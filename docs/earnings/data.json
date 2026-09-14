@@ -175,7 +175,23 @@
         ]
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
-      "story": "Nvidia grew revenue by 17.9% this quarter, extending its streak to 11 straight quarters of growth, while net income and EPS each edged up modestly (around 2-3%). Cash on hand jumped nearly 70%, giving the company a much larger cushion, though this coincided with debt nearly quadrupling (up 293.9%) \u2014 a sharp shift worth watching to understand what the borrowed money is funding. Gross margin held essentially flat at 75%, showing that profitability per dollar of sales stayed steady even as the top line surged."
+      "story": "Nvidia grew revenue by 17.9% this quarter, extending its streak to 11 straight quarters of growth, while net income and EPS each edged up modestly (around 2-3%). Cash on hand jumped nearly 70%, giving the company a much larger cushion, though this coincided with debt nearly quadrupling (up 293.9%) \u2014 a sharp shift worth watching to understand what the borrowed money is funding. Gross margin held essentially flat at 75%, showing that profitability per dollar of sales stayed steady even as the top line surged.",
+      "position_history": [
+        {
+          "date": "2026-09-14",
+          "period_end": "2026-07-26",
+          "compared_to": "2026-04-26",
+          "consensus_line": "not available this quarter",
+          "key_metric": "The 293.9% surge in debt is most worth understanding this quarter, as it stands out sharply against otherwise steady operating performance and raises questions about capital allocation or financing needs.",
+          "good": "Revenue growth: +17.9%; Net income: +2.3%; EPS (diluted): +2.9%",
+          "bad": "Gross margin: +0.0 points (74.9% -> 75.0%)",
+          "ugly": "Debt: +293.9%",
+          "guidance_note": "Not available \u2014 SEC filings and Nasdaq's calendar don't carry forward-looking statements; would need an earnings-call transcript or press-release source to add this.",
+          "position_note": "For a long-term holder, this quarter shows continued revenue growth and stable margins, but the large increase in debt is a structural change worth monitoring as it may affect the company's financial flexibility and risk profile going forward.",
+          "verdict": "Holding steady",
+          "verdict_reason": "1 medium flag(s), nothing worse"
+        }
+      ]
     },
     {
       "ticker": "AAPL",
