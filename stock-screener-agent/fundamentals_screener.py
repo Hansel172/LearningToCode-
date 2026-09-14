@@ -1,10 +1,16 @@
+import os
+from pathlib import Path
+
 import yfinance as yf
 import httpx
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 TICKERS_FILE = "fundamentals_tickers.txt"
-NEWS_API_KEY  = "ec86790d8a8349bba91acd058157a73d"
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 
 # Gate 1 — Quality thresholds
 MIN_GROSS_MARGIN = 0.40   # 40% gross margin (lowered from 60% — most great companies hit this)
@@ -83,6 +89,8 @@ def get_fundamentals(ticker):
 
 def check_risk_headlines(ticker, company):
     """Pull latest news and flag if a risk keyword appears in an article that is actually about this company."""
+    if not NEWS_API_KEY:
+        return {"ticker": ticker, "skipped": "NEWS_API_KEY not set"}
     try:
         # Search specifically for this ticker/company + risk terms
         short_name = company.split()[0]  # e.g. "Apple" from "Apple Inc."
