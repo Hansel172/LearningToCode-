@@ -146,6 +146,33 @@ function quartersTable(rows) {
   </details>`;
 }
 
+const VERDICT_COLOR = {
+  'Improving': 'var(--green)',
+  'Weakening': 'var(--red)',
+  'Holding steady': 'var(--yellow)',
+};
+
+/* Only rendered for tickers with a positions_data/<TICKER>.json file —
+   i.e. an actual held position, not just something on the watchlist. Most
+   recent first (already sorted that way by attach_position_history.py). */
+function positionHistoryBlock(history) {
+  if (!history || !history.length) return '';
+  const rows = history.map(e => `
+    <div class="pos-entry">
+      <div class="pos-entry-head">
+        <span class="pos-date">${esc(e.date)} &middot; quarter ending ${esc(e.period_end)}</span>
+        <span class="pos-verdict" style="color:${VERDICT_COLOR[e.verdict] || 'var(--muted)'}">${esc(e.verdict)}</span>
+      </div>
+      ${e.key_metric ? `<div class="pos-line">${esc(e.key_metric)}</div>` : ''}
+      ${e.position_note ? `<div class="pos-line pos-position">${esc(e.position_note)}</div>` : ''}
+    </div>`).join('');
+  return `
+  <details class="position-history">
+    <summary>Your position &middot; ${history.length} logged ${history.length === 1 ? 'entry' : 'entries'}</summary>
+    <div class="pos-entries">${rows}</div>
+  </details>`;
+}
+
 function companyCard(company) {
   if (company.error) {
     return `<section class="card"><div class="card-head"><h2>${esc(company.ticker)}</h2></div>
@@ -201,6 +228,7 @@ function companyCard(company) {
     ${flagsBlock(company.red_flags)}
     ${reaction}
     ${trend.quarters_table ? quartersTable(trend.quarters_table) : ''}
+    ${positionHistoryBlock(company.position_history)}
   </section>`;
 }
 

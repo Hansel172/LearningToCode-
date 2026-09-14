@@ -90,6 +90,15 @@ jobs:
           HOLDING_TICKERS: ${{ secrets.HOLDING_TICKERS }}
         run: python3 earnings-tracker/scripts/update_position_trackers.py /tmp/old_earnings_data.json
 
+      # Patches docs/earnings/data.json with each held ticker's persisted
+      # history (from earnings-tracker/positions_data/, just written above)
+      # so the phone app shows it — including a brand-new entry from this
+      # same run, not just starting next refresh. Runs after the step
+      # above rather than being folded into build_public.py, since
+      # build_public.py runs before this run knows whether anyone reported.
+      - name: Attach position history to the app
+        run: python3 earnings-tracker/scripts/attach_position_history.py
+
       # A tracker entry is the one thing this workflow produces that can't
       # be regenerated on the next run — unlike docs/earnings/data.json,
       # there's no "just rebuild it from SEC/Nasdaq" fallback if a commit
@@ -101,11 +110,11 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -z "$(git status --porcelain earnings-tracker/*_tracker.md)" ]; then
+          if [ -z "$(git status --porcelain earnings-tracker/*_tracker.md earnings-tracker/positions_data)" ]; then
             echo "no tracker changes"
             exit 0
           fi
-          git add earnings-tracker/*_tracker.md
+          git add earnings-tracker/*_tracker.md earnings-tracker/positions_data
           git commit -m "Position tracker: $(date -u +%Y-%m-%d)"
           for attempt in 1 2 3; do
             if git push; then

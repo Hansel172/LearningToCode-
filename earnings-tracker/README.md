@@ -203,25 +203,38 @@ python earnings-tracker/scripts/write_stories.py
 
 ## Position trackers
 
-For a company you actually hold — not just watch — `<TICKER>_tracker.md`
-(e.g. `NVDA_tracker.md`) is an append-only log written each time that
-company reports, following an "Earnings Analyzer" framework: what analysts
-expected versus what happened, the one metric most worth understanding
-that quarter, guidance (always "not available" — SEC filings don't carry
-forward-looking statements), what it means for the position specifically,
-and a trend verdict (Improving / Weakening / Holding steady) computed from
-the same red flags and streaks shown elsewhere in this repo, not left to
-the model's judgment alone. See `CLAUDE.md` in this folder for the full
-reasoning.
+For a company you actually hold — not just watch — every report gets logged
+following an "Earnings Analyzer" framework: what analysts expected versus
+what happened, the one metric most worth understanding that quarter,
+guidance (always "not available" — SEC filings don't carry forward-looking
+statements), what it means for the position specifically, and a trend
+verdict (Improving / Weakening / Holding steady) computed from the same red
+flags and streaks shown elsewhere in this repo, not left to the model's
+judgment alone. See `CLAUDE.md` in this folder for the full reasoning.
+
+This is written in two places from the same data, so they can't drift apart:
+
+- **In the app itself** — a "Your position" section on that ticker's card,
+  showing the last 8 logged entries, most recent first.
+- **`<TICKER>_tracker.md`** (e.g. `NVDA_tracker.md`) — the same entries as
+  an append-only, human-readable log in the repo, for anyone who'd rather
+  read it there or diff it in git history.
 
 **Which tickers get a file** comes from `profile.local.json` (gitignored —
 copy `profile.example.json` to create your own) rather than `watchlist.txt`,
-since holding a position is a different fact from just watching a company,
-and — same reasoning as `macro-tracker/profile.local.json` — personal
-position information doesn't belong in a public repo. In the Action, the
-same list comes from the `HOLDING_TICKERS` repo secret (comma-separated,
-e.g. `NVDA,AAPL,MSFT`) instead, since the gitignored file never reaches
-that runner.
+since holding a position is a different fact from just watching a company.
+In the Action, the same list comes from the `HOLDING_TICKERS` repo secret
+(comma-separated, e.g. `NVDA,AAPL,MSFT`) instead, since the gitignored file
+never reaches that runner.
+
+Worth being precise about what this does and doesn't hide: `<TICKER>_tracker.md`
+and `positions_data/<TICKER>.json` are committed and public, so a file named
+`NVDA_tracker.md` already discloses that NVDA is held — gitignoring
+`profile.local.json` doesn't undo that. What it actually keeps private is
+*account-level* detail: which kind of account, dollar amounts, anything
+beyond the bare ticker. The Earnings Analyzer prompt is deliberately never
+given the account type for this reason — only "long-term," since it's true
+of all three holdings and isn't account-identifying on its own.
 
 **To test it by hand:**
 ```bash
@@ -241,7 +254,8 @@ real earnings report:
    every watchlist ticker, "Update position trackers" should say either
    "No held position reported since last run" (the normal case — nothing
    to log if nobody's held ticker reported) or list which ticker(s) got an
-   entry appended.
+   entry appended, and "Attach position history to the app" should say how
+   many tickers it attached history for.
 3. To actually see a real entry get written without waiting for a real
    report, temporarily edit a held ticker's line in a copy of `data.json`'s
    snapshot to an older `period_end`, then run `update_position_trackers.py`
@@ -260,8 +274,10 @@ real earnings report:
 | `scripts/build_public.py` | Builds `docs/earnings/` from `watchlist.txt` |
 | `scripts/send_alerts.py` | Emails you only when someone new has reported |
 | `scripts/write_stories.py` | Writes the "AI summary" on each card, from facts already computed |
-| `scripts/update_position_trackers.py` | Appends an Earnings Analyzer entry to `<TICKER>_tracker.md` for held positions |
+| `scripts/update_position_trackers.py` | Builds an Earnings Analyzer entry for each held position that reported, writes it to `positions_data/<TICKER>.json` and `<TICKER>_tracker.md` |
+| `scripts/attach_position_history.py` | Patches `docs/earnings/data.json` with each held ticker's history so the app can show it |
 | `watchlist_data/` | Where the *CLI's* tracked companies' data lives (not committed — see below) |
+| `positions_data/<TICKER>.json` | Structured position history — the source of truth the app and the `.md` log both render from |
 | `<TICKER>_tracker.md` | Running per-position log — committed (numbers only, no account details) |
 | `profile.local.json` | Which tickers are held and in what kind of account (not committed — see below) |
 | `profile.example.json` | Template showing `profile.local.json`'s shape, with no real data |
@@ -277,10 +293,14 @@ Three different personal-data files, three different rules, on purpose:
   a short, deliberate list you chose to publish, and the app itself only
   ever displays public company financials — no personal or account
   information touches it at all, so there's nothing to redact.
-- **`profile.local.json`** (which tickers you actually *hold*, and in what
-  kind of account) is gitignored, same reasoning as
-  `macro-tracker/profile.local.json` — position information doesn't belong
-  in a public repo even when the tickers themselves are unremarkable. The
-  Action gets the ticker list a different way (the `HOLDING_TICKERS`
-  secret) so this never needs to be committed anywhere to make the
-  automation work.
+- **`profile.local.json`** (which tickers you hold, and in what kind of
+  account) is gitignored. This doesn't hide *that* NVDA/AAPL/MSFT are held —
+  `NVDA_tracker.md` existing in the repo already makes that plain — it keeps
+  the *account-level* detail out: which kind of account, dollar amounts,
+  anything beyond the bare ticker. That's also why the Earnings Analyzer
+  prompt is only ever given "long-term," never the account type — see
+  `CLAUDE.md` for a real bug this caught (the account type was briefly
+  leaking into committed position notes before being fixed). The Action
+  gets the ticker list a different way (the `HOLDING_TICKERS` secret) so
+  the gitignored file never needs to be committed to make the automation
+  work.
