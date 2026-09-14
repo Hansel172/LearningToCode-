@@ -78,6 +78,63 @@ jobs:
           FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
         run: python3 earnings-tracker/scripts/send_alerts.py /tmp/old_earnings_data.json
 
+      # Appends one entry per held position that just reported to
+      # <TICKER>_tracker.md — see earnings-tracker/CLAUDE.md for the
+      # Earnings Analyzer framework this follows. Which tickers count as
+      # "held" comes from the HOLDING_TICKERS secret here (profile.local.json
+      # is gitignored, so it never reaches this runner) — deliberately kept
+      # out of both the repo and the workflow file itself.
+      - name: Update position trackers
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          HOLDING_TICKERS: ${{ secrets.HOLDING_TICKERS }}
+        run: python3 earnings-tracker/scripts/update_position_trackers.py /tmp/old_earnings_data.json
+
+      # A tracker entry is the one thing this workflow produces that can't
+      # be regenerated on the next run — unlike docs/earnings/data.json,
+      # there's no "just rebuild it from SEC/Nasdaq" fallback if a commit
+      # containing one gets discarded. So this pushes it FIRST, with its
+      # own commit, and rebases (never resets) on a rejected push — a
+      # conflict here means two runs actually appended competing content,
+      # which needs a human, not an auto-discard.
+      - name: Commit position tracker entries
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain earnings-tracker/*_tracker.md)" ]; then
+            echo "no tracker changes"
+            exit 0
+          fi
+          git add earnings-tracker/*_tracker.md
+          git commit -m "Position tracker: $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "pushed"
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt) — rebasing, not discarding"
+            git fetch origin main
+            # docs/earnings is always dirty here (build_public.py already ran,
+            # its own commit hasn't happened yet) — git rebase refuses to run
+            # with ANY unstaged changes present, even in unrelated files, so
+            # they have to be stashed out of the way and restored after.
+            git stash push -u -m "wip-during-tracker-rebase" -- docs/earnings
+            if git rebase origin/main; then
+              rebase_ok=1
+            else
+              rebase_ok=0
+            fi
+            git stash pop
+            if [ "$rebase_ok" != "1" ]; then
+              git rebase --abort 2>/dev/null || true
+              echo "rebase conflict in a tracker file — needs a human to resolve, not auto-discarding an appended entry" >&2
+              exit 1
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "still rejected after 3 attempts — leaving the commit local for a human to push" >&2
+          exit 1
+
       # Retries on a rejected push rather than failing outright. Two runs
       # close together (a manual trigger overlapping the schedule, or two
       # manual triggers back to back) both build from the same starting

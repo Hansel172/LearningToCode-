@@ -201,6 +201,52 @@ as normal — a missing summary is a smaller problem than a broken build.
 python earnings-tracker/scripts/write_stories.py
 ```
 
+## Position trackers
+
+For a company you actually hold — not just watch — `<TICKER>_tracker.md`
+(e.g. `NVDA_tracker.md`) is an append-only log written each time that
+company reports, following an "Earnings Analyzer" framework: what analysts
+expected versus what happened, the one metric most worth understanding
+that quarter, guidance (always "not available" — SEC filings don't carry
+forward-looking statements), what it means for the position specifically,
+and a trend verdict (Improving / Weakening / Holding steady) computed from
+the same red flags and streaks shown elsewhere in this repo, not left to
+the model's judgment alone. See `CLAUDE.md` in this folder for the full
+reasoning.
+
+**Which tickers get a file** comes from `profile.local.json` (gitignored —
+copy `profile.example.json` to create your own) rather than `watchlist.txt`,
+since holding a position is a different fact from just watching a company,
+and — same reasoning as `macro-tracker/profile.local.json` — personal
+position information doesn't belong in a public repo. In the Action, the
+same list comes from the `HOLDING_TICKERS` repo secret (comma-separated,
+e.g. `NVDA,AAPL,MSFT`) instead, since the gitignored file never reaches
+that runner.
+
+**To test it by hand:**
+```bash
+python earnings-tracker/scripts/update_position_trackers.py path/to/an/older/data.json
+```
+Run `build_public.py` first so `data.json` reflects the "new" state to
+compare against. Without `ANTHROPIC_API_KEY`, the entry still gets written
+with every mechanical fact and the trend verdict — just without the key
+metric / position note lines.
+
+**How to know it's actually working end to end**, without waiting for a
+real earnings report:
+1. Open the Actions tab → "Earnings Tracker Refresh" → "Run workflow" to
+   trigger it manually — same workflow the schedule uses, so a successful
+   manual run is a real test of the whole pipeline.
+2. Check the run's logs for each step: "Build public app" should list
+   every watchlist ticker, "Update position trackers" should say either
+   "No held position reported since last run" (the normal case — nothing
+   to log if nobody's held ticker reported) or list which ticker(s) got an
+   entry appended.
+3. To actually see a real entry get written without waiting for a real
+   report, temporarily edit a held ticker's line in a copy of `data.json`'s
+   snapshot to an older `period_end`, then run `update_position_trackers.py`
+   against that copy — this is exactly what the automated test above does.
+
 ## Files
 
 | File | What it does |
@@ -214,11 +260,15 @@ python earnings-tracker/scripts/write_stories.py
 | `scripts/build_public.py` | Builds `docs/earnings/` from `watchlist.txt` |
 | `scripts/send_alerts.py` | Emails you only when someone new has reported |
 | `scripts/write_stories.py` | Writes the "AI summary" on each card, from facts already computed |
+| `scripts/update_position_trackers.py` | Appends an Earnings Analyzer entry to `<TICKER>_tracker.md` for held positions |
 | `watchlist_data/` | Where the *CLI's* tracked companies' data lives (not committed — see below) |
+| `<TICKER>_tracker.md` | Running per-position log — committed (numbers only, no account details) |
+| `profile.local.json` | Which tickers are held and in what kind of account (not committed — see below) |
+| `profile.example.json` | Template showing `profile.local.json`'s shape, with no real data |
 
 ## Privacy
 
-Two different watchlists, two different rules, on purpose:
+Three different personal-data files, three different rules, on purpose:
 
 - **`watchlist_data/*.json`** (the CLI) is gitignored. This is your personal,
   ad hoc research list — whatever you've typed `add TICKER` for — and it's
@@ -227,3 +277,10 @@ Two different watchlists, two different rules, on purpose:
   a short, deliberate list you chose to publish, and the app itself only
   ever displays public company financials — no personal or account
   information touches it at all, so there's nothing to redact.
+- **`profile.local.json`** (which tickers you actually *hold*, and in what
+  kind of account) is gitignored, same reasoning as
+  `macro-tracker/profile.local.json` — position information doesn't belong
+  in a public repo even when the tickers themselves are unremarkable. The
+  Action gets the ticker list a different way (the `HOLDING_TICKERS`
+  secret) so this never needs to be committed anywhere to make the
+  automation work.

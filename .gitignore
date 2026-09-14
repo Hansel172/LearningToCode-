@@ -140,4 +140,8 @@ macro-tracker/profile.example.json.bak
 # earnings-tracker — watchlist reflects personal research interests
 earnings-tracker/watchlist_data/*.json
 !earnings-tracker/watchlist_data/.gitkeep
+
+# earnings-tracker — which tickers are actual personal holdings, same
+# reasoning as macro-tracker/profile.local.json
+earnings-tracker/profile.local.json
 /.playwright-mcp/
