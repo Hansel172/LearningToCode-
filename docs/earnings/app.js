@@ -20,10 +20,15 @@ function column(label, items, cls) {
   const body = items.length
     ? items.map(m => `<div class="metric-line ${cls}">${metricLine(m)}</div>`).join('')
     : `<div class="metric-empty">Nothing here</div>`;
-  return `<div><div class="col-lbl">${label}</div>${body}</div>`;
+  // Tinting the header to match its column's own metric-line color (green
+  // for good, red for ugly; bad stays neutral, same as its metric lines
+  // already are) — a scan down the page reads the shape of a card's news
+  // before any individual line of text does.
+  return `<div><div class="col-lbl col-lbl-${cls}">${label}</div>${body}</div>`;
 }
 
 const SEVERITY_COLOR = { high: 'var(--red)', medium: 'var(--orange)', low: 'var(--yellow)' };
+const SEVERITY_LABEL = { high: 'HIGH', medium: 'MED', low: 'LOW' };
 
 function flagsBlock(flags) {
   if (!flags.length) {
@@ -31,11 +36,18 @@ function flagsBlock(flags) {
   }
   const order = { high: 0, medium: 1, low: 2 };
   const sorted = [...flags].sort((a, b) => order[a.severity] - order[b.severity]);
+  // Severity used to be color-only (a dot with no text) — fails the "never
+  // color alone" rule for status info, since it's unreadable to a colorblind
+  // viewer and invisible to anyone glancing at a grayscale screenshot. The
+  // dot stays as a fast visual anchor, but the label carries the meaning.
   const rows = sorted.map(f => `
     <div class="flag">
       <span class="flag-dot" style="background:${SEVERITY_COLOR[f.severity]}"></span>
       <div>
-        <div class="flag-title">${esc(f.flag)}</div>
+        <div class="flag-title">
+          <span class="flag-sev" style="color:${SEVERITY_COLOR[f.severity]}">${SEVERITY_LABEL[f.severity]}</span>
+          ${esc(f.flag)}
+        </div>
         <div class="flag-detail">${esc(f.detail)}</div>
       </div>
     </div>`).join('');
@@ -203,9 +215,33 @@ function companyCard(company) {
   // (a callout, not a bullet list) — this is the one part of the card
   // that's synthesized rather than independently computed from SEC/Nasdaq
   // data, and a reader should always be able to tell which is which.
+  // Clamped to 2 lines by default (checkStoryClamps() below hides the
+  // toggle on a render pass where a short story never actually overflows)
+  // so a paragraph of prose doesn't dominate the card before you've even
+  // seen whether anything's wrong.
   const story = company.story
-    ? `<div class="story"><div class="story-label">AI summary</div>${esc(company.story)}</div>`
+    ? `<div class="story"><div class="story-label">AI summary</div>
+        <div class="story-text clamped">${esc(company.story)}</div>
+        <button class="story-toggle" type="button" hidden>Read more</button>
+      </div>`
     : '';
+
+  // Everything below this point is the numeric backup for the story and the
+  // flags above it — real, but the kind of thing you check when something
+  // looks off, not every time. Collapsing it is most of why this card used
+  // to run to ~1400px: the good/bad/ugly breakdown alone was several
+  // hundred pixels of text that mostly restates what the story already said.
+  const numbers = `
+  <details class="numbers">
+    <summary>Show the numbers</summary>
+    <div class="cols">
+      ${column('The Good', company.good, 'good')}
+      ${column('The Bad', company.bad, 'bad')}
+      ${column('The Ugly', company.ugly, 'ugly')}
+    </div>
+    ${reaction}
+    ${trend.quarters_table ? quartersTable(trend.quarters_table) : ''}
+  </details>`;
 
   return `<section class="card" style="--s:${s.color}">
     <div class="card-head">
@@ -220,14 +256,8 @@ function companyCard(company) {
     ${story}
     ${sparklineContainer(trend.revenue_points || [], s.color)}
     ${streakNotes(trend)}
-    <div class="cols">
-      ${column('The Good', company.good, 'good')}
-      ${column('The Bad', company.bad, 'bad')}
-      ${column('The Ugly', company.ugly, 'ugly')}
-    </div>
     ${flagsBlock(company.red_flags)}
-    ${reaction}
-    ${trend.quarters_table ? quartersTable(trend.quarters_table) : ''}
+    ${numbers}
     ${positionHistoryBlock(company.position_history)}
   </section>`;
 }
@@ -243,11 +273,35 @@ function severityRank(company) {
   return 2;
 }
 
+/* Same "measure after layout" reasoning as drawSparklines(): scrollHeight
+   only tells the truth once the browser has actually wrapped the text, so
+   this runs after the HTML is in the DOM, not while building the string.
+   A story short enough to already fit in 2 lines gets no toggle at all —
+   "Read more" that reveals nothing is worse than no button. */
+function checkStoryClamps() {
+  document.querySelectorAll('.story').forEach(card => {
+    const text = card.querySelector('.story-text');
+    const btn = card.querySelector('.story-toggle');
+    if (text && btn && text.scrollHeight > text.clientHeight + 1) {
+      btn.hidden = false;
+    }
+  });
+}
+
+document.getElementById('grid').addEventListener('click', e => {
+  const btn = e.target.closest('.story-toggle');
+  if (!btn) return;
+  const text = btn.previousElementSibling;
+  const collapsed = text.classList.toggle('clamped');
+  btn.textContent = collapsed ? 'Read more' : 'Show less';
+});
+
 function render(data) {
   const companies = [...(data.companies || [])].sort((a, b) =>
     severityRank(a) - severityRank(b) || a.ticker.localeCompare(b.ticker));
   document.getElementById('grid').innerHTML = companies.map(companyCard).join('');
   drawSparklines();
+  checkStoryClamps();
 }
 
 let resizeTimer;
