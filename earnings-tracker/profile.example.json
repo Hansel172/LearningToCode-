@@ -1,0 +1,7 @@
+{
+  "holdings": {
+    "NVDA": { "account": "taxable brokerage", "horizon": "long-term" },
+    "AAPL": { "account": "taxable brokerage", "horizon": "long-term" },
+    "MSFT": { "account": "taxable brokerage", "horizon": "long-term" }
+  }
+}

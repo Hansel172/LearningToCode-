@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-NEWS_API_KEY = "ec86790d8a8349bba91acd058157a73d"
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 
 
 def _rh_login():

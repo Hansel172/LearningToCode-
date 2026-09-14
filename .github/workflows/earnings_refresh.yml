@@ -2,10 +2,23 @@ name: Earnings Tracker Refresh
 
 on:
   schedule:
-    # 21:07 UTC ≈ 5pm ET, after market close — new SEC filings are typically
-    # processed by then. Off the hour deliberately, same reasoning as the
-    # macro tracker: scheduled jobs queue up worst right at :00.
-    - cron: '7 21 * * 1-5'
+    # Most companies report either before the market opens or right after
+    # it closes, but "right after close" isn't always exactly at close —
+    # NVDA's own report was live and sitting on SEC EDGAR well before the
+    # old single 5:07pm ET check would have caught it. So this checks
+    # hourly through the whole after-close window instead of once, 4pm-8pm
+    # ET, weekdays. Off the hour deliberately, same reasoning as the macro
+    # tracker: scheduled jobs queue up worst right at :00. Safe to run this
+    # often now that write_stories.py skips unchanged companies (no wasted
+    # API calls) and the commit step below handles overlapping runs
+    # without failing.
+    #
+    # Split in two because cron is evaluated in UTC and ET is behind it:
+    # the 4-7pm ET checks land on the same UTC weekday, but the 8pm ET
+    # check crosses into the next UTC day — so it needs its own weekday
+    # range (Tue-Sat UTC) to still mean Mon-Fri in ET.
+    - cron: '7 20-23 * * 1-5'   # 4pm-7pm ET, weekdays
+    - cron: '7 0 * * 2-6'       # 8pm ET, weekdays (lands as 00:07 UTC the next day)
   workflow_dispatch:
 
 permissions:
@@ -45,10 +58,16 @@ jobs:
       # doesn't already back up. Skips itself cleanly (exit 0, no story
       # field written) if ANTHROPIC_API_KEY isn't set, so the app still
       # ships in full without it.
+      #
+      # Passed the same pre-rebuild snapshot as the alert step below, so it
+      # can reuse a company's existing story when its period_end hasn't
+      # moved — with hourly runs during earnings season, most runs see no
+      # new reports at all, and this is what keeps those runs from paying
+      # for a Claude call that would just re-describe the same numbers.
       - name: Write AI summaries
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python3 earnings-tracker/scripts/write_stories.py
+        run: python3 earnings-tracker/scripts/write_stories.py /tmp/old_earnings_data.json
 
       # Same SendGrid secrets already configured for morning_briefing.yml —
       # one alert pipeline, not two. Silent when nothing has changed.
@@ -59,15 +78,108 @@ jobs:
           FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
         run: python3 earnings-tracker/scripts/send_alerts.py /tmp/old_earnings_data.json
 
+      # Appends one entry per held position that just reported to
+      # <TICKER>_tracker.md — see earnings-tracker/CLAUDE.md for the
+      # Earnings Analyzer framework this follows. Which tickers count as
+      # "held" comes from the HOLDING_TICKERS secret here (profile.local.json
+      # is gitignored, so it never reaches this runner) — deliberately kept
+      # out of both the repo and the workflow file itself.
+      - name: Update position trackers
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          HOLDING_TICKERS: ${{ secrets.HOLDING_TICKERS }}
+        run: python3 earnings-tracker/scripts/update_position_trackers.py /tmp/old_earnings_data.json
+
+      # Patches docs/earnings/data.json with each held ticker's persisted
+      # history (from earnings-tracker/positions_data/, just written above)
+      # so the phone app shows it — including a brand-new entry from this
+      # same run, not just starting next refresh. Runs after the step
+      # above rather than being folded into build_public.py, since
+      # build_public.py runs before this run knows whether anyone reported.
+      - name: Attach position history to the app
+        run: python3 earnings-tracker/scripts/attach_position_history.py
+
+      # A tracker entry is the one thing this workflow produces that can't
+      # be regenerated on the next run — unlike docs/earnings/data.json,
+      # there's no "just rebuild it from SEC/Nasdaq" fallback if a commit
+      # containing one gets discarded. So this pushes it FIRST, with its
+      # own commit, and rebases (never resets) on a rejected push — a
+      # conflict here means two runs actually appended competing content,
+      # which needs a human, not an auto-discard.
+      - name: Commit position tracker entries
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain earnings-tracker/*_tracker.md earnings-tracker/positions_data)" ]; then
+            echo "no tracker changes"
+            exit 0
+          fi
+          git add earnings-tracker/*_tracker.md earnings-tracker/positions_data
+          git commit -m "Position tracker: $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "pushed"
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt) — rebasing, not discarding"
+            git fetch origin main
+            # docs/earnings is always dirty here (build_public.py already ran,
+            # its own commit hasn't happened yet) — git rebase refuses to run
+            # with ANY unstaged changes present, even in unrelated files, so
+            # they have to be stashed out of the way and restored after.
+            git stash push -u -m "wip-during-tracker-rebase" -- docs/earnings
+            if git rebase origin/main; then
+              rebase_ok=1
+            else
+              rebase_ok=0
+            fi
+            git stash pop
+            if [ "$rebase_ok" != "1" ]; then
+              git rebase --abort 2>/dev/null || true
+              echo "rebase conflict in a tracker file — needs a human to resolve, not auto-discarding an appended entry" >&2
+              exit 1
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "still rejected after 3 attempts — leaving the commit local for a human to push" >&2
+          exit 1
+
+      # Retries on a rejected push rather than failing outright. Two runs
+      # close together (a manual trigger overlapping the schedule, or two
+      # manual triggers back to back) both build from the same starting
+      # commit; whichever pushes second gets rejected because the remote
+      # has moved. Hit exactly this the first time NVDA actually reported —
+      # the losing run had already written 8 real AI summaries and correctly
+      # detected the new report, then failed on the last line for a reason
+      # that has nothing to do with any of that work being wrong.
+      #
+      # On rejection this discards the local commit rather than rebasing.
+      # docs/earnings/data.json is entirely regenerated from SEC/Nasdaq on
+      # every run, never hand-edited, so there's no independent change here
+      # worth preserving through a merge — a rebase would just as likely hit
+      # a real conflict on the same JSON lines from two runs that each wrote
+      # slightly different wording for the same numbers. Whichever run's
+      # commit already landed reflects the same underlying facts, so it's
+      # simply treated as authoritative and this run's copy is dropped.
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain docs/earnings)" ]; then
-            git add docs/earnings
-            git commit -m "Earnings refresh $(date -u +%Y-%m-%d)"
-            git push
-            echo "pushed"
-          else
+          if [ -z "$(git status --porcelain docs/earnings)" ]; then
             echo "no change"
+            exit 0
           fi
+          git add docs/earnings
+          git commit -m "Earnings refresh $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "pushed"
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt) — another run already landed; adopting it"
+            git fetch origin main
+            git reset --hard origin/main
+            sleep $((attempt * 3))
+          done
+          echo "still rejected after 3 attempts — leaving main as the other run(s) left it" >&2
+          exit 0

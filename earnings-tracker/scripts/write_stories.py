@@ -17,6 +17,15 @@ doesn't justify a second HTTP dependency.
 Requires ANTHROPIC_API_KEY in .env (local) or as a GitHub secret (Action).
 Skips silently — the rest of the app still ships — if it's absent, since a
 missing story is a lesser failure than a broken build.
+
+Usage: write_stories.py [OLD_DATA_JSON]
+  OLD_DATA_JSON is the same pre-rebuild snapshot the workflow already takes
+  for send_alerts.py. When given, a company whose period_end hasn't changed
+  since that snapshot keeps its old story instead of paying for a fresh
+  Claude call — the facts driving the story haven't moved, so the story
+  wouldn't meaningfully change either. This matters once the schedule runs
+  more than once a day: most runs see no new earnings at all, and without
+  this every one of those runs would re-narrate the same unchanged numbers.
 """
 
 import json
@@ -131,6 +140,23 @@ def call_claude(prompt, api_key):
     return "".join(b.get("text", "") for b in blocks if b.get("type") == "text").strip()
 
 
+def _load_old_stories(path):
+    """ticker -> (period_end, story) for whatever the previous run already
+    wrote, so an unchanged company can keep its existing story instead of
+    regenerating an identical one."""
+    if not path:
+        return {}
+    p = Path(path)
+    if not p.exists():
+        return {}
+    data = json.loads(p.read_text())
+    return {
+        c["ticker"]: (c.get("period_end"), c["story"])
+        for c in data.get("companies", [])
+        if c.get("story")
+    }
+
+
 def main():
     api_key = os.getenv("ANTHROPIC_API_KEY")
     if not api_key:
@@ -141,12 +167,22 @@ def main():
         print(f"{DATA_PATH} doesn't exist — run build_public.py first.", file=sys.stderr)
         return 1
 
+    old_stories = _load_old_stories(sys.argv[1] if len(sys.argv) > 1 else None)
+
     data = json.loads(DATA_PATH.read_text())
     wrote = 0
+    reused = 0
 
     for company in data.get("companies", []):
         if company.get("error") or company.get("insufficient_data"):
             continue
+
+        old = old_stories.get(company["ticker"])
+        if old and old[0] == company["period_end"]:
+            company["story"] = old[1]
+            reused += 1
+            continue
+
         try:
             prompt = build_prompt(company)
             company["story"] = call_claude(prompt, api_key)
@@ -158,7 +194,7 @@ def main():
             # the app already renders fine with it absent.
 
     DATA_PATH.write_text(json.dumps(data, indent=2) + "\n")
-    print(f"Wrote {wrote} stories to {DATA_PATH}")
+    print(f"Wrote {wrote} new stories, reused {reused} unchanged, to {DATA_PATH}")
     return 0
 
 

@@ -14,7 +14,7 @@ load_dotenv()
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 TO_EMAIL         = os.getenv("TO_EMAIL")
 FROM_EMAIL       = os.getenv("FROM_EMAIL")
-NEWS_API_KEY     = "ec86790d8a8349bba91acd058157a73d"
+NEWS_API_KEY     = os.getenv("NEWS_API_KEY")
 
 WATCHLIST = ["MSFT", "GOOGL", "META", "PLTR", "NVDA", "AMD", "AAPL"]
 INDEXES   = {"SPY": "S&P 500", "QQQ": "Nasdaq 100", "IBIT": "Bitcoin ETF"}
