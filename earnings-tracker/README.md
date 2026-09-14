@@ -150,18 +150,30 @@ To change it: edit the SVG in that file, then regenerate the three PNGs at
 their exact pixel sizes (rendering each at its native size directly, rather
 than scaling one image down, is what keeps the small one crisp).
 
-## Email alerts
+## Email alerts (optional, off by default)
 
-You don't have to remember to open the app — an email goes out only when a
-tracked company actually reports a new quarter. Silent every other day.
+`send_alerts.py` can email you when a tracked company reports a new
+quarter — it compares the pre-rebuild snapshot against the fresh one and
+emails only on a genuine change, silent otherwise. It's **not** wired into
+`earnings_refresh.yml` by default, since the app itself (checked hourly
+during the after-close window) already covers "did I miss anything,"
+without needing a SendGrid account and its three secrets.
 
-This reuses the same SendGrid setup as `morning_briefing.py` (one email
-pipeline, not two) and runs as part of the same scheduled Action that
-refreshes the app. Each run snapshots the previously-published data before
-rebuilding, then `send_alerts.py` compares old against new — a ticker whose
-latest quarter date changed gets an email; nothing else does.
+**To turn it on:** add a step back into `earnings_refresh.yml` after
+"Send alert email if anyone reported" the workflow runs used to have here —
+```yaml
+- name: Send alert email if anyone reported
+  env:
+    SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+    TO_EMAIL: ${{ secrets.TO_EMAIL }}
+    FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+  run: python3 earnings-tracker/scripts/send_alerts.py /tmp/old_earnings_data.json
+```
+placed after "Snapshot previous data" and before "Commit if changed" — then
+add those three secrets (same place as `HOLDING_TICKERS`; reuses the same
+SendGrid setup as `morning_briefing.py` if that's already configured).
 
-**To test it by hand:**
+**To test it by hand** (needs SendGrid config in `.env`):
 ```bash
 python earnings-tracker/scripts/send_alerts.py path/to/an/older/data.json
 ```
@@ -272,7 +284,7 @@ real earnings report:
 | `data_store.py` | Saves and loads each ticker's data as local JSON (CLI only) |
 | `watchlist.txt` | Which companies the *web app* shows — plain, public, committed |
 | `scripts/build_public.py` | Builds `docs/earnings/` from `watchlist.txt` |
-| `scripts/send_alerts.py` | Emails you only when someone new has reported |
+| `scripts/send_alerts.py` | Emails you only when someone new has reported (optional — not wired into the Action by default) |
 | `scripts/write_stories.py` | Writes the "AI summary" on each card, from facts already computed |
 | `scripts/update_position_trackers.py` | Builds an Earnings Analyzer entry for each held position that reported, writes it to `positions_data/<TICKER>.json` and `<TICKER>_tracker.md` |
 | `scripts/attach_position_history.py` | Patches `docs/earnings/data.json` with each held ticker's history so the app can show it |

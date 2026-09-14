@@ -37,9 +37,11 @@ jobs:
       - run: pip install -r earnings-tracker/requirements.txt
 
       # Snapshot the currently-published data BEFORE build_public.py
-      # overwrites it, so send_alerts.py has something to diff against —
-      # otherwise there's no way to tell "a company just reported" from
-      # "the numbers refreshed but nothing changed."
+      # overwrites it, so write_stories.py and update_position_trackers.py
+      # each have something to diff against — otherwise there's no way to
+      # tell "a company just reported" from "the numbers refreshed but
+      # nothing changed." (send_alerts.py uses this same snapshot too, if
+      # you wire email alerts back in — see the README.)
       - name: Snapshot previous data
         run: cp docs/earnings/data.json /tmp/old_earnings_data.json
 
@@ -68,15 +70,6 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 earnings-tracker/scripts/write_stories.py /tmp/old_earnings_data.json
-
-      # Same SendGrid secrets already configured for morning_briefing.yml —
-      # one alert pipeline, not two. Silent when nothing has changed.
-      - name: Send alert email if anyone reported
-        env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          TO_EMAIL: ${{ secrets.TO_EMAIL }}
-          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
-        run: python3 earnings-tracker/scripts/send_alerts.py /tmp/old_earnings_data.json
 
       # Appends one entry per held position that just reported to
       # <TICKER>_tracker.md — see earnings-tracker/CLAUDE.md for the
