@@ -67,7 +67,11 @@ body {
 .grid { display: flex; flex-direction: column; gap: 16px; }
 
 .card {
-  background: var(--card);
+  /* A faint wash of the same status color as the top border and badge —
+     subtle enough not to touch text contrast (5%), but enough that
+     scrolling past a flagged card reads differently than a clean one
+     before you've read a single word on it. */
+  background: color-mix(in srgb, var(--s, var(--border)) 5%, var(--card));
   border: 1px solid var(--border);
   border-top: 3px solid var(--s, var(--border));
   border-radius: 10px;
@@ -111,6 +115,16 @@ body {
   font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.1px;
   color: var(--muted); margin-bottom: 6px;
 }
+.story-text.clamped {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.story-toggle {
+  display: block; margin-top: 8px; padding: 0; border: none; background: none;
+  color: var(--blue); font-family: var(--body); font-size: 12.5px; cursor: pointer;
+}
+.story-toggle:hover { text-decoration: underline; }
+.story-toggle[hidden] { display: none; }
 
 .spark-wrap { margin-top: 14px; }
 .spark { width: 100%; height: 40px; line-height: 0; }
@@ -155,6 +169,12 @@ body {
 .pos-line { font-size: 13px; margin-top: 4px; line-height: 1.5; }
 .pos-position { color: var(--muted); }
 
+.numbers { margin-top: 16px; border-top: 1px solid var(--border); padding-top: 12px; }
+.numbers summary {
+  font-size: 12.5px; color: var(--blue); cursor: pointer; user-select: none;
+}
+.numbers summary:hover { text-decoration: underline; }
+
 .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 14px; }
 @media (max-width: 640px) { .cols { grid-template-columns: 1fr; } }
 
@@ -162,6 +182,10 @@ body {
   font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.1px;
   color: var(--muted); margin-bottom: 8px;
 }
+/* Tinted to match each column's own metric-line colors below (.metric-line
+   .good/.ugly) — "bad" stays neutral there too, so its header does here. */
+.col-lbl-good { color: color-mix(in srgb, var(--green) 65%, var(--muted)); }
+.col-lbl-ugly { color: color-mix(in srgb, var(--red) 65%, var(--muted)); }
 .metric-line { font-size: 13px; padding: 5px 0; line-height: 1.4; }
 .metric-line.good { color: var(--green); }
 .metric-line.bad { color: var(--text); }
@@ -174,6 +198,10 @@ body {
 }
 .flag-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex: 0 0 auto; }
 .flag-title { font-size: 13px; font-weight: 600; }
+.flag-sev {
+  font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+  margin-right: 6px;
+}
 .flag-detail { font-size: 12.5px; color: var(--muted); line-height: 1.5; margin-top: 2px; }
 .no-flags { font-size: 13px; color: var(--muted); }
 
