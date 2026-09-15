@@ -95,32 +95,43 @@ function daysUntil(iso) {
   return `in ${diff}d`;
 }
 
-// A macro data print (CPI/PPI/FOMC-type) and a corporate deal are different
-// kinds of "what to watch" — lumping an acquisition in with a Fed decision
-// under one undifferentiated list made it easy to miss that a deal-type
-// catalyst had even happened. Partnership and acquisition started as two
-// separate types but were merged into one "Deal" tag — the distinction
-// wasn't worth a second color to track, and a partnership can be as
-// consequential as an acquisition (or vice versa) depending on terms, which
-// the "why" text already explains better than a label could. Old data
-// tagged with either name still renders correctly via the alias map, so
-// nothing needs to be migrated. Undated/unrecognized types fall back to
-// "macro" rather than breaking, since most entries so far have been that.
+// Deal-type catalysts (partnerships, acquisitions) used to sit in "What to
+// Watch" alongside Fed decisions and CPI prints — two different kinds of
+// "thing worth knowing about" mixed into one list. Deals now live in their
+// own section (dealsSection, below) next to the auto-detected candidates,
+// so there's one place for "what's happening with a held company" instead
+// of two. Partnership and acquisition were originally two separate types;
+// merged into one "Deal" tag since the distinction wasn't worth a second
+// color — old data tagged with either name still resolves via the alias.
 const CATALYST_TYPE = {
   macro:    { color: 'var(--blue)',   label: 'Macro'    },
   earnings: { color: 'var(--yellow)', label: 'Earnings' },
   deal:     { color: 'var(--orange)', label: 'Deal'     },
 };
 const CATALYST_TYPE_ALIAS = { partnership: 'deal', acquisition: 'deal' };
+const resolvedType = raw => CATALYST_TYPE_ALIAS[raw] || raw;
 
+/* Today at local midnight, so "date >= todayIso" comparisons (plain string
+   compares, since dates are already YYYY-MM-DD) mean "today or later" —
+   not "later than right now," which would flicker an event out mid-day. */
+const todayIso = (() => {
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, '0')}-${String(n.getDate()).padStart(2, '0')}`;
+})();
+
+/* Only macro/earnings calendar events — deals are split out to
+   dealsSection(). Past-dated entries are dropped automatically, every
+   render, purely from today's date: a CPI print from three weeks ago isn't
+   "up next" anymore, and the whole point of an autonomous tracker is that
+   nobody should have to remember to go prune the list by hand. */
 function catalysts(list) {
-  if (!list || !list.length) return '';
-  const rows = [...list]
-    .sort((a, b) => a.date.localeCompare(b.date))
-    .map(c => {
-      const key = CATALYST_TYPE_ALIAS[c.type] || c.type;
-      const t = CATALYST_TYPE[key] || CATALYST_TYPE.macro;
-      return `<div class="cat-row">
+  const upcoming = (list || [])
+    .filter(c => resolvedType(c.type) !== 'deal' && c.date >= todayIso)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  if (!upcoming.length) return '';
+  const rows = upcoming.map(c => {
+    const t = CATALYST_TYPE[resolvedType(c.type)] || CATALYST_TYPE.macro;
+    return `<div class="cat-row">
       <div class="cat-d">${esc(c.date)}<span class="days">${daysUntil(c.date)}</span></div>
       <div>
         <div class="cat-l">
@@ -130,7 +141,7 @@ function catalysts(list) {
         <div class="cat-w">${esc(c.why)}</div>
       </div>
     </div>`;
-    }).join('');
+  }).join('');
   return `<section class="card cat">
     <div class="card-head"><h2>What to Watch</h2>
       <span class="badge">Next catalysts</span></div>
@@ -138,15 +149,29 @@ function catalysts(list) {
   </section>`;
 }
 
-/* Auto-detected, never auto-verified — see scan_news.py for why. Rendered
-   as an unmistakably provisional list (not a themes card, no "why it
-   matters" narrative) so it never reads as already-vetted analysis the way
-   a catalyst entry does. Ages out on its own after 7 days server-side, so
-   there's nothing to dismiss here — just something to notice and, if it's
-   real, go verify and turn into an actual catalyst entry. */
-function pendingDeals(list) {
-  if (!list || !list.length) return '';
-  const rows = [...list]
+/* One section for "something's happening with a held company," split into
+   two trust levels rather than two separate cards: confirmed deals (a
+   catalyst entry someone actually verified, like NVIDIA/Hugging Face) and
+   auto-detected candidates (scan_news.py — see that script for why it only
+   flags, never auto-writes, a confirmed entry). Confirmed entries have no
+   natural expiry (a real deal stays true); pending ones age out server-side
+   after 7 days since there's no "mark reviewed" affordance on a static page. */
+function dealsSection(catalystList, pending) {
+  const confirmed = (catalystList || [])
+    .filter(c => resolvedType(c.type) === 'deal')
+    .sort((a, b) => b.date.localeCompare(a.date));
+  const unverified = pending || [];
+  if (!confirmed.length && !unverified.length) return '';
+
+  const confirmedRows = confirmed.map(c => `<div class="cat-row">
+      <div class="cat-d">${esc(c.date)}<span class="days">${daysUntil(c.date)}</span></div>
+      <div>
+        <div class="cat-l">${esc(c.label)}</div>
+        <div class="cat-w">${esc(c.why)}</div>
+      </div>
+    </div>`).join('');
+
+  const pendingRows = unverified
     .sort((a, b) => (b.detectedAt || '').localeCompare(a.detectedAt || ''))
     .map(p => `<div class="pd-row">
       <span class="pd-ticker">${esc(p.ticker)}</span>
@@ -155,13 +180,14 @@ function pendingDeals(list) {
         <div class="pd-meta">${esc(p.source)} &middot; ${daysUntil((p.publishedAt || '').slice(0, 10))}</div>
       </div>
     </div>`).join('');
-  return `<section class="card pending">
-    <div class="card-head"><h2>Needs a Look</h2>
-      <span class="badge">Unverified</span></div>
-    <div class="pd-note">Auto-detected from headlines mentioning a held ticker plus an
-      acquisition/partnership keyword — not yet checked against a primary source.
-      Verify before treating as fact.</div>
-    ${rows}
+
+  return `<section class="card deals">
+    <div class="card-head"><h2>Partnerships &amp; Acquisitions</h2></div>
+    ${confirmedRows ? `<div class="deals-sub">Confirmed</div>${confirmedRows}` : ''}
+    ${pendingRows ? `<div class="deals-sub deals-sub-unverified">Unverified — needs a look</div>
+      <div class="pd-note">Auto-detected from headlines mentioning a held ticker plus an
+        acquisition/partnership keyword — not yet checked against a primary source.
+        Verify before treating as fact.</div>${pendingRows}` : ''}
   </section>`;
 }
 
@@ -181,7 +207,7 @@ function render() {
     ? `<div class="err">Some series failed to refresh: ${esc(errs.join(' · '))}</div>` : '';
 
   document.getElementById('grid').innerHTML = (THEMES.themes || []).map(card).join('');
-  document.getElementById('pending').innerHTML = pendingDeals(PENDING);
+  document.getElementById('pending').innerHTML = dealsSection(THEMES.catalysts, PENDING);
   document.getElementById('catalysts').innerHTML = catalysts(THEMES.catalysts);
 
   const stamp = LIVE.updated ? new Date(LIVE.updated).toLocaleString() : 'never';

@@ -2,9 +2,19 @@ name: Macro Tracker Refresh
 
 on:
   schedule:
-    # 11:12 UTC ≈ 7:12am ET. Off the hour deliberately — GitHub delays
-    # scheduled jobs most heavily at :00, and FRED publishes on the hour.
-    - cron: '12 11 * * 1-5'
+    # Checks 3x/day instead of once — a single 7:12am ET check kept showing
+    # stale data for whichever FRED series hadn't posted its update yet by
+    # that specific moment (confirmed live: DGS10's Monday value existed on
+    # FRED by midday but the single morning check had already run and
+    # missed it, so it sat showing Friday's value until the *next* day's
+    # check — which then had the same problem with whatever posted late
+    # that day, a rolling lag that never closes on its own). FRED series
+    # post at different times of day (equity closes, Treasury H.15 data,
+    # Fed funds effective rate), so multiple passes through the day is what
+    # actually catches each one same-day rather than one shot at a single
+    # fixed hour. Off the hour deliberately, same reasoning as the earnings
+    # tracker: GitHub delays scheduled jobs most heavily right at :00.
+    - cron: '12 11,17,22 * * 1-5'   # ~7:12am, 1:12pm, 6:12pm ET, weekdays
   workflow_dispatch:
 
 permissions:
@@ -55,15 +65,32 @@ jobs:
           HOLDING_TICKERS: ${{ secrets.HOLDING_TICKERS }}
         run: python3 macro-tracker/scripts/scan_news.py /tmp/old_macro_data.json
 
+      # Retries on a rejected push instead of failing outright — same fix
+      # already applied to the earnings tracker for the same reason: 3x/day
+      # instead of once means two runs (or a manual trigger overlapping the
+      # schedule) can now plausibly overlap. Resets to whatever the other
+      # run already pushed rather than rebasing: docs/macro/data.json is
+      # entirely regenerated from FRED/NewsAPI every run, so there's never
+      # anything here worth preserving through a merge.
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain docs/macro)" ]; then
-            git add docs/macro
-            git commit -m "Macro refresh $(date -u +%Y-%m-%d)"
-            git push
-            echo "pushed"
-          else
+          if [ -z "$(git status --porcelain docs/macro)" ]; then
             echo "no change"
+            exit 0
           fi
+          git add docs/macro
+          git commit -m "Macro refresh $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "pushed"
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt) — another run already landed; adopting it"
+            git fetch origin main
+            git reset --hard origin/main
+            sleep $((attempt * 3))
+          done
+          echo "still rejected after 3 attempts — leaving main as the other run(s) left it" >&2
+          exit 0
