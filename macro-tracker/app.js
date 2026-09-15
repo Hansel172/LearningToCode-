@@ -2,8 +2,9 @@
    No framework, no build step. The data is already on window by the time
    this runs, because bundle.js is a plain script tag loaded before it. */
 
-const LIVE   = window.__LIVE__   || { market: {}, macro: {}, errors: [] };
-const THEMES = window.__THEMES__ || { themes: [], catalysts: [] };
+const LIVE    = window.__LIVE__    || { market: {}, macro: {}, errors: [] };
+const THEMES  = window.__THEMES__  || { themes: [], catalysts: [] };
+const PENDING = window.__PENDING__ || [];
 
 const STATUS = {
   green:  { color: 'var(--green)',  label: 'Positive'   },
@@ -94,18 +95,65 @@ function daysUntil(iso) {
   return `in ${diff}d`;
 }
 
+// A macro data print (CPI/PPI/FOMC-type) and a corporate deal are different
+// kinds of "what to watch" — lumping an acquisition in with a Fed decision
+// under one undifferentiated list made it easy to miss that a deal-type
+// catalyst had even happened. Undated/unrecognized types fall back to
+// "macro" rather than breaking, since most entries so far have been that.
+const CATALYST_TYPE = {
+  macro:       { color: 'var(--blue)',   label: 'Macro'       },
+  earnings:    { color: 'var(--yellow)', label: 'Earnings'    },
+  partnership: { color: 'var(--green)',  label: 'Partnership' },
+  acquisition: { color: 'var(--orange)', label: 'Acquisition' },
+};
+
 function catalysts(list) {
   if (!list || !list.length) return '';
   const rows = [...list]
     .sort((a, b) => a.date.localeCompare(b.date))
-    .map(c => `<div class="cat-row">
+    .map(c => {
+      const t = CATALYST_TYPE[c.type] || CATALYST_TYPE.macro;
+      return `<div class="cat-row">
       <div class="cat-d">${esc(c.date)}<span class="days">${daysUntil(c.date)}</span></div>
-      <div><div class="cat-l">${esc(c.label)}</div>
-           <div class="cat-w">${esc(c.why)}</div></div>
-    </div>`).join('');
+      <div>
+        <div class="cat-l">
+          <span class="cat-type" style="color:${t.color};border-color:${t.color}">${t.label}</span>
+          ${esc(c.label)}
+        </div>
+        <div class="cat-w">${esc(c.why)}</div>
+      </div>
+    </div>`;
+    }).join('');
   return `<section class="card cat">
     <div class="card-head"><h2>What to Watch</h2>
       <span class="badge">Next catalysts</span></div>
+    ${rows}
+  </section>`;
+}
+
+/* Auto-detected, never auto-verified — see scan_news.py for why. Rendered
+   as an unmistakably provisional list (not a themes card, no "why it
+   matters" narrative) so it never reads as already-vetted analysis the way
+   a catalyst entry does. Ages out on its own after 7 days server-side, so
+   there's nothing to dismiss here — just something to notice and, if it's
+   real, go verify and turn into an actual catalyst entry. */
+function pendingDeals(list) {
+  if (!list || !list.length) return '';
+  const rows = [...list]
+    .sort((a, b) => (b.detectedAt || '').localeCompare(a.detectedAt || ''))
+    .map(p => `<div class="pd-row">
+      <span class="pd-ticker">${esc(p.ticker)}</span>
+      <div>
+        <a class="pd-headline" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.headline)}</a>
+        <div class="pd-meta">${esc(p.source)} &middot; ${daysUntil((p.publishedAt || '').slice(0, 10))}</div>
+      </div>
+    </div>`).join('');
+  return `<section class="card pending">
+    <div class="card-head"><h2>Needs a Look</h2>
+      <span class="badge">Unverified</span></div>
+    <div class="pd-note">Auto-detected from headlines mentioning a held ticker plus an
+      acquisition/partnership keyword — not yet checked against a primary source.
+      Verify before treating as fact.</div>
     ${rows}
   </section>`;
 }
@@ -126,6 +174,7 @@ function render() {
     ? `<div class="err">Some series failed to refresh: ${esc(errs.join(' · '))}</div>` : '';
 
   document.getElementById('grid').innerHTML = (THEMES.themes || []).map(card).join('');
+  document.getElementById('pending').innerHTML = pendingDeals(PENDING);
   document.getElementById('catalysts').innerHTML = catalysts(THEMES.catalysts);
 
   const stamp = LIVE.updated ? new Date(LIVE.updated).toLocaleString() : 'never';

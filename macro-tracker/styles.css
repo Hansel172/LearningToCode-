@@ -152,10 +152,35 @@ body {
 @media (max-width: 560px) { .cat-row { grid-template-columns: 1fr; gap: 3px; } }
 .cat-d { font-family: var(--mono); font-size: 12.5px; color: var(--blue); }
 .cat-l { font-size: 14px; font-weight: 500; }
+.cat-type {
+  font-family: var(--body); font-size: 9px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  padding: 2px 7px; border-radius: 20px; border: 1px solid;
+  margin-right: 8px; white-space: nowrap; vertical-align: 1px;
+}
 .cat-w { font-size: 12.5px; color: var(--muted); line-height: 1.5; margin-top: 2px; }
 .days {
   font-family: var(--mono); font-size: 10px; color: var(--muted); display: block;
 }
+
+/* ── pending deals (auto-detected, unverified) ─────────────────────────
+   Deliberately plainer than a theme card or catalyst row — no colored
+   status border, no "why it matters" prose — so it never reads as
+   already-vetted analysis the way those do. */
+.pending { margin-top: 22px; --s: var(--yellow); }
+.pd-note {
+  font-size: 12.5px; color: var(--muted); line-height: 1.5;
+  padding-bottom: 10px; border-bottom: 1px solid var(--border);
+}
+.pd-row {
+  display: grid; grid-template-columns: 56px 1fr; gap: 16px;
+  padding: 12px 0; border-top: 1px solid var(--border); align-items: start;
+}
+@media (max-width: 560px) { .pd-row { grid-template-columns: 1fr; gap: 3px; } }
+.pd-ticker { font-family: var(--mono); font-size: 12.5px; color: var(--yellow); font-weight: 500; }
+.pd-headline { font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; }
+.pd-headline:hover { text-decoration: underline; }
+.pd-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
 footer {
   margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--border);

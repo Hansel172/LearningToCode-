@@ -108,12 +108,18 @@ def main():
     const d = await r.json();
     window.__LIVE__ = d.live;
     window.__THEMES__ = d.themes;
+    window.__PENDING__ = d.pending_deals;
   } catch (e) {
     // Offline or fetch failed — fall back to whatever the service worker cached.
     console.warn('Live fetch failed, using cache:', e.message);
     try {
       const c = await caches.match('data.json');
-      if (c) { const d = await c.json(); window.__LIVE__ = d.live; window.__THEMES__ = d.themes; }
+      if (c) {
+        const d = await c.json();
+        window.__LIVE__ = d.live;
+        window.__THEMES__ = d.themes;
+        window.__PENDING__ = d.pending_deals;
+      }
     } catch (_) {}
     window.__STALE__ = true;
   }
@@ -143,9 +149,18 @@ def main():
         ],
     }, indent=2) + "\n")
 
-    # Network-first for data so a refresh always tries live before cache;
-    # cache-first for the shell so it opens instantly and works offline.
-    (OUT / "sw.js").write_text("""const SHELL = 'macro-shell-v1';
+    # v2: network-first for EVERYTHING, not just data.json. The v1 template
+    # here was cache-first for the shell (app.js, boot.js, styles.css,
+    # index.html), which meant a code change never reached an
+    # already-installed phone until sw.js itself changed byte-for-byte —
+    # nothing else triggers a browser to re-check it. Fixed once already by
+    # hand-editing the *output* file directly, but this function is what
+    # actually regenerates that output on every run — the hand-edit would
+    # have been silently reverted by the very next scheduled refresh, since
+    # this template, not the file it writes, is the real source. Fixed here
+    # instead, and the cache name bumped v1 -> v2 so a browser that already
+    # has v1 cached actually notices this file changed at all.
+    (OUT / "sw.js").write_text("""const SHELL = 'macro-shell-v2';
 const FILES = ['./', 'index.html', 'styles.css', 'app.js', 'boot.js',
                'manifest.webmanifest'];
 
@@ -160,15 +175,15 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-  const url = new URL(e.request.url);
-  if (url.pathname.endsWith('data.json')) {
-    e.respondWith(fetch(e.request)
-      .then(r => { const copy = r.clone();
-        caches.open(SHELL).then(c => c.put('data.json', copy)); return r; })
-      .catch(() => caches.match('data.json')));
-    return;
-  }
-  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
+  e.respondWith(
+    fetch(e.request)
+      .then(r => {
+        const copy = r.clone();
+        caches.open(SHELL).then(c => c.put(e.request, copy));
+        return r;
+      })
+      .catch(() => caches.match(e.request))
+  );
 });
 """)
 

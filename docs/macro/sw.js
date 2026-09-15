@@ -1,11 +1,3 @@
-// v2: the shell files (app.js, boot.js, styles.css, index.html) were
-// cache-first, which meant a code or content change never reached an
-// already-installed phone until the SW file itself changed — nothing
-// forces a browser to re-check a service worker otherwise. Same bug, same
-// fix already applied to the earnings tracker's sw.js: network-first
-// everywhere, same as data.json already was. The cache name bump below is
-// also required — it's what makes the browser notice this file changed at
-// all.
 const SHELL = 'macro-shell-v2';
 const FILES = ['./', 'index.html', 'styles.css', 'app.js', 'boot.js',
                'manifest.webmanifest'];

@@ -6,12 +6,18 @@
     const d = await r.json();
     window.__LIVE__ = d.live;
     window.__THEMES__ = d.themes;
+    window.__PENDING__ = d.pending_deals;
   } catch (e) {
     // Offline or fetch failed — fall back to whatever the service worker cached.
     console.warn('Live fetch failed, using cache:', e.message);
     try {
       const c = await caches.match('data.json');
-      if (c) { const d = await c.json(); window.__LIVE__ = d.live; window.__THEMES__ = d.themes; }
+      if (c) {
+        const d = await c.json();
+        window.__LIVE__ = d.live;
+        window.__THEMES__ = d.themes;
+        window.__PENDING__ = d.pending_deals;
+      }
     } catch (_) {}
     window.__STALE__ = true;
   }
