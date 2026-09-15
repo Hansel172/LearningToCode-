@@ -94,15 +94,35 @@ function daysUntil(iso) {
   return `in ${diff}d`;
 }
 
+// A macro data print (CPI/PPI/FOMC-type) and a corporate deal are different
+// kinds of "what to watch" — lumping an acquisition in with a Fed decision
+// under one undifferentiated list made it easy to miss that a deal-type
+// catalyst had even happened. Undated/unrecognized types fall back to
+// "macro" rather than breaking, since most entries so far have been that.
+const CATALYST_TYPE = {
+  macro:       { color: 'var(--blue)',   label: 'Macro'       },
+  earnings:    { color: 'var(--yellow)', label: 'Earnings'    },
+  partnership: { color: 'var(--green)',  label: 'Partnership' },
+  acquisition: { color: 'var(--orange)', label: 'Acquisition' },
+};
+
 function catalysts(list) {
   if (!list || !list.length) return '';
   const rows = [...list]
     .sort((a, b) => a.date.localeCompare(b.date))
-    .map(c => `<div class="cat-row">
+    .map(c => {
+      const t = CATALYST_TYPE[c.type] || CATALYST_TYPE.macro;
+      return `<div class="cat-row">
       <div class="cat-d">${esc(c.date)}<span class="days">${daysUntil(c.date)}</span></div>
-      <div><div class="cat-l">${esc(c.label)}</div>
-           <div class="cat-w">${esc(c.why)}</div></div>
-    </div>`).join('');
+      <div>
+        <div class="cat-l">
+          <span class="cat-type" style="color:${t.color};border-color:${t.color}">${t.label}</span>
+          ${esc(c.label)}
+        </div>
+        <div class="cat-w">${esc(c.why)}</div>
+      </div>
+    </div>`;
+    }).join('');
   return `<section class="card cat">
     <div class="card-head"><h2>What to Watch</h2>
       <span class="badge">Next catalysts</span></div>
