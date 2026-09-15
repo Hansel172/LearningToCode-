@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install httpx
+      - run: pip install httpx python-dotenv
 
       # themes.json is gitignored (it holds portfolio detail), so the runner
       # won't have it. Carry forward whatever is already published rather than
@@ -33,11 +33,27 @@ jobs:
             echo "carried forward existing analysis"
           fi
 
+      # build_public.py rebuilds data.json from scratch every run (live +
+      # themes only) — it has no concept of pending_deals, so that key would
+      # silently vanish before scan_news.py ever saw it without this.
+      - name: Snapshot previous data
+        run: cp docs/macro/data.json /tmp/old_macro_data.json
+
       - name: Refresh numbers
         run: python3 macro-tracker/scripts/refresh.py
 
       - name: Build public copy
         run: python3 macro-tracker/scripts/build_public.py
+
+      # Detects, never auto-writes, M&A/partnership headlines for held
+      # tickers — see scripts/scan_news.py for why this stops short of full
+      # automation. Same HOLDING_TICKERS secret the earnings tracker uses
+      # (same real-world holdings, no reason for a second list of them).
+      - name: Scan for deal news
+        env:
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+          HOLDING_TICKERS: ${{ secrets.HOLDING_TICKERS }}
+        run: python3 macro-tracker/scripts/scan_news.py /tmp/old_macro_data.json
 
       - name: Commit if changed
         run: |
