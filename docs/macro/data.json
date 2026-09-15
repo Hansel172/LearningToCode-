@@ -12,86 +12,86 @@
       {
         "id": "memory",
         "name": "Memory Supply Chain",
-        "status": "green",
-        "whatChanged": "The memory shortage stopped being cyclical and started looking structural. Data centres now consume roughly 70% of all memory produced globally, and the three makers who control 95%+ of DRAM have redirected capacity toward high-bandwidth memory for AI accelerators \u2014 starving everything else. SK Hynix's CEO said in July the shortage will likely persist past 2030. Micron's CEO said they can fill only half to two-thirds of demand into 2027.",
+        "status": "orange",
+        "whatChanged": "The shortage escalated sharply past what was already described as structural. Samsung and SK Hynix's finished DRAM inventory fell below 10 days of supply on September 7 \u2014 the tightest point of the cycle. SK Hynix says its HBM, DRAM, and NAND capacity is essentially sold out for all of 2026. Micron has exited the consumer memory market entirely to focus only on enterprise and AI customers. DRAM spot prices are up roughly 700% over the past year, far beyond the price rise already priced into this theme. Samsung's memory chief now expects significant shortages to continue through at least 2027, and SK Hynix isn't targeting new cleanroom capacity until 2028-2029.",
         "dataPoints": [
           {
-            "label": "DDR5 contract price",
-            "value": "+100%",
-            "detail": "to ~$19.50/unit from ~$7 in 2025",
-            "source": "TrendForce / Astute Group"
+            "label": "DRAM inventory",
+            "value": "<10 days",
+            "detail": "Samsung/SK Hynix finished DRAM \u2014 lowest of the cycle",
+            "source": "Tom's Hardware, Sep 7"
           },
           {
-            "label": "Mobile DRAM Q/Q ask",
-            "value": "+80%",
-            "detail": "Samsung and Micron sought >80%; SK Hynix opened 55-60%",
-            "source": "TrendForce"
+            "label": "DRAM spot price",
+            "value": "~+700%",
+            "detail": "over the past year",
+            "source": "Bloomberg, Jul 2026"
           },
           {
-            "label": "DRAM average selling price",
-            "value": "+60%",
-            "detail": "quarter over quarter, low-60s range",
-            "source": "TrendForce"
+            "label": "2026 HBM capacity",
+            "value": "sold out",
+            "detail": "SK Hynix: essentially sold out for all of 2026",
+            "source": "SK Hynix earnings call"
           },
           {
-            "label": "Datacentre share of memory output",
-            "value": "~70%",
-            "detail": "of all memory chips produced worldwide",
-            "source": "Network World"
+            "label": "Micron consumer memory",
+            "value": "exited",
+            "detail": "shifted entirely to enterprise/AI customers",
+            "source": "Tom's Hardware"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "DRAM ETF (watchlist)",
             "rating": "positive",
-            "reason": "This is the thesis, and it is playing out \u2014 pricing power across every name on your list simultaneously."
+            "reason": "The thesis didn\u2019t just play out, it accelerated \u2014 a 700% spot price move and sold-out 2026 capacity is pricing power with no near-term ceiling."
           },
           {
             "holding": "NVDA",
             "rating": "positive",
-            "reason": "HBM demand is the direct cause of the shortage; NVDA sits upstream of it as the demand driver."
+            "reason": "HBM demand is the direct cause of the shortage; NVDA sits upstream of it as the demand driver, and sold-out 2026 capacity confirms it isn\u2019t slowing."
           },
           {
             "holding": "AAPL",
             "rating": "negative",
-            "reason": "Buys mobile DRAM at enormous scale. An 80% input price rise is real gross-margin pressure they cannot fully pass to consumers."
+            "reason": "Buys mobile DRAM at enormous scale. A ~700% input cost move (up from the 80% figure this theme opened with) is a materially larger gross-margin threat than first described."
           },
           {
             "holding": "MSFT",
             "rating": "neutral",
-            "reason": "Server memory costs rise, but Azure pricing absorbs it and AI revenue growth outweighs the input hit."
+            "reason": "Server memory costs rise, but Azure pricing absorbs it and AI revenue growth outweighs the input hit \u2014 unchanged, though worth re-checking if the escalation continues."
           }
         ],
-        "watch": "Micron earnings for guidance on how far into 2027 the shortage extends, and whether any maker announces new non-HBM capacity."
+        "watch": "Whether new cleanroom capacity (SK Hynix isn't targeting any until 2028-2029) starts before demand does, whether Micron's full exit from consumer memory pushes AAPL toward alternative suppliers, and whether spot prices keep climbing past +700%."
       },
       {
         "id": "fed-rates",
         "name": "Fed & Rates",
         "status": "orange",
-        "whatChanged": "The gap between producer and consumer inflation has become the thing to watch. PPI is running at 10.1% year over year against CPI at 3.7% \u2014 producers are absorbing cost increases they have not yet passed on. That gap closes one of two ways: margins compress, or consumer prices catch up. Neither is good for a Fed hoping to cut.",
+        "whatChanged": "The PPI-CPI gap has barely narrowed heading into the September 17 FOMC decision \u2014 PPI at 9.85% year over year against CPI at 3.71%, still roughly a 6-point gap. What's new: the Hormuz-driven oil shock (see Defense & Geopolitics) adds a fresh inflation input right at the moment the Fed has to decide whether to cut, and the 10-year Treasury has already climbed to 4.96% from 4.63% in early August \u2014 the market pricing in some of that risk ahead of the decision.",
         "dataPoints": [
           {
             "label": "Fed funds rate",
             "value": "3.63%",
-            "detail": "as of Aug 4",
+            "detail": "as of Sep 11",
             "source": "FRED DFF"
           },
           {
             "label": "10-year Treasury",
-            "value": "4.63%",
-            "detail": "as of Aug 4",
+            "value": "4.96%",
+            "detail": "as of Sep 11, up from 4.63% in early August",
             "source": "FRED DGS10"
           },
           {
             "label": "CPI",
-            "value": "3.73%",
-            "detail": "year over year, June",
+            "value": "3.71%",
+            "detail": "year over year, latest available print",
             "source": "FRED CPIAUCSL"
           },
           {
             "label": "PPI",
-            "value": "10.11%",
-            "detail": "year over year, June \u2014 the outlier",
+            "value": "9.85%",
+            "detail": "year over year, latest available print \u2014 still the outlier",
             "source": "FRED PPIACO"
           }
         ],
@@ -99,17 +99,17 @@
           {
             "holding": "Cash",
             "rating": "positive",
-            "reason": "Cash keeps earning while rates stay elevated. The longer cuts are delayed, the longer this holds."
+            "reason": "Cash keeps earning while rates stay elevated, and the fresh oil-driven inflation input makes a September 17 cut less likely, not more."
           },
           {
             "holding": "VOO / VTI / QQQM",
             "rating": "negative",
-            "reason": "Equity valuations are priced for cuts. A PPI-driven delay removes a support the market has already banked."
+            "reason": "Equity valuations are priced for cuts. A PPI-driven delay, now compounded by an oil shock, removes a support the market has already banked."
           },
           {
             "holding": "Bitcoin / IBIT",
             "rating": "negative",
-            "reason": "The most liquidity-sensitive thing you own. Higher-for-longer is a direct headwind."
+            "reason": "The most liquidity-sensitive thing you own. Higher-for-longer, now with an oil shock layered on top, is a direct headwind."
           },
           {
             "holding": "AAPL / MSFT / NVDA",
@@ -117,32 +117,38 @@
             "reason": "Long-duration cash flows are rate-sensitive, but earnings strength has been offsetting it so far."
           }
         ],
-        "watch": "Next CPI print, and whether PPI decelerates. If PPI stays double-digit while CPI sits near 3.7%, something has to give."
+        "watch": "The September 17 FOMC decision \u2014 now a referendum on two inflation inputs at once: the persistent PPI-CPI gap and the new oil shock from the Strait of Hormuz situation."
       },
       {
         "id": "ai-infra",
         "name": "AI Infrastructure",
         "status": "green",
-        "whatChanged": "Hyperscalers reaffirmed aggressive capex plans on earnings, which resolved the capex-sustainability scare that had knocked chip names down mid-week. Around 86% of S&P 500 companies reporting have beaten expectations. The spending cycle is intact for now.",
+        "whatChanged": "The capex story didn't just hold, it grew. The big four hyperscalers (Microsoft, Meta, Amazon, Google) now guide to roughly $732.5 billion in combined 2026 capex \u2014 up about 77% year over year \u2014 with H1 2026 actual spend alone already at $301 billion. Demand for AI infrastructure capacity is outpacing even this: hyperscale operators say they can't build data centers fast enough to keep up.",
         "dataPoints": [
           {
-            "label": "S&P 500 earnings beat rate",
-            "value": "~86%",
-            "detail": "of companies reported so far",
-            "source": "Econcurrents, Aug 3"
+            "label": "2026 combined capex guidance",
+            "value": "$732.5B",
+            "detail": "Microsoft, Meta, Amazon, Google \u2014 up ~77% YoY",
+            "source": "industry capex trackers, Sep 2026"
           },
           {
-            "label": "TSMC Q2 profit",
-            "value": "+77% YoY",
-            "detail": "record quarter; 2026 revenue growth guided above 40%",
-            "source": "TSMC Q2 report"
+            "label": "H1 2026 actual spend",
+            "value": "$301B",
+            "detail": "same four companies, first half only",
+            "source": "industry capex trackers"
+          },
+          {
+            "label": "Hyperscaler capacity",
+            "value": "can\u2019t keep pace",
+            "detail": "operators say they can\u2019t build data centers fast enough for demand",
+            "source": "industry reporting, Sep 2026"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "NVDA",
             "rating": "positive",
-            "reason": "Direct beneficiary. Hyperscaler capex converts almost mechanically into NVDA revenue."
+            "reason": "Direct beneficiary. Hyperscaler capex converts almost mechanically into NVDA revenue, and guidance just got raised, not cut."
           },
           {
             "holding": "MSFT",
@@ -155,39 +161,45 @@
             "reason": "Heavily weighted to exactly these names, which cuts both ways but is working now."
           }
         ],
-        "watch": "Whether capex guidance holds through the next quarter, or any hyperscaler signals digestion. That is the single point of failure for this theme."
+        "watch": "Whether actual spend through Q3/Q4 tracks the raised guidance, or any hyperscaler signals a pullback \u2014 the single point of failure for this theme hasn't changed, the stakes just got bigger."
       },
       {
         "id": "tariffs",
         "name": "Tariffs",
-        "status": "blue",
-        "whatChanged": "Beijing and Washington floated cutting roughly $30bn in tariffs, with China's Ministry of Commerce seeking public input \u2014 an early procedural step, not an agreement. Meanwhile semiconductor and hardware firms with China exposure remain the most tariff-sensitive corner of the market.",
+        "status": "yellow",
+        "whatChanged": "Talks moved past the procedural stage. As of September 10, negotiators are actively working reciprocal cuts of roughly $30 billion in tariffs on each side's 'nonsensitive' goods, as part of broader talks toward a bilateral Board of Trade. A truce expires November 10, creating real urgency, and a leaders' meeting was expected within about two weeks of that date. Targeted reductions look more likely than a comprehensive deal.",
         "dataPoints": [
           {
-            "label": "Proposed tariff reduction",
-            "value": "~$30bn",
-            "detail": "US-China, public comment stage",
-            "source": "China Ministry of Commerce"
+            "label": "Proposed reciprocal cuts",
+            "value": "$30bn each side",
+            "detail": "on each side's 'nonsensitive' goods",
+            "source": "US-China trade reporting, Sep 10"
+          },
+          {
+            "label": "Truce deadline",
+            "value": "Nov 10, 2026",
+            "detail": "creates urgency for a deal before expiry",
+            "source": "US-China trade reporting"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "AAPL",
             "rating": "neutral",
-            "reason": "Largest China manufacturing exposure you own. Genuine upside if this lands, genuine risk if talks reverse \u2014 currently unresolved in both directions."
+            "reason": "Largest China manufacturing exposure you own. Genuine upside if the Nov 10 deadline produces a deal, genuine risk if talks stall and the truce lapses \u2014 still unresolved in both directions."
           },
           {
             "holding": "NVDA",
             "rating": "neutral",
-            "reason": "China export restrictions matter more to NVDA than tariffs per se; this proposal does not address them."
+            "reason": "China export restrictions matter more to NVDA than tariffs per se; this negotiation doesn\u2019t address them."
           },
           {
             "holding": "EM sleeve",
             "rating": "positive",
-            "reason": "Tariff de-escalation is broadly supportive of Chinese and Asian equities, which anchor most EM indices."
+            "reason": "Active tariff-reduction talks are broadly supportive of Chinese and Asian equities, which anchor most EM indices, more so now than at the procedural stage."
           }
         ],
-        "watch": "Whether the comment period produces an actual schedule. Until then this is noise."
+        "watch": "Whether the leaders' meeting (expected within about two weeks of Sep 10) produces an actual signed schedule before the November 10 truce deadline, or whether talks stall and the truce lapses."
       },
       {
         "id": "defense-geo",
@@ -243,41 +255,41 @@
         "id": "emerging-markets",
         "name": "Emerging Markets",
         "status": "yellow",
-        "whatChanged": "China's equity market rallied on AI demand while its factories contracted \u2014 July manufacturing PMI fell into contraction for the first time since February. Brazil is cutting rates into fast-falling inflation. Mexico's GDP is rebounding on nearshoring. India's RBI was expected to hold at 5.25%.",
+        "whatChanged": "China's picture got more nuanced, not clearer: the official NBS manufacturing PMI improved slightly to 49.8 in August (from 49.2) but stayed in contraction for a second straight month, while the private Caixin PMI showed outright expansion at 51.5 \u2014 official and private surveys are telling different stories. India's RBI held its repo rate at 5.25% for a fourth consecutive meeting, citing a weakening rupee and Middle East-driven uncertainty. Brazil paused its cutting cycle at 14.25% after three straight cuts, and raised its own 2026 inflation projection to 5.2% \u2014 above its 4.5% ceiling.",
         "dataPoints": [
           {
-            "label": "Shanghai Composite",
-            "value": "3,832",
-            "detail": "+0.72% Friday, but -6.81% over the month",
-            "source": "Trading Economics"
+            "label": "China NBS manufacturing PMI",
+            "value": "49.8",
+            "detail": "August, up from 49.2 in July but still contraction (2nd month)",
+            "source": "NBS, Aug 2026"
           },
           {
-            "label": "China manufacturing PMI",
-            "value": "contraction",
-            "detail": "first time since February",
-            "source": "NBS via Vanguard"
+            "label": "China Caixin PMI (private)",
+            "value": "51.5",
+            "detail": "August, expansion \u2014 diverges from the official reading",
+            "source": "Caixin / S&P Global"
           },
           {
-            "label": "Brazil IPCA-15",
-            "value": "0.06%",
-            "detail": "mid-July, monthly \u2014 very low",
-            "source": "IBGE via Rio Times"
+            "label": "India repo rate",
+            "value": "5.25%",
+            "detail": "held for a 4th consecutive meeting",
+            "source": "RBI, Aug 2026"
           },
           {
-            "label": "Mexico GDP",
-            "value": "~1.5% YoY",
-            "detail": "rebounding from 0.2% on nearshoring",
-            "source": "Rio Times"
+            "label": "Brazil Selic rate",
+            "value": "14.25%",
+            "detail": "cutting cycle paused; 2026 inflation projection raised to 5.2% (above 4.5% ceiling)",
+            "source": "Brazil central bank"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "EM sleeve",
             "rating": "neutral",
-            "reason": "Your only direct EM exposure. China dominates most EM indices, and China is currently two contradictory stories at once \u2014 strong exports, weak domestic demand."
+            "reason": "Your only direct EM exposure. China\u2019s official/private PMI divergence keeps the domestic demand picture genuinely unclear, while India and Brazil both signal central banks in wait-and-see mode rather than a clear easing or tightening bias."
           }
         ],
-        "watch": "Whether China's PMI contraction persists into August. One month is noise; two is a trend."
+        "watch": "Whether China's official and private PMI readings converge in September, and whether Brazil's paused cutting cycle resumes or holds given the higher inflation projection."
       }
     ],
     "catalysts": [
