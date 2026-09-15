@@ -386,6 +386,12 @@
         "label": "Micron earnings (approx)",
         "why": "The cleanest public read on how long the memory shortage runs.",
         "type": "earnings"
+      },
+      {
+        "date": "2026-09-03",
+        "label": "NVIDIA to acquire Hugging Face ($12.93B)",
+        "why": "Direct expansion of NVDA's AI platform reach into model distribution \u2014 18M+ developers, 3M+ models on the platform today. NVIDIA committed Hugging Face stays open (no NVIDIA-compute requirement, continued multi-cloud/multi-accelerator support), so this reads as a distribution/ecosystem play rather than a lock-in move.",
+        "type": "acquisition"
       }
     ]
   }
