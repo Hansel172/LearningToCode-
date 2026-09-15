@@ -1,24 +1,24 @@
 {
   "live": {
-    "updated": "2026-09-14T16:56:48+00:00",
+    "updated": "2026-09-15T13:11:03+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7656.98,
+        "value": 7619.98,
         "unit": "",
         "note": "last close",
-        "changePct": 0.86,
-        "asOf": "2026-09-11",
+        "changePct": -0.48,
+        "asOf": "2026-09-14",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26333.04,
+        "value": 26186.41,
         "unit": "",
         "note": "last close",
-        "changePct": 0.96,
-        "asOf": "2026-09-11",
+        "changePct": -0.56,
+        "asOf": "2026-09-14",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
@@ -40,17 +40,17 @@
         "unit": "%",
         "note": "last close",
         "changePct": 0.0,
-        "asOf": "2026-09-10",
+        "asOf": "2026-09-11",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 4.95,
+        "value": 4.96,
         "unit": "%",
         "note": "last close",
-        "changePct": 2.48,
-        "asOf": "2026-09-10",
+        "changePct": 0.2,
+        "asOf": "2026-09-11",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -394,5 +394,15 @@
         "type": "acquisition"
       }
     ]
-  }
+  },
+  "pending_deals": [
+    {
+      "ticker": "MSFT",
+      "headline": "Abacus Launches AI\u00b3 Initiative to Accelerate Enterprise AI Adoption for Regulated Industries",
+      "url": "https://www.prnewswire.com/news-releases/abacus-launches-ai-initiative-to-accelerate-enterprise-ai-adoption-for-regulated-industries-302876630.html",
+      "source": "PRNewswire",
+      "publishedAt": "2026-09-14T13:00:00Z",
+      "detectedAt": "2026-09-15T13:11:04+00:00"
+    }
+  ]
 }
