@@ -354,32 +354,38 @@
       {
         "date": "2026-08-12",
         "label": "US CPI print",
-        "why": "The PPI-CPI gap is the open question. This is the read on whether it is closing."
+        "why": "The PPI-CPI gap is the open question. This is the read on whether it is closing.",
+        "type": "macro"
       },
       {
         "date": "2026-08-14",
         "label": "US PPI print",
-        "why": "Whether double-digit producer inflation decelerates or persists."
+        "why": "Whether double-digit producer inflation decelerates or persists.",
+        "type": "macro"
       },
       {
         "date": "2026-08-21",
         "label": "Jackson Hole symposium begins",
-        "why": "Fed signalling venue. Historically where policy pivots get telegraphed."
+        "why": "Fed signalling venue. Historically where policy pivots get telegraphed.",
+        "type": "macro"
       },
       {
         "date": "2026-09-10",
         "label": "ECB decision",
-        "why": "Markets moved toward pricing a hike after hot July eurozone inflation \u2014 against the global easing narrative."
+        "why": "Markets moved toward pricing a hike after hot July eurozone inflation \u2014 against the global easing narrative.",
+        "type": "macro"
       },
       {
         "date": "2026-09-17",
         "label": "FOMC decision",
-        "why": "Whether the PPI problem delays the cut equities are priced for."
+        "why": "Whether the PPI problem delays the cut equities are priced for.",
+        "type": "macro"
       },
       {
         "date": "2026-09-25",
         "label": "Micron earnings (approx)",
-        "why": "The cleanest public read on how long the memory shortage runs."
+        "why": "The cleanest public read on how long the memory shortage runs.",
+        "type": "earnings"
       }
     ]
   }
