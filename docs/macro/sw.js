@@ -1,4 +1,12 @@
-const SHELL = 'macro-shell-v1';
+// v2: the shell files (app.js, boot.js, styles.css, index.html) were
+// cache-first, which meant a code or content change never reached an
+// already-installed phone until the SW file itself changed — nothing
+// forces a browser to re-check a service worker otherwise. Same bug, same
+// fix already applied to the earnings tracker's sw.js: network-first
+// everywhere, same as data.json already was. The cache name bump below is
+// also required — it's what makes the browser notice this file changed at
+// all.
+const SHELL = 'macro-shell-v2';
 const FILES = ['./', 'index.html', 'styles.css', 'app.js', 'boot.js',
                'manifest.webmanifest'];
 
@@ -13,13 +21,13 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-  const url = new URL(e.request.url);
-  if (url.pathname.endsWith('data.json')) {
-    e.respondWith(fetch(e.request)
-      .then(r => { const copy = r.clone();
-        caches.open(SHELL).then(c => c.put('data.json', copy)); return r; })
-      .catch(() => caches.match('data.json')));
-    return;
-  }
-  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
+  e.respondWith(
+    fetch(e.request)
+      .then(r => {
+        const copy = r.clone();
+        caches.open(SHELL).then(c => c.put(e.request, copy));
+        return r;
+      })
+      .catch(() => caches.match(e.request))
+  );
 });
