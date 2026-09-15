@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-15T13:11:03+00:00",
+    "updated": "2026-09-15T15:21:30+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -24,13 +24,23 @@
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 15.84,
+        "value": 17.1,
         "unit": "",
         "note": "last close",
-        "changePct": -11.21,
-        "asOf": "2026-09-11",
+        "changePct": 7.95,
+        "asOf": "2026-09-14",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
+      },
+      "DCOILWTICO": {
+        "label": "WTI Crude",
+        "value": 97.26,
+        "unit": "",
+        "note": "last close",
+        "changePct": 3.24,
+        "asOf": "2026-09-09",
+        "source": "FRED DCOILWTICO",
+        "sourceUrl": "https://fred.stlouisfed.org/series/DCOILWTICO"
       }
     },
     "macro": {
@@ -78,7 +88,7 @@
     "errors": []
   },
   "themes": {
-    "updated": "2026-08-06",
+    "updated": "2026-09-15",
     "note": "Qualitative layer. Written by a person or by Claude \u2014 never by the refresh script. Regenerate with: 'update themes.json'",
     "themes": [
       {
@@ -264,41 +274,52 @@
       {
         "id": "defense-geo",
         "name": "Defense & Geopolitics",
-        "status": "yellow",
-        "whatChanged": "Planned US strikes on Iran were called off after a Qatari-brokered arrangement to protect Strait of Hormuz traffic. Oil fell hard on the de-escalation \u2014 Brent down over 5% toward $83, WTI down over 6% below $80. Treasury yields eased as energy-inflation fears cooled. Separately a $76.6bn Navy contract landed.",
+        "status": "orange",
+        "whatChanged": "The Hormuz de-escalation from early August reversed. Strikes between the US and Iran intensified again in early September, and vessel traffic through the Strait of Hormuz has effectively collapsed \u2014 from 100+ ships a day to roughly 5-12. The IEA has called it the largest oil supply disruption in the history of the global oil market, on the order of 20 million barrels a day removed. WTI has moved from the high-$80s to $97+/bbl in under two weeks; Brent is trading near $104-105. Forecasts diverge sharply on what happens next: Goldman Sachs\u2019 base case has Brent easing back toward $85, while Rystad Energy\u2019s scenario puts it above $140 with global recession risk attached.",
         "dataPoints": [
           {
-            "label": "Brent crude",
-            "value": "-5%",
-            "detail": "toward $83/bbl on de-escalation",
-            "source": "Econcurrents, Aug 3"
-          },
-          {
             "label": "WTI crude",
-            "value": "-6%",
-            "detail": "below $80/bbl",
-            "source": "Econcurrents, Aug 3"
+            "value": "$97.26/bbl",
+            "detail": "up from the high-$80s in under two weeks",
+            "source": "FRED DCOILWTICO, Sep 9"
           },
           {
-            "label": "Navy contract",
-            "value": "$76.6bn",
-            "detail": "awarded",
-            "source": "Econcurrents, Aug 3"
+            "label": "Strait of Hormuz traffic",
+            "value": "-95%",
+            "detail": "100+ ships/day down to 5-12",
+            "source": "IEA / Oil & Gas Journal"
+          },
+          {
+            "label": "Supply removed",
+            "value": "~20M bbl/day",
+            "detail": "IEA: largest disruption in the history of the global oil market",
+            "source": "IEA"
+          },
+          {
+            "label": "Price forecast range",
+            "value": "$85\u2013$140+/bbl",
+            "detail": "Goldman Sachs base case vs. Rystad Energy recession scenario",
+            "source": "Bloomberg, Goldman Sachs, Rystad Energy"
           }
         ],
         "portfolioImpact": [
           {
-            "holding": "VOO / VTI",
+            "holding": "Cash",
             "rating": "positive",
-            "reason": "Lower oil removes an inflation input, which indirectly supports the rate path equities are priced for."
+            "reason": "Oil feeds directly into CPI/PPI \u2014 the same PPI-CPI gap already flagged in the Fed & Rates theme \u2014 and a fresh inflation input makes a near-term rate cut less likely. Cash keeps earning while that persists."
+          },
+          {
+            "holding": "VOO / VTI / QQQM",
+            "rating": "negative",
+            "reason": "Exposed on two fronts: an oil-driven inflation resurgence delays the cut equities are priced for, and the Rystad scenario attaches outright recession risk if the Strait stays effectively closed."
           },
           {
             "holding": "Bitcoin / IBIT",
-            "rating": "neutral",
-            "reason": "Geopolitical de-escalation cuts both ways \u2014 less crisis bid, but better liquidity conditions."
+            "rating": "negative",
+            "reason": "The most liquidity-sensitive holding here \u2014 a risk-off shock this size, on top of an already-elevated-rate environment, is a direct headwind, not the mixed read a de-escalation would have been."
           }
         ],
-        "watch": "Whether the Hormuz arrangement holds. This is a de-escalation, not a resolution, and oil reprices fast in either direction."
+        "watch": "Whether the Strait reopens to normal traffic or the closure persists \u2014 Goldman\u2019s $85 base case and Rystad\u2019s $140+/recession scenario diverge entirely on that question. The Sep 17 FOMC decision (already tracked below) is now also a referendum on whether the Fed treats this inflation input as transitory or persistent."
       },
       {
         "id": "emerging-markets",
@@ -391,18 +412,8 @@
         "date": "2026-09-03",
         "label": "NVIDIA to acquire Hugging Face ($12.93B)",
         "why": "Direct expansion of NVDA's AI platform reach into model distribution \u2014 18M+ developers, 3M+ models on the platform today. NVIDIA committed Hugging Face stays open (no NVIDIA-compute requirement, continued multi-cloud/multi-accelerator support), so this reads as a distribution/ecosystem play rather than a lock-in move.",
-        "type": "acquisition"
+        "type": "deal"
       }
     ]
-  },
-  "pending_deals": [
-    {
-      "ticker": "MSFT",
-      "headline": "Abacus Launches AI\u00b3 Initiative to Accelerate Enterprise AI Adoption for Regulated Industries",
-      "url": "https://www.prnewswire.com/news-releases/abacus-launches-ai-initiative-to-accelerate-enterprise-ai-adoption-for-regulated-industries-302876630.html",
-      "source": "PRNewswire",
-      "publishedAt": "2026-09-14T13:00:00Z",
-      "detectedAt": "2026-09-15T13:11:04+00:00"
-    }
-  ]
+  }
 }

@@ -98,21 +98,28 @@ function daysUntil(iso) {
 // A macro data print (CPI/PPI/FOMC-type) and a corporate deal are different
 // kinds of "what to watch" — lumping an acquisition in with a Fed decision
 // under one undifferentiated list made it easy to miss that a deal-type
-// catalyst had even happened. Undated/unrecognized types fall back to
+// catalyst had even happened. Partnership and acquisition started as two
+// separate types but were merged into one "Deal" tag — the distinction
+// wasn't worth a second color to track, and a partnership can be as
+// consequential as an acquisition (or vice versa) depending on terms, which
+// the "why" text already explains better than a label could. Old data
+// tagged with either name still renders correctly via the alias map, so
+// nothing needs to be migrated. Undated/unrecognized types fall back to
 // "macro" rather than breaking, since most entries so far have been that.
 const CATALYST_TYPE = {
-  macro:       { color: 'var(--blue)',   label: 'Macro'       },
-  earnings:    { color: 'var(--yellow)', label: 'Earnings'    },
-  partnership: { color: 'var(--green)',  label: 'Partnership' },
-  acquisition: { color: 'var(--orange)', label: 'Acquisition' },
+  macro:    { color: 'var(--blue)',   label: 'Macro'    },
+  earnings: { color: 'var(--yellow)', label: 'Earnings' },
+  deal:     { color: 'var(--orange)', label: 'Deal'     },
 };
+const CATALYST_TYPE_ALIAS = { partnership: 'deal', acquisition: 'deal' };
 
 function catalysts(list) {
   if (!list || !list.length) return '';
   const rows = [...list]
     .sort((a, b) => a.date.localeCompare(b.date))
     .map(c => {
-      const t = CATALYST_TYPE[c.type] || CATALYST_TYPE.macro;
+      const key = CATALYST_TYPE_ALIAS[c.type] || c.type;
+      const t = CATALYST_TYPE[key] || CATALYST_TYPE.macro;
       return `<div class="cat-row">
       <div class="cat-d">${esc(c.date)}<span class="days">${daysUntil(c.date)}</span></div>
       <div>
@@ -164,7 +171,7 @@ function render() {
       { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
   document.getElementById('snapshot').innerHTML =
-    ['SP500', 'NASDAQCOM', 'VIXCLS'].map(k => tick(LIVE.market[k])).join('');
+    ['SP500', 'NASDAQCOM', 'VIXCLS', 'DCOILWTICO'].map(k => tick(LIVE.market[k])).join('');
 
   document.getElementById('strip').innerHTML =
     ['DFF', 'DGS10', 'CPIAUCSL', 'PPIACO'].map(k => tick(LIVE.macro[k], true)).join('');

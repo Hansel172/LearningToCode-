@@ -33,9 +33,15 @@ URL  = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}"
 #   level = latest observation, with change vs the prior observation
 #   yoy   = percent change against the observation 12 periods back
 MARKET = {
-    "SP500":     ("S&P 500", "",  "level"),
-    "NASDAQCOM": ("Nasdaq",  "",  "level"),
-    "VIXCLS":    ("VIX",     "",  "level"),
+    "SP500":      ("S&P 500",   "", "level"),
+    "NASDAQCOM":  ("Nasdaq",    "", "level"),
+    "VIXCLS":     ("VIX",       "", "level"),
+    # Added after the 2026 Iran war disrupted the Strait of Hormuz — WTI
+    # moved from the high-$80s to $97+/bbl in under two weeks (see the
+    # "Iran Conflict / Strait of Hormuz" theme). Unitless like the other
+    # MARKET tiles; the "WTI Crude" label already says what it is, same as
+    # how the VIX tile carries no unit either.
+    "DCOILWTICO": ("WTI Crude", "", "level"),
 }
 MACRO = {
     "DFF":      ("Fed funds rate",   "%", "level"),
