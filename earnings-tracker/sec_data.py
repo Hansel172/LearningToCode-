@@ -79,6 +79,13 @@ CONCEPTS = {
                               "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"], "USD", True),
     "capex":              (["PaymentsToAcquirePropertyPlantAndEquipment",
                              "PaymentsForCapitalImprovements", "PaymentsToAcquireProductiveAssets"], "USD", True),
+    # Only fetched to build a real EBITDA for the valuation multiple in the
+    # Company Story section (see build_valuation() in analyzer.py) — nothing
+    # else here needs operating income or D&A separately from net income.
+    "operating_income":  (["OperatingIncomeLoss"], "USD", True),
+    "depreciation_amortization": (["DepreciationDepletionAndAmortization",
+                                    "DepreciationAmortizationAndAccretionNet",
+                                    "DepreciationAndAmortization"], "USD", True),
 }
 
 # Instant (point-in-time) concepts — balance sheet items with no duration,
@@ -239,6 +246,8 @@ def get_quarterly_financials(ticker, num_quarters=12):
         opex  = series["operating_expenses"].get(end, {}).get("val")
         ocf   = series["operating_cash_flow"].get(end, {}).get("val")
         capex = series["capex"].get(end, {}).get("val")
+        op_income = series["operating_income"].get(end, {}).get("val")
+        d_and_a   = series["depreciation_amortization"].get(end, {}).get("val")
 
         cash_d = nearest_instant(instants["cash"].keys(), end)
         debt_d = nearest_instant(instants["debt"].keys(), end)
@@ -262,11 +271,31 @@ def get_quarterly_financials(ticker, num_quarters=12):
             "free_cash_flow": fcf,
             "cash": cash,
             "debt": debt,
+            "ebitda": (op_income + d_and_a) if (op_income is not None and d_and_a is not None) else None,
             "gross_margin_pct": round(gp / rev * 100, 2) if gp is not None and rev else None,
             "net_margin_pct": round(ni / rev * 100, 2) if ni is not None and rev else None,
         })
 
     return quarters
+
+
+def get_market_cap(ticker):
+    """Today's market cap from Nasdaq's public quote-summary endpoint — no
+    key, same trust tier as the earnings calendar calls above. Deliberately
+    the only "live price" data this app touches, and even then only to
+    report the business's total value, never a per-share number. Returns
+    None if the ticker isn't found or the field is missing/unparseable,
+    rather than guessing."""
+    try:
+        r = httpx.get(f"https://api.nasdaq.com/api/quote/{ticker.upper()}/summary",
+                      params={"assetclass": "stocks"}, headers=NASDAQ_HEADERS, timeout=20)
+        r.raise_for_status()
+        raw = r.json().get("data", {}).get("summaryData", {}).get("MarketCap", {}).get("value")
+        if not raw or raw == "N/A":
+            return None
+        return float(raw.replace(",", ""))
+    except Exception:
+        return None
 
 
 def get_earnings_calendar(days_ahead=14):

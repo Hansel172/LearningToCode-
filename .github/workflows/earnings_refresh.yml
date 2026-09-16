@@ -71,6 +71,20 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 earnings-tracker/scripts/write_stories.py /tmp/old_earnings_data.json
 
+      # "The Company Story" — an 11-question qualitative framework (business
+      # model, moat, leadership, growth, risk, valuation-vs-quality, market
+      # cap, the 5-10 year case, risk/reward) that matters more here than the
+      # numeric gates above, and never surfaces share price. Same reuse-on-
+      # unchanged-quarter logic as the AI summaries step, since this is
+      # long-horizon business narrative, not something that should churn
+      # every hour. See scripts/write_company_stories.py for the split
+      # between what's computed (market cap, valuation multiples) and what's
+      # Claude's judgment.
+      - name: Write Company Story sections
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 earnings-tracker/scripts/write_company_stories.py /tmp/old_earnings_data.json
+
       # Appends one entry per held position that just reported to
       # <TICKER>_tracker.md — see earnings-tracker/CLAUDE.md for the
       # Earnings Analyzer framework this follows. Which tickers count as
