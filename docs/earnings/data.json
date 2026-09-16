@@ -185,22 +185,22 @@
         {
           "n": 1,
           "label": "What it does",
-          "answer": "Nvidia designs GPUs and specialized AI chips, then licenses its CUDA software ecosystem alongside the hardware, effectively selling \"AI compute\" as a full stack of silicon, networking, and software that data centers use to train and run AI models."
+          "answer": "NVDA designs GPUs and AI accelerator chips, then outsources manufacturing (mainly to TSMC), pairing the hardware with its CUDA software platform so its chips become the default choice for training and running AI models."
         },
         {
           "n": 2,
           "label": "Who its customers are",
-          "answer": "Its customers are cloud giants (Microsoft, Amazon, Google, Meta, Oracle), AI labs (OpenAI, Anthropic), enterprises building AI infrastructure, and to a lesser extent gaming PC makers and automotive/robotics firms."
+          "answer": "Its customers are cloud hyperscalers (Microsoft, Google, Amazon, Meta), AI labs (OpenAI, Anthropic and similar), enterprises building AI infrastructure, governments, and gaming/PC makers through its GeForce line."
         },
         {
           "n": 3,
           "label": "Competitive edge",
-          "answer": "Nvidia's edge is the CUDA software moat \u2014 a decade-plus head start in developer tools, libraries, and optimized frameworks that make switching to rival chips costly and slow, combined with"
+          "answer": "The edge is the CUDA software ecosystem \u2014 a decade-plus head start in developer tools and libraries that makes switching to rivals like AMD or in-house chips costly and slow, combined with a consistent performance lead and deep integration with the biggest cloud buyers."
         },
         {
           "n": 4,
           "label": "Leadership",
-          "answer": ""
+          "answer": "Jensen"
         },
         {
           "n": 5,
@@ -439,22 +439,22 @@
         {
           "n": 1,
           "label": "What it does",
-          "answer": "Apple designs and sells premium hardware (iPhone, Mac, iPad, wearables) and layers a growing services business (App Store, iCloud, subscriptions, advertising) on top of that installed base, monetizing both"
+          "answer": "Apple designs and sells premium hardware \u2014 iPhone, Mac, iPad, Watch \u2014 and layers a growing services business (App Store, iCloud, Apple Music, AppleCare, advertising, payments) on top, monetizing a large installed base of devices over time."
         },
         {
           "n": 2,
           "label": "Who its customers are",
-          "answer": ""
+          "answer": "Its customers are consumers and businesses globally who want tightly integrated, premium hardware and software, skewing toward higher-income buyers in the U.S., Europe, and China, plus a large recurring base of existing iPhone/Mac/iPad owners who buy services and upgrades."
         },
         {
           "n": 3,
           "label": "Competitive edge",
-          "answer": ""
+          "answer": "The moat comes from ecosystem lock-in (iMessage, iCloud, Apple Watch pairing, AirDrop), a tightly controlled hardware-software-services integration that's hard to replicate, brand loyalty, and high switching costs once someone owns multiple Apple devices tied together."
         },
         {
           "n": 4,
           "label": "Leadership",
-          "answer": ""
+          "answer": "Tim Cook is CEO, a role he's held since 2011 after succeeding Steve Jobs; this is based on general knowledge and could be outdated if there's been a very recent leadership change."
         },
         {
           "n": 5,
@@ -464,17 +464,17 @@
         {
           "n": 6,
           "label": "Growth potential",
-          "answer": ""
+          "answer": "Growth is currently stalled at the top line (0 straight quarters of revenue growth) even as gross margins have expanded for 4 straight quarters, so future growth potential rests on services expansion, new product categories (like wearables or future AI-driven features), and eventual hardware upgrade cycles rather than current momentum."
         },
         {
           "n": 7,
           "label": "Risks",
-          "answer": ""
+          "answer": "Key risks include revenue growth having stopped, operating expenses growing faster than revenue for two straight quarters, heavy reliance on iPhone sales, regulatory pressure on App Store fees globally, and geopolitical/supply chain exposure concentrated in China."
         },
         {
           "n": 8,
           "label": "What you're paying",
-          "answer": ""
+          "answer": "The stock trades at a trailing P/E of 37.5; EV/EBITDA is not available due to missing or negative EBITDA data, so that comparison can't be made."
         },
         {
           "n": 9,
@@ -484,12 +484,12 @@
         {
           "n": 10,
           "label": "The 5-10 year case",
-          "answer": ""
+          "answer": "For the market cap to grow meaningfully from $4.84T, revenue growth would need to resume and the current opex-outgrowing-revenue trend would need to reverse, likely requiring a new services or product growth driver (such as AI-integrated features or new device categories) to reaccelerate the top line while sustaining margins."
         },
         {
           "n": 11,
           "label": "Risk / reward",
-          "answer": ""
+          "answer": "Without a share price or explicit future multiple/growth assumption to model, no numeric return can be responsibly estimated here; qualitatively, the risk/reward hinges on whether growth resumes and margins hold \u2014 if operating costs keep outpacing flat-to-declining revenue, profitability could erode even as the business remains large and profitable in absolute terms."
         }
       ]
     },
@@ -683,22 +683,22 @@
         {
           "n": 1,
           "label": "What it does",
-          "answer": "Microsoft sells software, cloud infrastructure, and productivity tools on a subscription/licensing model \u2014 Windows and Office generate steady recurring revenue, while Azure rents out computing power and AI infrastructure to businesses, creating a mix of legacy licensing cash flow and fast-growing cloud consumption revenue."
+          "answer": "Microsoft sells software, productivity tools, operating systems, and cloud infrastructure \u2014 making money through licensing (Windows, Office), subscriptions (Microsoft 365, Dynamics 365), and consumption-based cloud services (Azure), plus a growing slice from AI tools like Copilot and gaming (Xbox, Activision)."
         },
         {
           "n": 2,
           "label": "Who its customers are",
-          "answer": "Its customers span the spectrum from individual consumers (Windows, Office, Xbox) to small businesses to the largest global enterprises and governments that run Azure cloud infrastructure, Microsoft 365, and Teams as core operating tools."
+          "answer": "Its customers span the spectrum: individual consumers using Windows and Office, small businesses running Microsoft 365, and large enterprises and governments relying on Azure cloud infrastructure, security tools, and enterprise software agreements."
         },
         {
           "n": 3,
           "label": "Competitive edge",
-          "answer": "Deep enterprise entrenchment is the moat \u2014 decades of corpor"
+          "answer": "Its moat comes from deep enterprise entrenchment \u2014 decades of businesses building workflows around Windows, Office, and Active Directory \u2014 plus high switching costs, bundled pricing that makes Microsoft cheaper to keep than to leave, and Azure's scale advantages in cloud and AI infrastructure."
         },
         {
           "n": 4,
           "label": "Leadership",
-          "answer": ""
+          "answer": "Satya Nadella is CEO, a role he's held since 2014; this is from general knowledge and could be outdated if a change has occurred very recently."
         },
         {
           "n": 5,
@@ -708,17 +708,17 @@
         {
           "n": 6,
           "label": "Growth potential",
-          "answer": ""
+          "answer": "Growth is being driven by Azure cloud expansion, AI monetization through Copilot and OpenAI-related products, and continued enterprise software upsell; the 9-quarter revenue growth streak suggests this momentum is currently intact, though the pace of expansion into new AI revenue is the key swing factor."
         },
         {
           "n": 7,
           "label": "Risks",
-          "answer": ""
+          "answer": "Key risks include operating costs growing faster than revenue for two straight quarters (opex +12.6% vs. revenue +8.6%), a sharp 34.8% drop in cash reserves alongside slightly rising debt, and zero quarters of gross margin expansion \u2014 together suggesting the company is spending heavily (likely on AI/cloud infrastructure) with pressure building on profitability if that spending doesn't translate to revenue fast enough."
         },
         {
           "n": 8,
           "label": "What you're paying",
-          "answer": ""
+          "answer": "The stock trades at a trailing P/E of 27.6; EV/EBITDA is not available due to missing or negative EBITDA data."
         },
         {
           "n": 9,
@@ -728,12 +728,12 @@
         {
           "n": 10,
           "label": "The 5-10 year case",
-          "answer": ""
+          "answer": "At $3.69T today, a meaningfully higher market cap in five to ten years would require Azure and AI products to keep growing revenue at a healthy clip while operating expense growth comes back under revenue growth \u2014 if opex keeps outpacing revenue and margins erode instead, the current premium multiple would be harder to sustain even with top-line growth."
         },
         {
           "n": 11,
           "label": "Risk / reward",
-          "answer": ""
+          "answer": "If the growth and AI monetization story plays out while cost growth normalizes, the business could compound earnings and re-rate higher; if cost growth keeps outpacing revenue and cash burn continues without clear payoff, the multiple could compress, meaning the loss risk is less about the business failing and more about paying a high price for growth that slows or margins that shrink."
         }
       ]
     },
@@ -810,22 +810,22 @@
         {
           "n": 1,
           "label": "What it does",
-          "answer": ""
+          "answer": "SpaceX designs, builds, and launches reusable rockets (Falcon 9, Falcon Heavy, Starship) for commercial, government, and military payloads, and separately operates Starlink, a satellite internet constellation that sells broadband subscriptions directly to consumers, businesses, and governments."
         },
         {
           "n": 2,
           "label": "Who its customers are",
-          "answer": ""
+          "answer": "Customers include NASA and the U.S. Department of Defense, commercial satellite operators and telecom companies needing launch services, and a growing base of individual, enterprise, maritime, aviation, and government Starlink internet subscribers worldwide."
         },
         {
           "n": 3,
           "label": "Competitive edge",
-          "answer": ""
+          "answer": "Its edge is reusable rocket technology that lets it launch far more often and far more cheaply than competitors, combined with a vertically integrated manufacturing operation and a Starlink satellite fleet that no rival currently matches in scale."
         },
         {
           "n": 4,
           "label": "Leadership",
-          "answer": ""
+          "answer": "Elon Musk is CEO, based on general knowledge; this may be outdated if there has been a very recent leadership change not yet reflected publicly."
         },
         {
           "n": 5,
@@ -835,17 +835,17 @@
         {
           "n": 6,
           "label": "Growth potential",
-          "answer": ""
+          "answer": "Growth potential rests on Starlink subscriber and revenue expansion, increased launch cadence (including Starship coming online for heavier and cheaper missions), and new applications like direct-to-cell satellite service, in-space infrastructure, and potential government contracts tied to national security and lunar/Mars programs."
         },
         {
           "n": 7,
           "label": "Risks",
-          "answer": ""
+          "answer": "Key risks include the technical and regulatory difficulty of scaling Starship, dependence on a small number of large government contracts, competitive pressure from other satellite constellations, launch failures or delays, and the general execution risk of running two capital-intensive businesses simultaneously."
         },
         {
           "n": 8,
           "label": "What you're paying",
-          "answer": ""
+          "answer": "Trailing P/E and EV/EBITDA are both not available due to a trailing net loss or missing/negative earnings data, so no multiple-based valuation judgment can be made from these figures alone."
         },
         {
           "n": 9,
@@ -855,12 +855,12 @@
         {
           "n": 10,
           "label": "The 5-10 year case",
-          "answer": ""
+          "answer": "A materially higher market cap in five to ten years would require Starlink to scale into a large, durable, profitable global subscriber and enterprise/government revenue base, Starship to become a reliable, high-cadence, low-cost launch platform, and new lines of business (direct-to-cell, in-space services, government contracts) to meaningfully add revenue beyond current levels."
         },
         {
           "n": 11,
           "label": "Risk / reward",
-          "answer": ""
+          "answer": "If the business executes as described, the payoff could be very large given the scale of the addressable launch and satellite-broadband markets; if it doesn't \u2014 through technical setbacks, contract losses, competitive erosion, or capital strain from Starship development \u2014 an investor could lose a substantial portion or all of the capital committed, since no profitability metrics currently exist to cushion the downside."
         }
       ]
     },
@@ -1042,22 +1042,22 @@
         {
           "n": 1,
           "label": "What it does",
-          "answer": "Micron designs and manufactures memory and storage chips \u2014 DRAM (short-term memory) and NAND (long-term storage) \u2014 that go inside computers, phones, servers, and data-center equipment; it sells these as components to hardware makers rather than selling finished devices to consumers."
+          "answer": "MU designs and manufactures DRAM and NAND memory/storage chips in large capital-intensive fabs, then sells them as components to hardware makers \u2014 it's a commodity-technology manufacturing business, not a software or services model."
         },
         {
           "n": 2,
           "label": "Who its customers are",
-          "answer": "Its customers are PC makers, smartphone makers, and data-center/server and cloud infrastructure providers who buy memory and storage chips in bulk to build into their own products."
+          "answer": "Its customers are PC and laptop makers, smartphone manufacturers, cloud/data center operators, enterprise storage vendors, and automotive/industrial electronics companies."
         },
         {
           "n": 3,
           "label": "Competitive edge",
-          "answer": "Micron competes on manufacturing scale, process technology, and cost efficiency in a market with only three major DRAM players (Micron, Samsung, SK Hynix) and a handful of NAND players, so its edge is being one of a small number of companies that can produce leading-edge memory at global scale rather than"
+          "answer": "The memory industry has only three major global players (Micron, Samsung, SK Hynix), so scale, process-node technology leadership, and manufacturing yield/cost efficiency are the real edges \u2014 differentiation is thin since memory itself is largely commoditized."
         },
         {
           "n": 4,
           "label": "Leadership",
-          "answer": ""
+          "answer": "Sanjay Mehrotra is CEO as of general knowledge; this may be outdated if there's been a very recent leadership change."
         },
         {
           "n": 5,
@@ -1067,17 +1067,17 @@
         {
           "n": 6,
           "label": "Growth potential",
-          "answer": ""
+          "answer": "Growth is currently tied to AI-driven demand for high-bandwidth memory (HBM) in data centers plus rising storage needs across devices; the 5-quarter streak of revenue growth and gross margin expansion signals an active upcycle in demand and pricing."
         },
         {
           "n": 7,
           "label": "Risks",
-          "answer": ""
+          "answer": "The core risk is memory's extreme boom-bust price cyclicality \u2014 oversupply from Micron or its two competitors can crush prices and margins quickly, and the business requires continuous heavy capital spending to stay on the technology curve."
         },
         {
           "n": 8,
           "label": "What you're paying",
-          "answer": ""
+          "answer": "On the numbers given, MU trades at a trailing P/E of 20.8 and EV/EBITDA of 15.1 \u2014 multiples that reflect a business currently in a favorable, growth/margin-expanding phase of its historically volatile cycle."
         },
         {
           "n": 9,
@@ -1087,12 +1087,12 @@
         {
           "n": 10,
           "label": "The 5-10 year case",
-          "answer": ""
+          "answer": "Market cap is $1.05T today; a materially higher figure in 5-10 years would require the AI/HBM demand wave to persist (not just spike), Micron to hold technology parity with Samsung/SK Hynix, and the industry to avoid another severe oversupply-driven downturn \u2014 none of which is guaranteed given memory's history."
         },
         {
           "n": 11,
           "label": "Risk / reward",
-          "answer": ""
+          "answer": "No specific return figure can be estimated from the given facts alone; realistically, memory stocks have historically delivered large gains in upcycles and large drawdowns in downcycles, so the risk/reward here is defined by cycle timing rather than steady compounding."
         }
       ]
     },
@@ -1245,22 +1245,22 @@
         {
           "n": 1,
           "label": "What it does",
-          "answer": "SanDisk designs and manufactures NAND flash memory chips and the storage products built around them \u2014 SSDs, memory cards, USB drives, and embedded flash for phones and other devices \u2014 making money by selling silicon and storage hardware into a highly cyclical commodity-tech market."
+          "answer": "SanDisk designs and manufactures NAND flash memory chips and the storage products built around them \u2014 SSDs, memory cards, USB drives, and embedded flash for phones and PCs \u2014 selling both under its own brand and to device makers who put the chips inside their hardware."
         },
         {
           "n": 2,
           "label": "Who its customers are",
-          "answer": "Customers span consumer electronics buyers (via retail memory cards, USB drives, SSDs), device makers (smartphone, laptop, camera manufacturers who embed flash), and enterprise/data-center customers buying storage drives at scale."
+          "answer": "Customers span PC and smartphone manufacturers, data center and cloud operators buying enterprise SSDs, industrial and automotive electronics makers, and retail consumers buying SanDisk-branded cards and drives."
         },
         {
           "n": 3,
           "label": "Competitive edge",
-          "answer": "Its"
+          "answer": "Its edge is being one of a handful of companies that actually make NAND flash at scale (via its longstanding fab joint venture, historically with Kioxia/Toshiba), which gives it manufacturing know-how and cost position that most competitors can't replicate, plus strong retail brand recognition in memory cards and USB drives."
         },
         {
           "n": 4,
           "label": "Leadership",
-          "answer": ""
+          "answer": "David Goeckeler, formerly CEO of Western Digital, has been positioned to lead SanDisk post-spinoff \u2014 this is based on general knowledge and may be outdated if a leadership change has occurred since."
         },
         {
           "n": 5,
@@ -1270,17 +1270,17 @@
         {
           "n": 6,
           "label": "Growth potential",
-          "answer": ""
+          "answer": "Growth is tied to rising demand for storage from AI data centers, smartphones, and PCs, and the current streak of 5 straight quarters of both revenue growth and gross margin expansion suggests the business is coming out of a NAND pricing downcycle into a stronger demand environment."
         },
         {
           "n": 7,
           "label": "Risks",
-          "answer": ""
+          "answer": "NAND flash is a commodity-like, highly cyclical business prone to boom-bust pricing driven by industry-wide oversupply/undersupply, it requires heavy capital spending to stay competitive, it faces large well-funded rivals (Samsung, SK Hynix/Solidigm, Micron, Kioxia), and as a newly spun-off company it carries some standalone execution and balance-sheet risk."
         },
         {
           "n": 8,
           "label": "What you're paying",
-          "answer": ""
+          "answer": "The stock trades at a trailing P/E of 19.6, with EV/EBITDA not available due to missing or negative EBITDA \u2014 that's the full picture on multiples, with no other valuation figure to reference."
         },
         {
           "n": 9,
@@ -1290,12 +1290,12 @@
         {
           "n": 10,
           "label": "The 5-10 year case",
-          "answer": ""
+          "answer": "No market-cap projection is available in the given facts, so any specific future figure would be invented; what would have to be true for meaningful growth from the current $224.2B is a sustained multi-year period of NAND demand outpacing supply (driven by AI/data center storage needs) combined with SanDisk holding or gaining share and avoiding the margin collapses that have hit this industry in past cycles."
         },
         {
           "n": 11,
           "label": "Risk / reward",
-          "answer": ""
+          "answer": "Without a forward multiple, growth rate, or price target provided, a real numeric risk/reward can't be responsibly constructed \u2014 the qualitative framing is that NAND is a boom-bust commod"
         }
       ]
     },
@@ -1485,22 +1485,22 @@
         {
           "n": 1,
           "label": "What it does",
-          "answer": ""
+          "answer": "Western Digital designs and manufactures hard disk drives (HDDs) and, historically, flash storage, selling storage capacity to cloud providers, enterprises, and device makers who need to store massive amounts of data; the company recently separated its flash/NAND business (SanDisk) from its HDD business, leaving WDC as a more focused hard-drive and storage-systems maker."
         },
         {
           "n": 2,
           "label": "Who its customers are",
-          "answer": ""
+          "answer": "Its main customers are hyperscale cloud and data center operators (like AWS, Google, Microsoft, Meta) who buy high-capacity drives in bulk, along with enterprise IT departments and some consumer/retail storage products."
         },
         {
           "n": 3,
           "label": "Competitive edge",
-          "answer": ""
+          "answer": "WDC's edge comes from decades of manufacturing scale, proprietary areal-density technology (like energy-assisted recording), and being one of only three companies globally (with Seagate and Toshiba) capable of producing HDDs at the precision and volume data centers require \u2014 high capital and technical barriers keep new entrants out."
         },
         {
           "n": 4,
           "label": "Leadership",
-          "answer": ""
+          "answer": "As of recent public information, Irving Tan serves as CEO of Western Digital following the 2025 separation of the flash business into SanDisk; leadership may have changed since, so this should be verified against current sources."
         },
         {
           "n": 5,
@@ -1510,17 +1510,17 @@
         {
           "n": 6,
           "label": "Growth potential",
-          "answer": ""
+          "answer": "Growth is tied to the ongoing global expansion of data storage needs \u2014 AI, cloud, and video are driving demand for higher-capacity drives \u2014 and the company has posted 5 straight quarters of revenue growth and 11 straight quarters of gross margin expansion, suggesting improving unit economics alongside demand growth."
         },
         {
           "n": 7,
           "label": "Risks",
-          "answer": ""
+          "answer": "Key risks include cyclicality in storage pricing and demand, competition from flash/SSD technology eating into HDD's role over time, and two flagged concerns: net income fell 0.3% even as revenue rose 12.3% (margin pressure from rising costs), and cash reserves dropped 23% in a single quarter, which warrants attention to cash management or capital spending."
         },
         {
           "n": 8,
           "label": "What you're paying",
-          "answer": ""
+          "answer": "The stock trades at a trailing P/E of 15.8; EV/EBITDA is not available due to missing or negative EBITDA data, so that comparison can't be made here."
         },
         {
           "n": 9,
@@ -1530,12 +1530,12 @@
         {
           "n": 10,
           "label": "The 5-10 year case",
-          "answer": ""
+          "answer": "A materially higher market cap in five to ten years would require sustained data-center storage demand growth (especially AI-driven data retention), continued margin expansion turning into actual net income growth rather than the recent net-income stagnation, and stabilization of cash flow trends \u2014 without those, growth in revenue alone may not translate to shareholder value."
         },
         {
           "n": 11,
           "label": "Risk / reward",
-          "answer": ""
+          "answer": "Without a specific target price or multiple to project forward, precise return figures can't be given; in general terms, an investor's upside depends on whether revenue growth converts into real profit growth (which hasn't been happening lately), while the downside risk centers on continued margin erosion, cash burn, or a cyclical storage-demand downturn eroding both earnings and the multiple paid."
         }
       ]
     },
@@ -1712,22 +1712,22 @@
         {
           "n": 1,
           "label": "What it does",
-          "answer": "Seagate designs and manufactures hard disk drives (HDDs) and related storage systems, selling the physical media that data centers, cloud providers, and enterprises use to store massive amounts of data at low cost per gigabyte."
+          "answer": "Seagate designs and manufactures hard disk drives (HDDs) \u2014 mostly high-capacity \"nearline\" drives \u2014 and sells them to data center operators, cloud providers, and enterprise storage vendors as the physical backbone for storing mass data."
         },
         {
           "n": 2,
           "label": "Who its customers are",
-          "answer": "Its customers are primarily hyperscale cloud providers (like Amazon, Microsoft, Google), enterprise data center operators, and OEMs that build storage systems, with a smaller consumer/retail tail."
+          "answer": "Its core customers are hyperscale cloud providers (like AWS, Microsoft, Google), enterprise storage OEMs, and to a lesser extent PC makers, surveillance systems, and NAS device makers."
         },
         {
           "n": 3,
           "label": "Competitive edge",
-          "answer": "Seagate's edge is decades of manufacturing scale and engineering expertise in high-capacity HDD technology (like HAMR), which lets it hit the cost-per-ter"
+          "answer": "Seagate's edge comes from being one of only two scaled HDD makers left (alongside Western Digital), decades of manufacturing know-how in areal density technology (like HAMR), and deep, hard-to-switch qualification relationships with hyperscale buyers who need drives at massive volume and reliability."
         },
         {
           "n": 4,
           "label": "Leadership",
-          "answer": ""
+          "answer": "Dave Mosley is CEO, based on general knowledge \u2014 this may be out of date if there's been a very recent leadership change."
         },
         {
           "n": 5,
@@ -1737,17 +1737,17 @@
         {
           "n": 6,
           "label": "Growth potential",
-          "answer": ""
+          "answer": "Growth is tied to the ongoing explosion in data creation and storage \u2014 especially AI training/inference datasets and cloud archival needs \u2014 which favors cheap, high-capacity nearline HDDs even as flash grows in other segments; the 5-quarter growth streak and 11-quarter gross margin expansion suggest this demand and pricing discipline are currently working in its favor."
         },
         {
           "n": 7,
           "label": "Risks",
-          "answer": ""
+          "answer": "Key risks include the cyclicality of hardware demand, heavy customer concentration in a handful of hyperscalers, long-term substitution risk from falling SSD/flash prices, and the capital intensity and execution risk of next-generation technology transitions like HAMR."
         },
         {
           "n": 8,
           "label": "What you're paying",
-          "answer": ""
+          "answer": "The business currently trades at a trailing P/E of 55.4; EV/EBITDA is not available due to missing or negative EBITDA data."
         },
         {
           "n": 9,
@@ -1757,12 +1757,12 @@
         {
           "n": 10,
           "label": "The 5-10 year case",
-          "answer": ""
+          "answer": "A materially larger market cap in five to ten years would require the current streak of revenue growth and margin expansion to continue for years, HAMR technology to scale successfully and defend cost leadership, and cloud/AI data growth to keep favoring HDDs over flash for bulk storage \u2014 none of which is guaranteed given the cyclical and competitive nature of the industry."
         },
         {
           "n": 11,
           "label": "Risk / reward",
-          "answer": ""
+          "answer": "Without a defined growth rate or forward multiple to anchor this, the honest framing is binary: if the current margin-expansion and demand streak persists, the business could be worth meaningfully more as earnings compound; if the cycle turns, competition intensifies, or flash substitution accelerates, both earnings and the multiple paid for them (currently high at 55.4x trailing) could compress simultaneously, amplifying losses."
         }
       ]
     }
