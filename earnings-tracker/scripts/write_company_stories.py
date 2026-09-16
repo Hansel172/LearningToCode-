@@ -158,12 +158,19 @@ def _parse_reply(text, expected_numbers):
 
 def build_company_story(company, api_key):
     expected = {n for n, _ in QUESTIONS}
-    # 9 answers of up to 3 sentences each runs well past write_stories.py's
-    # own 300-token budget (fine for its single 2-4 sentence blurb) — the
-    # first real run of this script truncated mid-answer-3, leaving 4/6/7/
-    # 8/10/11 empty. 1500 gives real headroom without being wasteful; 60s
-    # matches the longer generation time a completion that size can take.
-    reply = call_claude(build_prompt(company), api_key, max_tokens=1500, timeout=60)
+    # claude-sonnet-5 runs adaptive thinking ON by default, and those
+    # thinking tokens count against max_tokens even though they're never
+    # part of the visible reply (display defaults to "omitted" on this
+    # model) — raising max_tokens to 1500 alone still truncated NVDA's
+    # reply mid-answer-4, because the model spent an unpredictable, data-
+    # dependent share of the budget reasoning before writing a single
+    # visible character. This is plain fact-grounded formatting (the
+    # prompt already hands over every real number and constrains the
+    # reply shape) — nothing here needs multi-step reasoning — so thinking
+    # is switched off entirely rather than padded around blindly. 2000
+    # tokens is now real headroom for the visible reply alone.
+    reply = call_claude(build_prompt(company), api_key, max_tokens=2000, timeout=60,
+                         thinking={"type": "disabled"})
     parsed = _parse_reply(reply, expected)
 
     story = []
