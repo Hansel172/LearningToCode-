@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-16T00:17:56+00:00",
+    "updated": "2026-09-16T15:25:15+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -14,21 +14,21 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26186.41,
+        "value": 25981.57,
         "unit": "",
         "note": "last close",
-        "changePct": -0.56,
-        "asOf": "2026-09-14",
+        "changePct": -0.78,
+        "asOf": "2026-09-15",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 17.1,
+        "value": 17.2,
         "unit": "",
         "note": "last close",
-        "changePct": 7.95,
-        "asOf": "2026-09-14",
+        "changePct": 0.58,
+        "asOf": "2026-09-15",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -459,5 +459,22 @@
       }
     ]
   },
-  "pending_deals": []
+  "pending_deals": [
+    {
+      "ticker": "NVDA",
+      "headline": "Cisco, Nvidia expand deal on Splunk Agentic AI",
+      "url": "https://biztoc.com/x/ab0b02abbb1ff82b",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-09-15T14:59:57Z",
+      "detectedAt": "2026-09-16T15:25:15+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Cisco Delivers Trusted AI at Scale Through New Splunk Advancements",
+      "url": "https://www.prnewswire.com/news-releases/cisco-delivers-trusted-ai-at-scale-through-new-splunk-advancements-302878467.html",
+      "source": "PRNewswire",
+      "publishedAt": "2026-09-15T14:30:00Z",
+      "detectedAt": "2026-09-16T15:25:15+00:00"
+    }
+  ]
 }
