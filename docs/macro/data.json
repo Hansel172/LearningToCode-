@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-16T15:25:15+00:00",
+    "updated": "2026-09-16T20:06:48+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -34,11 +34,11 @@
       },
       "DCOILWTICO": {
         "label": "WTI Crude",
-        "value": 97.26,
+        "value": 107.02,
         "unit": "",
         "note": "last close",
-        "changePct": 3.24,
-        "asOf": "2026-09-09",
+        "changePct": 4.49,
+        "asOf": "2026-09-15",
         "source": "FRED DCOILWTICO",
         "sourceUrl": "https://fred.stlouisfed.org/series/DCOILWTICO"
       }
