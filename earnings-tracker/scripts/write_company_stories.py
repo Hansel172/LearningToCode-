@@ -158,7 +158,12 @@ def _parse_reply(text, expected_numbers):
 
 def build_company_story(company, api_key):
     expected = {n for n, _ in QUESTIONS}
-    reply = call_claude(build_prompt(company), api_key)
+    # 9 answers of up to 3 sentences each runs well past write_stories.py's
+    # own 300-token budget (fine for its single 2-4 sentence blurb) — the
+    # first real run of this script truncated mid-answer-3, leaving 4/6/7/
+    # 8/10/11 empty. 1500 gives real headroom without being wasteful; 60s
+    # matches the longer generation time a completion that size can take.
+    reply = call_claude(build_prompt(company), api_key, max_tokens=1500, timeout=60)
     parsed = _parse_reply(reply, expected)
 
     story = []
@@ -171,6 +176,18 @@ def build_company_story(company, api_key):
             answer = parsed.get(n, "")
         story.append({"n": n, "label": LABELS[n], "answer": answer})
     return story
+
+
+def _is_complete(story):
+    """False if any answer is blank — e.g. the model's reply got cut off by
+    max_tokens partway through, which happened on this script's first real
+    run (a 300-token default sized for write_stories.py's single short
+    blurb, not 9 full answers). A story missing even one answer must never
+    be cached as "the current one" — reusing it would leave that company
+    stuck with a permanently incomplete card until its next real earnings
+    report, since the whole point of reuse is treating an unchanged
+    period_end as nothing left to do here."""
+    return bool(story) and all(a.get("answer") for a in story)
 
 
 def _load_old_stories(path):
@@ -189,7 +206,7 @@ def _load_old_stories(path):
     return {
         c["ticker"]: (c.get("period_end"), c["company_story"])
         for c in data.get("companies", [])
-        if c.get("company_story")
+        if _is_complete(c.get("company_story"))
     }
 
 

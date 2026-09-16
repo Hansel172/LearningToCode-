@@ -120,7 +120,7 @@ substance. Do not give investment advice or say what to do about it — explain,
 recommend."""
 
 
-def call_claude(prompt, api_key):
+def call_claude(prompt, api_key, max_tokens=300, timeout=30):
     r = httpx.post(
         API_URL,
         headers={
@@ -130,10 +130,10 @@ def call_claude(prompt, api_key):
         },
         json={
             "model": MODEL,
-            "max_tokens": 300,
+            "max_tokens": max_tokens,
             "messages": [{"role": "user", "content": prompt}],
         },
-        timeout=30,
+        timeout=timeout,
     )
     r.raise_for_status()
     blocks = r.json().get("content", [])
