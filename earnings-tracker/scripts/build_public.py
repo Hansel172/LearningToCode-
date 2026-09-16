@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 import sec_data
-from analyzer import build_analysis
+from analyzer import build_analysis, build_valuation
 
 OUT = ROOT.parent / "docs" / "earnings"
 
@@ -66,6 +66,7 @@ def main():
 
         analysis = build_analysis(ticker, quarters)
         analysis["description"] = description
+        analysis["valuation"] = build_valuation(sec_data.get_market_cap(ticker), quarters)
         if not analysis["insufficient_data"]:
             surprise = sec_data.get_earnings_surprise(ticker, analysis["period_end"])
             if surprise and surprise.get("eps"):

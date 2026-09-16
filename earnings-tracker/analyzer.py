@@ -77,6 +77,46 @@ def build_trend(quarters):
     }
 
 
+def _ttm_sum(quarters, key):
+    """Trailing-twelve-month total for an additive dollar figure, from the
+    4 most recent quarters. None if fewer than 4 are available or any of
+    the 4 is missing the figure — a partial-year sum would understate the
+    real trailing total, which is worse than not showing one at all."""
+    latest_four = quarters[:4]
+    if len(latest_four) < 4:
+        return None
+    values = [q.get(key) for q in latest_four]
+    if any(v is None for v in values):
+        return None
+    return sum(values)
+
+
+def build_valuation(market_cap, quarters):
+    """Real valuation multiples for the Company Story section — never asked
+    of Claude, since these are exact arithmetic on numbers already fetched
+    (market_cap from Nasdaq, everything else from SEC XBRL). A multiple is
+    only returned when every input for it is actually known; otherwise the
+    field is None and the caller labels it as unavailable rather than
+    guessing at a number this function couldn't actually compute.
+    """
+    if market_cap is None or not quarters:
+        return {"market_cap": market_cap, "pe_ttm": None, "ev_ebitda_ttm": None}
+
+    ttm_net_income = _ttm_sum(quarters, "net_income")
+    pe_ttm = (round(market_cap / ttm_net_income, 1)
+              if ttm_net_income and ttm_net_income > 0 else None)
+
+    latest = quarters[0]
+    debt, cash = latest.get("debt"), latest.get("cash")
+    ev = (market_cap + debt - cash) if debt is not None and cash is not None else None
+
+    ttm_ebitda = _ttm_sum(quarters, "ebitda")
+    ev_ebitda_ttm = (round(ev / ttm_ebitda, 1)
+                     if ev is not None and ttm_ebitda and ttm_ebitda > 0 else None)
+
+    return {"market_cap": market_cap, "pe_ttm": pe_ttm, "ev_ebitda_ttm": ev_ebitda_ttm}
+
+
 def build_analysis(ticker, quarters):
     """One ticker's latest-quarter-vs-baseline comparison, plus the full-
     history trend from build_trend(). Returns a dict with

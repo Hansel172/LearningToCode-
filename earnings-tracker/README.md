@@ -213,6 +213,67 @@ as normal — a missing summary is a smaller problem than a broken build.
 python earnings-tracker/scripts/write_stories.py
 ```
 
+## The Company Story
+
+Each card also carries an 11-question qualitative framework — what the
+business actually does, who its customers are, its competitive moat, who's
+running it, insider ownership, growth potential, the real risks, what
+multiple you're paying relative to growth and quality, market cap today,
+the realistic 5-10 year case, and a real risk/reward framing. This matters
+more here than the numeric good/bad/ugly gates below it, and **share price
+never appears anywhere in this section** — market cap is shown instead,
+since it's the whole business's value, not a per-share number.
+
+**What's real data versus judgment**, same split as everywhere else in this
+app:
+
+- **Market cap** (`sec_data.get_market_cap()`) — Nasdaq's public
+  quote-summary endpoint, no key, same trust tier as the earnings calendar.
+- **Valuation multiples** (`analyzer.build_valuation()`) — trailing P/E and
+  EV/EBITDA, computed in Python from that market cap plus the net
+  income/EBITDA/debt/cash SEC already reports. A multiple only appears when
+  every input for it is actually known; otherwise it reads "not available"
+  rather than a guess.
+- **Insider ownership** always reads "requires manual research." There's no
+  free, keyless source for this — real ownership percentages live in DEF
+  14A proxy filings, which aren't parsed here. This is a fixed string, not
+  something the model is ever asked to estimate.
+- **Everything else** (business model, customers, moat, leadership, growth
+  potential, risk, the valuation-vs-quality judgment, the 5-10 year case,
+  risk/reward) comes from Claude in `scripts/write_company_stories.py`,
+  handed the real valuation multiples and revenue/margin trend above and
+  told explicitly not to invent its own numbers. Leadership is flagged as
+  "general knowledge, may be out of date" since there's no live source for
+  who currently runs a company.
+
+**It skips companies that haven't changed**, same reuse logic as the AI
+summary — a company whose `period_end` hasn't moved since the last run
+keeps its existing Company Story rather than paying for a fresh Claude
+call. This is long-horizon business narrative, not something that should
+change because market cap ticked between two hourly runs.
+
+**EV/EBITDA is often "not available," and that's expected, not a bug.**
+Most companies only report a discrete quarterly D&A figure in their fiscal
+Q1 10-Q — Q2 and Q3 filings disclose D&A as a cumulative year-to-date
+number, which `sec_data.py`'s quarterly parser correctly excludes as a
+duplicate rather than a true single-quarter figure (same 80-100 day
+duration filter used everywhere else in this tool). Deriving Q2/Q3 D&A
+from the cumulative figures the way Q4 is already derived from the annual
+total would be a real, separate change to that core parsing logic, not
+something bolted on here — for now, EV/EBITDA shows up when all 4 trailing
+quarters happen to have it (rare) and reads "not available" otherwise.
+Trailing P/E doesn't have this problem, since net income is reported as a
+discrete quarterly figure everywhere.
+
+**Setup:** same `ANTHROPIC_API_KEY` as the AI summaries above — nothing
+extra to configure. Without it, this section skips itself and the rest of
+the card ships as normal.
+
+**To test by hand:**
+```bash
+python earnings-tracker/scripts/write_company_stories.py
+```
+
 ## Position trackers
 
 For a company you actually hold — not just watch — every report gets logged
@@ -286,6 +347,7 @@ real earnings report:
 | `scripts/build_public.py` | Builds `docs/earnings/` from `watchlist.txt` |
 | `scripts/send_alerts.py` | Emails you only when someone new has reported (optional — not wired into the Action by default) |
 | `scripts/write_stories.py` | Writes the "AI summary" on each card, from facts already computed |
+| `scripts/write_company_stories.py` | Writes "The Company Story" 11-question section on each card |
 | `scripts/update_position_trackers.py` | Builds an Earnings Analyzer entry for each held position that reported, writes it to `positions_data/<TICKER>.json` and `<TICKER>_tracker.md` |
 | `scripts/attach_position_history.py` | Patches `docs/earnings/data.json` with each held ticker's history so the app can show it |
 | `watchlist_data/` | Where the *CLI's* tracked companies' data lives (not committed — see below) |

@@ -67,6 +67,36 @@ Each entry contains:
   consistent with the red flags already shown elsewhere, rather than a
   second, possibly-disagreeing opinion.
 
+## The Company Story framework
+
+`scripts/write_company_stories.py` builds the 11-question "Company Story"
+section on every watchlist card (not just held positions) — business
+model, customers, moat, leadership, insider ownership, growth potential,
+risk, valuation-vs-quality, market cap, the 5-10 year case, and
+risk/reward. This is the section the app's reader cares about more than
+the numeric good/bad/ugly gates, and it never surfaces share price.
+
+Two of the 11 answers are never left to the model:
+- **Insider ownership** is a fixed string ("requires manual research") —
+  there's no free, keyless source, and the alternative to admitting that
+  is a model quietly inventing a plausible percentage.
+- **Market cap** is formatted directly from `sec_data.get_market_cap()`
+  (Nasdaq's public quote-summary endpoint) — a real number, nothing for
+  the model to add.
+
+Everything else is qualitative by nature (no numeric endpoint answers
+"what's the moat"), so it comes from Claude — but grounded in real,
+already-computed numbers (`analyzer.build_valuation()`'s trailing P/E and
+EV/EBITDA, plus the existing revenue/margin trend) that the prompt hands
+it as facts to use as-is, same "use ONLY the facts given" discipline as
+`write_stories.py`. See `README.md`'s "The Company Story" section for the
+full breakdown, including why EV/EBITDA often reads "not available" (most
+companies only tag a discrete quarterly D&A figure in fiscal Q1 — a real
+limitation of the underlying SEC data, not a bug here).
+
+Same reuse-on-unchanged-quarter caching as the AI summary, since this is
+long-horizon business narrative that shouldn't churn every hourly run.
+
 ## Which tickers get a tracker file
 
 Whatever's in `profile.local.json`'s `holdings` (local) or the

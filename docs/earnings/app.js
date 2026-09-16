@@ -185,6 +185,28 @@ function positionHistoryBlock(history) {
   </details>`;
 }
 
+/* "The Company Story" — the 11-question qualitative framework (business
+   model, customers, moat, leadership, insider ownership, growth potential,
+   risk, valuation-vs-quality, market cap, the 5-10 year case, risk/reward)
+   that matters more here than the numeric good/bad/ugly gates below it, and
+   never mentions share price. Rendered as an open <details> rather than a
+   plain div — same disclosure idiom as the numbers/quarters sections below,
+   just open by default since this is the primary thing to read, with the
+   option to collapse it once you've already read a given company's story. */
+function companyStoryBlock(story) {
+  if (!story || !story.length) return '';
+  const rows = story.map(a => `
+    <div class="story-q">
+      <div class="story-q-label">${a.n}. ${esc(a.label)}</div>
+      <div class="story-q-answer">${esc(a.answer) || '<span class="story-q-empty">Not available</span>'}</div>
+    </div>`).join('');
+  return `
+  <details class="company-story" open>
+    <summary>The Company Story</summary>
+    <div class="story-q-list">${rows}</div>
+  </details>`;
+}
+
 function companyCard(company) {
   if (company.error) {
     return `<section class="card"><div class="card-head"><h2>${esc(company.ticker)}</h2></div>
@@ -254,6 +276,7 @@ function companyCard(company) {
     ${descLine(company.description)}
     ${gapNote}
     ${story}
+    ${companyStoryBlock(company.company_story)}
     ${sparklineContainer(trend.revenue_points || [], s.color)}
     ${streakNotes(trend)}
     ${flagsBlock(company.red_flags)}
