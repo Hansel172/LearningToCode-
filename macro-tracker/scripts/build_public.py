@@ -25,6 +25,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT  = ROOT.parent / "docs" / "macro"
 
+# iOS caches apple-touch-icon / manifest icons at the OS level, independent of
+# normal HTTP or Safari-website-data caching — it can keep showing an old
+# icon at an unchanged URL indefinitely. Bump this whenever the icon files
+# change so the URL itself looks new, the same trick sw.js's SHELL name
+# bump already relies on.
+ICON_VERSION = "2"
+
 # Applied to portfolio-impact holding labels, longest pattern first.
 REDACT = [
     (r"401k EM sleeve \(25%\)", "EM sleeve"),
@@ -94,7 +101,7 @@ def main():
         '<meta name="theme-color" content="#0a0a0f">\n'
         '<meta name="apple-mobile-web-app-capable" content="yes">\n'
         '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">\n'
-        '<link rel="apple-touch-icon" href="icon-180.png">\n'
+        f'<link rel="apple-touch-icon" href="icon-180.png?v={ICON_VERSION}">\n'
         "</head>")
     (OUT / "index.html").write_text(html)
 
@@ -144,8 +151,8 @@ def main():
         "background_color": "#0a0a0f",
         "theme_color": "#0a0a0f",
         "icons": [
-            {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
-            {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"},
+            {"src": f"icon-192.png?v={ICON_VERSION}", "sizes": "192x192", "type": "image/png"},
+            {"src": f"icon-512.png?v={ICON_VERSION}", "sizes": "512x512", "type": "image/png"},
         ],
     }, indent=2) + "\n")
 
