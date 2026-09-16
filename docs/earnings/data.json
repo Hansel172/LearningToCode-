@@ -185,22 +185,22 @@
         {
           "n": 1,
           "label": "What it does",
-          "answer": "NVDA designs GPUs and AI accelerator chips, then outsources manufacturing (mainly to TSMC), pairing the hardware with its CUDA software platform so its chips become the default choice for training and running AI models."
+          "answer": "NVIDIA designs GPUs and AI accelerator chips (plus the CUDA software stack and networking gear) and sells them to companies that build and run AI systems, essentially selling the \"picks and shovels\" of the AI computing buildout rather than running AI applications itself."
         },
         {
           "n": 2,
           "label": "Who its customers are",
-          "answer": "Its customers are cloud hyperscalers (Microsoft, Google, Amazon, Meta), AI labs (OpenAI, Anthropic and similar), enterprises building AI infrastructure, governments, and gaming/PC makers through its GeForce line."
+          "answer": "Its customers are cloud providers (Microsoft, Google, Amazon, Oracle), AI labs (OpenAI, Anthropic), large enterprises building AI infrastructure, and to a lesser extent gaming PC makers and automotive/robotics companies."
         },
         {
           "n": 3,
           "label": "Competitive edge",
-          "answer": "The edge is the CUDA software ecosystem \u2014 a decade-plus head start in developer tools and libraries that makes switching to rivals like AMD or in-house chips costly and slow, combined with a consistent performance lead and deep integration with the biggest cloud buyers."
+          "answer": "The moat is the combination of raw chip performance, the CUDA software ecosystem that developers have built on for over a decade, and full-stack integration (chips, networking, systems, software) that makes switching to competitors costly and technically risky."
         },
         {
           "n": 4,
           "label": "Leadership",
-          "answer": "Jensen"
+          "answer": "Jensen Huang, co-founder and CEO since 1993, still leads the company \u2014 this is from general knowledge and could be out of date if there's been a very recent change."
         },
         {
           "n": 5,
@@ -210,17 +210,17 @@
         {
           "n": 6,
           "label": "Growth potential",
-          "answer": ""
+          "answer": "Growth potential is tied to continued buildout of AI data center infrastructure, expansion into new markets like robotics, autonomous vehicles, and enterprise AI software, and international demand, though the pace of the last few years' growth is unlikely to be sustained indefinitely."
         },
         {
           "n": 7,
           "label": "Risks",
-          "answer": ""
+          "answer": "Key risks include customer concentration (a handful of hyperscalers drive a large share of revenue), competition from custom chips built by those same customers (Google TPUs, Amazon Trainium), export restrictions on China sales, potential AI capital spending slowdown, and the recent sharp increase in debt whose purpose isn't yet clear."
         },
         {
           "n": 8,
           "label": "What you're paying",
-          "answer": ""
+          "answer": "The business trades at a trailing P/E of 26.5; EV/EBITDA is not available due to missing or negative EBITDA data."
         },
         {
           "n": 9,
@@ -230,12 +230,12 @@
         {
           "n": 10,
           "label": "The 5-10 year case",
-          "answer": ""
+          "answer": "A materially higher market cap in five to ten years would require AI infrastructure spending to keep growing for years, NVIDIA to maintain its technological lead over custom silicon and rival GPU makers, and margins to hold up despite customers' efforts to reduce dependence on it; a stagnant or lower valuation could result if any of those falter or if AI capex growth simply matures like past computing cycles."
         },
         {
           "n": 11,
           "label": "Risk / reward",
-          "answer": ""
+          "answer": "If the AI buildout continues and NVIDIA holds its position, the business could be worth substantially more than today given how early large-scale AI infrastructure spending may still be; if growth slows sharply, customers succeed in shifting to in-house chips, or the current spending proves to be overbuilt capacity, the business's earnings power and valuation could contract significantly, and at a $5.11T starting size even modest percentage disappointments represent enormous dollar amounts."
         }
       ],
       "position_history": [
