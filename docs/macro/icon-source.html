@@ -6,31 +6,16 @@
 </style>
 <body>
 <!--
-  App icon design, kept intentionally simple, same conventions as the
-  earnings tracker's icon:
-    - Full-bleed dark background matching the app's own --bg (#0a0a0f) and
-      the manifest's theme_color, so the icon visually continues into the
-      app when it launches rather than flashing a mismatched color.
-    - An upward trend line ending in an arrowhead — the literal "bull
-      market" visual, same motif as the earnings tracker's own icon
-      (upward sparkline), just with an arrowhead tip instead of a dot.
-      Built entirely from straight line segments, no curves at all, which
-      is exactly why this one is safe: every previous attempt that failed
-      (continents, a bull) failed because of freehand curve-guessing: a
-      straight-line arrow has zero ambiguity to get wrong.
-    - Thin stroke, single accent color — matches this app's existing
-      visual language rather than a bold flat-icon-pack mark.
-    - No text: illegible at 29-60px icon sizes, and the OS already prints
-      the app name underneath the icon.
-    - ~18% margin on all sides — iOS applies its own rounded-square mask
-      automatically, and a design that runs edge-to-edge gets clipped by it.
+  App icon design: a single centered dot, in the app's own --red token
+  (#ff5252) rather than an arbitrary red, so the icon draws from the same
+  palette the app itself uses (status colors, badges) instead of
+  introducing a one-off color nobody else in the app uses.
+  Full-bleed dark background matches the app's own --bg (#0a0a0f) and the
+  manifest's theme_color, so the icon visually continues into the app
+  when it launches. No text, no curves to get wrong — just one shape.
 -->
 <svg viewBox="0 0 512 512" width="512" height="512" xmlns="http://www.w3.org/2000/svg">
   <rect width="512" height="512" fill="#0a0a0f"/>
-  <path d="M 100 380 L 210 300 L 290 330 L 410 150
-           M 410 150 L 366 160
-           M 410 150 L 394 196"
-        fill="none" stroke="#448aff" stroke-width="26"
-        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="256" cy="256" r="90" fill="#ff5252"/>
 </svg>
 </body>
