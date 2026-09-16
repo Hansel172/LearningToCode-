@@ -1,8 +1,90 @@
 {
   "live": {
-    "updated": "2026-09-16T00:00:00+00:00",
-    "market": {},
-    "macro": {},
+    "updated": "2026-09-16T00:17:56+00:00",
+    "market": {
+      "SP500": {
+        "label": "S&P 500",
+        "value": 7585.73,
+        "unit": "",
+        "note": "last close",
+        "changePct": -0.45,
+        "asOf": "2026-09-15",
+        "source": "FRED SP500",
+        "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
+      },
+      "NASDAQCOM": {
+        "label": "Nasdaq",
+        "value": 26186.41,
+        "unit": "",
+        "note": "last close",
+        "changePct": -0.56,
+        "asOf": "2026-09-14",
+        "source": "FRED NASDAQCOM",
+        "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
+      },
+      "VIXCLS": {
+        "label": "VIX",
+        "value": 17.1,
+        "unit": "",
+        "note": "last close",
+        "changePct": 7.95,
+        "asOf": "2026-09-14",
+        "source": "FRED VIXCLS",
+        "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
+      },
+      "DCOILWTICO": {
+        "label": "WTI Crude",
+        "value": 97.26,
+        "unit": "",
+        "note": "last close",
+        "changePct": 3.24,
+        "asOf": "2026-09-09",
+        "source": "FRED DCOILWTICO",
+        "sourceUrl": "https://fred.stlouisfed.org/series/DCOILWTICO"
+      }
+    },
+    "macro": {
+      "DFF": {
+        "label": "Fed funds rate",
+        "value": 3.63,
+        "unit": "%",
+        "note": "last close",
+        "changePct": 0.0,
+        "asOf": "2026-09-14",
+        "source": "FRED DFF",
+        "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
+      },
+      "DGS10": {
+        "label": "10-year Treasury",
+        "value": 4.97,
+        "unit": "%",
+        "note": "last close",
+        "changePct": 0.2,
+        "asOf": "2026-09-14",
+        "source": "FRED DGS10",
+        "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
+      },
+      "CPIAUCSL": {
+        "label": "CPI",
+        "value": 3.71,
+        "unit": "%",
+        "note": "year over year",
+        "changePct": null,
+        "asOf": "2026-08-01",
+        "source": "FRED CPIAUCSL",
+        "sourceUrl": "https://fred.stlouisfed.org/series/CPIAUCSL"
+      },
+      "PPIACO": {
+        "label": "PPI",
+        "value": 9.85,
+        "unit": "%",
+        "note": "year over year",
+        "changePct": null,
+        "asOf": "2026-08-01",
+        "source": "FRED PPIACO",
+        "sourceUrl": "https://fred.stlouisfed.org/series/PPIACO"
+      }
+    },
     "errors": []
   },
   "themes": {
@@ -376,5 +458,6 @@
         "type": "deal"
       }
     ]
-  }
+  },
+  "pending_deals": []
 }
