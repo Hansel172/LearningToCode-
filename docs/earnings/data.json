@@ -175,7 +175,69 @@
         ]
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
+      "valuation": {
+        "market_cap": 5113297000000.0,
+        "pe_ttm": 26.5,
+        "ev_ebitda_ttm": null
+      },
       "story": "Nvidia grew revenue by 17.9% this quarter, extending its streak to 11 straight quarters of growth, while net income and EPS each edged up modestly (around 2-3%). Cash on hand jumped nearly 70%, giving the company a much larger cushion, though this coincided with debt nearly quadrupling (up 293.9%) \u2014 a sharp shift worth watching to understand what the borrowed money is funding. Gross margin held essentially flat at 75%, showing that profitability per dollar of sales stayed steady even as the top line surged.",
+      "company_story": [
+        {
+          "n": 1,
+          "label": "What it does",
+          "answer": "Nvidia designs GPUs and specialized AI chips, then licenses its CUDA software ecosystem alongside the hardware, effectively selling \"AI compute\" as a full stack of silicon, networking, and software that data centers use to train and run AI models."
+        },
+        {
+          "n": 2,
+          "label": "Who its customers are",
+          "answer": "Its customers are cloud giants (Microsoft, Amazon, Google, Meta, Oracle), AI labs (OpenAI, Anthropic), enterprises building AI infrastructure, and to a lesser extent gaming PC makers and automotive/robotics firms."
+        },
+        {
+          "n": 3,
+          "label": "Competitive edge",
+          "answer": "Nvidia's edge is the CUDA software moat \u2014 a decade-plus head start in developer tools, libraries, and optimized frameworks that make switching to rival chips costly and slow, combined with"
+        },
+        {
+          "n": 4,
+          "label": "Leadership",
+          "answer": ""
+        },
+        {
+          "n": 5,
+          "label": "Insider ownership",
+          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
+        },
+        {
+          "n": 6,
+          "label": "Growth potential",
+          "answer": ""
+        },
+        {
+          "n": 7,
+          "label": "Risks",
+          "answer": ""
+        },
+        {
+          "n": 8,
+          "label": "What you're paying",
+          "answer": ""
+        },
+        {
+          "n": 9,
+          "label": "Market cap today",
+          "answer": "$5.11T, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
+        },
+        {
+          "n": 10,
+          "label": "The 5-10 year case",
+          "answer": ""
+        },
+        {
+          "n": 11,
+          "label": "Risk / reward",
+          "answer": ""
+        }
+      ],
       "position_history": [
         {
           "date": "2026-09-14",
@@ -367,7 +429,69 @@
         ]
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
-      "story": "Apple's profits and earnings per share ticked up slightly even as revenue slipped 1.6%, thanks to improved efficiency: gross margin rose to 50.1%, extending a four-quarter streak of margin gains, and debt edged lower. Cash on hand dropped a notable 13.2%, though nothing in the numbers here explains why. The bigger caution sign is that operating expenses grew 0.9% while revenue shrank\u2014the second straight quarter costs have outpaced sales\u2014meaning the company is spending more to earn less, a pattern that could squeeze profits down the road if it continues."
+      "valuation": {
+        "market_cap": 4835635601200.0,
+        "pe_ttm": 37.5,
+        "ev_ebitda_ttm": null
+      },
+      "story": "Apple's profits and earnings per share ticked up slightly even as revenue slipped 1.6%, thanks to improved efficiency: gross margin rose to 50.1%, extending a four-quarter streak of margin gains, and debt edged lower. Cash on hand dropped a notable 13.2%, though nothing in the numbers here explains why. The bigger caution sign is that operating expenses grew 0.9% while revenue shrank\u2014the second straight quarter costs have outpaced sales\u2014meaning the company is spending more to earn less, a pattern that could squeeze profits down the road if it continues.",
+      "company_story": [
+        {
+          "n": 1,
+          "label": "What it does",
+          "answer": "Apple designs and sells premium hardware (iPhone, Mac, iPad, wearables) and layers a growing services business (App Store, iCloud, subscriptions, advertising) on top of that installed base, monetizing both"
+        },
+        {
+          "n": 2,
+          "label": "Who its customers are",
+          "answer": ""
+        },
+        {
+          "n": 3,
+          "label": "Competitive edge",
+          "answer": ""
+        },
+        {
+          "n": 4,
+          "label": "Leadership",
+          "answer": ""
+        },
+        {
+          "n": 5,
+          "label": "Insider ownership",
+          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
+        },
+        {
+          "n": 6,
+          "label": "Growth potential",
+          "answer": ""
+        },
+        {
+          "n": 7,
+          "label": "Risks",
+          "answer": ""
+        },
+        {
+          "n": 8,
+          "label": "What you're paying",
+          "answer": ""
+        },
+        {
+          "n": 9,
+          "label": "Market cap today",
+          "answer": "$4.84T, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
+        },
+        {
+          "n": 10,
+          "label": "The 5-10 year case",
+          "answer": ""
+        },
+        {
+          "n": 11,
+          "label": "Risk / reward",
+          "answer": ""
+        }
+      ]
     },
     {
       "ticker": "MSFT",
@@ -549,7 +673,69 @@
         ]
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
-      "story": "Microsoft posted solid growth this quarter, with revenue up 8.6%, net income up 12.5%, and free cash flow jumping 24.3% \u2014 continuing a revenue growth streak that's now lasted nine straight quarters. But underneath those headline numbers, operating expenses grew even faster than revenue (12.6%) for the second quarter in a row, and gross margin slipped slightly, signs that costs are creeping up relative to sales. The bigger question mark is cash: reserves fell 34.8% while debt ticked up 0.1%, meaning the company drew down cash and added a bit more borrowing in the same period \u2014 a combination worth watching even though profits and cash flow both looked strong on the surface."
+      "valuation": {
+        "market_cap": 3691387174486.0,
+        "pe_ttm": 27.6,
+        "ev_ebitda_ttm": null
+      },
+      "story": "Microsoft posted solid growth this quarter, with revenue up 8.6%, net income up 12.5%, and free cash flow jumping 24.3% \u2014 continuing a revenue growth streak that's now lasted nine straight quarters. But underneath those headline numbers, operating expenses grew even faster than revenue (12.6%) for the second quarter in a row, and gross margin slipped slightly, signs that costs are creeping up relative to sales. The bigger question mark is cash: reserves fell 34.8% while debt ticked up 0.1%, meaning the company drew down cash and added a bit more borrowing in the same period \u2014 a combination worth watching even though profits and cash flow both looked strong on the surface.",
+      "company_story": [
+        {
+          "n": 1,
+          "label": "What it does",
+          "answer": "Microsoft sells software, cloud infrastructure, and productivity tools on a subscription/licensing model \u2014 Windows and Office generate steady recurring revenue, while Azure rents out computing power and AI infrastructure to businesses, creating a mix of legacy licensing cash flow and fast-growing cloud consumption revenue."
+        },
+        {
+          "n": 2,
+          "label": "Who its customers are",
+          "answer": "Its customers span the spectrum from individual consumers (Windows, Office, Xbox) to small businesses to the largest global enterprises and governments that run Azure cloud infrastructure, Microsoft 365, and Teams as core operating tools."
+        },
+        {
+          "n": 3,
+          "label": "Competitive edge",
+          "answer": "Deep enterprise entrenchment is the moat \u2014 decades of corpor"
+        },
+        {
+          "n": 4,
+          "label": "Leadership",
+          "answer": ""
+        },
+        {
+          "n": 5,
+          "label": "Insider ownership",
+          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
+        },
+        {
+          "n": 6,
+          "label": "Growth potential",
+          "answer": ""
+        },
+        {
+          "n": 7,
+          "label": "Risks",
+          "answer": ""
+        },
+        {
+          "n": 8,
+          "label": "What you're paying",
+          "answer": ""
+        },
+        {
+          "n": 9,
+          "label": "Market cap today",
+          "answer": "$3.69T, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
+        },
+        {
+          "n": 10,
+          "label": "The 5-10 year case",
+          "answer": ""
+        },
+        {
+          "n": 11,
+          "label": "Risk / reward",
+          "answer": ""
+        }
+      ]
     },
     {
       "ticker": "SPCX",
@@ -614,7 +800,69 @@
         ]
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
-      "story": "SPCX's numbers cover a full 12-month stretch (June 2025 to June 2026, spanning its IPO) rather than a single quarter, so these are year-over-year comparisons rather than quarter-over-quarter ones. Over that span, revenue nearly doubled (+91.9%) while gross margin climbed 11.3 points to 55.3%, suggesting the company is not just selling more but keeping more of each dollar earned. Net income, while still negative, improved 46.3%, and diluted EPS rose 73.5%, pointing toward a narrowing path away from losses. Cash on hand jumped 525.1%, which likely reflects proceeds from the June 2026 IPO on top of the underlying business trends."
+      "valuation": {
+        "market_cap": 1947564174971.0,
+        "pe_ttm": null,
+        "ev_ebitda_ttm": null
+      },
+      "story": "SPCX's numbers cover a full 12-month stretch (June 2025 to June 2026, spanning its IPO) rather than a single quarter, so these are year-over-year comparisons rather than quarter-over-quarter ones. Over that span, revenue nearly doubled (+91.9%) while gross margin climbed 11.3 points to 55.3%, suggesting the company is not just selling more but keeping more of each dollar earned. Net income, while still negative, improved 46.3%, and diluted EPS rose 73.5%, pointing toward a narrowing path away from losses. Cash on hand jumped 525.1%, which likely reflects proceeds from the June 2026 IPO on top of the underlying business trends.",
+      "company_story": [
+        {
+          "n": 1,
+          "label": "What it does",
+          "answer": ""
+        },
+        {
+          "n": 2,
+          "label": "Who its customers are",
+          "answer": ""
+        },
+        {
+          "n": 3,
+          "label": "Competitive edge",
+          "answer": ""
+        },
+        {
+          "n": 4,
+          "label": "Leadership",
+          "answer": ""
+        },
+        {
+          "n": 5,
+          "label": "Insider ownership",
+          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
+        },
+        {
+          "n": 6,
+          "label": "Growth potential",
+          "answer": ""
+        },
+        {
+          "n": 7,
+          "label": "Risks",
+          "answer": ""
+        },
+        {
+          "n": 8,
+          "label": "What you're paying",
+          "answer": ""
+        },
+        {
+          "n": 9,
+          "label": "Market cap today",
+          "answer": "$1.95T, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
+        },
+        {
+          "n": 10,
+          "label": "The 5-10 year case",
+          "answer": ""
+        },
+        {
+          "n": 11,
+          "label": "Risk / reward",
+          "answer": ""
+        }
+      ]
     },
     {
       "ticker": "MU",
@@ -784,7 +1032,69 @@
         ]
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
-      "story": "Micron had a standout quarter, with revenue jumping 73.7% and net income more than doubling as gross margin surged over 10 points to 84.6%. That kind of margin expansion suggests the company is selling its memory chips at much higher profitability than before, not just more of them. This builds on five straight quarters of both revenue growth and margin improvement, pointing to a sustained upswing rather than a one-off blip, and it came without any change in debt levels."
+      "valuation": {
+        "market_cap": 1047625086868.0,
+        "pe_ttm": 20.8,
+        "ev_ebitda_ttm": 15.1
+      },
+      "story": "Micron had a standout quarter, with revenue jumping 73.7% and net income more than doubling as gross margin surged over 10 points to 84.6%. That kind of margin expansion suggests the company is selling its memory chips at much higher profitability than before, not just more of them. This builds on five straight quarters of both revenue growth and margin improvement, pointing to a sustained upswing rather than a one-off blip, and it came without any change in debt levels.",
+      "company_story": [
+        {
+          "n": 1,
+          "label": "What it does",
+          "answer": "Micron designs and manufactures memory and storage chips \u2014 DRAM (short-term memory) and NAND (long-term storage) \u2014 that go inside computers, phones, servers, and data-center equipment; it sells these as components to hardware makers rather than selling finished devices to consumers."
+        },
+        {
+          "n": 2,
+          "label": "Who its customers are",
+          "answer": "Its customers are PC makers, smartphone makers, and data-center/server and cloud infrastructure providers who buy memory and storage chips in bulk to build into their own products."
+        },
+        {
+          "n": 3,
+          "label": "Competitive edge",
+          "answer": "Micron competes on manufacturing scale, process technology, and cost efficiency in a market with only three major DRAM players (Micron, Samsung, SK Hynix) and a handful of NAND players, so its edge is being one of a small number of companies that can produce leading-edge memory at global scale rather than"
+        },
+        {
+          "n": 4,
+          "label": "Leadership",
+          "answer": ""
+        },
+        {
+          "n": 5,
+          "label": "Insider ownership",
+          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
+        },
+        {
+          "n": 6,
+          "label": "Growth potential",
+          "answer": ""
+        },
+        {
+          "n": 7,
+          "label": "Risks",
+          "answer": ""
+        },
+        {
+          "n": 8,
+          "label": "What you're paying",
+          "answer": ""
+        },
+        {
+          "n": 9,
+          "label": "Market cap today",
+          "answer": "$1.05T, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
+        },
+        {
+          "n": 10,
+          "label": "The 5-10 year case",
+          "answer": ""
+        },
+        {
+          "n": 11,
+          "label": "Risk / reward",
+          "answer": ""
+        }
+      ]
     },
     {
       "ticker": "SNDK",
@@ -925,7 +1235,69 @@
         ]
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
-      "story": "SanDisk had a standout quarter: revenue jumped 50.7% and net income nearly doubled, up 91.0%, while gross margin climbed 6.2 points to 84.6%. Cash on hand also grew 27.5%, leaving the company with a stronger financial cushion. This continues a five-quarter streak of both rising revenue and expanding margins, suggesting the growth and profitability improvements aren't a one-time blip but part of a sustained pattern since the company's 2025 spinoff from Western Digital."
+      "valuation": {
+        "market_cap": 224152116536.0,
+        "pe_ttm": 19.6,
+        "ev_ebitda_ttm": null
+      },
+      "story": "SanDisk had a standout quarter: revenue jumped 50.7% and net income nearly doubled, up 91.0%, while gross margin climbed 6.2 points to 84.6%. Cash on hand also grew 27.5%, leaving the company with a stronger financial cushion. This continues a five-quarter streak of both rising revenue and expanding margins, suggesting the growth and profitability improvements aren't a one-time blip but part of a sustained pattern since the company's 2025 spinoff from Western Digital.",
+      "company_story": [
+        {
+          "n": 1,
+          "label": "What it does",
+          "answer": "SanDisk designs and manufactures NAND flash memory chips and the storage products built around them \u2014 SSDs, memory cards, USB drives, and embedded flash for phones and other devices \u2014 making money by selling silicon and storage hardware into a highly cyclical commodity-tech market."
+        },
+        {
+          "n": 2,
+          "label": "Who its customers are",
+          "answer": "Customers span consumer electronics buyers (via retail memory cards, USB drives, SSDs), device makers (smartphone, laptop, camera manufacturers who embed flash), and enterprise/data-center customers buying storage drives at scale."
+        },
+        {
+          "n": 3,
+          "label": "Competitive edge",
+          "answer": "Its"
+        },
+        {
+          "n": 4,
+          "label": "Leadership",
+          "answer": ""
+        },
+        {
+          "n": 5,
+          "label": "Insider ownership",
+          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
+        },
+        {
+          "n": 6,
+          "label": "Growth potential",
+          "answer": ""
+        },
+        {
+          "n": 7,
+          "label": "Risks",
+          "answer": ""
+        },
+        {
+          "n": 8,
+          "label": "What you're paying",
+          "answer": ""
+        },
+        {
+          "n": 9,
+          "label": "Market cap today",
+          "answer": "$224.2B, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
+        },
+        {
+          "n": 10,
+          "label": "The 5-10 year case",
+          "answer": ""
+        },
+        {
+          "n": 11,
+          "label": "Risk / reward",
+          "answer": ""
+        }
+      ]
     },
     {
       "ticker": "WDC",
@@ -1103,7 +1475,69 @@
         ]
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
-      "story": "WDC grew revenue 12.3% and pushed gross margin up nearly 4 points to 54.1%, continuing streaks of five straight quarters of sales growth and eleven straight quarters of margin expansion. But that stronger top line didn't translate into more profit \u2014 net income slipped 0.3%, meaning other costs below the gross margin line ate up the gains. The company also cut debt by a third, a positive sign, but cash on hand dropped 23%, a notable one-quarter decline worth watching alongside the flat profit picture."
+      "valuation": {
+        "market_cap": 148528447290.0,
+        "pe_ttm": 15.8,
+        "ev_ebitda_ttm": null
+      },
+      "story": "WDC grew revenue 12.3% and pushed gross margin up nearly 4 points to 54.1%, continuing streaks of five straight quarters of sales growth and eleven straight quarters of margin expansion. But that stronger top line didn't translate into more profit \u2014 net income slipped 0.3%, meaning other costs below the gross margin line ate up the gains. The company also cut debt by a third, a positive sign, but cash on hand dropped 23%, a notable one-quarter decline worth watching alongside the flat profit picture.",
+      "company_story": [
+        {
+          "n": 1,
+          "label": "What it does",
+          "answer": ""
+        },
+        {
+          "n": 2,
+          "label": "Who its customers are",
+          "answer": ""
+        },
+        {
+          "n": 3,
+          "label": "Competitive edge",
+          "answer": ""
+        },
+        {
+          "n": 4,
+          "label": "Leadership",
+          "answer": ""
+        },
+        {
+          "n": 5,
+          "label": "Insider ownership",
+          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
+        },
+        {
+          "n": 6,
+          "label": "Growth potential",
+          "answer": ""
+        },
+        {
+          "n": 7,
+          "label": "Risks",
+          "answer": ""
+        },
+        {
+          "n": 8,
+          "label": "What you're paying",
+          "answer": ""
+        },
+        {
+          "n": 9,
+          "label": "Market cap today",
+          "answer": "$148.5B, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
+        },
+        {
+          "n": 10,
+          "label": "The 5-10 year case",
+          "answer": ""
+        },
+        {
+          "n": 11,
+          "label": "Risk / reward",
+          "answer": ""
+        }
+      ]
     },
     {
       "ticker": "STX",
@@ -1268,7 +1702,69 @@
         ]
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
-      "story": "Seagate (STX) had a strong quarter: revenue climbed 16.6% while net income surged 73.0%, a sign that profits grew much faster than sales. That gap shows up clearly in the gross margin, which jumped 5.8 points to 52.3% \u2014 meaning the company is keeping a lot more of each sales dollar as profit. At the same time, Seagate built up cash (+48.6%) and paid down debt (-2.5%), strengthening its financial footing. This isn't a one-off: it's the 5th straight quarter of revenue growth and the 11th straight quarter of improving margins, pointing to a sustained trend of both growing and getting more efficient at the same time."
+      "valuation": {
+        "market_cap": 176527264847.0,
+        "pe_ttm": 55.4,
+        "ev_ebitda_ttm": null
+      },
+      "story": "Seagate (STX) had a strong quarter: revenue climbed 16.6% while net income surged 73.0%, a sign that profits grew much faster than sales. That gap shows up clearly in the gross margin, which jumped 5.8 points to 52.3% \u2014 meaning the company is keeping a lot more of each sales dollar as profit. At the same time, Seagate built up cash (+48.6%) and paid down debt (-2.5%), strengthening its financial footing. This isn't a one-off: it's the 5th straight quarter of revenue growth and the 11th straight quarter of improving margins, pointing to a sustained trend of both growing and getting more efficient at the same time.",
+      "company_story": [
+        {
+          "n": 1,
+          "label": "What it does",
+          "answer": "Seagate designs and manufactures hard disk drives (HDDs) and related storage systems, selling the physical media that data centers, cloud providers, and enterprises use to store massive amounts of data at low cost per gigabyte."
+        },
+        {
+          "n": 2,
+          "label": "Who its customers are",
+          "answer": "Its customers are primarily hyperscale cloud providers (like Amazon, Microsoft, Google), enterprise data center operators, and OEMs that build storage systems, with a smaller consumer/retail tail."
+        },
+        {
+          "n": 3,
+          "label": "Competitive edge",
+          "answer": "Seagate's edge is decades of manufacturing scale and engineering expertise in high-capacity HDD technology (like HAMR), which lets it hit the cost-per-ter"
+        },
+        {
+          "n": 4,
+          "label": "Leadership",
+          "answer": ""
+        },
+        {
+          "n": 5,
+          "label": "Insider ownership",
+          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
+        },
+        {
+          "n": 6,
+          "label": "Growth potential",
+          "answer": ""
+        },
+        {
+          "n": 7,
+          "label": "Risks",
+          "answer": ""
+        },
+        {
+          "n": 8,
+          "label": "What you're paying",
+          "answer": ""
+        },
+        {
+          "n": 9,
+          "label": "Market cap today",
+          "answer": "$176.5B, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
+        },
+        {
+          "n": 10,
+          "label": "The 5-10 year case",
+          "answer": ""
+        },
+        {
+          "n": 11,
+          "label": "Risk / reward",
+          "answer": ""
+        }
+      ]
     }
   ]
 }
