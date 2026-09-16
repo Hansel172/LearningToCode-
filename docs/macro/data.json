@@ -1,12 +1,12 @@
 {
   "live": {
-    "updated": "2026-09-15T00:00:00+00:00",
+    "updated": "2026-09-16T00:00:00+00:00",
     "market": {},
     "macro": {},
     "errors": []
   },
   "themes": {
-    "updated": "2026-09-15",
+    "updated": "2026-09-16",
     "note": "Qualitative layer. Written by a person or by Claude \u2014 never by the refresh script. Regenerate with: 'update themes.json'",
     "themes": [
       {
@@ -290,6 +290,46 @@
           }
         ],
         "watch": "Whether China's official and private PMI readings converge in September, and whether Brazil's paused cutting cycle resumes or holds given the higher inflation projection."
+      },
+      {
+        "id": "crypto",
+        "name": "Crypto / Bitcoin",
+        "status": "yellow",
+        "whatChanged": "Bitcoin's price and its regulatory backdrop both moved this week. The Senate failed to advance the CLARITY Act (crypto market-structure legislation) in a 49-50 cloture vote on September 15 \u2014 short of the 60 needed \u2014 effectively killing it for 2026 and, given midterm politics, likely until 2029. Unresolved fights over DeFi treatment, stablecoin yield, and an ethics clause barring officials from launching tokens were the sticking points. The SEC's fallback path continues regardless: a formal 'Regulation Crypto Assets' rulemaking proposed August 19, with a 60-day comment period closing in mid-October. Separately, price has slid to around $77,000 ahead of the September 17 FOMC decision, down from an early-September peak near $81,000 after a short squeeze that had carried it up from below $63,000 \u2014 directly reflecting the same 'higher-for-longer' pressure already tracked in Fed & Rates. Spot Bitcoin ETF adoption keeps deepening in absolute terms regardless: $83.3 billion in net assets on $53.9 billion of cumulative inflows, even though 2026 flows overall remain net negative by more than $1 billion.",
+        "dataPoints": [
+          {
+            "label": "Bitcoin price",
+            "value": "~$77,000",
+            "detail": "down from an early-Sep peak near $81,000, sliding ahead of the Sep 17 FOMC decision",
+            "source": "Yahoo Finance, Sep 15"
+          },
+          {
+            "label": "CLARITY Act cloture vote",
+            "value": "Failed, 49-50",
+            "detail": "needed 60; effectively dead for 2026, likely until 2029",
+            "source": "Senate vote, Sep 15"
+          },
+          {
+            "label": "Bitcoin ETF net assets",
+            "value": "$83.3B",
+            "detail": "cumulative inflows of $53.9B since launch",
+            "source": "crypto ETF trackers, mid-Aug 2026"
+          },
+          {
+            "label": "2026 ETF flows YTD",
+            "value": "net negative",
+            "detail": "more than $1B below where the year started, despite recent monthly inflows",
+            "source": "CoinDesk, Sep 8"
+          }
+        ],
+        "portfolioImpact": [
+          {
+            "holding": "Bitcoin / IBIT",
+            "rating": "neutral",
+            "reason": "Two real forces pulling in different directions: the failed CLARITY vote removes a near-term catalyst for regulatory clarity that would have supported institutional adoption, while continued ETF asset growth ($83.3B net assets) shows institutionalization proceeding anyway through the SEC's own fallback rulemaking. Near-term price is also under the same Fed-timing pressure already tracked in Fed & Rates."
+          }
+        ],
+        "watch": "Whether the SEC's Regulation Crypto Assets comment period (closing mid-October) produces an actual rule now that legislative action is off the table until at least 2029, and whether the Sep 17 FOMC decision reverses or extends the current price slide."
       }
     ],
     "catalysts": [
