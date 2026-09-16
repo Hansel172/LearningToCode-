@@ -120,7 +120,14 @@ substance. Do not give investment advice or say what to do about it — explain,
 recommend."""
 
 
-def call_claude(prompt, api_key, max_tokens=300, timeout=30):
+def call_claude(prompt, api_key, max_tokens=300, timeout=30, thinking=None):
+    body = {
+        "model": MODEL,
+        "max_tokens": max_tokens,
+        "messages": [{"role": "user", "content": prompt}],
+    }
+    if thinking:
+        body["thinking"] = thinking
     r = httpx.post(
         API_URL,
         headers={
@@ -128,11 +135,7 @@ def call_claude(prompt, api_key, max_tokens=300, timeout=30):
             "anthropic-version": "2023-06-01",
             "content-type": "application/json",
         },
-        json={
-            "model": MODEL,
-            "max_tokens": max_tokens,
-            "messages": [{"role": "user", "content": prompt}],
-        },
+        json=body,
         timeout=timeout,
     )
     r.raise_for_status()
