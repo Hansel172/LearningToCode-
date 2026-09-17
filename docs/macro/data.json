@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-17T15:32:07+00:00",
+    "updated": "2026-09-17T20:19:19+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -475,6 +475,14 @@
       "source": "PRNewswire",
       "publishedAt": "2026-09-15T14:30:00Z",
       "detectedAt": "2026-09-16T15:25:15+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Nvidia and BUZZHPC deepen AI infrastructure ties as parent HIVE targets $100M revenue",
+      "url": "https://cryptobriefing.com/nvidia-buzzhpc-hive-digital-ai-infrastructure/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-16T19:21:33Z",
+      "detectedAt": "2026-09-17T20:19:19+00:00"
     }
   ]
 }
