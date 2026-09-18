@@ -1,14 +1,14 @@
 {
   "live": {
-    "updated": "2026-09-17T20:19:19+00:00",
+    "updated": "2026-09-18T00:16:11+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7551.81,
+        "value": 7637.76,
         "unit": "",
         "note": "last close",
-        "changePct": -0.45,
-        "asOf": "2026-09-16",
+        "changePct": 1.14,
+        "asOf": "2026-09-17",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -50,17 +50,17 @@
         "unit": "%",
         "note": "last close",
         "changePct": 0.0,
-        "asOf": "2026-09-15",
+        "asOf": "2026-09-16",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.0,
+        "value": 5.01,
         "unit": "%",
         "note": "last close",
-        "changePct": 0.6,
-        "asOf": "2026-09-15",
+        "changePct": 0.2,
+        "asOf": "2026-09-16",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -483,6 +483,14 @@
       "source": "Crypto Briefing",
       "publishedAt": "2026-09-16T19:21:33Z",
       "detectedAt": "2026-09-17T20:19:19+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Snap targets enterprises with Salesforce, Nvidia AI tools for augmented-reality glasses",
+      "url": "https://www.channelnewsasia.com/business/snap-targets-enterprises-salesforce-nvidia-ai-tools-augmented-reality-glasses-6390506",
+      "source": "CNA",
+      "publishedAt": "2026-09-16T23:45:12Z",
+      "detectedAt": "2026-09-18T00:16:11+00:00"
     }
   ]
 }
