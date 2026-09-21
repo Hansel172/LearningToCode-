@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-21T17:02:07+00:00",
+    "updated": "2026-09-21T21:03:12+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -49,18 +49,18 @@
         "value": 3.88,
         "unit": "%",
         "note": "last close",
-        "changePct": 6.89,
-        "asOf": "2026-09-17",
+        "changePct": 0.0,
+        "asOf": "2026-09-18",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 4.94,
+        "value": 5.01,
         "unit": "%",
         "note": "last close",
-        "changePct": -1.4,
-        "asOf": "2026-09-17",
+        "changePct": 1.42,
+        "asOf": "2026-09-18",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -491,6 +491,14 @@
       "source": "CNA",
       "publishedAt": "2026-09-16T23:45:12Z",
       "detectedAt": "2026-09-18T00:16:11+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Microsoft, Meta lost billions on VR headsets \u2014 but Snap thinks its $2,195 AR glasses will change the game as it teams up with Nvidia, Salesforce and AWS to crack the enterprise market",
+      "url": "https://www.techradar.com/pro/microsoft-meta-lost-billions-on-vr-headsets-snap-thinks-its-usd2-195-ar-glasses-will-change-the-game-as-it-teams-up-with-nvidia-salesforce-and-aws-to-crack-the-enterprise-market",
+      "source": "TechRadar",
+      "publishedAt": "2026-09-20T18:35:00Z",
+      "detectedAt": "2026-09-21T21:03:13+00:00"
     }
   ]
 }
