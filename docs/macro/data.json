@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-22T15:30:58+00:00",
+    "updated": "2026-09-22T20:11:30+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -499,6 +499,14 @@
       "source": "TechRadar",
       "publishedAt": "2026-09-20T18:35:00Z",
       "detectedAt": "2026-09-21T21:03:13+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Nvidia buys $2B in SB Energy shares ahead of US IPO",
+      "url": "https://cryptobriefing.com/nvidia-sb-energy-shares-ipo/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-21T19:29:13Z",
+      "detectedAt": "2026-09-22T20:11:31+00:00"
     }
   ]
 }
