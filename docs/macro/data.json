@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-25T00:32:46+00:00",
+    "updated": "2026-09-25T15:48:39+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -14,11 +14,11 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26936.04,
+        "value": 26939.37,
         "unit": "",
         "note": "last close",
-        "changePct": -1.13,
-        "asOf": "2026-09-23",
+        "changePct": 0.01,
+        "asOf": "2026-09-24",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
@@ -483,6 +483,14 @@
       "source": "Crypto Briefing",
       "publishedAt": "2026-09-22T21:30:14Z",
       "detectedAt": "2026-09-24T00:29:18+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "headline": "Apple and Qualcomm Renew Partnership for 5G Modem Supply",
+      "url": "https://www.techpowerup.com/353052/apple-and-qualcomm-renew-partnership-for-5g-modem-supply",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-09-24T15:20:10Z",
+      "detectedAt": "2026-09-25T15:48:40+00:00"
     }
   ]
 }
