@@ -1,14 +1,14 @@
 {
   "live": {
-    "updated": "2026-09-25T20:28:45+00:00",
+    "updated": "2026-09-26T00:37:04+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7704.13,
+        "value": 7743.41,
         "unit": "",
         "note": "last close",
-        "changePct": -0.02,
-        "asOf": "2026-09-24",
+        "changePct": 0.51,
+        "asOf": "2026-09-25",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
