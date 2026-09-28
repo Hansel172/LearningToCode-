@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-26T00:37:04+00:00",
+    "updated": "2026-09-28T18:35:41+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -14,11 +14,11 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26939.37,
+        "value": 27068.72,
         "unit": "",
         "note": "last close",
-        "changePct": 0.01,
-        "asOf": "2026-09-24",
+        "changePct": 0.48,
+        "asOf": "2026-09-25",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
