@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-29T16:53:11+00:00",
+    "updated": "2026-09-29T21:23:40+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -24,11 +24,11 @@
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 14.21,
+        "value": 16.07,
         "unit": "",
         "note": "last close",
-        "changePct": -4.44,
-        "asOf": "2026-09-22",
+        "changePct": 8.07,
+        "asOf": "2026-09-28",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -50,17 +50,17 @@
         "unit": "%",
         "note": "last close",
         "changePct": 0.0,
-        "asOf": "2026-09-25",
+        "asOf": "2026-09-28",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.17,
+        "value": 5.24,
         "unit": "%",
         "note": "last close",
-        "changePct": -0.19,
-        "asOf": "2026-09-25",
+        "changePct": 1.35,
+        "asOf": "2026-09-28",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -460,14 +460,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "Nvidia buys $2B in SB Energy shares ahead of US IPO",
-      "url": "https://cryptobriefing.com/nvidia-sb-energy-shares-ipo/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-09-21T19:29:13Z",
-      "detectedAt": "2026-09-22T20:11:31+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "Apple poised to join Nvidia in exclusive $5T club",
