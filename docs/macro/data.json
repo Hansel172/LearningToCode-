@@ -1,14 +1,14 @@
 {
   "live": {
-    "updated": "2026-09-28T18:35:41+00:00",
+    "updated": "2026-09-29T01:55:46+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7743.41,
+        "value": 7683.69,
         "unit": "",
         "note": "last close",
-        "changePct": 0.51,
-        "asOf": "2026-09-25",
+        "changePct": -0.77,
+        "asOf": "2026-09-28",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -50,17 +50,17 @@
         "unit": "%",
         "note": "last close",
         "changePct": 0.0,
-        "asOf": "2026-09-24",
+        "asOf": "2026-09-25",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.18,
+        "value": 5.17,
         "unit": "%",
         "note": "last close",
-        "changePct": 1.37,
-        "asOf": "2026-09-24",
+        "changePct": -0.19,
+        "asOf": "2026-09-25",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -460,14 +460,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "Microsoft, Meta lost billions on VR headsets \u2014 but Snap thinks its $2,195 AR glasses will change the game as it teams up with Nvidia, Salesforce and AWS to crack the enterprise market",
-      "url": "https://www.techradar.com/pro/microsoft-meta-lost-billions-on-vr-headsets-snap-thinks-its-usd2-195-ar-glasses-will-change-the-game-as-it-teams-up-with-nvidia-salesforce-and-aws-to-crack-the-enterprise-market",
-      "source": "TechRadar",
-      "publishedAt": "2026-09-20T18:35:00Z",
-      "detectedAt": "2026-09-21T21:03:13+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "Nvidia buys $2B in SB Energy shares ahead of US IPO",
