@@ -1,14 +1,14 @@
 {
   "live": {
-    "updated": "2026-09-29T21:23:40+00:00",
+    "updated": "2026-09-30T01:17:22+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7683.69,
+        "value": 7670.84,
         "unit": "",
         "note": "last close",
-        "changePct": -0.77,
-        "asOf": "2026-09-28",
+        "changePct": -0.17,
+        "asOf": "2026-09-29",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -475,6 +475,14 @@
       "source": "Techpowerup.com",
       "publishedAt": "2026-09-24T15:20:10Z",
       "detectedAt": "2026-09-25T15:48:40+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "and Microsoft (MSFT) are Expanding Their AI Reach. Can the Opportunity Translate into Returns?",
+      "url": "https://biztoc.com/x/efbe437476b38e9d",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-09-28T23:13:24Z",
+      "detectedAt": "2026-09-30T01:17:23+00:00"
     }
   ]
 }
