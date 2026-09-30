@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-09-30T16:49:03+00:00",
+    "updated": "2026-09-30T21:25:05+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -34,11 +34,11 @@
       },
       "DCOILWTICO": {
         "label": "WTI Crude",
-        "value": 96.41,
+        "value": 96.16,
         "unit": "",
         "note": "last close",
-        "changePct": -0.58,
-        "asOf": "2026-09-22",
+        "changePct": -3.23,
+        "asOf": "2026-09-29",
         "source": "FRED DCOILWTICO",
         "sourceUrl": "https://fred.stlouisfed.org/series/DCOILWTICO"
       }
@@ -50,17 +50,17 @@
         "unit": "%",
         "note": "last close",
         "changePct": 0.0,
-        "asOf": "2026-09-28",
+        "asOf": "2026-09-29",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.24,
+        "value": 5.26,
         "unit": "%",
         "note": "last close",
-        "changePct": 1.35,
-        "asOf": "2026-09-28",
+        "changePct": 0.38,
+        "asOf": "2026-09-29",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
