@@ -1,14 +1,14 @@
 {
   "live": {
-    "updated": "2026-09-30T21:25:05+00:00",
+    "updated": "2026-10-01T01:17:09+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7670.84,
+        "value": 7651.54,
         "unit": "",
         "note": "last close",
-        "changePct": -0.17,
-        "asOf": "2026-09-29",
+        "changePct": -0.25,
+        "asOf": "2026-09-30",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -461,14 +461,6 @@
   },
   "pending_deals": [
     {
-      "ticker": "NVDA",
-      "headline": "Apple poised to join Nvidia in exclusive $5T club",
-      "url": "https://cryptobriefing.com/apple-nvidia-5-trillion-market-cap/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-09-22T21:30:14Z",
-      "detectedAt": "2026-09-24T00:29:18+00:00"
-    },
-    {
       "ticker": "AAPL",
       "headline": "Apple and Qualcomm Renew Partnership for 5G Modem Supply",
       "url": "https://www.techpowerup.com/353052/apple-and-qualcomm-renew-partnership-for-5g-modem-supply",
@@ -483,6 +475,14 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-09-28T23:13:24Z",
       "detectedAt": "2026-09-30T01:17:23+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
+      "url": "https://biztoc.com/x/f345c9f1b1162b6d",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-09-30T00:43:11Z",
+      "detectedAt": "2026-10-01T01:17:10+00:00"
     }
   ]
 }
