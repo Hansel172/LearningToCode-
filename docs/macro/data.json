@@ -1,14 +1,14 @@
 {
   "live": {
-    "updated": "2026-10-01T17:21:45+00:00",
+    "updated": "2026-10-02T01:41:04+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7651.54,
+        "value": 7666.45,
         "unit": "",
         "note": "last close",
-        "changePct": -0.25,
-        "asOf": "2026-09-30",
+        "changePct": 0.19,
+        "asOf": "2026-10-01",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -50,17 +50,17 @@
         "unit": "%",
         "note": "last close",
         "changePct": 0.0,
-        "asOf": "2026-09-29",
+        "asOf": "2026-09-30",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.26,
+        "value": 5.29,
         "unit": "%",
         "note": "last close",
-        "changePct": 0.38,
-        "asOf": "2026-09-29",
+        "changePct": 0.57,
+        "asOf": "2026-09-30",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -483,6 +483,22 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-09-30T00:43:11Z",
       "detectedAt": "2026-10-01T01:17:10+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Michael Burry Buys Put Options on Nvidia, Micron, and Palantir as \"The Big Short\" Investor Predicts a 1987-Style Market Crash",
+      "url": "https://biztoc.com/x/36ced46abb39c082",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-01T00:33:15Z",
+      "detectedAt": "2026-10-02T01:41:04+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Lip-Bu Tan calls TSMC a partner rather than a rival",
+      "url": "https://www.digitimes.com/news/a20260930PD246/intel-lip-bu-tan-tsmc-partnership.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-10-01T00:11:53Z",
+      "detectedAt": "2026-10-02T01:41:04+00:00"
     }
   ]
 }
