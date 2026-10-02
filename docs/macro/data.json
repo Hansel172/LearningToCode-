@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-02T01:41:04+00:00",
+    "updated": "2026-10-02T16:37:28+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -14,21 +14,21 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26861.06,
+        "value": 26871.6,
         "unit": "",
         "note": "last close",
-        "changePct": 0.24,
-        "asOf": "2026-09-30",
+        "changePct": 0.04,
+        "asOf": "2026-10-01",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 16.34,
+        "value": 16.39,
         "unit": "",
         "note": "last close",
-        "changePct": 1.87,
-        "asOf": "2026-09-30",
+        "changePct": 0.31,
+        "asOf": "2026-10-01",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -461,14 +461,6 @@
   },
   "pending_deals": [
     {
-      "ticker": "AAPL",
-      "headline": "Apple and Qualcomm Renew Partnership for 5G Modem Supply",
-      "url": "https://www.techpowerup.com/353052/apple-and-qualcomm-renew-partnership-for-5g-modem-supply",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-09-24T15:20:10Z",
-      "detectedAt": "2026-09-25T15:48:40+00:00"
-    },
-    {
       "ticker": "MSFT",
       "headline": "and Microsoft (MSFT) are Expanding Their AI Reach. Can the Opportunity Translate into Returns?",
       "url": "https://biztoc.com/x/efbe437476b38e9d",
@@ -499,6 +491,14 @@
       "source": "Digitimes",
       "publishedAt": "2026-10-01T00:11:53Z",
       "detectedAt": "2026-10-02T01:41:04+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "In 1996, Tim Draper bought Hotmail shares for $300,000. 2 years later, Microsoft acquired the startup for $400 million",
+      "url": "https://economictimes.indiatimes.com/news/international/us/in-1996-tim-draper-bought-hotmail-shares-for-300000-2-years-later-microsoft-acquired-the-startup-for-400-million/articleshow/134621681.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-10-01T15:45:00Z",
+      "detectedAt": "2026-10-02T16:37:28+00:00"
     }
   ]
 }
