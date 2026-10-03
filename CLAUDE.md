@@ -37,3 +37,15 @@ Hansel is learning to code and wants the reps, not just the artifacts.
   feature branch have no effect until they land on `main`.
 - Hansel works at a brokerage. Anything that places trades is a compliance
   question, not just a technical one — flag it once, then it's his call.
+- `.github/workflows/idea_team.yml` runs Claude Code autonomously, weekly, to
+  propose and implement one small improvement to earnings-tracker or
+  macro-tracker, then open a PR — it never merges; Hansel always does.
+  **Needs a one-time manual setup he has to do himself** (repo admin access,
+  can't be scripted): install the Claude GitHub App at
+  github.com/apps/claude. Explicitly forbidden from touching `mcp/`,
+  `morning_briefing.py`, `stock-screener-agent/`, or
+  `weekly-research-prompt.md` — see the workflow file's own prompt for the
+  full guardrails. A platform-level safety check refused even researching a
+  fully-autonomous (auto-merge, no human review) version of this when it was
+  first proposed — that's why it stops at opening a PR.
+

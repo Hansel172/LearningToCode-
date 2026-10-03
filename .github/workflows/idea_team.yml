@@ -1,0 +1,103 @@
+name: Idea Team
+
+# Runs Claude Code autonomously, weekly, to propose and implement ONE small
+# improvement to earnings-tracker or macro-tracker, then open a PR for human
+# review. It never merges — see the "no auto-merge" note on the prompt below,
+# and research-brief/README.md's sibling project for the reasoning behind
+# keeping a human in the loop here instead of full autonomy.
+#
+# REQUIRED ONE-TIME SETUP (can't be done from a workflow file — needs repo
+# admin access in the GitHub UI):
+#   1. Install the Claude GitHub App: https://github.com/apps/claude
+#   2. Confirm the ANTHROPIC_API_KEY secret exists (it already does, for the
+#      two trackers' own scheduled refreshes — this workflow reuses it).
+# Without step 1, this workflow will fail to push a branch or open a PR.
+
+on:
+  schedule:
+    - cron: '17 14 * * 1'   # Monday ~10:17am ET, off-the-hour like the other schedules
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: idea-team
+  cancel-in-progress: false
+
+jobs:
+  propose-improvement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r earnings-tracker/requirements.txt
+        # Covers macro-tracker too — it only needs httpx, already in that file.
+        # No separate macro-tracker/requirements.txt exists.
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --max-turns 40
+            --model claude-sonnet-5
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep"
+          prompt: |
+            You are the Idea Team for this repo's two personal finance trackers:
+            earnings-tracker/ and macro-tracker/. Your job this run: propose and
+            implement exactly ONE small, scoped improvement to one of them, then
+            open a pull request for a human to review. You never merge — the
+            human always clicks merge, no exceptions.
+
+            Read first: earnings-tracker/CLAUDE.md, earnings-tracker/README.md,
+            macro-tracker/CLAUDE.md, and docs/earnings/data.json /
+            docs/macro/data.json (the live output) to understand what already
+            exists, what's already documented as a known limitation, and what
+            would be genuinely new value rather than something already covered.
+
+            HARD RULES, no exceptions:
+            - Never touch anything under mcp/ (Robinhood credentials/trading —
+              any change there is a compliance question for the human, not
+              something you decide).
+            - Never touch morning_briefing.py, stock-screener-agent/, or
+              weekly-research-prompt.md — out of scope for this task.
+            - Never read, move, or commit profile.local.json or anything under
+              watchlist_data/ or positions_data/ beyond what's already committed
+              — personal holdings/account data never gets newly exposed.
+            - Pick exactly ONE idea. Do not attempt multiple changes in one run.
+            - If you can't find a genuinely good, small, scoped idea, it is fine
+              to stop and explain why in the workflow log rather than forcing a
+              weak change through.
+
+            Before committing anything, verify your change the same way this
+            repo's own CLAUDE.md files describe:
+            - For a macro-tracker change: reconstruct macro-tracker/data/live.json
+              and themes.json from the current docs/macro/data.json, run
+              `python3 macro-tracker/scripts/build_public.py`, and diff the
+              output against the pre-existing docs/macro/ files to confirm only
+              your intended change occurred. The script's own audit() function
+              must report clean (no forbidden personal-data patterns).
+            - For an earnings-tracker change: run
+              `python3 earnings-tracker/scripts/build_public.py` and confirm it
+              completes without error and the diff against the existing
+              docs/earnings/data.json only reflects your intended change.
+            - Syntax-check every Python file you touch.
+            - If verification fails, do not commit — stop and explain what
+              failed in the workflow log instead.
+
+            If verification passes: create a new branch (e.g.
+            claude/idea-<short-description>), commit, push it, and open a pull
+            request with a clear description of what you built and why, plus
+            how you verified it. Do NOT merge the PR. Do NOT push to main
+            directly.
