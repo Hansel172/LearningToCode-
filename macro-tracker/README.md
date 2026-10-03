@@ -98,10 +98,17 @@ All from `fred.stlouisfed.org/graph/fredgraph.csv` — no key required. FRED's
 *documented* API at `api.stlouisfed.org` does need one (400 without it); this
 CSV endpoint does not.
 
-`SP500` · `NASDAQCOM` · `VIXCLS` · `DFF` · `DGS10` · `CPIAUCSL` · `PPIACO`
+`SP500` · `NASDAQCOM` · `VIXCLS` · `DCOILWTICO` · `DFF` · `DGS10` ·
+`T10Y2Y` · `CPIAUCSL` · `PPIACO`
 
 CPI and PPI arrive as index levels and are converted to year-over-year
 percentages before rendering, because "CPI: 332.568" tells you nothing.
+
+`T10Y2Y` (10-year minus 2-year Treasury yield) is the standard yield-curve
+inversion signal — negative means short-term rates are above long-term
+rates, widely watched as an early recession indicator. It's shown as a
+plain level with no day-over-day change, since the sign is the signal, not
+the daily wiggle.
 
 **Known limitation:** FRED publishes daily closes, not intraday quotes. Index
 levels are last close and can lag by a session. For a dashboard you read in

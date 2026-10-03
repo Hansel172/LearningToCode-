@@ -33,7 +33,14 @@ Note that FRED's *documented* API at `api.stlouisfed.org` **does** require a
 key (returns 400 without one). The CSV graph endpoint does not. That is the
 one being used, deliberately.
 
-Series: `SP500`, `NASDAQCOM`, `VIXCLS`, `DFF`, `DGS10`, `CPIAUCSL`, `PPIACO`.
+Series: `SP500`, `NASDAQCOM`, `VIXCLS`, `DCOILWTICO`, `DFF`, `DGS10`,
+`T10Y2Y`, `CPIAUCSL`, `PPIACO`.
+
+`T10Y2Y` (10-year minus 2-year Treasury yield) is FRED's own published
+spread, not something derived here from `DGS10` and a second series — it
+carries no day-over-day change, since a percent change is meaningless for a
+value that routinely crosses zero (the whole point of watching it is the
+sign: negative means the curve is inverted, a standard recession signal).
 
 CPI and PPI are published as index levels, which mean nothing to a reader, so
 `refresh.py` converts them to year-over-year percentages before they reach the

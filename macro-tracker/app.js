@@ -200,7 +200,7 @@ function render() {
     ['SP500', 'NASDAQCOM', 'VIXCLS', 'DCOILWTICO'].map(k => tick(LIVE.market[k])).join('');
 
   document.getElementById('strip').innerHTML =
-    ['DFF', 'DGS10', 'CPIAUCSL', 'PPIACO'].map(k => tick(LIVE.macro[k], true)).join('');
+    ['DFF', 'DGS10', 'T10Y2Y', 'CPIAUCSL', 'PPIACO'].map(k => tick(LIVE.macro[k], true)).join('');
 
   const errs = LIVE.errors || [];
   document.getElementById('errors').innerHTML = errs.length
