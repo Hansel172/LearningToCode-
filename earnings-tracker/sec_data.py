@@ -281,11 +281,10 @@ def get_quarterly_financials(ticker, num_quarters=12):
 
 def get_market_cap(ticker):
     """Today's market cap from Nasdaq's public quote-summary endpoint — no
-    key, same trust tier as the earnings calendar calls above. Deliberately
-    the only "live price" data this app touches, and even then only to
-    report the business's total value, never a per-share number. Returns
-    None if the ticker isn't found or the field is missing/unparseable,
-    rather than guessing."""
+    key, same trust tier as the earnings calendar calls above. Reports the
+    business's total value, never a per-share number. Returns None if the
+    ticker isn't found or the field is missing/unparseable, rather than
+    guessing."""
     try:
         r = httpx.get(f"https://api.nasdaq.com/api/quote/{ticker.upper()}/summary",
                       params={"assetclass": "stocks"}, headers=NASDAQ_HEADERS, timeout=20)
@@ -296,6 +295,84 @@ def get_market_cap(ticker):
         return float(raw.replace(",", ""))
     except Exception:
         return None
+
+
+def get_annual_returns(ticker, years=10):
+    """Year-by-year price return for the last `years` calendar years, from
+    Nasdaq's public historical-quotes endpoint — no key, same trust tier as
+    everything else in this file. This is the one place real share-price
+    history enters the app (the Company Story section deliberately avoids
+    it entirely); it's shown because a reader explicitly asked to see how
+    the stock has actually performed, not because price belongs in the
+    valuation framework elsewhere on the card.
+
+    Each year's return is measured against the PRIOR year's final close,
+    not January 1st of the same year — that's the actual definition of an
+    annual return; using the same year's own first trading day would quietly
+    drop whatever moved between the two most recent trading days of last
+    December and the market's next open.
+
+    Returns a list of {year, return_pct, note} dicts, oldest first. `note`
+    is None for a normal full year, "year to date" for the current
+    (unfinished) year, or "partial year" for a ticker's first year of
+    available history (e.g. SPCX, which IPO'd in 2026 and has no prior-year
+    close to measure against) — a reader should always be able to tell a
+    real full-year number from one that isn't, rather than the two looking
+    identical. Returns [] if the data couldn't be fetched or parsed.
+    """
+    today = date.today()
+    start_year = today.year - years
+    try:
+        r = httpx.get(
+            f"https://api.nasdaq.com/api/quote/{ticker.upper()}/historical",
+            params={"assetclass": "stocks", "fromdate": f"{start_year}-01-01",
+                    "todate": today.isoformat(), "limit": 9999},
+            headers=NASDAQ_HEADERS, timeout=30)
+        r.raise_for_status()
+        rows = r.json().get("data", {}).get("tradesTable", {}).get("rows") or []
+    except Exception:
+        return []
+
+    # Nasdaq returns most-recent-first; walk oldest-first so the last write
+    # to year_end_close naturally ends up being that year's LAST trading day.
+    parsed = []
+    for row in reversed(rows):
+        try:
+            d = datetime.strptime(row["date"], "%m/%d/%Y").date()
+            close = float(row["close"].replace("$", "").replace(",", ""))
+            parsed.append((d, close))
+        except (ValueError, KeyError, TypeError, AttributeError):
+            continue
+    if not parsed:
+        return []
+
+    year_end_close = {}
+    year_first_close = {}
+    for d, close in parsed:
+        if d.year not in year_first_close:
+            year_first_close[d.year] = close
+        year_end_close[d.year] = close
+
+    results = []
+    for y in sorted(year_end_close):
+        prior = year_end_close.get(y - 1)
+        if prior is not None:
+            baseline, note = prior, None
+        elif y == min(year_end_close):
+            # Furthest back our data goes — the ticker's IPO year, or simply
+            # the edge of the fetched window. Measure from this year's own
+            # first available close rather than dropping the year entirely.
+            baseline, note = year_first_close[y], "partial year"
+        else:
+            continue  # shouldn't happen — every later year has a predecessor
+        if y == today.year:
+            note = "year to date"
+        results.append({
+            "year": y,
+            "return_pct": round((year_end_close[y] / baseline - 1) * 100, 1),
+            "note": note,
+        })
+    return results
 
 
 def get_earnings_calendar(days_ahead=14):

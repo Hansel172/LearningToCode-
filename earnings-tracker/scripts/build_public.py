@@ -67,6 +67,7 @@ def main():
         analysis = build_analysis(ticker, quarters)
         analysis["description"] = description
         analysis["valuation"] = build_valuation(sec_data.get_market_cap(ticker), quarters)
+        analysis["annual_returns"] = sec_data.get_annual_returns(ticker)
         if not analysis["insufficient_data"]:
             surprise = sec_data.get_earnings_surprise(ticker, analysis["period_end"])
             if surprise and surprise.get("eps"):

@@ -158,6 +158,29 @@ function quartersTable(rows) {
   </details>`;
 }
 
+/* Share price only shows up here, nowhere else on the card — see the note
+   on sec_data.get_annual_returns() for why that's deliberate. Oldest first,
+   so a reader scans top-to-bottom the same direction time moves. A row's
+   `note` (year-to-date, or a ticker's first partial year of history, e.g.
+   SPCX) is printed next to the year rather than silently folded into the
+   number, so a partial year never reads as if it were a complete one. */
+function annualReturnsTable(rows) {
+  if (!rows || !rows.length) return '';
+  const body = rows.map(r => `
+    <tr>
+      <td>${r.year}${r.note ? ` <span class="ar-note">(${esc(r.note)})</span>` : ''}</td>
+      <td class="num ${r.return_pct > 0 ? 'up' : r.return_pct < 0 ? 'down' : ''}">${fmtPct(r.return_pct)}</td>
+    </tr>`).join('');
+  return `
+  <details class="qtable">
+    <summary>Annual returns, last ${rows.length} year${rows.length === 1 ? '' : 's'}</summary>
+    <table>
+      <thead><tr><th>Year</th><th class="num">Return</th></tr></thead>
+      <tbody>${body}</tbody>
+    </table>
+  </details>`;
+}
+
 const VERDICT_COLOR = {
   'Improving': 'var(--green)',
   'Weakening': 'var(--red)',
@@ -263,6 +286,7 @@ function companyCard(company) {
     </div>
     ${reaction}
     ${trend.quarters_table ? quartersTable(trend.quarters_table) : ''}
+    ${annualReturnsTable(company.annual_returns)}
   </details>`;
 
   return `<section class="card" style="--s:${s.color}">

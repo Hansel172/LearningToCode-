@@ -274,6 +274,31 @@ the card ships as normal.
 python earnings-tracker/scripts/write_company_stories.py
 ```
 
+## Annual returns
+
+Each card's "Show the numbers" section also carries a plain year-by-year
+return table — the last ~10 calendar years, from Nasdaq's free historical-
+quotes endpoint (`sec_data.get_annual_returns()`). This is the one place
+actual share price enters the app; The Company Story section above
+deliberately avoids it entirely, since a reader asked specifically to see
+realized historical performance here, not have price mixed into the
+valuation judgment.
+
+**Each year is measured against the prior year's final close**, not January
+1st of the same year — that's the real definition of an annual return.
+Using the same year's own first trading day instead would quietly drop
+whatever moved between late December and the market's next open.
+
+**A year is labeled, not silently treated as normal, whenever it isn't a
+full one:** the current year reads "(year to date)," and a ticker's first
+year of available history — SPCX, which IPO'd in 2026, has exactly one row
+— reads "(partial year)" instead of being measured against a prior close
+that doesn't exist. A reader should never have to guess whether a number is
+a complete year or not.
+
+No setup needed — same keyless Nasdaq source already used for market cap,
+computed automatically on every `build_public.py` run.
+
 ## Position trackers
 
 For a company you actually hold — not just watch — every report gets logged
