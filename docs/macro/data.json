@@ -1,14 +1,14 @@
 {
   "live": {
-    "updated": "2026-10-02T21:18:58+00:00",
+    "updated": "2026-10-03T00:20:58+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7666.45,
+        "value": 7722.72,
         "unit": "",
         "note": "last close",
-        "changePct": 0.19,
-        "asOf": "2026-10-01",
+        "changePct": 0.73,
+        "asOf": "2026-10-02",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -83,6 +83,16 @@
         "asOf": "2026-08-01",
         "source": "FRED PPIACO",
         "sourceUrl": "https://fred.stlouisfed.org/series/PPIACO"
+      },
+      "T10Y2Y": {
+        "label": "10Y-2Y spread",
+        "value": 0.45,
+        "unit": "pp",
+        "note": "last close",
+        "changePct": null,
+        "asOf": "2026-10-02",
+        "source": "FRED T10Y2Y",
+        "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
     },
     "errors": []

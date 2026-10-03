@@ -48,6 +48,14 @@ MACRO = {
     "DGS10":    ("10-year Treasury", "%", "level"),
     "CPIAUCSL": ("CPI",              "%", "yoy"),
     "PPIACO":   ("PPI",              "%", "yoy"),
+    # 10Y minus 2Y Treasury yield — the standard recession-inversion signal
+    # (negative = inverted curve). FRED publishes this spread as its own
+    # series rather than requiring it be derived from two others. "spread"
+    # mode (not "level"): a day-over-day percent change is meaningless for a
+    # value that routinely crosses zero — (0.01 -> -0.01) would compute as a
+    # -200% "change" and point the arrow the wrong way. The level itself,
+    # sign included, is the whole signal here.
+    "T10Y2Y":   ("10Y-2Y spread",    "pp", "spread"),
 }
 
 
@@ -84,6 +92,17 @@ def build(series_id, label, unit, mode):
             "label": label,
             "value": round((latest - prior) / prior * 100, 2),
             "unit": "%", "note": "year over year",
+            "changePct": None,
+        }, rows[-1][0]
+
+    if mode == "spread":
+        # No day-over-day delta — see the comment on T10Y2Y above for why a
+        # percent change doesn't mean anything for a value that crosses zero.
+        latest = rows[-1][1]
+        return {
+            "label": label,
+            "value": round(latest, 2),
+            "unit": unit, "note": "last close",
             "changePct": None,
         }, rows[-1][0]
 
