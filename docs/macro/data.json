@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-03T00:20:58+00:00",
+    "updated": "2026-10-03T01:11:15+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -509,6 +509,14 @@
       "source": "The Times of India",
       "publishedAt": "2026-10-01T15:45:00Z",
       "detectedAt": "2026-10-02T16:37:28+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Commentary: AMD challenges Nvidia in embodied AI as Lisa Su acquires Fei-Fei Li's World Labs",
+      "url": "https://www.digitimes.com/news/a20261001PD239/amd-acquisition-software-2026.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-10-01T23:48:58Z",
+      "detectedAt": "2026-10-03T01:11:15+00:00"
     }
   ]
 }
