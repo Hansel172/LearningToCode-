@@ -72,6 +72,16 @@ jobs:
             exists, what's already documented as a known limitation, and what
             would be genuinely new value rather than something already covered.
 
+            Check IDEAS.md at the repo root BEFORE inventing your own idea.
+            If its "## Open" section has any items, pick the first (topmost)
+            one instead of coming up with something yourself — that's a
+            direct ask from the person who owns this repo, and it takes
+            priority over your own judgment. Only fall back to proposing
+            your own idea when "## Open" is empty. Either way, implement
+            only ONE idea this run. If you implement an idea from IDEAS.md,
+            move that line from "## Open" to "## Done" as part of the same
+            commit, so the backlog always reflects what's actually left.
+
             You have web search. Use it to find genuinely new capabilities —
             a new free data source, a real fact worth adding — not just to
             restate what a search result says. Both trackers' whole design
