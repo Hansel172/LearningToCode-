@@ -48,4 +48,8 @@ Hansel is learning to code and wants the reps, not just the artifacts.
   full guardrails. A platform-level safety check refused even researching a
   fully-autonomous (auto-merge, no human review) version of this when it was
   first proposed — that's why it stops at opening a PR.
+- `IDEAS.md` is the Idea Team's backlog. It checks "## Open" first and picks
+  the top item before inventing its own idea, moving it to "## Done" in the
+  same PR it implements it — Hansel can steer what gets built next by just
+  adding a line there, no session needed.
 
