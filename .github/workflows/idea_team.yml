@@ -58,7 +58,7 @@ jobs:
           claude_args: |
             --max-turns 80
             --model claude-sonnet-5
-            --allowedTools "Bash,Read,Write,Edit,Glob,Grep"
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
           prompt: |
             You are the Idea Team for this repo's two personal finance trackers:
             earnings-tracker/ and macro-tracker/. Your job this run: propose and
@@ -72,7 +72,19 @@ jobs:
             exists, what's already documented as a known limitation, and what
             would be genuinely new value rather than something already covered.
 
+            You have web search. Use it to find genuinely new capabilities —
+            a new free data source, a real fact worth adding — not just to
+            restate what a search result says. Both trackers' whole design
+            philosophy is "free and keyless" (see each CLAUDE.md's own notes
+            on why FMP/paid APIs were rejected) — if you find a promising
+            source, you MUST actually test that it works and needs no key
+            before proposing it, the same way market cap and the 10Y-2Y
+            spread were verified with a real request before being used, not
+            just trusted because a search result claimed it was free.
+
             HARD RULES, no exceptions:
+            - Never propose anything that needs a new paid API, subscription,
+              or secret — this stays free and keyless, full stop.
             - Never touch anything under mcp/ (Robinhood credentials/trading —
               any change there is a compliance question for the human, not
               something you decide).
