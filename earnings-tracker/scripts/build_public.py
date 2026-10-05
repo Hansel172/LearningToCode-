@@ -13,6 +13,7 @@ committed on purpose.
 
 import json
 import sys
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -22,6 +23,26 @@ import sec_data
 from analyzer import build_analysis, build_valuation
 
 OUT = ROOT.parent / "docs" / "earnings"
+
+
+def next_earnings_by_ticker(tickers, days_ahead=14):
+    """ticker -> {"date": iso, "days_until": int} for anyone in `tickers`
+    on Nasdaq's calendar in the next `days_ahead` days. One shared calendar
+    fetch for the whole watchlist (same data the CLI's `monitor` command
+    already pulls, just not previously surfaced in the app)."""
+    calendar = sec_data.get_earnings_calendar(days_ahead=days_ahead)
+    wanted = {t.upper() for t in tickers}
+    today = date.today()
+    found = {}
+    for day_str, rows in calendar.items():
+        for row in rows:
+            sym = row.get("symbol", "").upper()
+            if sym not in wanted:
+                continue
+            days_until = (date.fromisoformat(day_str) - today).days
+            if sym not in found or days_until < found[sym]["days_until"]:
+                found[sym] = {"date": day_str, "days_until": days_until}
+    return found
 
 
 def load_watchlist():
@@ -46,6 +67,11 @@ def main():
     watchlist = load_watchlist()
     print(f"Building public app for {len(watchlist)} ticker(s): "
           f"{', '.join(t for t, _ in watchlist)}")
+
+    upcoming = next_earnings_by_ticker([t for t, _ in watchlist])
+    if upcoming:
+        print("Reporting soon: " + ", ".join(
+            f"{t} ({v['date']})" for t, v in sorted(upcoming.items(), key=lambda kv: kv[1]["days_until"])))
 
     companies = []
     for ticker, description in watchlist:
@@ -83,6 +109,10 @@ def main():
             print(f"  only {analysis['quarters_available']} quarter(s) — nothing to compare yet")
 
         companies.append(analysis)
+
+    for company in companies:
+        if company["ticker"] in upcoming:
+            company["next_earnings"] = upcoming[company["ticker"]]
 
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "data.json").write_text(json.dumps({"companies": companies}, indent=2) + "\n")
