@@ -10,7 +10,14 @@ actually left.
 
 ## Open
 
-(nothing yet — add a line below this one)
+- Refresh macro-tracker's theme content (`docs/macro/data.json`'s "themes")
+  that's gone stale — some of it dates to July, August, or early September
+  and no longer reflects current conditions. Use web search to re-verify
+  the real, current facts for each theme (don't just reword what's already
+  there), following the existing sourcing discipline in
+  `macro-tracker/CLAUDE.md` (cite sources, no padding, explain mechanism
+  not just conclusion). Numeric data (`"live"`) already auto-refreshes on
+  its own schedule — this is specifically about the written analysis.
 
 ## Done
 
