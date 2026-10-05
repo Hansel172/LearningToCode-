@@ -12,6 +12,12 @@ name: Idea Team
 #   2. Confirm the ANTHROPIC_API_KEY secret exists (it already does, for the
 #      two trackers' own scheduled refreshes — this workflow reuses it).
 # Without step 1, this workflow will fail to push a branch or open a PR.
+#
+# --max-turns started at 40 and hit it on the second real run (reading both
+# trackers' docs, picking an idea, implementing, verifying, and opening a PR
+# is a lot of turns, and it only grows as this repo's own docs grow) — the
+# run ended with error_max_turns, no PR, $1.13 spent for nothing shipped.
+# Raised to 80 for real headroom; raise again if it recurs.
 
 on:
   schedule:
@@ -50,7 +56,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
-            --max-turns 40
+            --max-turns 80
             --model claude-sonnet-5
             --allowedTools "Bash,Read,Write,Edit,Glob,Grep"
           prompt: |
