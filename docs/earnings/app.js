@@ -67,6 +67,16 @@ function descLine(description) {
   return description ? `<div class="desc">${esc(description)}</div>` : '';
 }
 
+/* Same calendar data the CLI's `monitor` command already checks — just
+   surfaced here so it's visible without leaving the app. */
+function nextEarningsLine(info) {
+  if (!info) return '';
+  const when = info.days_until <= 0 ? 'today'
+    : info.days_until === 1 ? 'tomorrow'
+    : `in ${info.days_until} days`;
+  return `<div class="next-earnings">Reports ${when} &middot; ${esc(info.date)}</div>`;
+}
+
 function fmtMoneyShort(v) {
   if (v === null || v === undefined) return 'n/a';
   const abs = Math.abs(v);
@@ -233,11 +243,13 @@ function companyStoryBlock(story) {
 function companyCard(company) {
   if (company.error) {
     return `<section class="card"><div class="card-head"><h2>${esc(company.ticker)}</h2></div>
+      ${nextEarningsLine(company.next_earnings)}
       ${descLine(company.description)}
       <div class="error-card">${esc(company.error)}</div></section>`;
   }
   if (company.insufficient_data) {
     return `<section class="card"><div class="card-head"><h2>${esc(company.ticker)}</h2></div>
+      ${nextEarningsLine(company.next_earnings)}
       ${descLine(company.description)}
       <div class="error-card">Only ${company.quarters_available} quarter(s) available — need at least 2 to compare.</div></section>`;
   }
@@ -297,6 +309,7 @@ function companyCard(company) {
       </div>
       <span class="badge">${s.label}</span>
     </div>
+    ${nextEarningsLine(company.next_earnings)}
     ${descLine(company.description)}
     ${gapNote}
     ${story}
