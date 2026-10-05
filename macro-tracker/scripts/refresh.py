@@ -20,7 +20,7 @@ import csv
 import io
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import httpx
@@ -75,10 +75,29 @@ def series(series_id):
     return rows
 
 
+def _fifty_two_week_range(rows):
+    """High/low over the trailing 365 days of observations, inclusive of the
+    latest point. None for both if there's under a year of history yet (a
+    newly-added series) rather than a misleadingly narrow range."""
+    latest_date = datetime.strptime(rows[-1][0], "%Y-%m-%d")
+    cutoff = latest_date - timedelta(days=365)
+    window = [v for d, v in rows if datetime.strptime(d, "%Y-%m-%d") >= cutoff]
+    if len(window) < 2:
+        return None, None
+    return round(max(window), 2), round(min(window), 2)
+
+
 def build(series_id, label, unit, mode):
     rows = series(series_id)
     if not rows:
         raise ValueError("no observations")
+
+    # Only meaningful for modes where the displayed value IS the raw series
+    # value — "yoy" tiles (CPI/PPI) display a converted rate, so a 52-week
+    # range of the underlying index level wouldn't match what's shown.
+    week52_high, week52_low = (
+        _fifty_two_week_range(rows) if mode in ("level", "spread") else (None, None)
+    )
 
     if mode == "yoy":
         # An index level like CPI 332.568 means nothing to a reader. The rate
@@ -104,6 +123,8 @@ def build(series_id, label, unit, mode):
             "value": round(latest, 2),
             "unit": unit, "note": "last close",
             "changePct": None,
+            "fiftyTwoWeekHigh": week52_high,
+            "fiftyTwoWeekLow": week52_low,
         }, rows[-1][0]
 
     latest = rows[-1][1]
@@ -115,6 +136,8 @@ def build(series_id, label, unit, mode):
         "value": round(latest, 2),
         "unit": unit, "note": "last close",
         "changePct": change,
+        "fiftyTwoWeekHigh": week52_high,
+        "fiftyTwoWeekLow": week52_low,
     }, rows[-1][0]
 
 
