@@ -67,6 +67,18 @@ function descLine(description) {
   return description ? `<div class="desc">${esc(description)}</div>` : '';
 }
 
+/* Only present when Nasdaq's calendar has this ticker reporting within the
+   next 14 days (see build_public.py's next_earnings_map) — same calendar
+   source already trusted for the analyst-reaction line, just looked up
+   forward instead of matched to a quarter already filed. */
+function nextEarningsLine(ne) {
+  if (!ne) return '';
+  const when = ne.days_away <= 0 ? 'today'
+    : ne.days_away === 1 ? 'tomorrow'
+    : `in ${ne.days_away} days`;
+  return `<div class="next-earnings">Reports ${when} &middot; ${esc(ne.date)}${ne.time ? ` (${esc(ne.time)})` : ''}</div>`;
+}
+
 function fmtMoneyShort(v) {
   if (v === null || v === undefined) return 'n/a';
   const abs = Math.abs(v);
@@ -234,11 +246,13 @@ function companyCard(company) {
   if (company.error) {
     return `<section class="card"><div class="card-head"><h2>${esc(company.ticker)}</h2></div>
       ${descLine(company.description)}
+      ${nextEarningsLine(company.next_earnings)}
       <div class="error-card">${esc(company.error)}</div></section>`;
   }
   if (company.insufficient_data) {
     return `<section class="card"><div class="card-head"><h2>${esc(company.ticker)}</h2></div>
       ${descLine(company.description)}
+      ${nextEarningsLine(company.next_earnings)}
       <div class="error-card">Only ${company.quarters_available} quarter(s) available — need at least 2 to compare.</div></section>`;
   }
 
@@ -298,6 +312,7 @@ function companyCard(company) {
       <span class="badge">${s.label}</span>
     </div>
     ${descLine(company.description)}
+    ${nextEarningsLine(company.next_earnings)}
     ${gapNote}
     ${story}
     ${companyStoryBlock(company.company_story)}

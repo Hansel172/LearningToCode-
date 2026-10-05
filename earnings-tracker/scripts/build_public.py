@@ -13,6 +13,7 @@ committed on purpose.
 
 import json
 import sys
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -22,6 +23,31 @@ import sec_data
 from analyzer import build_analysis, build_valuation
 
 OUT = ROOT.parent / "docs" / "earnings"
+
+# How far ahead to flag an upcoming report. Matches the CLI's own `monitor`
+# default so "reports soon" means the same thing in both places.
+EARNINGS_SOON_DAYS = 14
+
+
+def next_earnings_map(tickers, days_ahead=EARNINGS_SOON_DAYS):
+    """ticker -> {date, days_away, time} for anyone on `tickers` reporting
+    within `days_ahead` days, from the same Nasdaq calendar the CLI's
+    `monitor` command and the analyst-reaction line already use. One shared
+    call across the whole watchlist rather than one per ticker, since
+    get_earnings_calendar() already fetches the full window in one pass."""
+    calendar = sec_data.get_earnings_calendar(days_ahead=days_ahead)
+    today = date.today()
+    out = {}
+    for d in sorted(calendar):
+        for row in calendar[d]:
+            sym = row.get("symbol", "").upper()
+            if sym in tickers and sym not in out:
+                out[sym] = {
+                    "date": d,
+                    "days_away": (date.fromisoformat(d) - today).days,
+                    "time": row.get("time", ""),
+                }
+    return out
 
 
 def load_watchlist():
@@ -47,6 +73,11 @@ def main():
     print(f"Building public app for {len(watchlist)} ticker(s): "
           f"{', '.join(t for t, _ in watchlist)}")
 
+    print(f"\nChecking next {EARNINGS_SOON_DAYS} days for upcoming reports...")
+    upcoming = next_earnings_map({t for t, _ in watchlist})
+    if upcoming:
+        print(f"  reporting soon: {', '.join(sorted(upcoming))}")
+
     companies = []
     for ticker, description in watchlist:
         print(f"\n{ticker}...")
@@ -54,18 +85,21 @@ def main():
         if not cik:
             print(f"  not found on SEC EDGAR — skipping")
             companies.append({"ticker": ticker, "description": description,
-                               "error": "not found on SEC EDGAR"})
+                               "error": "not found on SEC EDGAR",
+                               "next_earnings": upcoming.get(ticker)})
             continue
 
         quarters = sec_data.get_quarterly_financials(ticker, num_quarters=12)
         if not quarters:
             print(f"  no usable financial data — skipping")
             companies.append({"ticker": ticker, "description": description,
-                               "error": "no financial data available"})
+                               "error": "no financial data available",
+                               "next_earnings": upcoming.get(ticker)})
             continue
 
         analysis = build_analysis(ticker, quarters)
         analysis["description"] = description
+        analysis["next_earnings"] = upcoming.get(ticker)
         analysis["valuation"] = build_valuation(sec_data.get_market_cap(ticker), quarters)
         analysis["annual_returns"] = sec_data.get_annual_returns(ticker)
         if not analysis["insufficient_data"]:

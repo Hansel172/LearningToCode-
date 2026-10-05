@@ -125,6 +125,16 @@ rebuild the whole page from a clean checkout every run.
 **Current watchlist:** NVDA, AAPL, MSFT, SPCX, MU, SNDK, WDC, STX. Edit
 `watchlist.txt` and re-run `build_public.py` to change it.
 
+### Reporting soon
+
+Each card shows a "Reports today / tomorrow / in N days" badge whenever
+Nasdaq's calendar has that ticker down to report within the next 14 days —
+the same calendar source and window the CLI's `monitor` command already
+uses, and the same one the analyst-reaction line already trusts, just
+looked up forward instead of matched against a quarter already filed. One
+calendar fetch covers the whole watchlist per build, not one per ticker. No
+badge appears when nothing's upcoming.
+
 ### 12-quarter trend
 
 Each card also draws on the full stored history, not just the latest
