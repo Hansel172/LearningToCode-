@@ -34,6 +34,11 @@ function delta(pct) {
   return `<span class="d ${cls}">${arw} ${Math.abs(pct).toFixed(2)}%</span>`;
 }
 
+function range52(d) {
+  if (d.fiftyTwoWeekHigh == null || d.fiftyTwoWeekLow == null) return '';
+  return `<div class="range52">52w ${fmt(d.fiftyTwoWeekLow)}–${fmt(d.fiftyTwoWeekHigh)}${esc(d.unit || '')}</div>`;
+}
+
 function tick(d, showAsOf) {
   if (!d) return '';
   return `<div class="tick">
@@ -42,6 +47,7 @@ function tick(d, showAsOf) {
     ${d.note === 'year over year'
       ? `<div class="d flat">year over year</div>`
       : delta(d.changePct)}
+    ${range52(d)}
     ${showAsOf && d.asOf ? `<div class="asof">${esc(d.asOf)}</div>` : ''}
   </div>`;
 }
