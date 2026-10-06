@@ -1,14 +1,16 @@
 {
   "live": {
-    "updated": "2026-10-05T20:40:13+00:00",
+    "updated": "2026-10-06T02:17:33+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7722.72,
+        "value": 7773.95,
         "unit": "",
         "note": "last close",
-        "changePct": 0.73,
-        "asOf": "2026-10-02",
+        "changePct": 0.66,
+        "fiftyTwoWeekHigh": 7798.99,
+        "fiftyTwoWeekLow": 6343.72,
+        "asOf": "2026-10-05",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -18,6 +20,8 @@
         "unit": "",
         "note": "last close",
         "changePct": 1.19,
+        "fiftyTwoWeekHigh": 27244.28,
+        "fiftyTwoWeekLow": 20794.64,
         "asOf": "2026-10-02",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
@@ -28,6 +32,8 @@
         "unit": "",
         "note": "last close",
         "changePct": -6.59,
+        "fiftyTwoWeekHigh": 31.05,
+        "fiftyTwoWeekLow": 13.47,
         "asOf": "2026-10-02",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
@@ -38,6 +44,8 @@
         "unit": "",
         "note": "last close",
         "changePct": -3.23,
+        "fiftyTwoWeekHigh": 114.58,
+        "fiftyTwoWeekLow": 55.44,
         "asOf": "2026-09-29",
         "source": "FRED DCOILWTICO",
         "sourceUrl": "https://fred.stlouisfed.org/series/DCOILWTICO"
@@ -50,6 +58,8 @@
         "unit": "%",
         "note": "last close",
         "changePct": 0.0,
+        "fiftyTwoWeekHigh": 4.12,
+        "fiftyTwoWeekLow": 3.62,
         "asOf": "2026-10-02",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
@@ -60,6 +70,8 @@
         "unit": "%",
         "note": "last close",
         "changePct": 0.76,
+        "fiftyTwoWeekHigh": 5.29,
+        "fiftyTwoWeekLow": 3.97,
         "asOf": "2026-10-02",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
@@ -86,11 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.45,
+        "value": 0.47,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
-        "asOf": "2026-10-02",
+        "fiftyTwoWeekHigh": 0.74,
+        "fiftyTwoWeekLow": 0.2,
+        "asOf": "2026-10-05",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
