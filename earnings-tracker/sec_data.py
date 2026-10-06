@@ -32,18 +32,41 @@ _CIK_CACHE = Path(__file__).parent / "watchlist_data" / ".cik_cache.json"
 
 def _load_cik_map():
     """The ticker->CIK lookup is one ~800KB file that never needs refetching
-    more than occasionally, so it's cached locally after the first pull."""
+    more than occasionally, so it's cached locally after the first pull.
+    Note the cache lives in watchlist_data/, which is gitignored — on a
+    scheduled GitHub Action's fresh checkout it never exists, so every
+    hourly run refetches this file from scratch. That's expected, not a
+    bug; what IS worth guarding against is SEC occasionally 429-ing this
+    specific request (confirmed live: a scheduled run failed outright on
+    this exact call on 2026-10-06, nothing to do with this app's own
+    behavior — GitHub's runners share IP ranges across every customer's
+    workflows, and SEC's rate limit is per-IP). A transient 429/5xx here
+    used to take down the entire build before a single ticker was even
+    looked up; now it gets a few short retries first."""
     if _CIK_CACHE.exists():
         return json.loads(_CIK_CACHE.read_text())
 
-    r = httpx.get("https://www.sec.gov/files/company_tickers.json",
-                  headers=SEC_HEADERS, timeout=30)
-    r.raise_for_status()
-    raw = r.json()
+    last_error = None
+    for attempt in range(3):
+        if attempt:
+            time.sleep(2 * attempt)  # 2s, then 4s
+        try:
+            r = httpx.get("https://www.sec.gov/files/company_tickers.json",
+                          headers=SEC_HEADERS, timeout=30)
+            if r.status_code == 429 or r.status_code >= 500:
+                last_error = httpx.HTTPStatusError(
+                    f"{r.status_code} from SEC", request=r.request, response=r)
+                continue
+            r.raise_for_status()
+            raw = r.json()
+            mapping = {e["ticker"].upper(): str(e["cik_str"]).zfill(10) for e in raw.values()}
+            _CIK_CACHE.parent.mkdir(parents=True, exist_ok=True)
+            _CIK_CACHE.write_text(json.dumps(mapping))
+            return mapping
+        except httpx.TransportError as e:
+            last_error = e
 
-    mapping = {e["ticker"].upper(): str(e["cik_str"]).zfill(10) for e in raw.values()}
-    _CIK_CACHE.write_text(json.dumps(mapping))
-    return mapping
+    raise last_error
 
 
 def get_cik(ticker):
