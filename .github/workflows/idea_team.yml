@@ -55,13 +55,6 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Temporary: a run completed "successfully" with 0 files changed
-          # and no PR (the macro-theme-refresh backlog item, 2026-10-06) —
-          # full output is hidden by default, so there's no way to see WHY
-          # it declined without this. Remove once that's understood; this
-          # shouldn't stay on long-term (it's verbose, and the hidden
-          # default exists for a reason per the action's own docs).
-          show_full_output: "true"
           claude_args: |
             --max-turns 80
             --model claude-sonnet-5
