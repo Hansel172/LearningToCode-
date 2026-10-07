@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-07T01:31:18+00:00",
+    "updated": "2026-10-07T17:48:43+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,37 +16,37 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 27477.31,
+        "value": 27599.89,
         "unit": "",
         "note": "last close",
-        "changePct": 1.05,
-        "fiftyTwoWeekHigh": 27477.31,
+        "changePct": 0.45,
+        "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-05",
+        "asOf": "2026-10-06",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 15.52,
+        "value": 15.01,
         "unit": "",
         "note": "last close",
-        "changePct": 1.37,
+        "changePct": -3.29,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-05",
+        "asOf": "2026-10-06",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
       "DCOILWTICO": {
         "label": "WTI Crude",
-        "value": 96.16,
+        "value": 96.24,
         "unit": "",
         "note": "last close",
-        "changePct": -3.23,
+        "changePct": 0.11,
         "fiftyTwoWeekHigh": 114.58,
         "fiftyTwoWeekLow": 55.44,
-        "asOf": "2026-09-29",
+        "asOf": "2026-10-06",
         "source": "FRED DCOILWTICO",
         "sourceUrl": "https://fred.stlouisfed.org/series/DCOILWTICO"
       }
