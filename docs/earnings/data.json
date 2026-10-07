@@ -183,7 +183,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 56.4,
+          "return_pct": 58.5,
           "note": "partial year"
         },
         {
@@ -233,7 +233,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 28.1,
+          "return_pct": 28.3,
           "note": "year to date"
         }
       ],
@@ -494,7 +494,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 2.5,
+          "return_pct": 1.7,
           "note": "partial year"
         },
         {
@@ -544,7 +544,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 22.4,
+          "return_pct": 22.7,
           "note": "year to date"
         }
       ],
@@ -795,7 +795,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 7.8,
+          "return_pct": 7.6,
           "note": "partial year"
         },
         {
@@ -845,7 +845,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 8.6,
+          "return_pct": 9.4,
           "note": "year to date"
         }
       ],
@@ -979,7 +979,7 @@
       "annual_returns": [
         {
           "year": 2026,
-          "return_pct": 6.3,
+          "return_pct": 6.8,
           "note": "year to date"
         }
       ],
@@ -1218,7 +1218,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 23.8,
+          "return_pct": 23.6,
           "note": "partial year"
         },
         {
@@ -1268,7 +1268,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 272.8,
+          "return_pct": 266.3,
           "note": "year to date"
         }
       ],
@@ -1483,7 +1483,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 617.9,
+          "return_pct": 599.5,
           "note": "year to date"
         }
       ],
@@ -1730,7 +1730,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 14.7,
+          "return_pct": 17.1,
           "note": "partial year"
         },
         {
@@ -1780,7 +1780,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 156.4,
+          "return_pct": 138.6,
           "note": "year to date"
         }
       ],
@@ -2014,7 +2014,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": -1.0,
+          "return_pct": 1.0,
           "note": "partial year"
         },
         {
@@ -2064,7 +2064,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 222.1,
+          "return_pct": 192.5,
           "note": "year to date"
         }
       ],
