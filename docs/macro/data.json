@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-10-06T21:38:59+00:00",
+    "updated": "2026-10-07T01:31:18+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7773.95,
+        "value": 7818.93,
         "unit": "",
         "note": "last close",
-        "changePct": 0.66,
-        "fiftyTwoWeekHigh": 7798.99,
+        "changePct": 0.58,
+        "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-05",
+        "asOf": "2026-10-06",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -485,14 +485,6 @@
   },
   "pending_deals": [
     {
-      "ticker": "MSFT",
-      "headline": "and Microsoft (MSFT) are Expanding Their AI Reach. Can the Opportunity Translate into Returns?",
-      "url": "https://biztoc.com/x/efbe437476b38e9d",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-09-28T23:13:24Z",
-      "detectedAt": "2026-09-30T01:17:23+00:00"
-    },
-    {
       "ticker": "NVDA",
       "headline": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
       "url": "https://biztoc.com/x/f345c9f1b1162b6d",
@@ -539,6 +531,14 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-10-05T17:05:18Z",
       "detectedAt": "2026-10-06T17:10:35+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Marvell sees custom chips as a must for CSPs",
+      "url": "https://www.digitimes.com/news/a20261005PD231/marvell-nvidia-ceo-chips-jensen-huang.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-10-06T00:08:33Z",
+      "detectedAt": "2026-10-07T01:31:19+00:00"
     }
   ]
 }
