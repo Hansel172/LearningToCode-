@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-08T01:54:41+00:00",
+    "updated": "2026-10-08T17:52:01+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 27599.89,
+        "value": 27538.69,
         "unit": "",
         "note": "last close",
-        "changePct": 0.45,
+        "changePct": -0.22,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-06",
+        "asOf": "2026-10-07",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 15.01,
+        "value": 15.08,
         "unit": "",
         "note": "last close",
-        "changePct": -3.29,
+        "changePct": 0.47,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-06",
+        "asOf": "2026-10-07",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -539,6 +539,14 @@
       "source": "Livemint",
       "publishedAt": "2026-10-07T01:11:43Z",
       "detectedAt": "2026-10-08T01:54:41+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "SpaceX Wants $40 Billion for Nvidia Chips. Here\u2019s Where the 145% Long Term Upside Sits",
+      "url": "https://biztoc.com/x/42135ea19130270f",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-07T17:46:58Z",
+      "detectedAt": "2026-10-08T17:52:01+00:00"
     }
   ]
 }
