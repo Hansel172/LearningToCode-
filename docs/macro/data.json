@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-10-07T17:48:43+00:00",
+    "updated": "2026-10-08T01:54:41+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7818.93,
+        "value": 7801.77,
         "unit": "",
         "note": "last close",
-        "changePct": 0.58,
+        "changePct": -0.22,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-06",
+        "asOf": "2026-10-07",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-05",
+        "asOf": "2026-10-06",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.31,
+        "value": 5.27,
         "unit": "%",
         "note": "last close",
-        "changePct": 0.57,
+        "changePct": -0.75,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-05",
+        "asOf": "2026-10-06",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.48,
+        "value": 0.51,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-10-06",
+        "asOf": "2026-10-07",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -486,14 +486,6 @@
   "pending_deals": [
     {
       "ticker": "NVDA",
-      "headline": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
-      "url": "https://biztoc.com/x/f345c9f1b1162b6d",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-09-30T00:43:11Z",
-      "detectedAt": "2026-10-01T01:17:10+00:00"
-    },
-    {
-      "ticker": "NVDA",
       "headline": "Michael Burry Buys Put Options on Nvidia, Micron, and Palantir as \"The Big Short\" Investor Predicts a 1987-Style Market Crash",
       "url": "https://biztoc.com/x/36ced46abb39c082",
       "source": "Biztoc.com",
@@ -539,6 +531,14 @@
       "source": "Digitimes",
       "publishedAt": "2026-10-06T00:08:33Z",
       "detectedAt": "2026-10-07T01:31:19+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "SpaceX\u2019s $40 billion AI bet: Elon Musk turns to banks and investors for Nvidia chips",
+      "url": "https://www.livemint.com/companies/people/spacexs-40-billion-ai-bet-elon-musk-turns-to-banks-and-investors-for-nvidia-chips-11791335088153.html",
+      "source": "Livemint",
+      "publishedAt": "2026-10-07T01:11:43Z",
+      "detectedAt": "2026-10-08T01:54:41+00:00"
     }
   ]
 }
