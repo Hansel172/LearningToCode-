@@ -183,7 +183,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 58.5,
+          "return_pct": 59.7,
           "note": "partial year"
         },
         {
@@ -233,7 +233,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 28.3,
+          "return_pct": 27.3,
           "note": "year to date"
         }
       ],
@@ -1471,8 +1471,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 247802445672.0,
-        "pe_ttm": 21.7,
+        "market_cap": 245955475570.0,
+        "pe_ttm": 21.5,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
