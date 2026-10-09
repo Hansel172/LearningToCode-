@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-09T02:07:51+00:00",
+    "updated": "2026-10-09T17:26:14+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 27538.69,
+        "value": 27193.34,
         "unit": "",
         "note": "last close",
-        "changePct": -0.22,
+        "changePct": -1.25,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-07",
+        "asOf": "2026-10-08",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 15.08,
+        "value": 15.41,
         "unit": "",
         "note": "last close",
-        "changePct": 0.47,
+        "changePct": 2.19,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-07",
+        "asOf": "2026-10-08",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -484,14 +484,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "MSFT",
-      "headline": "In 1996, Tim Draper bought Hotmail shares for $300,000. 2 years later, Microsoft acquired the startup for $400 million",
-      "url": "https://economictimes.indiatimes.com/news/international/us/in-1996-tim-draper-bought-hotmail-shares-for-300000-2-years-later-microsoft-acquired-the-startup-for-400-million/articleshow/134621681.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-10-01T15:45:00Z",
-      "detectedAt": "2026-10-02T16:37:28+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "Commentary: AMD challenges Nvidia in embodied AI as Lisa Su acquires Fei-Fei Li's World Labs",
