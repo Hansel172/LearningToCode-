@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-10-08T17:52:01+00:00",
+    "updated": "2026-10-09T02:07:51+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7801.77,
+        "value": 7765.36,
         "unit": "",
         "note": "last close",
-        "changePct": -0.22,
+        "changePct": -0.47,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-07",
+        "asOf": "2026-10-08",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-06",
+        "asOf": "2026-10-07",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.27,
+        "value": 5.28,
         "unit": "%",
         "note": "last close",
-        "changePct": -0.75,
+        "changePct": 0.19,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-06",
+        "asOf": "2026-10-07",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.51,
+        "value": 0.47,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-10-07",
+        "asOf": "2026-10-08",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -484,22 +484,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "Michael Burry Buys Put Options on Nvidia, Micron, and Palantir as \"The Big Short\" Investor Predicts a 1987-Style Market Crash",
-      "url": "https://biztoc.com/x/36ced46abb39c082",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-01T00:33:15Z",
-      "detectedAt": "2026-10-02T01:41:04+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "headline": "Lip-Bu Tan calls TSMC a partner rather than a rival",
-      "url": "https://www.digitimes.com/news/a20260930PD246/intel-lip-bu-tan-tsmc-partnership.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-10-01T00:11:53Z",
-      "detectedAt": "2026-10-02T01:41:04+00:00"
-    },
     {
       "ticker": "MSFT",
       "headline": "In 1996, Tim Draper bought Hotmail shares for $300,000. 2 years later, Microsoft acquired the startup for $400 million",
