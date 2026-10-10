@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 5554568000000.0,
-        "pe_ttm": 28.8,
+        "market_cap": 5525648000000.0,
+        "pe_ttm": 28.6,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -487,8 +487,8 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 4968150755600.0,
-        "pe_ttm": 38.5,
+        "market_cap": 4912984755200.0,
+        "pe_ttm": 38.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -788,8 +788,8 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3880664329052.0,
-        "pe_ttm": 29.0,
+        "market_cap": 3973186625869.0,
+        "pe_ttm": 29.7,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -972,7 +972,7 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 2179387968326.0,
+        "market_cap": 2206533611576.0,
         "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
@@ -1045,48 +1045,39 @@
     {
       "ticker": "MU",
       "insufficient_data": false,
-      "period_end": "2026-05-28",
-      "compared_to": "2026-02-26",
-      "gap_days": 91,
+      "period_end": "2026-09-03",
+      "compared_to": "2026-05-28",
+      "gap_days": 98,
       "is_quarterly_comparison": true,
       "good": [
         {
           "metric": "Revenue growth",
-          "change_pct": 73.7
+          "change_pct": 30.8
         },
         {
           "metric": "Net income",
-          "change_pct": 104.9
-        },
-        {
-          "metric": "EPS (diluted)",
-          "change_pct": 104.4
+          "change_pct": 33.5
         },
         {
           "metric": "Cash on hand",
-          "change_pct": 79.6
+          "change_pct": 53.4
+        },
+        {
+          "metric": "Debt",
+          "change_pct": -68.4
         },
         {
           "metric": "Gross margin",
-          "change_pts": 10.2,
-          "from_pct": 74.41,
-          "to_pct": 84.56
+          "change_pts": 2.2,
+          "from_pct": 84.56,
+          "to_pct": 86.76
         }
       ],
-      "bad": [
-        {
-          "metric": "Debt",
-          "change_pct": 0.0
-        }
-      ],
+      "bad": [],
       "ugly": [],
       "red_flags": [],
       "trend": {
         "revenue_points": [
-          {
-            "period_end": "2023-08-31",
-            "revenue": 4010000000
-          },
           {
             "period_end": "2023-11-30",
             "revenue": 4726000000
@@ -1130,11 +1121,21 @@
           {
             "period_end": "2026-05-28",
             "revenue": 41456000000
+          },
+          {
+            "period_end": "2026-09-03",
+            "revenue": 54229000000
           }
         ],
-        "revenue_growth_streak": 5,
-        "margin_expansion_streak": 5,
+        "revenue_growth_streak": 6,
+        "margin_expansion_streak": 6,
         "quarters_table": [
+          {
+            "period_end": "2026-09-03",
+            "revenue": 54229000000,
+            "gross_margin_pct": 86.76,
+            "eps_diluted": null
+          },
           {
             "period_end": "2026-05-28",
             "revenue": 41456000000,
@@ -1200,20 +1201,14 @@
             "revenue": 4726000000,
             "gross_margin_pct": -0.74,
             "eps_diluted": -1.12
-          },
-          {
-            "period_end": "2023-08-31",
-            "revenue": 4010000000,
-            "gross_margin_pct": -10.85,
-            "eps_diluted": null
           }
         ]
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 1169870601532.0,
-        "pe_ttm": 23.2,
-        "ev_ebitda_ttm": 16.9
+        "market_cap": 1162145552379.0,
+        "pe_ttm": 13.7,
+        "ev_ebitda_ttm": 10.4
       },
       "annual_returns": [
         {
@@ -1270,64 +1265,6 @@
           "year": 2026,
           "return_pct": 262.9,
           "note": "year to date"
-        }
-      ],
-      "story": "Micron had a standout quarter, with revenue jumping 73.7% and net income more than doubling as gross margin surged over 10 points to 84.6%. That kind of margin expansion suggests the company is selling its memory chips at much higher profitability than before, not just more of them. This builds on five straight quarters of both revenue growth and margin improvement, pointing to a sustained upswing rather than a one-off blip, and it came without any change in debt levels.",
-      "company_story": [
-        {
-          "n": 1,
-          "label": "What it does",
-          "answer": "MU designs and manufactures DRAM and NAND memory/storage chips in large capital-intensive fabs, then sells them as components to hardware makers \u2014 it's a commodity-technology manufacturing business, not a software or services model."
-        },
-        {
-          "n": 2,
-          "label": "Who its customers are",
-          "answer": "Its customers are PC and laptop makers, smartphone manufacturers, cloud/data center operators, enterprise storage vendors, and automotive/industrial electronics companies."
-        },
-        {
-          "n": 3,
-          "label": "Competitive edge",
-          "answer": "The memory industry has only three major global players (Micron, Samsung, SK Hynix), so scale, process-node technology leadership, and manufacturing yield/cost efficiency are the real edges \u2014 differentiation is thin since memory itself is largely commoditized."
-        },
-        {
-          "n": 4,
-          "label": "Leadership",
-          "answer": "Sanjay Mehrotra is CEO as of general knowledge; this may be outdated if there's been a very recent leadership change."
-        },
-        {
-          "n": 5,
-          "label": "Insider ownership",
-          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
-        },
-        {
-          "n": 6,
-          "label": "Growth potential",
-          "answer": "Growth is currently tied to AI-driven demand for high-bandwidth memory (HBM) in data centers plus rising storage needs across devices; the 5-quarter streak of revenue growth and gross margin expansion signals an active upcycle in demand and pricing."
-        },
-        {
-          "n": 7,
-          "label": "Risks",
-          "answer": "The core risk is memory's extreme boom-bust price cyclicality \u2014 oversupply from Micron or its two competitors can crush prices and margins quickly, and the business requires continuous heavy capital spending to stay on the technology curve."
-        },
-        {
-          "n": 8,
-          "label": "What you're paying",
-          "answer": "On the numbers given, MU trades at a trailing P/E of 20.8 and EV/EBITDA of 15.1 \u2014 multiples that reflect a business currently in a favorable, growth/margin-expanding phase of its historically volatile cycle."
-        },
-        {
-          "n": 9,
-          "label": "Market cap today",
-          "answer": "$1.05T, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
-        },
-        {
-          "n": 10,
-          "label": "The 5-10 year case",
-          "answer": "Market cap is $1.05T today; a materially higher figure in 5-10 years would require the AI/HBM demand wave to persist (not just spike), Micron to hold technology parity with Samsung/SK Hynix, and the industry to avoid another severe oversupply-driven downturn \u2014 none of which is guaranteed given memory's history."
-        },
-        {
-          "n": 11,
-          "label": "Risk / reward",
-          "answer": "No specific return figure can be estimated from the given facts alone; realistically, memory stocks have historically delivered large gains in upcycles and large drawdowns in downcycles, so the risk/reward here is defined by cycle timing rather than steady compounding."
         }
       ]
     },
@@ -1471,8 +1408,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 233899091072.0,
-        "pe_ttm": 20.5,
+        "market_cap": 229882233941.0,
+        "pe_ttm": 20.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1723,8 +1660,8 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 146928022214.0,
-        "pe_ttm": 15.6,
+        "market_cap": 148411087094.0,
+        "pe_ttm": 15.7,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1784,6 +1721,10 @@
           "note": "year to date"
         }
       ],
+      "next_earnings": {
+        "date": "2026-10-22",
+        "days_until": 13
+      },
       "story": "WDC grew revenue 12.3% and pushed gross margin up nearly 4 points to 54.1%, continuing streaks of five straight quarters of sales growth and eleven straight quarters of margin expansion. But that stronger top line didn't translate into more profit \u2014 net income slipped 0.3%, meaning other costs below the gross margin line ate up the gains. The company also cut debt by a third, a positive sign, but cash on hand dropped 23%, a notable one-quarter decline worth watching alongside the flat profit picture.",
       "company_story": [
         {
@@ -2007,8 +1948,8 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 177216851279.0,
-        "pe_ttm": 55.7,
+        "market_cap": 179086625433.0,
+        "pe_ttm": 56.2,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
