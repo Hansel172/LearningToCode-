@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-10-09T17:26:14+00:00",
+    "updated": "2026-10-10T01:45:02+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7765.36,
+        "value": 7811.54,
         "unit": "",
         "note": "last close",
-        "changePct": -0.47,
+        "changePct": 0.59,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-08",
+        "asOf": "2026-10-09",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-07",
+        "asOf": "2026-10-08",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.28,
+        "value": 5.22,
         "unit": "%",
         "note": "last close",
-        "changePct": 0.19,
+        "changePct": -1.14,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-07",
+        "asOf": "2026-10-08",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.47,
+        "value": 0.44,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-10-08",
+        "asOf": "2026-10-09",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -484,14 +484,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "Commentary: AMD challenges Nvidia in embodied AI as Lisa Su acquires Fei-Fei Li's World Labs",
-      "url": "https://www.digitimes.com/news/a20261001PD239/amd-acquisition-software-2026.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-10-01T23:48:58Z",
-      "detectedAt": "2026-10-03T01:11:15+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "NYSE parent company's joint venture plans 24/7 tokenized stock trading, and it's a huge deal",
