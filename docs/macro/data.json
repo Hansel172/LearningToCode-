@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-10-12T20:16:57+00:00",
+    "updated": "2026-10-13T03:02:41+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7811.54,
+        "value": 7807.24,
         "unit": "",
         "note": "last close",
-        "changePct": 0.59,
+        "changePct": -0.06,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-09",
+        "asOf": "2026-10-12",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -515,6 +515,22 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-10-07T17:46:58Z",
       "detectedAt": "2026-10-08T17:52:01+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Nvidia Looks to Purchase Open-Weight AI Firm Reflection",
+      "url": "https://biztoc.com/x/d43123acfd3bd501",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-12T00:41:06Z",
+      "detectedAt": "2026-10-13T03:02:42+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Nvidia Looks to Purchase Open-Weight AI Firm Reflection",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/nvidia-looks-to-purchase-open-weight-ai-firm-reflection/",
+      "source": "pymnts.com",
+      "publishedAt": "2026-10-11T23:45:15Z",
+      "detectedAt": "2026-10-13T03:02:42+00:00"
     }
   ]
 }
