@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-13T03:02:41+00:00",
+    "updated": "2026-10-13T18:17:04+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 27366.17,
+        "value": 27245.9,
         "unit": "",
         "note": "last close",
-        "changePct": 0.64,
+        "changePct": -0.44,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-09",
+        "asOf": "2026-10-12",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 14.84,
+        "value": 15.21,
         "unit": "",
         "note": "last close",
-        "changePct": -3.7,
+        "changePct": 2.49,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-09",
+        "asOf": "2026-10-12",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -486,14 +486,6 @@
   "pending_deals": [
     {
       "ticker": "NVDA",
-      "headline": "NYSE parent company's joint venture plans 24/7 tokenized stock trading, and it's a huge deal",
-      "url": "https://biztoc.com/x/07d642eb1333d150",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-05T17:05:18Z",
-      "detectedAt": "2026-10-06T17:10:35+00:00"
-    },
-    {
-      "ticker": "NVDA",
       "headline": "Marvell sees custom chips as a must for CSPs",
       "url": "https://www.digitimes.com/news/a20261005PD231/marvell-nvidia-ceo-chips-jensen-huang.html",
       "source": "Digitimes",
@@ -531,6 +523,22 @@
       "source": "pymnts.com",
       "publishedAt": "2026-10-11T23:45:15Z",
       "detectedAt": "2026-10-13T03:02:42+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "headline": "Apple Leadership Shake Up",
+      "url": "https://www.ilounge.com/news/apple/apple-leadership-shake-up",
+      "source": "iLounge",
+      "publishedAt": "2026-10-12T18:11:26Z",
+      "detectedAt": "2026-10-13T18:17:05+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "headline": "Being Heumann \u2014 Official Trailer",
+      "url": "https://ohnotheydidnt.livejournal.com/133002090.html",
+      "source": "Livejournal.com",
+      "publishedAt": "2026-10-12T18:08:55Z",
+      "detectedAt": "2026-10-13T18:17:05+00:00"
     }
   ]
 }
