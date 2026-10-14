@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-14T01:12:42+00:00",
+    "updated": "2026-10-14T15:49:04+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 27245.9,
+        "value": 27204.38,
         "unit": "",
         "note": "last close",
-        "changePct": -0.44,
+        "changePct": -0.15,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-12",
+        "asOf": "2026-10-13",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 15.21,
+        "value": 15.27,
         "unit": "",
         "note": "last close",
-        "changePct": 2.49,
+        "changePct": 0.39,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-12",
+        "asOf": "2026-10-13",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -78,11 +78,11 @@
       },
       "CPIAUCSL": {
         "label": "CPI",
-        "value": 3.71,
+        "value": 4.02,
         "unit": "%",
         "note": "year over year",
         "changePct": null,
-        "asOf": "2026-08-01",
+        "asOf": "2026-09-01",
         "source": "FRED CPIAUCSL",
         "sourceUrl": "https://fred.stlouisfed.org/series/CPIAUCSL"
       },
@@ -484,14 +484,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "Marvell sees custom chips as a must for CSPs",
-      "url": "https://www.digitimes.com/news/a20261005PD231/marvell-nvidia-ceo-chips-jensen-huang.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-10-06T00:08:33Z",
-      "detectedAt": "2026-10-07T01:31:19+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "SpaceX\u2019s $40 billion AI bet: Elon Musk turns to banks and investors for Nvidia chips",
