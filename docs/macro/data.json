@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-14T15:49:04+00:00",
+    "updated": "2026-10-14T20:40:57+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-12",
+        "asOf": "2026-10-13",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.24,
+        "value": 5.21,
         "unit": "%",
         "note": "last close",
-        "changePct": 0.38,
+        "changePct": -0.57,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-09",
+        "asOf": "2026-10-13",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
