@@ -183,7 +183,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 60.7,
+          "return_pct": 63.3,
           "note": "partial year"
         },
         {
@@ -233,7 +233,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 21.4,
+          "return_pct": 22.5,
           "note": "year to date"
         }
       ],
@@ -494,7 +494,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": -1.3,
+          "return_pct": -1.0,
           "note": "partial year"
         },
         {
@@ -544,7 +544,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 25.4,
+          "return_pct": 25.5,
           "note": "year to date"
         }
       ],
@@ -795,7 +795,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 8.8,
+          "return_pct": 9.2,
           "note": "partial year"
         },
         {
@@ -845,10 +845,14 @@
         },
         {
           "year": 2026,
-          "return_pct": 11.9,
+          "return_pct": 12.4,
           "note": "year to date"
         }
       ],
+      "next_earnings": {
+        "date": "2026-10-28",
+        "days_until": 14
+      },
       "story": "Microsoft posted solid growth this quarter, with revenue up 8.6%, net income up 12.5%, and free cash flow jumping 24.3% \u2014 continuing a revenue growth streak that's now lasted nine straight quarters. But underneath those headline numbers, operating expenses grew even faster than revenue (12.6%) for the second quarter in a row, and gross margin slipped slightly, signs that costs are creeping up relative to sales. The bigger question mark is cash: reserves fell 34.8% while debt ticked up 0.1%, meaning the company drew down cash and added a bit more borrowing in the same period \u2014 a combination worth watching even though profits and cash flow both looked strong on the surface.",
       "company_story": [
         {
@@ -979,7 +983,7 @@
       "annual_returns": [
         {
           "year": 2026,
-          "return_pct": 1.5,
+          "return_pct": -2.7,
           "note": "year to date"
         }
       ],
@@ -1213,7 +1217,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 30.6,
+          "return_pct": 30.1,
           "note": "partial year"
         },
         {
@@ -1263,7 +1267,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 246.5,
+          "return_pct": 234.0,
           "note": "year to date"
         }
       ]
@@ -1420,7 +1424,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 526.6,
+          "return_pct": 524.5,
           "note": "year to date"
         }
       ],
@@ -1667,7 +1671,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 20.4,
+          "return_pct": 22.9,
           "note": "partial year"
         },
         {
@@ -1717,13 +1721,13 @@
         },
         {
           "year": 2026,
-          "return_pct": 124.6,
+          "return_pct": 121.0,
           "note": "year to date"
         }
       ],
       "next_earnings": {
         "date": "2026-10-22",
-        "days_until": 9
+        "days_until": 8
       },
       "story": "WDC grew revenue 12.3% and pushed gross margin up nearly 4 points to 54.1%, continuing streaks of five straight quarters of sales growth and eleven straight quarters of margin expansion. But that stronger top line didn't translate into more profit \u2014 net income slipped 0.3%, meaning other costs below the gross margin line ate up the gains. The company also cut debt by a third, a positive sign, but cash on hand dropped 23%, a notable one-quarter decline worth watching alongside the flat profit picture.",
       "company_story": [
@@ -1955,7 +1959,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 8.3,
+          "return_pct": 8.5,
           "note": "partial year"
         },
         {
@@ -2005,13 +2009,13 @@
         },
         {
           "year": 2026,
-          "return_pct": 173.5,
+          "return_pct": 171.3,
           "note": "year to date"
         }
       ],
       "next_earnings": {
         "date": "2026-10-27",
-        "days_until": 14
+        "days_until": 13
       },
       "story": "Seagate (STX) had a strong quarter: revenue climbed 16.6% while net income surged 73.0%, a sign that profits grew much faster than sales. That gap shows up clearly in the gross margin, which jumped 5.8 points to 52.3% \u2014 meaning the company is keeping a lot more of each sales dollar as profit. At the same time, Seagate built up cash (+48.6%) and paid down debt (-2.5%), strengthening its financial footing. This isn't a one-off: it's the 5th straight quarter of revenue growth and the 11th straight quarter of improving margins, pointing to a sustained trend of both growing and getting more efficient at the same time.",
       "company_story": [
