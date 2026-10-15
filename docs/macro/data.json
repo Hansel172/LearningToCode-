@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-15T00:30:54+00:00",
+    "updated": "2026-10-15T15:35:08+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 27204.38,
+        "value": 26692.87,
         "unit": "",
         "note": "last close",
-        "changePct": -0.15,
+        "changePct": -1.88,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-13",
+        "asOf": "2026-10-14",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 15.27,
+        "value": 16.87,
         "unit": "",
         "note": "last close",
-        "changePct": 0.39,
+        "changePct": 10.48,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-13",
+        "asOf": "2026-10-14",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -484,14 +484,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "SpaceX\u2019s $40 billion AI bet: Elon Musk turns to banks and investors for Nvidia chips",
-      "url": "https://www.livemint.com/companies/people/spacexs-40-billion-ai-bet-elon-musk-turns-to-banks-and-investors-for-nvidia-chips-11791335088153.html",
-      "source": "Livemint",
-      "publishedAt": "2026-10-07T01:11:43Z",
-      "detectedAt": "2026-10-08T01:54:41+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "SpaceX Wants $40 Billion for Nvidia Chips. Here\u2019s Where the 145% Long Term Upside Sits",
