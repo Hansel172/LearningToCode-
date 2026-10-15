@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-15T15:35:08+00:00",
+    "updated": "2026-10-15T20:19:58+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -486,14 +486,6 @@
   "pending_deals": [
     {
       "ticker": "NVDA",
-      "headline": "SpaceX Wants $40 Billion for Nvidia Chips. Here\u2019s Where the 145% Long Term Upside Sits",
-      "url": "https://biztoc.com/x/42135ea19130270f",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-07T17:46:58Z",
-      "detectedAt": "2026-10-08T17:52:01+00:00"
-    },
-    {
-      "ticker": "NVDA",
       "headline": "Nvidia Looks to Purchase Open-Weight AI Firm Reflection",
       "url": "https://biztoc.com/x/d43123acfd3bd501",
       "source": "Biztoc.com",
@@ -531,6 +523,14 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-10-13T21:46:42Z",
       "detectedAt": "2026-10-15T00:30:55+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "headline": "Apple plans to debut AI features in China in December",
+      "url": "https://cryptobriefing.com/apple-intelligence-china-december-launch/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-14T19:58:04Z",
+      "detectedAt": "2026-10-15T20:19:59+00:00"
     }
   ]
 }
