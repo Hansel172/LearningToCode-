@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-16T00:23:05+00:00",
+    "updated": "2026-10-16T15:22:06+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26692.87,
+        "value": 26713.03,
         "unit": "",
         "note": "last close",
-        "changePct": -1.88,
+        "changePct": 0.08,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-14",
+        "asOf": "2026-10-15",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 16.87,
+        "value": 16.46,
         "unit": "",
         "note": "last close",
-        "changePct": 10.48,
+        "changePct": -2.43,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-14",
+        "asOf": "2026-10-15",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -531,6 +531,38 @@
       "source": "Crypto Briefing",
       "publishedAt": "2026-10-14T19:58:04Z",
       "detectedAt": "2026-10-15T20:19:59+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Nvidia CEO Jensen Huang says CoreWeave doesn\u2019t need a backstop",
+      "url": "https://cryptobriefing.com/nvidia-huang-no-need-backstop-coreweave/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-15T15:14:41Z",
+      "detectedAt": "2026-10-16T15:22:06+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Germany said to plan AI partnership with Nvidia",
+      "url": "https://biztoc.com/x/baf3eb9bc39deda5",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-15T15:02:54Z",
+      "detectedAt": "2026-10-16T15:22:06+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "NVIDIA Announces The 120B Nemotron 3.5 Super VL Model For AI Agents And 2 Tiny 4 GB And 24 GB Edge Models Under The Nemotron 3.5 Bolt Umbrella",
+      "url": "https://wccftech.com/nvidia-announces-the-120b-nemotron-3-5-super-vl-model-for-ai-agents-and-2-tiny-4-gb-and-24-gb-edge-models-under-the-nemotron-3-5-bolt-umbrella/",
+      "source": "Wccftech",
+      "publishedAt": "2026-10-15T15:00:00Z",
+      "detectedAt": "2026-10-16T15:22:06+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "German government plans Nvidia partnership, Handelsblatt reports",
+      "url": "https://cryptobriefing.com/german-government-nvidia-partnership-handelsblatt/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-15T14:48:48Z",
+      "detectedAt": "2026-10-16T15:22:06+00:00"
     }
   ]
 }
