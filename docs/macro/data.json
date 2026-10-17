@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-17T00:27:46+00:00",
+    "updated": "2026-10-17T19:02:25+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -78,7 +78,7 @@
       },
       "CPIAUCSL": {
         "label": "CPI",
-        "value": 4.02,
+        "value": 3.72,
         "unit": "%",
         "note": "year over year",
         "changePct": null,
