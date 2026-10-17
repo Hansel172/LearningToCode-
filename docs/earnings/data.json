@@ -1270,6 +1270,64 @@
           "return_pct": 207.9,
           "note": "year to date"
         }
+      ],
+      "story": "Micron had a strong quarter: revenue climbed 30.8% and net income rose 33.5%, while profitability also improved as gross margin expanded from 84.6% to 86.8%. The company's financial position got healthier too, with cash on hand up 53.4% and debt cut by 68.4%. This marks the sixth straight quarter of both revenue growth and margin expansion, suggesting the memory and storage chip business has been on a sustained upswing rather than a one-time bounce.",
+      "company_story": [
+        {
+          "n": 1,
+          "label": "What it does",
+          "answer": "Micron designs and manufactures memory and storage chips \u2014 DRAM (short-term memory) and NAND flash (storage) \u2014 that are essential, interchangeable components built into computers, phones, servers, and other electronics, and sells them as commodity-like semiconductors at massive scale."
+        },
+        {
+          "n": 2,
+          "label": "Who its customers are",
+          "answer": "Its customers are PC makers, smartphone manufacturers, data center and cloud operators, automakers, and industrial electronics companies \u2014 essentially any business that builds devices needing memory or storage."
+        },
+        {
+          "n": 3,
+          "label": "Competitive edge",
+          "answer": "Micron competes on manufacturing scale, process technology, and cost efficiency in a market with only three major DRAM players (Micron, Samsung, SK Hynix) and a handful of NAND makers; its edge is being one of a small number of companies capable of producing memory at the leading edge and at volume, not a sticky brand or switching-cost moat."
+        },
+        {
+          "n": 4,
+          "label": "Leadership",
+          "answer": "Sanjay Mehrotra is CEO, a role he has held since 2017; this is from general knowledge and may be out of date if there's been a very recent change."
+        },
+        {
+          "n": 5,
+          "label": "Insider ownership",
+          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
+        },
+        {
+          "n": 6,
+          "label": "Growth potential",
+          "answer": "Growth is tied to rising memory content per device (AI servers, smartphones, cars) and cyclical price recoveries; the current streak of 6 straight quarters of revenue growth and margin expansion reflects a strong upswing driven in part by AI-related demand for high-bandwidth memory."
+        },
+        {
+          "n": 7,
+          "label": "Risks",
+          "answer": "Memory is a brutally cyclical, commodity business where prices can swing wildly based on industry-wide supply and demand, capital spending is enormous, and a downturn in PC/phone/server demand or oversupply from competitors can quickly erase margins and profits."
+        },
+        {
+          "n": 8,
+          "label": "What you're paying",
+          "answer": "On the given numbers \u2014 trailing P/E of 11.7 and trailing EV/EBITDA of 8.8 \u2014 the market is pricing Micron cheaply relative to typical growth-stock multiples, consistent with investors treating it as a cyclical business currently near a profit peak rather than a steadily compounding grower."
+        },
+        {
+          "n": 9,
+          "label": "Market cap today",
+          "answer": "$994.3B, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
+        },
+        {
+          "n": 10,
+          "label": "The 5-10 year case",
+          "answer": "A meaningfully larger market cap in five to ten years would require sustained structural demand growth (AI, data centers) to smooth out the historical boom-bust cycle, continued discipline among the three major DRAM producers to avoid oversupply, and Micron maintaining technological parity with Samsung and SK Hynix; without those, the market cap could just as easily cycle back down as memory prices revert."
+        },
+        {
+          "n": 11,
+          "label": "Risk / reward",
+          "answer": "Because Micron is priced at a low multiple during a strong part of its cycle, an investor could gain significantly if AI-driven demand extends the upcycle and multiples re-rate upward, but could lose substantially if memory prices collapse in the next downturn, since both earnings and the multiple investors are willing to pay tend to fall together in this industry."
+        }
       ]
     },
     {
