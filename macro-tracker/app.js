@@ -23,35 +23,6 @@ const RATING = {
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-const fmt = n =>
-  typeof n === 'number' ? n.toLocaleString('en-US', { maximumFractionDigits: 2 }) : '—';
-
-/* Direction is never carried by color alone — the arrow says it too. */
-function delta(pct) {
-  if (pct === null || pct === undefined) return '<span class="d flat">—</span>';
-  const cls = pct > 0 ? 'up' : pct < 0 ? 'down' : 'flat';
-  const arw = pct > 0 ? '▲' : pct < 0 ? '▼' : '·';
-  return `<span class="d ${cls}">${arw} ${Math.abs(pct).toFixed(2)}%</span>`;
-}
-
-function range52(d) {
-  if (d.fiftyTwoWeekHigh == null || d.fiftyTwoWeekLow == null) return '';
-  return `<div class="range52">52w ${fmt(d.fiftyTwoWeekLow)}–${fmt(d.fiftyTwoWeekHigh)}${esc(d.unit || '')}</div>`;
-}
-
-function tick(d, showAsOf) {
-  if (!d) return '';
-  return `<div class="tick">
-    <div class="k">${esc(d.label)}</div>
-    <div class="v">${fmt(d.value)}${esc(d.unit || '')}</div>
-    ${d.note === 'year over year'
-      ? `<div class="d flat">year over year</div>`
-      : delta(d.changePct)}
-    ${range52(d)}
-    ${showAsOf && d.asOf ? `<div class="asof">${esc(d.asOf)}</div>` : ''}
-  </div>`;
-}
-
 function dataPoints(pts) {
   if (!pts || !pts.length) return '<div class="empty">No verified figures this cycle.</div>';
   return pts.map(p => `<div class="dp">
@@ -201,12 +172,6 @@ function render() {
   document.getElementById('today').textContent =
     new Date().toLocaleDateString('en-US',
       { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-
-  document.getElementById('snapshot').innerHTML =
-    ['SP500', 'NASDAQCOM', 'VIXCLS', 'DCOILWTICO'].map(k => tick(LIVE.market[k])).join('');
-
-  document.getElementById('strip').innerHTML =
-    ['DFF', 'DGS10', 'T10Y2Y', 'CPIAUCSL', 'PPIACO'].map(k => tick(LIVE.macro[k], true)).join('');
 
   const errs = LIVE.errors || [];
   document.getElementById('errors').innerHTML = errs.length
