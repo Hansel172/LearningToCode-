@@ -233,7 +233,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 16.5,
+          "return_pct": 14.8,
           "note": "year to date"
         }
       ],
@@ -544,7 +544,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 25.8,
+          "return_pct": 26.3,
           "note": "year to date"
         }
       ],
@@ -845,13 +845,13 @@
         },
         {
           "year": 2026,
-          "return_pct": 11.5,
+          "return_pct": 9.4,
           "note": "year to date"
         }
       ],
       "next_earnings": {
         "date": "2026-10-28",
-        "days_until": 12
+        "days_until": 11
       },
       "story": "Microsoft posted solid growth this quarter, with revenue up 8.6%, net income up 12.5%, and free cash flow jumping 24.3% \u2014 continuing a revenue growth streak that's now lasted nine straight quarters. But underneath those headline numbers, operating expenses grew even faster than revenue (12.6%) for the second quarter in a row, and gross margin slipped slightly, signs that costs are creeping up relative to sales. The bigger question mark is cash: reserves fell 34.8% while debt ticked up 0.1%, meaning the company drew down cash and added a bit more borrowing in the same period \u2014 a combination worth watching even though profits and cash flow both looked strong on the surface.",
       "company_story": [
@@ -983,7 +983,7 @@
       "annual_returns": [
         {
           "year": 2026,
-          "return_pct": -7.7,
+          "return_pct": -9.3,
           "note": "year to date"
         }
       ],
@@ -1267,7 +1267,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 226.3,
+          "return_pct": 207.9,
           "note": "year to date"
         }
       ]
@@ -1424,13 +1424,13 @@
         },
         {
           "year": 2026,
-          "return_pct": 487.6,
+          "return_pct": 447.4,
           "note": "year to date"
         }
       ],
       "next_earnings": {
         "date": "2026-10-29",
-        "days_until": 13
+        "days_until": 12
       },
       "story": "SanDisk had a standout quarter: revenue jumped 50.7% and net income nearly doubled, up 91.0%, while gross margin climbed 6.2 points to 84.6%. Cash on hand also grew 27.5%, leaving the company with a stronger financial cushion. This continues a five-quarter streak of both rising revenue and expanding margins, suggesting the growth and profitability improvements aren't a one-time blip but part of a sustained pattern since the company's 2025 spinoff from Western Digital.",
       "company_story": [
@@ -1725,13 +1725,13 @@
         },
         {
           "year": 2026,
-          "return_pct": 106.9,
+          "return_pct": 92.7,
           "note": "year to date"
         }
       ],
       "next_earnings": {
         "date": "2026-10-22",
-        "days_until": 6
+        "days_until": 5
       },
       "story": "WDC grew revenue 12.3% and pushed gross margin up nearly 4 points to 54.1%, continuing streaks of five straight quarters of sales growth and eleven straight quarters of margin expansion. But that stronger top line didn't translate into more profit \u2014 net income slipped 0.3%, meaning other costs below the gross margin line ate up the gains. The company also cut debt by a third, a positive sign, but cash on hand dropped 23%, a notable one-quarter decline worth watching alongside the flat profit picture.",
       "company_story": [
@@ -2013,13 +2013,13 @@
         },
         {
           "year": 2026,
-          "return_pct": 150.8,
+          "return_pct": 132.0,
           "note": "year to date"
         }
       ],
       "next_earnings": {
         "date": "2026-10-27",
-        "days_until": 11
+        "days_until": 10
       },
       "story": "Seagate (STX) had a strong quarter: revenue climbed 16.6% while net income surged 73.0%, a sign that profits grew much faster than sales. That gap shows up clearly in the gross margin, which jumped 5.8 points to 52.3% \u2014 meaning the company is keeping a lot more of each sales dollar as profit. At the same time, Seagate built up cash (+48.6%) and paid down debt (-2.5%), strengthening its financial footing. This isn't a one-off: it's the 5th straight quarter of revenue growth and the 11th straight quarter of improving margins, pointing to a sustained trend of both growing and getting more efficient at the same time.",
       "company_story": [
