@@ -48,37 +48,6 @@ body {
   margin-top: 6px; letter-spacing: 0.5px;
 }
 
-.snapshot { display: flex; gap: 10px; flex-wrap: wrap; }
-.tick {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 8px; padding: 10px 16px; min-width: 132px;
-}
-.tick .k {
-  font-family: var(--body); font-size: 10px; color: var(--muted);
-  text-transform: uppercase; letter-spacing: 1.2px;
-}
-.tick .v {
-  font-family: var(--mono); font-size: 20px; font-weight: 500;
-  margin-top: 3px; letter-spacing: -0.5px;
-}
-.tick .d { font-family: var(--mono); font-size: 12px; margin-top: 1px; }
-.up   { color: var(--green); }
-.down { color: var(--red); }
-.flat { color: var(--muted); }
-
-/* ── macro strip ────────────────────────────────────────────────────── */
-.strip {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px; margin-bottom: 32px;
-}
-.strip .tick { min-width: 0; }
-.tick .asof {
-  font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 4px;
-}
-.tick .range52 {
-  font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 2px;
-}
-
 /* ── theme cards ────────────────────────────────────────────────────── */
 .grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
