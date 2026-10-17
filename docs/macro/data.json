@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-10-16T19:56:36+00:00",
+    "updated": "2026-10-17T00:27:46+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7744.06,
+        "value": 7659.44,
         "unit": "",
         "note": "last close",
-        "changePct": 0.33,
+        "changePct": -1.09,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-15",
+        "asOf": "2026-10-16",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-14",
+        "asOf": "2026-10-15",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.19,
+        "value": 5.1,
         "unit": "%",
         "note": "last close",
-        "changePct": -0.38,
+        "changePct": -1.73,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-14",
+        "asOf": "2026-10-15",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.33,
+        "value": 0.35,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-10-15",
+        "asOf": "2026-10-16",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
