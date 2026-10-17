@@ -511,42 +511,10 @@
     {
       "ticker": "NVDA",
       "headline": "Nvidia Looks to Purchase Open-Weight AI Firm Reflection",
-      "url": "https://biztoc.com/x/d43123acfd3bd501",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-12T00:41:06Z",
-      "detectedAt": "2026-10-13T03:02:42+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "headline": "Nvidia Looks to Purchase Open-Weight AI Firm Reflection",
       "url": "https://www.pymnts.com/news/artificial-intelligence/2026/nvidia-looks-to-purchase-open-weight-ai-firm-reflection/",
       "source": "pymnts.com",
       "publishedAt": "2026-10-11T23:45:15Z",
       "detectedAt": "2026-10-13T03:02:42+00:00"
-    },
-    {
-      "ticker": "AAPL",
-      "headline": "Apple Leadership Shake Up",
-      "url": "https://www.ilounge.com/news/apple/apple-leadership-shake-up",
-      "source": "iLounge",
-      "publishedAt": "2026-10-12T18:11:26Z",
-      "detectedAt": "2026-10-13T18:17:05+00:00"
-    },
-    {
-      "ticker": "AAPL",
-      "headline": "Being Heumann \u2014 Official Trailer",
-      "url": "https://ohnotheydidnt.livejournal.com/133002090.html",
-      "source": "Livejournal.com",
-      "publishedAt": "2026-10-12T18:08:55Z",
-      "detectedAt": "2026-10-13T18:17:05+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "headline": "Why Bumble Stock Skyrocketed Today",
-      "url": "https://biztoc.com/x/627bf8285caf0e36",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-13T21:46:42Z",
-      "detectedAt": "2026-10-15T00:30:55+00:00"
     },
     {
       "ticker": "AAPL",
@@ -555,30 +523,6 @@
       "source": "Crypto Briefing",
       "publishedAt": "2026-10-14T19:58:04Z",
       "detectedAt": "2026-10-15T20:19:59+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "headline": "Nvidia CEO Jensen Huang says CoreWeave doesn\u2019t need a backstop",
-      "url": "https://cryptobriefing.com/nvidia-huang-no-need-backstop-coreweave/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-15T15:14:41Z",
-      "detectedAt": "2026-10-16T15:22:06+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "headline": "Germany said to plan AI partnership with Nvidia",
-      "url": "https://biztoc.com/x/baf3eb9bc39deda5",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-15T15:02:54Z",
-      "detectedAt": "2026-10-16T15:22:06+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "headline": "NVIDIA Announces The 120B Nemotron 3.5 Super VL Model For AI Agents And 2 Tiny 4 GB And 24 GB Edge Models Under The Nemotron 3.5 Bolt Umbrella",
-      "url": "https://wccftech.com/nvidia-announces-the-120b-nemotron-3-5-super-vl-model-for-ai-agents-and-2-tiny-4-gb-and-24-gb-edge-models-under-the-nemotron-3-5-bolt-umbrella/",
-      "source": "Wccftech",
-      "publishedAt": "2026-10-15T15:00:00Z",
-      "detectedAt": "2026-10-16T15:22:06+00:00"
     },
     {
       "ticker": "NVDA",
