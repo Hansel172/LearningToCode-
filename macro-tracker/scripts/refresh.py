@@ -75,6 +75,18 @@ def series(series_id):
     return rows
 
 
+def _months_before(d, n):
+    """d with n calendar months subtracted, clamped to the last valid day of
+    the resulting month (not used here beyond first-of-month FRED dates, but
+    correct regardless)."""
+    month = d.month - n
+    year = d.year + (month - 1) // 12
+    month = (month - 1) % 12 + 1
+    day = min(d.day, [31, 29 if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else 28,
+                       31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month - 1])
+    return d.replace(year=year, month=month, day=day)
+
+
 def _fifty_two_week_range(rows):
     """High/low over the trailing 365 days of observations, inclusive of the
     latest point. None for both if there's under a year of history yet (a
@@ -102,9 +114,23 @@ def build(series_id, label, unit, mode):
     if mode == "yoy":
         # An index level like CPI 332.568 means nothing to a reader. The rate
         # of change is the story, so convert before it reaches the dashboard.
-        if len(rows) < 13:
-            raise ValueError("insufficient history for year-over-year")
-        latest, prior = rows[-1][1], rows[-13][1]
+        #
+        # Finding "12 months ago" by date, not by counting back 13 list
+        # positions: FRED's own CPIAUCSL series has a missing 2025-10-01
+        # observation (confirmed live — almost certainly the Oct 2025
+        # government shutdown delaying that release), which silently
+        # shifted rows[-13] to August instead of September and produced a
+        # wrong 4.02% instead of the real ~3.72% YoY figure. A fixed index
+        # offset assumes no gaps ever occur in a government data series;
+        # that assumption was false for this exact series, caught by a
+        # user comparing the app's number against BLS's own reported 3.7%.
+        latest_date = datetime.strptime(rows[-1][0], "%Y-%m-%d")
+        target = _months_before(latest_date, 12).strftime("%Y-%m-%d")
+        by_date = {d: v for d, v in rows}
+        latest, prior = rows[-1][1], by_date.get(target)
+        if prior is None:
+            raise ValueError(f"no observation exactly 12 months before {rows[-1][0]} "
+                              f"(looked for {target}) — a real gap, not guessing a substitute")
         if not prior:
             raise ValueError("zero base")
         return {
