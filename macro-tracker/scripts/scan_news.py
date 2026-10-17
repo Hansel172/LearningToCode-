@@ -26,6 +26,18 @@ for the same headline-scanning pattern, and the earnings tracker's
 update_position_trackers.py for HOLDING_TICKERS). Skips cleanly if either
 is missing, so the rest of the refresh still ships.
 
+This script catches false positives it cannot filter out on its own, by
+design — title+description keyword matching has no way to tell a real deal
+apart from an ad teaser, an "earlier this year" aside, or a company name
+that only appears because it's the streaming platform a film is launching
+on. That's exactly why this only ever produces a *pending* candidate, never
+a written catalyst — periodic human (or Claude) review is the actual
+filter, not a one-time fix. A real pass on 2026-10-17 found 7 of 10
+pending entries were false positives (unrelated articles, old news
+reframed as a comment, or an exact-duplicate headline from a second
+outlet) — not a bug introduced here, just this detection method's honest
+false-positive rate.
+
 Usage: scan_news.py [OLD_DATA_JSON]
   OLD_DATA_JSON is a snapshot of docs/macro/data.json taken BEFORE
   build_public.py ran. That's required, not optional, here: build_public.py
@@ -83,6 +95,18 @@ def load_holdings():
 def matches_deal_keyword(text):
     text = text.lower()
     return any(k in text for k in DEAL_KEYWORDS)
+
+
+def _normalize_headline(ticker, headline):
+    """(ticker, lowercased/whitespace-collapsed headline) — catches the
+    exact-duplicate case where a second outlet (often an aggregator like
+    biztoc.com) republishes the identical title under its own URL. Doesn't
+    catch two different outlets *paraphrasing* the same story differently
+    (e.g. one outlet's own headline vs. another's "X reports Y" rewrite of
+    it) — that needs real semantic comparison, not a cheap heuristic, and
+    is exactly the kind of thing the periodic human/Claude review this
+    script is built around is still responsible for catching."""
+    return (ticker, " ".join((headline or "").lower().split()))
 
 
 def scan_ticker(ticker, company, api_key, since):
@@ -147,14 +171,17 @@ def main():
         existing = json.loads(old_snapshot.read_text()).get("pending_deals", [])
 
     cutoff = datetime.now(timezone.utc) - timedelta(days=PENDING_DAYS)
-    seen_urls = {e["url"] for e in existing}
     kept = [e for e in existing if datetime.fromisoformat(e["detectedAt"]) >= cutoff]
+    seen_urls = {e["url"] for e in kept}
+    seen_headlines = {_normalize_headline(e["ticker"], e["headline"]) for e in kept}
     added = []
     for h in new_hits:
-        if h["url"] in seen_urls:
+        key = _normalize_headline(h["ticker"], h["headline"])
+        if h["url"] in seen_urls or key in seen_headlines:
             continue
-        seen_urls.add(h["url"])  # also guards against the same article
-        added.append(h)          # matching two different held tickers
+        seen_urls.add(h["url"])
+        seen_headlines.add(key)
+        added.append(h)
 
     current = json.loads(DATA_PATH.read_text())
     current["pending_deals"] = kept + added
