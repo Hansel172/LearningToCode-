@@ -112,80 +112,86 @@
     "errors": []
   },
   "themes": {
-    "updated": "2026-09-16",
+    "updated": "2026-10-17",
     "note": "Qualitative layer. Written by a person or by Claude \u2014 never by the refresh script. Regenerate with: 'update themes.json'",
     "themes": [
       {
         "id": "memory",
         "name": "Memory Supply Chain",
         "status": "orange",
-        "whatChanged": "The shortage escalated sharply past what was already described as structural. Samsung and SK Hynix's finished DRAM inventory fell below 10 days of supply on September 7 \u2014 the tightest point of the cycle. SK Hynix says its HBM, DRAM, and NAND capacity is essentially sold out for all of 2026. Micron has exited the consumer memory market entirely to focus only on enterprise and AI customers. DRAM spot prices are up roughly 700% over the past year, far beyond the price rise already priced into this theme. Samsung's memory chief now expects significant shortages to continue through at least 2027, and SK Hynix isn't targeting new cleanroom capacity until 2028-2029.",
+        "whatChanged": "Micron's fiscal Q4 2026 results (reported Sep 30) put real, filed numbers behind what was previously mostly spot-price and inventory anecdotes: revenue of $54.23B beat its own $50B guidance and the ~$51B Wall Street consensus, full-year DRAM revenue grew 62% year over year \u2014 driven mainly by price, not volume, per the FY2026 10-K \u2014 and full-year gross margin jumped to 81% from 40% the prior year. Guidance for the next quarter (FQ1 FY2027) is $61.5B \u00b1 $1.5B, again above the ~$57B consensus. SK Hynix reaffirmed on its own October earnings call that 2026 HBM, DRAM, and NAND capacity is essentially sold out, and Samsung's EVP now expects HBM to take close to 30% of DRAM makers' wafer capacity in 2027, up from roughly 20% today \u2014 squeezing standard DRAM supply further as that capacity gets reallocated. AMD CEO Lisa Su traveled to Seoul on October 7 to negotiate supply directly with Samsung, telling reporters \u201cmemory supply is very tight\u201d \u2014 a sign the shortage is now a competitive bottleneck across AI chipmakers generally, not an NVDA-specific story.",
         "dataPoints": [
           {
-            "label": "DRAM inventory",
-            "value": "<10 days",
-            "detail": "Samsung/SK Hynix finished DRAM \u2014 lowest of the cycle",
-            "source": "Tom's Hardware, Sep 7"
+            "label": "Micron FQ4 FY2026 revenue",
+            "value": "$54.23B",
+            "detail": "beat its own $50B guide and ~$51B consensus",
+            "source": "Micron FQ4 FY2026 earnings, Sep 30"
           },
           {
-            "label": "DRAM spot price",
-            "value": "~+700%",
-            "detail": "over the past year",
-            "source": "Bloomberg, Jul 2026"
+            "label": "FY2026 DRAM revenue growth",
+            "value": "+62% YoY",
+            "detail": "driven mainly by price, not volume",
+            "source": "Micron FY2026 10-K"
           },
           {
-            "label": "2026 HBM capacity",
-            "value": "sold out",
-            "detail": "SK Hynix: essentially sold out for all of 2026",
-            "source": "SK Hynix earnings call"
+            "label": "FY2026 gross margin",
+            "value": "81%",
+            "detail": "up from 40% in FY2025",
+            "source": "Micron FY2026 10-K"
           },
           {
-            "label": "Micron consumer memory",
-            "value": "exited",
-            "detail": "shifted entirely to enterprise/AI customers",
-            "source": "Tom's Hardware"
+            "label": "FQ1 FY2027 guidance",
+            "value": "$61.5B \u00b1 $1.5B",
+            "detail": "vs ~$57B consensus \u2014 next hard data point, expected early December",
+            "source": "Micron guidance, Sep 30"
+          },
+          {
+            "label": "AMD-Samsung supply talks",
+            "value": "\u201cvery tight\u201d",
+            "detail": "Lisa Su in Seoul Oct 7 negotiating direct allocation \u2014 bottleneck now hitting AMD too, not just NVDA's suppliers",
+            "source": "industry reporting, Oct 7"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "DRAM ETF (watchlist)",
             "rating": "positive",
-            "reason": "The thesis didn\u2019t just play out, it accelerated \u2014 a 700% spot price move and sold-out 2026 capacity is pricing power with no near-term ceiling."
+            "reason": "The thesis is now showing up in filed financials, not just spot prices \u2014 62% DRAM revenue growth and gross margin nearly doubling in a single year is pricing power with real numbers behind it."
           },
           {
             "holding": "NVDA",
             "rating": "positive",
-            "reason": "HBM demand is the direct cause of the shortage; NVDA sits upstream of it as the demand driver, and sold-out 2026 capacity confirms it isn\u2019t slowing."
+            "reason": "Sold-out 2026 capacity and a 2027 outlook where HBM eats even more of total wafer supply means no near-term relief for the demand side NVDA sits on top of."
           },
           {
             "holding": "AAPL",
             "rating": "negative",
-            "reason": "Buys mobile DRAM at enormous scale. A ~700% input cost move (up from the 80% figure this theme opened with) is a materially larger gross-margin threat than first described."
+            "reason": "A 62% year-over-year DRAM cost increase is now a real, filed number (Micron's own 10-K), not an estimate \u2014 a materially larger gross-margin threat for a company that buys mobile DRAM at enormous scale."
           },
           {
             "holding": "MSFT",
             "rating": "neutral",
-            "reason": "Server memory costs rise, but Azure pricing absorbs it and AI revenue growth outweighs the input hit \u2014 unchanged, though worth re-checking if the escalation continues."
+            "reason": "Server memory costs keep rising, but Azure pricing and AI revenue growth have kept absorbing it so far \u2014 unchanged, though worth re-checking each quarter this continues."
           }
         ],
-        "watch": "Whether new cleanroom capacity (SK Hynix isn't targeting any until 2028-2029) starts before demand does, whether Micron's full exit from consumer memory pushes AAPL toward alternative suppliers, and whether spot prices keep climbing past +700%."
+        "watch": "Whether SK Hynix's M15X and Samsung's P4 lines (not expected to add meaningful output until mid-2027 to 2028) ship on schedule, whether AMD's direct Seoul negotiations shift allocation away from other buyers, and Micron's FQ1 FY2027 earnings (expected early December) as the next hard data point."
       },
       {
         "id": "fed-rates",
         "name": "Fed & Rates",
         "status": "orange",
-        "whatChanged": "The PPI-CPI gap has barely narrowed heading into the September 17 FOMC decision \u2014 PPI at 9.85% year over year against CPI at 3.71%, still roughly a 6-point gap. What's new: the Hormuz-driven oil shock (see Defense & Geopolitics) adds a fresh inflation input right at the moment the Fed has to decide whether to cut, and the 10-year Treasury has already climbed to 4.96% from 4.63% in early August \u2014 the market pricing in some of that risk ahead of the decision.",
+        "whatChanged": "The September 17 FOMC meeting hiked, not held or cut \u2014 a 25bp increase to a 3.75%-4.00% target range, voted 12-0, with the still-wide PPI-CPI gap (PPI 9.85% vs. CPI 3.71%, both year over year, latest available prints) the stated reason to keep leaning against inflation rather than ease. The effective fed funds rate sits at 3.88% and the 10-year Treasury at 5.28% as of the most recent FRED readings shown above. The next decision lands October 28; this meeting carries no Summary of Economic Projections, and market pricing is genuinely split on hold vs. another hike \u2014 a cut is barely priced at all. The renewed Hormuz-driven oil spike (see Defense & Geopolitics) adds a fresh inflation input directly into that decision.",
         "dataPoints": [
           {
-            "label": "Fed funds rate",
-            "value": "3.63%",
-            "detail": "as of Sep 11",
+            "label": "Fed funds rate (effective)",
+            "value": "3.88%",
+            "detail": "target range 3.75%-4.00% after a 12-0 hike on Sep 17",
             "source": "FRED DFF"
           },
           {
             "label": "10-year Treasury",
-            "value": "4.96%",
-            "detail": "as of Sep 11, up from 4.63% in early August",
+            "value": "5.28%",
+            "detail": "latest FRED close",
             "source": "FRED DGS10"
           },
           {
@@ -199,62 +205,74 @@
             "value": "9.85%",
             "detail": "year over year, latest available print \u2014 still the outlier",
             "source": "FRED PPIACO"
+          },
+          {
+            "label": "Next FOMC decision",
+            "value": "Oct 28, 2026",
+            "detail": "market pricing split \u2014 sources put hold-vs-hike odds anywhere from roughly 30/51 to 87/12; a cut is under 1% per Kalshi",
+            "source": "Kalshi / PrimeRates, Oct 2026"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "Cash",
             "rating": "positive",
-            "reason": "Cash keeps earning while rates stay elevated, and the fresh oil-driven inflation input makes a September 17 cut less likely, not more."
+            "reason": "Rates went up, not down, in September, and the fresh oil-driven inflation input makes an October 28 cut essentially off the table. Cash keeps earning while that persists."
           },
           {
             "holding": "VOO / VTI / QQQM",
             "rating": "negative",
-            "reason": "Equity valuations are priced for cuts. A PPI-driven delay, now compounded by an oil shock, removes a support the market has already banked."
+            "reason": "Equity valuations were priced for cuts this year; a hike instead, now compounded by a renewed oil shock, removes a support the market had banked on."
           },
           {
             "holding": "Bitcoin / IBIT",
             "rating": "negative",
-            "reason": "The most liquidity-sensitive thing you own. Higher-for-longer, now with an oil shock layered on top, is a direct headwind."
+            "reason": "The most liquidity-sensitive thing you own. A hiking Fed plus a fresh oil-driven risk-off input is a direct headwind, not a mixed read."
           },
           {
             "holding": "AAPL / MSFT / NVDA",
             "rating": "neutral",
-            "reason": "Long-duration cash flows are rate-sensitive, but earnings strength has been offsetting it so far."
+            "reason": "Long-duration cash flows are rate-sensitive, but earnings strength has kept offsetting it so far."
           }
         ],
-        "watch": "The September 17 FOMC decision \u2014 now a referendum on two inflation inputs at once: the persistent PPI-CPI gap and the new oil shock from the Strait of Hormuz situation."
+        "watch": "Whether October 28 produces a third straight hike, a hold, or any signal the tightening cycle is near its end, and whether the renewed oil shock shows up in the next CPI/PPI prints."
       },
       {
         "id": "ai-infra",
         "name": "AI Infrastructure",
         "status": "green",
-        "whatChanged": "The capex story didn't just hold, it grew. The big four hyperscalers (Microsoft, Meta, Amazon, Google) now guide to roughly $732.5 billion in combined 2026 capex \u2014 up about 77% year over year \u2014 with H1 2026 actual spend alone already at $301 billion. Demand for AI infrastructure capacity is outpacing even this: hyperscale operators say they can't build data centers fast enough to keep up.",
+        "whatChanged": "The capex race kept widening rather than leveling off. Meta raised its full-year 2026 guidance again, to $125-145B from $115-135B, citing higher component pricing \u2014 a direct line to the memory shortage above \u2014 and added data center costs. Alphabet's guidance moved to roughly $180-190B and Amazon's to about $200B, though that figure includes its Leo satellite business (formerly Project Kuiper) and the Globalstar acquisition, not AI infrastructure alone. Estimates for the big four's combined 2026 total now run $700-745B depending on methodology and which costs (e.g. finance leases) are counted \u2014 up from the single $732.5B figure this theme opened with in September. None of the four has reported full calendar-Q3 results as of this writing; most report in the back half of October, so these remain guidance updates, not actuals.",
         "dataPoints": [
           {
             "label": "2026 combined capex guidance",
-            "value": "$732.5B",
-            "detail": "Microsoft, Meta, Amazon, Google \u2014 up ~77% YoY",
-            "source": "industry capex trackers, Sep 2026"
+            "value": "$700B\u2013$745B",
+            "detail": "range across sources/methodologies, up from a single $732.5B estimate in Sep",
+            "source": "industry capex trackers, Oct 2026"
           },
           {
-            "label": "H1 2026 actual spend",
-            "value": "$301B",
-            "detail": "same four companies, first half only",
-            "source": "industry capex trackers"
+            "label": "Meta FY2026 capex guidance",
+            "value": "$125B\u2013$145B",
+            "detail": "raised from $115B\u2013$135B, cites component pricing and data-center costs",
+            "source": "Meta guidance update, Oct 2026"
           },
           {
-            "label": "Hyperscaler capacity",
-            "value": "can\u2019t keep pace",
-            "detail": "operators say they can\u2019t build data centers fast enough for demand",
-            "source": "industry reporting, Sep 2026"
+            "label": "Amazon FY2026 capex",
+            "value": "~$200B",
+            "detail": "includes the Leo satellite business and Globalstar acquisition, not AI infrastructure alone",
+            "source": "industry reporting, Oct 2026"
+          },
+          {
+            "label": "Amazon capex vs. cash flow",
+            "value": "~102%",
+            "detail": "trailing-4-quarter capex now exceeds trailing-4-quarter operating cash flow",
+            "source": "industry analysis, Oct 2026"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "NVDA",
             "rating": "positive",
-            "reason": "Direct beneficiary. Hyperscaler capex converts almost mechanically into NVDA revenue, and guidance just got raised, not cut."
+            "reason": "Direct beneficiary. Hyperscaler capex converts almost mechanically into NVDA revenue, and guidance just got raised again, not cut."
           },
           {
             "holding": "MSFT",
@@ -264,27 +282,39 @@
           {
             "holding": "QQQM",
             "rating": "positive",
-            "reason": "Heavily weighted to exactly these names, which cuts both ways but is working now."
+            "reason": "Heavily weighted to exactly these names, which cuts both ways but is working now \u2014 though Amazon spending above its own cash generation is a new wrinkle worth tracking."
           }
         ],
-        "watch": "Whether actual spend through Q3/Q4 tracks the raised guidance, or any hyperscaler signals a pullback \u2014 the single point of failure for this theme hasn't changed, the stakes just got bigger."
+        "watch": "Whether actual calendar-Q3 results (due in the back half of October) confirm the raised guidance, and whether Amazon's capex now running above its own operating cash flow draws investor pushback the way it hasn't yet."
       },
       {
         "id": "tariffs",
         "name": "Tariffs",
         "status": "yellow",
-        "whatChanged": "Talks moved past the procedural stage. As of September 10, negotiators are actively working reciprocal cuts of roughly $30 billion in tariffs on each side's 'nonsensitive' goods, as part of broader talks toward a bilateral Board of Trade. A truce expires November 10, creating real urgency, and a leaders' meeting was expected within about two weeks of that date. Targeted reductions look more likely than a comprehensive deal.",
+        "whatChanged": "The November 10 truce deadline this theme was built around got pushed back before it arrived: Treasury Secretary Bessent announced in late September that the Busan truce now runs to January 10, 2027, following a Trump-Xi summit in Washington. Bessent said he's unsure whether a \u201cbigger deal\u201d gets done by then or the truce simply rolls again. A related, separate tripwire \u2014 the suspension of Section 301 shipping fees \u2014 is set to expire November 9 unless independently extended, which trade groups are already pushing for. The roughly $30B-per-side tariff cut on each side's \u201cnonsensitive\u201d goods that this theme tracked in September is still described by some reporting as recommended rather than scheduled, with no reduction amounts or start date published. China did commit to buying 25 million tons of soybeans as part of the extension.",
         "dataPoints": [
           {
-            "label": "Proposed reciprocal cuts",
-            "value": "$30bn each side",
-            "detail": "on each side's 'nonsensitive' goods",
-            "source": "US-China trade reporting, Sep 10"
+            "label": "Truce deadline",
+            "value": "Jan 10, 2027",
+            "detail": "extended from Nov 10, 2026, announced after the Trump-Xi Washington summit",
+            "source": "Reuters / S&P Global, Sep 24"
           },
           {
-            "label": "Truce deadline",
-            "value": "Nov 10, 2026",
-            "detail": "creates urgency for a deal before expiry",
+            "label": "Section 301 shipping-fee suspension",
+            "value": "expires Nov 9, 2026",
+            "detail": "a separate tripwire inside the broader truce, unless independently extended",
+            "source": "trade reporting, Sep 2026"
+          },
+          {
+            "label": "Soybean purchase commitment",
+            "value": "25M tons",
+            "detail": "per Treasury Secretary Bessent",
+            "source": "Treasury statement, Sep 2026"
+          },
+          {
+            "label": "Proposed tariff cuts",
+            "value": "~$30bn each side",
+            "detail": "on each side's \u2018nonsensitive\u2019 goods \u2014 still described by some reporting as recommended, not scheduled",
             "source": "US-China trade reporting"
           }
         ],
@@ -292,7 +322,7 @@
           {
             "holding": "AAPL",
             "rating": "neutral",
-            "reason": "Largest China manufacturing exposure you own. Genuine upside if the Nov 10 deadline produces a deal, genuine risk if talks stall and the truce lapses \u2014 still unresolved in both directions."
+            "reason": "Largest China manufacturing exposure you own. The extension to January pushes the near-term cliff back, reducing immediate risk, but nothing is actually resolved \u2014 genuine upside and downside both still sit on the Jan 10 date."
           },
           {
             "holding": "NVDA",
@@ -302,183 +332,177 @@
           {
             "holding": "EM sleeve",
             "rating": "positive",
-            "reason": "Active tariff-reduction talks are broadly supportive of Chinese and Asian equities, which anchor most EM indices, more so now than at the procedural stage."
+            "reason": "A truce extension, rather than a lapse, is broadly supportive of Chinese and Asian equities, which anchor most EM indices \u2014 more so now that the near-term deadline has been pushed back three months."
           }
         ],
-        "watch": "Whether the leaders' meeting (expected within about two weeks of Sep 10) produces an actual signed schedule before the November 10 truce deadline, or whether talks stall and the truce lapses."
+        "watch": "Whether the Section 301 fee suspension gets extended past November 9, and whether the January 10 deadline produces an actual deal or another rollover."
       },
       {
         "id": "defense-geo",
         "name": "Defense & Geopolitics",
         "status": "orange",
-        "whatChanged": "The Hormuz de-escalation from early August reversed. Strikes between the US and Iran intensified again in early September, and vessel traffic through the Strait of Hormuz has effectively collapsed \u2014 from 100+ ships a day to roughly 5-12. The IEA has called it the largest oil supply disruption in the history of the global oil market, on the order of 20 million barrels a day removed. WTI has moved from the high-$80s to $97+/bbl in under two weeks; Brent is trading near $104-105. Forecasts diverge sharply on what happens next: Goldman Sachs\u2019 base case has Brent easing back toward $85, while Rystad Energy\u2019s scenario puts it above $140 with global recession risk attached.",
+        "whatChanged": "The de-escalation this theme logged earlier reversed hard in October. Iran escalated tanker attacks near the Strait of Hormuz starting around October 12 \u2014 at least nine commercial vessels hit in less than a week \u2014 while Houthi forces separately fired missiles at Saudi Arabia. Brent crude, which had eased toward $100 in September, spiked back to roughly $110 on October 16; WTI traded near $94.64 on October 14. Hormuz throughput during the week ended October 13 ran around 9.5 million barrels a day, roughly 30% below pre-war normal, per Kpler data. Prices eased off their session highs after President Trump said the US would not strike Iran before the November midterms \u2014 a political constraint capping, but not resolving, the risk.",
         "dataPoints": [
           {
+            "label": "Brent crude",
+            "value": "~$110/bbl",
+            "detail": "Oct 16, up from a September easing toward $100",
+            "source": "CNBC, Oct 16"
+          },
+          {
             "label": "WTI crude",
-            "value": "$97.26/bbl",
-            "detail": "up from the high-$80s in under two weeks",
-            "source": "FRED DCOILWTICO, Sep 9"
+            "value": "~$94.64/bbl",
+            "detail": "Oct 14 \u2014 the live FRED tile above is dated Sep 29 and hasn't caught up to this move yet",
+            "source": "CNBC, Oct 14"
           },
           {
-            "label": "Strait of Hormuz traffic",
-            "value": "-95%",
-            "detail": "100+ ships/day down to 5-12",
-            "source": "IEA / Oil & Gas Journal"
+            "label": "Strait of Hormuz throughput",
+            "value": "~9.5M bbl/day",
+            "detail": "week ended Oct 13, roughly 30% below pre-war normal",
+            "source": "Kpler data via CNBC, Oct 16"
           },
           {
-            "label": "Supply removed",
-            "value": "~20M bbl/day",
-            "detail": "IEA: largest disruption in the history of the global oil market",
-            "source": "IEA"
-          },
-          {
-            "label": "Price forecast range",
-            "value": "$85\u2013$140+/bbl",
-            "detail": "Goldman Sachs base case vs. Rystad Energy recession scenario",
-            "source": "Bloomberg, Goldman Sachs, Rystad Energy"
+            "label": "Vessel attacks",
+            "value": "9+ ships hit",
+            "detail": "since approximately Oct 12",
+            "source": "CNBC, Oct 16"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "Cash",
             "rating": "positive",
-            "reason": "Oil feeds directly into CPI/PPI \u2014 the same PPI-CPI gap already flagged in the Fed & Rates theme \u2014 and a fresh inflation input makes a near-term rate cut less likely. Cash keeps earning while that persists."
+            "reason": "Oil feeds directly into CPI/PPI \u2014 the same gap already flagged in Fed & Rates \u2014 and a renewed inflation input makes a rate cut at the October 28 FOMC even less likely. Cash keeps earning while that persists."
           },
           {
             "holding": "VOO / VTI / QQQM",
             "rating": "negative",
-            "reason": "Exposed on two fronts: an oil-driven inflation resurgence delays the cut equities are priced for, and the Rystad scenario attaches outright recession risk if the Strait stays effectively closed."
+            "reason": "Exposed on two fronts again: an oil-driven inflation resurgence complicates the Fed's October 28 decision, and continued attacks keep outright supply-disruption risk on the table."
           },
           {
             "holding": "Bitcoin / IBIT",
             "rating": "negative",
-            "reason": "The most liquidity-sensitive holding here \u2014 a risk-off shock this size, on top of an already-elevated-rate environment, is a direct headwind, not the mixed read a de-escalation would have been."
+            "reason": "The most liquidity-sensitive holding here \u2014 a fresh risk-off shock on top of a hiking Fed is a direct headwind."
           }
         ],
-        "watch": "Whether the Strait reopens to normal traffic or the closure persists \u2014 Goldman\u2019s $85 base case and Rystad\u2019s $140+/recession scenario diverge entirely on that question. The Sep 17 FOMC decision (already tracked below) is now also a referendum on whether the Fed treats this inflation input as transitory or persistent."
+        "watch": "Whether the attacks keep escalating or Trump's \u201cno strikes before the midterms\u201d line holds as a ceiling, and whether oil stays above $100 into the October 28 FOMC decision."
       },
       {
         "id": "emerging-markets",
         "name": "Emerging Markets",
         "status": "yellow",
-        "whatChanged": "China's picture got more nuanced, not clearer: the official NBS manufacturing PMI improved slightly to 49.8 in August (from 49.2) but stayed in contraction for a second straight month, while the private Caixin PMI showed outright expansion at 51.5 \u2014 official and private surveys are telling different stories. India's RBI held its repo rate at 5.25% for a fourth consecutive meeting, citing a weakening rupee and Middle East-driven uncertainty. Brazil paused its cutting cycle at 14.25% after three straight cuts, and raised its own 2026 inflation projection to 5.2% \u2014 above its 4.5% ceiling.",
+        "whatChanged": "The PMI divergence this theme flagged earlier actually resolved in September \u2014 in the direction of growth. China's official NBS manufacturing PMI rose to 50.1 (from 49.8), back in expansion for the first time in months, while the private Caixin/RatingDog reading rose to 52.1 (from 51.5); both surveys now agree. Underneath, the picture stays uneven \u2014 the employment sub-index remains in contraction at 48.4 and small firms are still weak at 48.9 \u2014 and Beijing announced a stimulus package to offset the strain. Meanwhile India's RBI delivered a hawkish surprise on October 7: a 25bp hike to 5.50% (most economists had expected a hold) and a stance shift from \u2018neutral\u2019 to \u2018calibrated tightening,\u2019 explicitly taking rate cuts off the table. Brazil, by contrast, kept cutting \u2014 the Selic moved to 14.00% in August, continuing a cycle this theme previously described as paused, with the Focus survey looking for 13.75% by year-end.",
         "dataPoints": [
           {
             "label": "China NBS manufacturing PMI",
-            "value": "49.8",
-            "detail": "August, up from 49.2 in July but still contraction (2nd month)",
-            "source": "NBS, Aug 2026"
+            "value": "50.1",
+            "detail": "September, up from 49.8 in August and back in expansion; employment sub-index still contracting at 48.4",
+            "source": "NBS, Sep 2026"
           },
           {
-            "label": "China Caixin PMI (private)",
-            "value": "51.5",
-            "detail": "August, expansion \u2014 diverges from the official reading",
+            "label": "China Caixin/RatingDog PMI (private)",
+            "value": "52.1",
+            "detail": "September, up from 51.5 \u2014 now agrees with the official reading instead of diverging from it",
             "source": "Caixin / S&P Global"
           },
           {
             "label": "India repo rate",
-            "value": "5.25%",
-            "detail": "held for a 4th consecutive meeting",
-            "source": "RBI, Aug 2026"
+            "value": "5.50%",
+            "detail": "hiked 25bp on Oct 7; stance shifted to \u2018calibrated tightening\u2019 \u2014 most economists had expected a hold",
+            "source": "RBI, Oct 7"
           },
           {
             "label": "Brazil Selic rate",
-            "value": "14.25%",
-            "detail": "cutting cycle paused; 2026 inflation projection raised to 5.2% (above 4.5% ceiling)",
-            "source": "Brazil central bank"
+            "value": "14.00%",
+            "detail": "cut from 14.25% in August, continuing \u2014 not pausing \u2014 its cutting cycle; Focus survey sees 13.75% by year-end",
+            "source": "Brazilian central bank / Focus survey"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "EM sleeve",
             "rating": "neutral",
-            "reason": "Your only direct EM exposure. China\u2019s official/private PMI divergence keeps the domestic demand picture genuinely unclear, while India and Brazil both signal central banks in wait-and-see mode rather than a clear easing or tightening bias."
+            "reason": "Your only direct EM exposure, and the signals genuinely point in different directions: China's PMI convergence to expansion and Brazil's continued cuts are supportive, while India's hawkish pivot to 'calibrated tightening' is a fresh headwind for rate-sensitive flows there."
           }
         ],
-        "watch": "Whether China's official and private PMI readings converge in September, and whether Brazil's paused cutting cycle resumes or holds given the higher inflation projection."
+        "watch": "Whether China's expansion holds into Q4 data, whether India's RBI follows through with another hike now that cuts are off the table (minutes due Oct 21), and whether Brazil's Selic actually reaches the 13.75% Focus consensus by year-end."
       },
       {
         "id": "crypto",
         "name": "Crypto / Bitcoin",
         "status": "yellow",
-        "whatChanged": "Bitcoin's price and its regulatory backdrop both moved this week. The Senate failed to advance the CLARITY Act (crypto market-structure legislation) in a 49-50 cloture vote on September 15 \u2014 short of the 60 needed \u2014 effectively killing it for 2026 and, given midterm politics, likely until 2029. Unresolved fights over DeFi treatment, stablecoin yield, and an ethics clause barring officials from launching tokens were the sticking points. The SEC's fallback path continues regardless: a formal 'Regulation Crypto Assets' rulemaking proposed August 19, with a 60-day comment period closing in mid-October. Separately, price has slid to around $77,000 ahead of the September 17 FOMC decision, down from an early-September peak near $81,000 after a short squeeze that had carried it up from below $63,000 \u2014 directly reflecting the same 'higher-for-longer' pressure already tracked in Fed & Rates. Spot Bitcoin ETF adoption keeps deepening in absolute terms regardless: $83.3 billion in net assets on $53.9 billion of cumulative inflows, even though 2026 flows overall remain net negative by more than $1 billion.",
+        "whatChanged": "With the CLARITY Act dead in the Senate (as tracked previously), the regulatory path has shifted entirely to the agencies. The SEC's own \u2018Regulation Crypto Assets\u2019 proposal \u2014 published in the Federal Register on August 21 \u2014 has its 60-day public comment period closing October 20, the first concrete near-term marker now that Congress is stalled. The CFTC has separately sent its own crypto market-structure rule to the White House for review, a parallel rulemaking track outside Congress entirely. Bitcoin's price is reported inconsistently across sources in mid-October \u2014 figures range from about $77,000 to $82,000 depending on the exact day and source \u2014 but is broadly flat to down from the roughly $77,000 level this theme logged previously.",
         "dataPoints": [
           {
+            "label": "SEC \u2018Regulation Crypto Assets\u2019 comment period",
+            "value": "closes Oct 20, 2026",
+            "detail": "60-day window after Aug 21 Federal Register publication; not final \u2014 comments must be addressed before any rule is adopted",
+            "source": "Federal Register, File No. S7-2026-27"
+          },
+          {
+            "label": "CFTC crypto market rule",
+            "value": "under White House review",
+            "detail": "a parallel rulemaking track to the SEC proposal, outside Congress",
+            "source": "industry reporting, Oct 2026"
+          },
+          {
             "label": "Bitcoin price",
-            "value": "~$77,000",
-            "detail": "down from an early-Sep peak near $81,000, sliding ahead of the Sep 17 FOMC decision",
-            "source": "Yahoo Finance, Sep 15"
-          },
-          {
-            "label": "CLARITY Act cloture vote",
-            "value": "Failed, 49-50",
-            "detail": "needed 60; effectively dead for 2026, likely until 2029",
-            "source": "Senate vote, Sep 15"
-          },
-          {
-            "label": "Bitcoin ETF net assets",
-            "value": "$83.3B",
-            "detail": "cumulative inflows of $53.9B since launch",
-            "source": "crypto ETF trackers, mid-Aug 2026"
-          },
-          {
-            "label": "2026 ETF flows YTD",
-            "value": "net negative",
-            "detail": "more than $1B below where the year started, despite recent monthly inflows",
-            "source": "CoinDesk, Sep 8"
+            "value": "~$77,000\u2013$82,000",
+            "detail": "reported inconsistently across sources in mid-October; broadly flat to down from the ~$77,000 level logged in mid-September",
+            "source": "multiple crypto price trackers, Oct 2026"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "Bitcoin / IBIT",
             "rating": "neutral",
-            "reason": "Two real forces pulling in different directions: the failed CLARITY vote removes a near-term catalyst for regulatory clarity that would have supported institutional adoption, while continued ETF asset growth ($83.3B net assets) shows institutionalization proceeding anyway through the SEC's own fallback rulemaking. Near-term price is also under the same Fed-timing pressure already tracked in Fed & Rates."
+            "reason": "The regulatory path now runs through SEC and CFTC rulemaking rather than Congress, since the CLARITY Act is stalled \u2014 a slower but still-live path to clarity. Price itself remains more directly tied to Fed-timing pressure, already tracked in Fed & Rates."
           }
         ],
-        "watch": "Whether the SEC's Regulation Crypto Assets comment period (closing mid-October) produces an actual rule now that legislative action is off the table until at least 2029, and whether the Sep 17 FOMC decision reverses or extends the current price slide."
+        "watch": "Whether the October 20 SEC comment-period close leads to a faster rulemaking timeline than Congress could produce, and whether the CFTC's parallel rule clears White House review."
       }
     ],
     "catalysts": [
       {
-        "date": "2026-08-12",
-        "label": "US CPI print",
-        "why": "The PPI-CPI gap is the open question. This is the read on whether it is closing.",
+        "date": "2026-10-20",
+        "label": "SEC 'Regulation Crypto Assets' comment period closes",
+        "why": "First concrete step toward an actual crypto rule now that the CLARITY Act is stalled in Congress.",
         "type": "macro"
       },
       {
-        "date": "2026-08-14",
-        "label": "US PPI print",
-        "why": "Whether double-digit producer inflation decelerates or persists.",
+        "date": "2026-10-21",
+        "label": "RBI MPC minutes released",
+        "why": "Will show how close the vote was to a further hike after the Oct 7 surprise 25bp increase and shift to 'calibrated tightening.'",
         "type": "macro"
       },
       {
-        "date": "2026-08-21",
-        "label": "Jackson Hole symposium begins",
-        "why": "Fed signalling venue. Historically where policy pivots get telegraphed.",
-        "type": "macro"
-      },
-      {
-        "date": "2026-09-10",
-        "label": "ECB decision",
-        "why": "Markets moved toward pricing a hike after hot July eurozone inflation \u2014 against the global easing narrative.",
-        "type": "macro"
-      },
-      {
-        "date": "2026-09-17",
+        "date": "2026-10-28",
         "label": "FOMC decision",
-        "why": "Whether the PPI problem delays the cut equities are priced for.",
+        "why": "The committee hiked last meeting; market pricing is split on hold vs. another hike, with the renewed oil shock as a wildcard input.",
         "type": "macro"
       },
       {
-        "date": "2026-09-25",
-        "label": "Micron earnings (approx)",
-        "why": "The cleanest public read on how long the memory shortage runs.",
-        "type": "earnings"
+        "date": "2026-11-09",
+        "label": "Section 301 shipping-fee suspension expires",
+        "why": "A concrete near-term tripwire inside the broader US-China truce, independent of the January 10 'bigger deal' deadline.",
+        "type": "macro"
+      },
+      {
+        "date": "2026-11-10",
+        "label": "US CPI print (October data)",
+        "why": "Whether the PPI-CPI gap narrows at all, and whether the October oil shock has started showing up in the data.",
+        "type": "macro"
+      },
+      {
+        "date": "2027-01-10",
+        "label": "US-China truce deadline",
+        "why": "Extended from the original November 10 date \u2014 deadline for a 'bigger deal' or another rollover.",
+        "type": "macro"
       },
       {
         "date": "2026-09-03",
         "label": "NVIDIA to acquire Hugging Face ($12.93B)",
-        "why": "Direct expansion of NVDA's AI platform reach into model distribution \u2014 18M+ developers, 3M+ models on the platform today. NVIDIA committed Hugging Face stays open (no NVIDIA-compute requirement, continued multi-cloud/multi-accelerator support), so this reads as a distribution/ecosystem play rather than a lock-in move.",
+        "why": "Direct expansion of NVDA's AI platform reach into model distribution \u2014 18M+ developers, 3M+ models on the platform today. NVIDIA committed Hugging Face stays open (no NVIDIA-compute requirement, continued multi-cloud/multi-accelerator support), so this reads as a distribution/ecosystem play rather than a lock-in move. Expected to close in H1 2027, pending regulatory approval.",
         "type": "deal"
       }
     ]
