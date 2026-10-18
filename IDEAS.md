@@ -10,7 +10,68 @@ actually left.
 
 ## Open
 
-(nothing right now)
+- Audit every other FRED series macro-tracker uses (`DFF`, `DGS10`,
+  `VIXCLS`, `SP500`, `NASDAQCOM`, `DCOILWTICO`, `T10Y2Y`) for the same
+  class of bug just fixed in `CPIAUCSL`'s year-over-year calculation —
+  FRED's own series can have missing observations (confirmed: `CPIAUCSL`
+  was missing 2025-10-01, almost certainly the Oct 2025 government
+  shutdown), and any code assuming contiguous dates (fixed index offsets,
+  "N days back" math) can silently compute a wrong number against a gap.
+  `refresh.py`'s `_fifty_two_week_range()` is one function worth checking
+  specifically. Fix any bug found the same way CPI's was fixed: match by
+  actual date, not list position, and raise rather than guess when no
+  exact match exists.
+
+- Add a visible "last verified" date on each theme card in the macro
+  tracker UI, not just in the underlying `themes.json`/`data.json`. Right
+  now staleness is invisible until someone happens to notice (like the
+  CPI mismatch this session) — a small label on each card (e.g. "verified
+  Oct 17") would surface it without anyone having to go looking.
+
+- Make macro-tracker's theme cards collapsed by default (headline +
+  status badge only), tap/click to expand the full "Key data" /
+  "Portfolio impact" / "What to watch" content — same pattern already
+  used for the earnings tracker's card sections. Reduces the page to a
+  scannable list by default instead of a wall of text, without losing any
+  content.
+
+- Highlight or visually distinguish which macro-tracker themes have
+  changed since the user's last visit. Store a last-viewed timestamp in
+  `localStorage` (per-device only, nothing server-side — consistent with
+  how this app already avoids needing a backend) and compare each theme's
+  own "last verified" date against it on load; dim or fade anything
+  unchanged, let new/updated content stand out. Directly serves the app's
+  own stated purpose ("open it daily") by answering "what's new" without
+  re-reading everything each time.
+
+- Make each theme's cited `source` field (e.g. "FRED DFF", "Micron FQ4
+  FY2026 earnings") an actual link where a real URL exists, so a reader
+  can verify any given figure in one tap instead of having to search for
+  it themselves. Only link where a genuine source URL is available —
+  never fabricate one to make a citation clickable.
+
+- Add a real historical trend chart (not just a single current value) for
+  at least one FRED series referenced inside a theme's "Key data" — e.g.
+  tapping the CPI or Fed funds rate dataPoint inside the Fed & Rates card
+  expands into a line chart of the last 1-2 years. Different from the
+  snapshot tiles removed earlier (a static current number) — this answers
+  "is this normal historically," visually, which a bare number or even
+  the 52-week range can't fully convey.
+
+- Carefully widen `scan_news.py`'s `DEAL_KEYWORDS` list (currently just
+  acquire/merger/partnership-style terms) to catch a few more real deal
+  patterns (e.g. "invests in," "stake," "licensing deal") — but weigh this
+  against the false-positive cost: a 2026-10-17 manual review found 7 of
+  10 live `pending_deals` entries were noise from the keyword matching
+  already in place. Only add a keyword if it doesn't make that ratio
+  worse; this one may turn out not to be worth doing.
+
+- Have the Idea Team periodically re-review EXISTING `pending_deals`
+  entries, not just screen new ones — read each article (not just the
+  headline) and remove anything that's aged past being useful or reads as
+  a false positive on a second look, the same manual process used in the
+  2026-10-17 cleanup. Worth deciding whether this belongs as a recurring
+  IDEAS.md item re-added periodically, or as its own scheduled check.
 
 ## Done
 
