@@ -60,21 +60,31 @@ function verifiedLabel(t) {
   return `<span class="verified">Verified ${date}</span>`;
 }
 
+/* Collapsed to headline + status badge by default — tap/click to reveal Key
+   data / Portfolio impact / What to watch. Same <details>/<summary> disclosure
+   idiom the earnings tracker already uses for its own card sections, just
+   applied to the whole card body here instead of a secondary backup section,
+   since a page of 7 fully-expanded theme cards is a wall of text to scroll
+   past before you can tell which ones actually changed. Native <details> also
+   gives keyboard/screen-reader toggling for free. */
 function card(t) {
   const s = STATUS[t.status] || STATUS.blue;
-  return `<section class="card" style="--s:${s.color}">
-    <div class="card-head">
+  return `<details class="card" style="--s:${s.color}">
+    <summary class="card-head">
       <h2>${esc(t.name)}</h2>
       <div class="card-head-right">
         <span class="badge">${esc(s.label)}</span>
         ${verifiedLabel(t)}
+        <span class="chevron" aria-hidden="true">&#9662;</span>
       </div>
+    </summary>
+    <div class="card-body">
+      <div class="changed">${esc(t.whatChanged)}</div>
+      <div class="lbl">Key data</div>${dataPoints(t.dataPoints)}
+      <div class="lbl">Portfolio impact</div>${impact(t.portfolioImpact)}
+      ${t.watch ? `<div class="watch"><b>What to watch next</b>${esc(t.watch)}</div>` : ''}
     </div>
-    <div class="changed">${esc(t.whatChanged)}</div>
-    <div class="lbl">Key data</div>${dataPoints(t.dataPoints)}
-    <div class="lbl">Portfolio impact</div>${impact(t.portfolioImpact)}
-    ${t.watch ? `<div class="watch"><b>What to watch next</b>${esc(t.watch)}</div>` : ''}
-  </section>`;
+  </details>`;
 }
 
 /* Days-until, computed in local time so "today" means the user's today. */

@@ -10,13 +10,6 @@ actually left.
 
 ## Open
 
-- Make macro-tracker's theme cards collapsed by default (headline +
-  status badge only), tap/click to expand the full "Key data" /
-  "Portfolio impact" / "What to watch" content — same pattern already
-  used for the earnings tracker's card sections. Reduces the page to a
-  scannable list by default instead of a wall of text, without losing any
-  content.
-
 - Highlight or visually distinguish which macro-tracker themes have
   changed since the user's last visit. Store a last-viewed timestamp in
   `localStorage` (per-device only, nothing server-side — consistent with
@@ -56,6 +49,21 @@ actually left.
   IDEAS.md item re-added periodically, or as its own scheduled check.
 
 ## Done
+
+- Made macro-tracker's theme cards collapsed by default (headline +
+  status badge only), click/tap to expand the full "Key data" /
+  "Portfolio impact" / "What to watch" content — same `<details>`/
+  `<summary>` disclosure pattern the earnings tracker already uses for
+  its own card sections, applied here to the whole card body instead of
+  a secondary backup section. Reduces the page to a scannable list of 7
+  headlines by default instead of a wall of text, without losing any
+  content — everything just moved inside the collapsed region. Verified
+  by reconstructing `macro-tracker/data/live.json` and `themes.json`
+  from the live `docs/macro/data.json`, running
+  `python3 macro-tracker/scripts/build_public.py`, and diffing the
+  output: `app.js`/`styles.css` changed only as intended, `data.json`'s
+  `live`/`themes` content came back byte-identical, and the script's own
+  `audit()` reported clean. (2026-10-18)
 
 - Added a visible "last verified" date on each macro-tracker theme card,
   not just buried in the underlying `themes.json`/`data.json`. Each theme
