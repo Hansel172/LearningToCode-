@@ -395,43 +395,37 @@
       {
         "id": "emerging-markets",
         "name": "Emerging Markets",
-        "verified": "2026-10-17",
+        "verified": "2026-10-18",
         "status": "yellow",
-        "whatChanged": "The PMI divergence this theme flagged earlier actually resolved in September \u2014 in the direction of growth. China's official NBS manufacturing PMI rose to 50.1 (from 49.8), back in expansion for the first time in months, while the private Caixin/RatingDog reading rose to 52.1 (from 51.5); both surveys now agree. Underneath, the picture stays uneven \u2014 the employment sub-index remains in contraction at 48.4 and small firms are still weak at 48.9 \u2014 and Beijing announced a stimulus package to offset the strain. Meanwhile India's RBI delivered a hawkish surprise on October 7: a 25bp hike to 5.50% (most economists had expected a hold) and a stance shift from \u2018neutral\u2019 to \u2018calibrated tightening,\u2019 explicitly taking rate cuts off the table. Brazil, by contrast, kept cutting \u2014 the Selic moved to 14.00% in August, continuing a cycle this theme previously described as paused, with the Focus survey looking for 13.75% by year-end.",
+        "whatChanged": "Broadened from a narrow China/India/Brazil data-point list to a higher-level read on three regions actually relevant to the EM sleeve. China: growth is decelerating but not falling off a cliff \u2014 the World Bank raised its 2026 forecast to 4.5% on October 12 on the strength of high-tech exports, even as a prolonged property slump and persistent deflation keep weighing on domestic demand; Beijing is leaning on fiscal and monetary support rather than a hard stimulus. Vietnam: still one of the fastest-growing export economies in Asia, but squeezed harder by US tariffs \u2014 the provisional rate rose from 10% to 20% in August \u2014 right as the country heads into its biggest political year in a decade, with the 14th Party Congress and National Assembly elections for the 2026-2031 term. Latin America: the region as a whole is decelerating, not accelerating \u2014 FocusEconomics has growth slowing to roughly 2.2% in 2026 from 2.4% \u2014 against a backdrop of a presidential-election supercycle (Brazil in November, Peru in April, plus Colombia and Costa Rica) that will test the rightward political shift seen across the region in 2025, and deepening US-hemisphere uncertainty after the Trump administration\u2019s capture of Venezuela\u2019s Maduro.",
         "dataPoints": [
           {
-            "label": "China NBS manufacturing PMI",
-            "value": "50.1",
-            "detail": "September, up from 49.8 in August and back in expansion; employment sub-index still contracting at 48.4",
-            "source": "NBS, Sep 2026"
+            "label": "China 2026 growth forecast",
+            "value": "4.5%",
+            "detail": "World Bank, raised Oct 12 on export strength; property slump and deflation still weigh on domestic demand",
+            "source": "World Bank, Oct 2026"
           },
           {
-            "label": "China Caixin/RatingDog PMI (private)",
-            "value": "52.1",
-            "detail": "September, up from 51.5 \u2014 now agrees with the official reading instead of diverging from it",
-            "source": "Caixin / S&P Global"
+            "label": "Vietnam US tariff rate",
+            "value": "20%",
+            "detail": "up from a provisional 10% in April 2025; squeezes an export-led growth story right as the country enters a major political transition year",
+            "source": "Vietnam trade reporting, 2026"
           },
           {
-            "label": "India repo rate",
-            "value": "5.50%",
-            "detail": "hiked 25bp on Oct 7; stance shifted to \u2018calibrated tightening\u2019 \u2014 most economists had expected a hold",
-            "source": "RBI, Oct 7"
-          },
-          {
-            "label": "Brazil Selic rate",
-            "value": "14.00%",
-            "detail": "cut from 14.25% in August, continuing \u2014 not pausing \u2014 its cutting cycle; Focus survey sees 13.75% by year-end",
-            "source": "Brazilian central bank / Focus survey"
+            "label": "Latin America 2026 growth",
+            "value": "~2.2%",
+            "detail": "down from 2.4% in 2025; FocusEconomics calls it the slowest-growing major region, amid a presidential-election supercycle",
+            "source": "FocusEconomics, 2026"
           }
         ],
         "portfolioImpact": [
           {
             "holding": "EM sleeve",
             "rating": "neutral",
-            "reason": "Your only direct EM exposure, and the signals genuinely point in different directions: China's PMI convergence to expansion and Brazil's continued cuts are supportive, while India's hawkish pivot to 'calibrated tightening' is a fresh headwind for rate-sensitive flows there."
+            "reason": "Your only direct EM exposure, and the three regions point in different directions: China\u2019s export strength is a mild positive offset to its domestic weakness, Vietnam\u2019s tariff hit is a genuine headwind to its growth story, and Latin America\u2019s election supercycle adds policy uncertainty without a clear directional read yet."
           }
         ],
-        "watch": "Whether China's expansion holds into Q4 data, whether India's RBI follows through with another hike now that cuts are off the table (minutes due Oct 21), and whether Brazil's Selic actually reaches the 13.75% Focus consensus by year-end."
+        "watch": "Vietnam\u2019s 14th Party Congress and National Assembly elections (2026-2031 term) for policy continuity signals, Brazil\u2019s November presidential election, and whether China\u2019s export strength keeps offsetting weak domestic demand into Q4 data."
       },
       {
         "id": "crypto",
