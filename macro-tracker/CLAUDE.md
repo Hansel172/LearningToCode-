@@ -73,6 +73,11 @@ Every theme follows a four-level funnel. Keep this structure when updating
   not say what to buy or sell.
 - Status values: `green` positive · `yellow` watch · `red` negative ·
   `orange` active risk · `blue` developing.
+- Each theme carries its own `verified` field (e.g. `"2026-10-17"`) — the
+  date *that theme's* facts were last actually checked, shown on its card
+  in the UI so staleness is visible without having to open `themes.json`.
+  Update it only for a theme you actually re-verified this pass; leave an
+  untouched theme's date alone rather than bumping it to "look" current.
 
 ## Communication style
 

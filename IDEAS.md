@@ -10,12 +10,6 @@ actually left.
 
 ## Open
 
-- Add a visible "last verified" date on each theme card in the macro
-  tracker UI, not just in the underlying `themes.json`/`data.json`. Right
-  now staleness is invisible until someone happens to notice (like the
-  CPI mismatch this session) — a small label on each card (e.g. "verified
-  Oct 17") would surface it without anyone having to go looking.
-
 - Make macro-tracker's theme cards collapsed by default (headline +
   status badge only), tap/click to expand the full "Key data" /
   "Portfolio impact" / "What to watch" content — same pattern already
@@ -62,6 +56,18 @@ actually left.
   IDEAS.md item re-added periodically, or as its own scheduled check.
 
 ## Done
+
+- Added a visible "last verified" date on each macro-tracker theme card,
+  not just buried in the underlying `themes.json`/`data.json`. Each theme
+  now carries its own `verified` field (e.g. `"2026-10-17"`), rendered as
+  a small label next to the status badge in `app.js`'s `card()`. Falls
+  back to the whole-file `themes.updated` stamp for any theme written
+  before this field existed, so nothing renders blank. Backfilled all 7
+  current themes to `2026-10-17`, matching the theme-content refresh done
+  that same day (see the entry below) — an honest date, not a guess.
+  Documented the new field in `macro-tracker/CLAUDE.md`'s "Rules for
+  updating themes.json" so future updates (human or Claude) keep setting
+  it per-theme rather than letting it go stale again. (2026-10-18)
 
 - Audited every other FRED series macro-tracker uses (`DFF`, `DGS10`,
   `VIXCLS`, `SP500`, `NASDAQCOM`, `DCOILWTICO`, `T10Y2Y`, plus `PPIACO`)

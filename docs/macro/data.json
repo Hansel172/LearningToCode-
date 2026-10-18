@@ -118,6 +118,7 @@
       {
         "id": "memory",
         "name": "Memory Supply Chain",
+        "verified": "2026-10-17",
         "status": "orange",
         "whatChanged": "Micron's fiscal Q4 2026 results (reported Sep 30) put real, filed numbers behind what was previously mostly spot-price and inventory anecdotes: revenue of $54.23B beat its own $50B guidance and the ~$51B Wall Street consensus, full-year DRAM revenue grew 62% year over year \u2014 driven mainly by price, not volume, per the FY2026 10-K \u2014 and full-year gross margin jumped to 81% from 40% the prior year. Guidance for the next quarter (FQ1 FY2027) is $61.5B \u00b1 $1.5B, again above the ~$57B consensus. SK Hynix reaffirmed on its own October earnings call that 2026 HBM, DRAM, and NAND capacity is essentially sold out, and Samsung's EVP now expects HBM to take close to 30% of DRAM makers' wafer capacity in 2027, up from roughly 20% today \u2014 squeezing standard DRAM supply further as that capacity gets reallocated. AMD CEO Lisa Su traveled to Seoul on October 7 to negotiate supply directly with Samsung, telling reporters \u201cmemory supply is very tight\u201d \u2014 a sign the shortage is now a competitive bottleneck across AI chipmakers generally, not an NVDA-specific story.",
         "dataPoints": [
@@ -179,6 +180,7 @@
       {
         "id": "fed-rates",
         "name": "Fed & Rates",
+        "verified": "2026-10-17",
         "status": "orange",
         "whatChanged": "The September 17 FOMC meeting hiked, not held or cut \u2014 a 25bp increase to a 3.75%-4.00% target range, voted 12-0, with the still-wide PPI-CPI gap (PPI 9.85% vs. CPI 3.71%, both year over year, latest available prints) the stated reason to keep leaning against inflation rather than ease. The effective fed funds rate sits at 3.88% and the 10-year Treasury at 5.28% as of the most recent FRED readings shown above. The next decision lands October 28; this meeting carries no Summary of Economic Projections, and market pricing is genuinely split on hold vs. another hike \u2014 a cut is barely priced at all. The renewed Hormuz-driven oil spike (see Defense & Geopolitics) adds a fresh inflation input directly into that decision.",
         "dataPoints": [
@@ -240,6 +242,7 @@
       {
         "id": "ai-infra",
         "name": "AI Infrastructure",
+        "verified": "2026-10-17",
         "status": "green",
         "whatChanged": "The capex race kept widening rather than leveling off. Meta raised its full-year 2026 guidance again, to $125-145B from $115-135B, citing higher component pricing \u2014 a direct line to the memory shortage above \u2014 and added data center costs. Alphabet's guidance moved to roughly $180-190B and Amazon's to about $200B, though that figure includes its Leo satellite business (formerly Project Kuiper) and the Globalstar acquisition, not AI infrastructure alone. Estimates for the big four's combined 2026 total now run $700-745B depending on methodology and which costs (e.g. finance leases) are counted \u2014 up from the single $732.5B figure this theme opened with in September. None of the four has reported full calendar-Q3 results as of this writing; most report in the back half of October, so these remain guidance updates, not actuals.",
         "dataPoints": [
@@ -290,6 +293,7 @@
       {
         "id": "tariffs",
         "name": "Tariffs",
+        "verified": "2026-10-17",
         "status": "yellow",
         "whatChanged": "The November 10 truce deadline this theme was built around got pushed back before it arrived: Treasury Secretary Bessent announced in late September that the Busan truce now runs to January 10, 2027, following a Trump-Xi summit in Washington. Bessent said he's unsure whether a \u201cbigger deal\u201d gets done by then or the truce simply rolls again. A related, separate tripwire \u2014 the suspension of Section 301 shipping fees \u2014 is set to expire November 9 unless independently extended, which trade groups are already pushing for. The roughly $30B-per-side tariff cut on each side's \u201cnonsensitive\u201d goods that this theme tracked in September is still described by some reporting as recommended rather than scheduled, with no reduction amounts or start date published. China did commit to buying 25 million tons of soybeans as part of the extension.",
         "dataPoints": [
@@ -340,6 +344,7 @@
       {
         "id": "defense-geo",
         "name": "Defense & Geopolitics",
+        "verified": "2026-10-17",
         "status": "orange",
         "whatChanged": "The de-escalation this theme logged earlier reversed hard in October. Iran escalated tanker attacks near the Strait of Hormuz starting around October 12 \u2014 at least nine commercial vessels hit in less than a week \u2014 while Houthi forces separately fired missiles at Saudi Arabia. Brent crude, which had eased toward $100 in September, spiked back to roughly $110 on October 16; WTI traded near $94.64 on October 14. Hormuz throughput during the week ended October 13 ran around 9.5 million barrels a day, roughly 30% below pre-war normal, per Kpler data. Prices eased off their session highs after President Trump said the US would not strike Iran before the November midterms \u2014 a political constraint capping, but not resolving, the risk.",
         "dataPoints": [
@@ -390,6 +395,7 @@
       {
         "id": "emerging-markets",
         "name": "Emerging Markets",
+        "verified": "2026-10-17",
         "status": "yellow",
         "whatChanged": "The PMI divergence this theme flagged earlier actually resolved in September \u2014 in the direction of growth. China's official NBS manufacturing PMI rose to 50.1 (from 49.8), back in expansion for the first time in months, while the private Caixin/RatingDog reading rose to 52.1 (from 51.5); both surveys now agree. Underneath, the picture stays uneven \u2014 the employment sub-index remains in contraction at 48.4 and small firms are still weak at 48.9 \u2014 and Beijing announced a stimulus package to offset the strain. Meanwhile India's RBI delivered a hawkish surprise on October 7: a 25bp hike to 5.50% (most economists had expected a hold) and a stance shift from \u2018neutral\u2019 to \u2018calibrated tightening,\u2019 explicitly taking rate cuts off the table. Brazil, by contrast, kept cutting \u2014 the Selic moved to 14.00% in August, continuing a cycle this theme previously described as paused, with the Focus survey looking for 13.75% by year-end.",
         "dataPoints": [
@@ -430,6 +436,7 @@
       {
         "id": "crypto",
         "name": "Crypto / Bitcoin",
+        "verified": "2026-10-17",
         "status": "yellow",
         "whatChanged": "With the CLARITY Act dead in the Senate (as tracked previously), the regulatory path has shifted entirely to the agencies. The SEC's own \u2018Regulation Crypto Assets\u2019 proposal \u2014 published in the Federal Register on August 21 \u2014 has its 60-day public comment period closing October 20, the first concrete near-term marker now that Congress is stalled. The CFTC has separately sent its own crypto market-structure rule to the White House for review, a parallel rulemaking track outside Congress entirely. Bitcoin's price is reported inconsistently across sources in mid-October \u2014 figures range from about $77,000 to $82,000 depending on the exact day and source \u2014 but is broadly flat to down from the roughly $77,000 level this theme logged previously.",
         "dataPoints": [

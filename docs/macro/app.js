@@ -47,12 +47,28 @@ function impact(rows) {
   </div>`).join('');
 }
 
+/* "verified" is per-theme (set whenever that theme's content was last
+   actually checked) so a theme nobody's touched in months reads
+   differently from one just reviewed today — falls back to the
+   whole-file THEMES.updated stamp for any theme written before this
+   field existed, rather than showing nothing. */
+function verifiedLabel(t) {
+  const iso = t.verified || THEMES.updated;
+  if (!iso) return '';
+  const [y, m, d] = iso.split('-').map(Number);
+  const date = new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return `<span class="verified">Verified ${date}</span>`;
+}
+
 function card(t) {
   const s = STATUS[t.status] || STATUS.blue;
   return `<section class="card" style="--s:${s.color}">
     <div class="card-head">
       <h2>${esc(t.name)}</h2>
-      <span class="badge">${esc(s.label)}</span>
+      <div class="card-head-right">
+        <span class="badge">${esc(s.label)}</span>
+        ${verifiedLabel(t)}
+      </div>
     </div>
     <div class="changed">${esc(t.whatChanged)}</div>
     <div class="lbl">Key data</div>${dataPoints(t.dataPoints)}
