@@ -78,6 +78,11 @@ Every theme follows a four-level funnel. Keep this structure when updating
   in the UI so staleness is visible without having to open `themes.json`.
   Update it only for a theme you actually re-verified this pass; leave an
   untouched theme's date alone rather than bumping it to "look" current.
+  `app.js` also uses this field to mark a card "Updated" and dim the rest
+  when `verified` is newer than a `localStorage` timestamp of the reader's
+  last visit (see `visitTracking()`) — another reason not to bump it
+  without a real re-check, since doing so would falsely flag a theme as
+  changed for every returning reader.
 
 ## Communication style
 

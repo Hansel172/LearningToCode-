@@ -60,6 +60,29 @@ function verifiedLabel(t) {
   return `<span class="verified">Verified ${date}</span>`;
 }
 
+/* Key used for the "last visited" timestamp, see visitTracking() below. */
+const LAST_VISIT_KEY = 'macroTrackerLastVisit';
+
+/* localStorage can throw (private browsing, disabled storage) — this is a
+   cosmetic feature, so any failure here should fall back to "nothing is
+   new" rather than breaking the render. */
+function visitTracking(themes) {
+  let lastVisit = null;
+  try { lastVisit = localStorage.getItem(LAST_VISIT_KEY); } catch (_) {}
+
+  // No prior visit recorded: nothing to compare against, so don't flag
+  // every theme as "new" on a reader's very first load. Just lay down the
+  // baseline for next time.
+  const isNew = lastVisit
+    ? t => (t.verified || THEMES.updated || '') > lastVisit
+    : () => false;
+  const anyNew = lastVisit ? themes.some(isNew) : false;
+
+  try { localStorage.setItem(LAST_VISIT_KEY, todayIso); } catch (_) {}
+
+  return { isNew, dim: anyNew };
+}
+
 /* Collapsed to headline + status badge by default — tap/click to reveal Key
    data / Portfolio impact / What to watch. Same <details>/<summary> disclosure
    idiom the earnings tracker already uses for its own card sections, just
@@ -67,13 +90,18 @@ function verifiedLabel(t) {
    since a page of 7 fully-expanded theme cards is a wall of text to scroll
    past before you can tell which ones actually changed. Native <details> also
    gives keyboard/screen-reader toggling for free. */
-function card(t) {
+function card(t, flags) {
   const s = STATUS[t.status] || STATUS.blue;
-  return `<details class="card" style="--s:${s.color}">
+  const isNew = flags.isNew(t);
+  // Only dim unchanged cards when at least one card actually is new —
+  // otherwise "nothing changed" would render as every card faded out.
+  const cls = isNew ? 'card is-new' : flags.dim ? 'card is-seen' : 'card';
+  return `<details class="${cls}" style="--s:${s.color}">
     <summary class="card-head">
       <h2>${esc(t.name)}</h2>
       <div class="card-head-right">
         <span class="badge">${esc(s.label)}</span>
+        ${isNew ? '<span class="new-tag">Updated</span>' : ''}
         ${verifiedLabel(t)}
         <span class="chevron" aria-hidden="true">&#9662;</span>
       </div>
@@ -203,7 +231,9 @@ function render() {
   document.getElementById('errors').innerHTML = errs.length
     ? `<div class="err">Some series failed to refresh: ${esc(errs.join(' · '))}</div>` : '';
 
-  document.getElementById('grid').innerHTML = (THEMES.themes || []).map(card).join('');
+  const themesList = THEMES.themes || [];
+  const visitFlags = visitTracking(themesList);
+  document.getElementById('grid').innerHTML = themesList.map(t => card(t, visitFlags)).join('');
   document.getElementById('pending').innerHTML = dealsSection(THEMES.catalysts, PENDING);
   document.getElementById('catalysts').innerHTML = catalysts(THEMES.catalysts);
 

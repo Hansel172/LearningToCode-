@@ -10,15 +10,6 @@ actually left.
 
 ## Open
 
-- Highlight or visually distinguish which macro-tracker themes have
-  changed since the user's last visit. Store a last-viewed timestamp in
-  `localStorage` (per-device only, nothing server-side — consistent with
-  how this app already avoids needing a backend) and compare each theme's
-  own "last verified" date against it on load; dim or fade anything
-  unchanged, let new/updated content stand out. Directly serves the app's
-  own stated purpose ("open it daily") by answering "what's new" without
-  re-reading everything each time.
-
 - Make each theme's cited `source` field (e.g. "FRED DFF", "Micron FQ4
   FY2026 earnings") an actual link where a real URL exists, so a reader
   can verify any given figure in one tap instead of having to search for
@@ -49,6 +40,33 @@ actually left.
   IDEAS.md item re-added periodically, or as its own scheduled check.
 
 ## Done
+
+- Highlighted which macro-tracker themes have changed since the user's
+  last visit. `app.js`'s new `visitTracking()` reads a per-device
+  `localStorage` timestamp (`macroTrackerLastVisit`, nothing server-side —
+  consistent with how this app already avoids needing a backend), compares
+  each theme's own `verified` date (falling back to `themes.updated`)
+  against it, and tags any card verified since then "Updated" while fading
+  the rest to 55% opacity (full on hover/focus). On a reader's very first
+  visit, with no stored baseline yet, nothing is flagged or dimmed — it
+  just records today's date so the *next* visit has something to compare
+  against. Dimming only kicks in when at least one card is actually new,
+  so "nothing changed since last time" doesn't fade the whole page.
+  Documented in `macro-tracker/CLAUDE.md` so a theme's `verified` date
+  isn't bumped without a real re-check — doing so would now falsely flag
+  it as changed for every returning reader, not just look stale in
+  `themes.json`. Verified by reconstructing `macro-tracker/data/live.json`
+  and `themes.json` from the live `docs/macro/data.json`, running
+  `python3 macro-tracker/scripts/build_public.py`, and diffing the output:
+  `app.js`/`styles.css` changed only as intended, `live`/`themes` content
+  came back byte-identical, and the script's own `audit()` reported clean
+  (`pending_deals` briefly dropped from the rebuilt `data.json`, as
+  expected since `build_public.py` has no concept of it — see
+  `scan_news.py`'s own comment on this — then the original `data.json`
+  was restored rather than committing that loss). Also sanity-checked
+  `visitTracking()`'s and `card()`'s logic standalone under Node for a
+  first-visit, a later-visit, and the resulting "Updated"/dimmed output.
+  (2026-10-18)
 
 - Made macro-tracker's theme cards collapsed by default (headline +
   status badge only), click/tap to expand the full "Key data" /
