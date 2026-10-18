@@ -32,6 +32,15 @@ jobs:
 
       - run: pip install httpx python-dotenv
 
+      # Regression tests for refresh.py's date-gap handling (see
+      # scripts/test_refresh.py's own docstring for the real incident this
+      # guards against — a fixed list-index offset silently landing on the
+      # wrong month when a FRED series has a gap). Runs before the actual
+      # refresh so a broken assumption fails loudly here, not as a wrong
+      # number quietly reaching the live page.
+      - name: Run refresh.py regression tests
+        run: python3 macro-tracker/scripts/test_refresh.py
+
       # themes.json is gitignored (it holds portfolio detail), so the runner
       # won't have it. Carry forward whatever is already published rather than
       # wiping the analysis every time the numbers refresh.
