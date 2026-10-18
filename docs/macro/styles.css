@@ -71,6 +71,10 @@ body {
   gap: 12px; margin-bottom: 14px;
 }
 
+.card-head-right {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 5px;
+}
+
 .badge {
   font-family: var(--body); font-size: 10px; font-weight: 700;
   text-transform: uppercase; letter-spacing: 1.2px;
@@ -78,6 +82,11 @@ body {
   color: var(--s);
   background: color-mix(in srgb, var(--s) 8%, transparent);
   border: 1px solid color-mix(in srgb, var(--s) 25%, transparent);
+}
+
+.verified {
+  font-family: var(--body); font-size: 10px; color: var(--muted);
+  white-space: nowrap;
 }
 
 .lbl {
