@@ -10,18 +10,6 @@ actually left.
 
 ## Open
 
-- Audit every other FRED series macro-tracker uses (`DFF`, `DGS10`,
-  `VIXCLS`, `SP500`, `NASDAQCOM`, `DCOILWTICO`, `T10Y2Y`) for the same
-  class of bug just fixed in `CPIAUCSL`'s year-over-year calculation —
-  FRED's own series can have missing observations (confirmed: `CPIAUCSL`
-  was missing 2025-10-01, almost certainly the Oct 2025 government
-  shutdown), and any code assuming contiguous dates (fixed index offsets,
-  "N days back" math) can silently compute a wrong number against a gap.
-  `refresh.py`'s `_fifty_two_week_range()` is one function worth checking
-  specifically. Fix any bug found the same way CPI's was fixed: match by
-  actual date, not list position, and raise rather than guess when no
-  exact match exists.
-
 - Add a visible "last verified" date on each theme card in the macro
   tracker UI, not just in the underlying `themes.json`/`data.json`. Right
   now staleness is invisible until someone happens to notice (like the
@@ -74,6 +62,30 @@ actually left.
   IDEAS.md item re-added periodically, or as its own scheduled check.
 
 ## Done
+
+- Audited every other FRED series macro-tracker uses (`DFF`, `DGS10`,
+  `VIXCLS`, `SP500`, `NASDAQCOM`, `DCOILWTICO`, `T10Y2Y`, plus `PPIACO`)
+  for the same class of bug just fixed in `CPIAUCSL`'s year-over-year
+  calculation (a fixed list offset silently landing on the wrong
+  observation when a series has a gap). Result: no live bug — the YoY fix
+  already applies generically to every `mode="yoy"` series (so `PPIACO`
+  was already covered, not just `CPIAUCSL`), and `_fifty_two_week_range()`
+  already filters by actual date rather than list position, so a gap just
+  shrinks its window instead of shifting it. The `"level"`/`"spread"`
+  modes' day-over-day change is defined as "vs the prior observation," not
+  a calendar-anchored comparison, so it has no fixed-offset assumption to
+  break. To make this durable rather than a one-time read-through: pulled
+  the YoY date-matching logic out of `build()` into its own `_yoy()`
+  function (same pattern as `_fifty_two_week_range()`) and added
+  `macro-tracker/scripts/test_refresh.py`, which reconstructs the exact
+  CPIAUCSL gap scenario synthetically (no network call) and asserts
+  `_yoy()` raises instead of silently using the wrong month, plus checks
+  `_fifty_two_week_range()` through a gap. **Not yet wired into CI** — the
+  Idea Team's GitHub App token doesn't have `workflows` permission, so it
+  can't push a change to `.github/workflows/macro_refresh.yml` itself; see
+  the PR description for the one step a human needs to paste in by hand to
+  actually run this on every scheduled refresh. Runs manually in the
+  meantime: `python3 macro-tracker/scripts/test_refresh.py`. (2026-10-18)
 
 - Refresh macro-tracker's theme content (`docs/macro/data.json`'s "themes")
   that's gone stale — some of it dates to July, August, or early September
