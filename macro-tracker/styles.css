@@ -135,6 +135,8 @@ details[open] .chevron { transform: rotate(180deg); }
 .dp-v { font-family: var(--mono); font-size: 14px; font-weight: 500; white-space: nowrap; }
 .dp-d { font-size: 12px; color: var(--muted); margin-top: 2px; }
 .dp-s { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 3px; }
+.dp-s a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.dp-s a:hover, .dp-s a:focus { color: var(--text); }
 
 /* portfolio impact */
 .pi { display: flex; gap: 10px; padding: 8px 0; border-top: 1px solid var(--border); }

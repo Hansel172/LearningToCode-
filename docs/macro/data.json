@@ -126,25 +126,29 @@
             "label": "Micron FQ4 FY2026 revenue",
             "value": "$54.23B",
             "detail": "beat its own $50B guide and ~$51B consensus",
-            "source": "Micron FQ4 FY2026 earnings, Sep 30"
+            "source": "Micron FQ4 FY2026 earnings, Sep 30",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/mu-20260930.htm"
           },
           {
             "label": "FY2026 DRAM revenue growth",
             "value": "+62% YoY",
             "detail": "driven mainly by price, not volume",
-            "source": "Micron FY2026 10-K"
+            "source": "Micron FY2026 10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm"
           },
           {
             "label": "FY2026 gross margin",
             "value": "81%",
             "detail": "up from 40% in FY2025",
-            "source": "Micron FY2026 10-K"
+            "source": "Micron FY2026 10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm"
           },
           {
             "label": "FQ1 FY2027 guidance",
             "value": "$61.5B \u00b1 $1.5B",
             "detail": "vs ~$57B consensus \u2014 next hard data point, expected early December",
-            "source": "Micron guidance, Sep 30"
+            "source": "Micron guidance, Sep 30",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/mu-20260930.htm"
           },
           {
             "label": "AMD-Samsung supply talks",
@@ -188,25 +192,29 @@
             "label": "Fed funds rate (effective)",
             "value": "3.88%",
             "detail": "target range 3.75%-4.00% after a 12-0 hike on Sep 17",
-            "source": "FRED DFF"
+            "source": "FRED DFF",
+            "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
           },
           {
             "label": "10-year Treasury",
             "value": "5.28%",
             "detail": "latest FRED close",
-            "source": "FRED DGS10"
+            "source": "FRED DGS10",
+            "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
           },
           {
             "label": "CPI",
             "value": "3.71%",
             "detail": "year over year, latest available print",
-            "source": "FRED CPIAUCSL"
+            "source": "FRED CPIAUCSL",
+            "sourceUrl": "https://fred.stlouisfed.org/series/CPIAUCSL"
           },
           {
             "label": "PPI",
             "value": "9.85%",
             "detail": "year over year, latest available print \u2014 still the outlier",
-            "source": "FRED PPIACO"
+            "source": "FRED PPIACO",
+            "sourceUrl": "https://fred.stlouisfed.org/series/PPIACO"
           },
           {
             "label": "Next FOMC decision",
@@ -438,7 +446,8 @@
             "label": "SEC \u2018Regulation Crypto Assets\u2019 comment period",
             "value": "closes Oct 20, 2026",
             "detail": "60-day window after Aug 21 Federal Register publication; not final \u2014 comments must be addressed before any rule is adopted",
-            "source": "Federal Register, File No. S7-2026-27"
+            "source": "Federal Register, File No. S7-2026-27",
+            "sourceUrl": "https://www.sec.gov/rules-regulations/public-comments/s7-2026-27"
           },
           {
             "label": "CFTC crypto market rule",
