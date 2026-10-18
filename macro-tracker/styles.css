@@ -89,6 +89,24 @@ body {
   white-space: nowrap;
 }
 
+/* Theme cards are <details>/<summary> now — collapsed to just the header
+   (name, badge, verified date) until tapped. Swap the native disclosure
+   triangle for a chevron that lives in the same right-aligned column as the
+   badge, since the default marker doesn't survive .card-head's flex layout. */
+.card > summary.card-head {
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 0;
+}
+.card > summary.card-head::-webkit-details-marker { display: none; }
+.card > summary.card-head::marker { content: ''; }
+.card-body { margin-top: 14px; }
+.chevron {
+  font-size: 11px; color: var(--muted); line-height: 1;
+  transition: transform 0.15s ease;
+}
+details[open] .chevron { transform: rotate(180deg); }
+
 .lbl {
   font-family: var(--body); font-size: 10px; color: var(--muted);
   text-transform: uppercase; letter-spacing: 1.2px;
