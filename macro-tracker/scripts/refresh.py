@@ -99,6 +99,33 @@ def _fifty_two_week_range(rows):
     return round(max(window), 2), round(min(window), 2)
 
 
+def _yoy(rows):
+    """Percent change vs the observation exactly 12 months before the latest
+    one. Returns (value, as_of_date).
+
+    Finding "12 months ago" by date, not by counting back 13 list positions:
+    FRED's own CPIAUCSL series has a missing 2025-10-01 observation (confirmed
+    live — almost certainly the Oct 2025 government shutdown delaying that
+    release), which silently shifted rows[-13] to August instead of September
+    and produced a wrong 4.02% instead of the real ~3.72% YoY figure. A fixed
+    index offset assumes no gaps ever occur in a government data series; that
+    assumption was false for this exact series, caught by a user comparing
+    the app's number against BLS's own reported 3.7%. Pulled out as its own
+    function (like _fifty_two_week_range) so the exact gap scenario can be
+    unit-tested in test_refresh.py without a network call — see that file for
+    the audit this guards against."""
+    latest_date = datetime.strptime(rows[-1][0], "%Y-%m-%d")
+    target = _months_before(latest_date, 12).strftime("%Y-%m-%d")
+    by_date = {d: v for d, v in rows}
+    latest, prior = rows[-1][1], by_date.get(target)
+    if prior is None:
+        raise ValueError(f"no observation exactly 12 months before {rows[-1][0]} "
+                          f"(looked for {target}) — a real gap, not guessing a substitute")
+    if not prior:
+        raise ValueError("zero base")
+    return round((latest - prior) / prior * 100, 2), rows[-1][0]
+
+
 def build(series_id, label, unit, mode):
     rows = series(series_id)
     if not rows:
@@ -114,31 +141,13 @@ def build(series_id, label, unit, mode):
     if mode == "yoy":
         # An index level like CPI 332.568 means nothing to a reader. The rate
         # of change is the story, so convert before it reaches the dashboard.
-        #
-        # Finding "12 months ago" by date, not by counting back 13 list
-        # positions: FRED's own CPIAUCSL series has a missing 2025-10-01
-        # observation (confirmed live — almost certainly the Oct 2025
-        # government shutdown delaying that release), which silently
-        # shifted rows[-13] to August instead of September and produced a
-        # wrong 4.02% instead of the real ~3.72% YoY figure. A fixed index
-        # offset assumes no gaps ever occur in a government data series;
-        # that assumption was false for this exact series, caught by a
-        # user comparing the app's number against BLS's own reported 3.7%.
-        latest_date = datetime.strptime(rows[-1][0], "%Y-%m-%d")
-        target = _months_before(latest_date, 12).strftime("%Y-%m-%d")
-        by_date = {d: v for d, v in rows}
-        latest, prior = rows[-1][1], by_date.get(target)
-        if prior is None:
-            raise ValueError(f"no observation exactly 12 months before {rows[-1][0]} "
-                              f"(looked for {target}) — a real gap, not guessing a substitute")
-        if not prior:
-            raise ValueError("zero base")
+        value, as_of = _yoy(rows)
         return {
             "label": label,
-            "value": round((latest - prior) / prior * 100, 2),
+            "value": value,
             "unit": "%", "note": "year over year",
             "changePct": None,
-        }, rows[-1][0]
+        }, as_of
 
     if mode == "spread":
         # No day-over-day delta — see the comment on T10Y2Y above for why a
