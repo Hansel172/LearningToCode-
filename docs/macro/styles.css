@@ -89,6 +89,19 @@ body {
   white-space: nowrap;
 }
 
+/* "Updated since your last visit" — only applied when at least one theme
+   actually is new, otherwise every card would dim with nothing to contrast
+   against. .is-seen fades the unchanged cards rather than the other way
+   around, so a returning reader's eye lands on what moved. */
+.card.is-seen { opacity: 0.55; transition: opacity 0.15s ease; }
+.card.is-seen:hover, .card.is-seen:focus-within { opacity: 1; }
+.new-tag {
+  font-family: var(--body); font-size: 9px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--bg);
+  background: var(--s); padding: 3px 9px; border-radius: 20px;
+  white-space: nowrap;
+}
+
 /* Theme cards are <details>/<summary> now — collapsed to just the header
    (name, badge, verified date) until tapped. Swap the native disclosure
    triangle for a chevron that lives in the same right-aligned column as the
