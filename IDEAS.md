@@ -10,12 +10,6 @@ actually left.
 
 ## Open
 
-- Make each theme's cited `source` field (e.g. "FRED DFF", "Micron FQ4
-  FY2026 earnings") an actual link where a real URL exists, so a reader
-  can verify any given figure in one tap instead of having to search for
-  it themselves. Only link where a genuine source URL is available —
-  never fabricate one to make a citation clickable.
-
 - Add a real historical trend chart (not just a single current value) for
   at least one FRED series referenced inside a theme's "Key data" — e.g.
   tapping the CPI or Fed funds rate dataPoint inside the Fed & Rates card
@@ -40,6 +34,39 @@ actually left.
   IDEAS.md item re-added periodically, or as its own scheduled check.
 
 ## Done
+
+- Made each theme's cited `source` field a real link wherever a genuine,
+  verified URL exists, so a reader can check any figure in one tap instead
+  of searching for it. Added an optional `sourceUrl` field to a dataPoint
+  in `themes.json`; `app.js`'s `dataPoints()` renders `source` as an
+  `<a>` only when it's present, plain text otherwise — no requirement to
+  link every citation. Linked 9 of the ~29 current dataPoints, each
+  verified with a real request before being added, same discipline as
+  market cap and the 10Y-2Y spread: the 4 FRED series
+  (`https://fred.stlouisfed.org/series/<ID>` — confirmed 200 via curl for
+  DFF, DGS10, CPIAUCSL, PPIACO), Micron's FY2026 10-K and FQ4 FY2026
+  earnings 8-K (exact accession numbers looked up via
+  `data.sec.gov/submissions/CIK0000723125.json`, then the resulting
+  Archives URLs confirmed 200), and the SEC's own public-comments page for
+  File No. S7-2026-27 (confirmed via fetch — a plain `curl` got a 403,
+  which turned out to be sec.gov blocking non-browser user agents, not a
+  bad URL). Deliberately left every CNBC/Reuters/industry-reporting/World
+  Bank/FocusEconomics/Kalshi/crypto-tracker source as plain text — those
+  are real sources but not ones with a specific article URL I could verify
+  without guessing, and guessing one to make a citation clickable is
+  exactly what this item said not to do. Documented the verify-before-
+  linking rule in `macro-tracker/CLAUDE.md`'s "Rules for updating
+  themes.json" so a future update doesn't add a `sourceUrl` on faith.
+  Verified by reconstructing `macro-tracker/data/live.json` and
+  `themes.json` from the live `docs/macro/data.json`, running
+  `python3 macro-tracker/scripts/build_public.py`, and diffing the
+  output: only the 9 intended `sourceUrl` additions plus the `app.js`/
+  `styles.css` link-rendering changes came through (`pending_deals`
+  briefly dropped from the rebuilt `data.json`, as expected since
+  `build_public.py` has no concept of it, then restored rather than
+  committing that loss), and the script's own `audit()` reported clean.
+  Also ran `macro-tracker/scripts/test_refresh.py` (unrelated to this
+  change, still green) and `node --check app.js`. (2026-10-18)
 
 - Highlighted which macro-tracker themes have changed since the user's
   last visit. `app.js`'s new `visitTracking()` reads a per-device

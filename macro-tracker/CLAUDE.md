@@ -64,6 +64,13 @@ Every theme follows a four-level funnel. Keep this structure when updating
 ## Rules for updating themes.json
 
 - **Cite sources for every figure.** No number without provenance.
+- **Add `sourceUrl` to a dataPoint only when you've actually verified the URL
+  resolves to that real source** (e.g. `https://fred.stlouisfed.org/series/<ID>`
+  for a FRED series, or an SEC EDGAR filing URL confirmed via
+  `data.sec.gov/submissions/CIK<CIK>.json`) — never guess at a news article's
+  URL to make a citation clickable. A `source` string with no verified URL
+  just stays plain text; `app.js`'s `dataPoints()` only renders a link when
+  `sourceUrl` is present, so there's no requirement to link everything.
 - **An empty section is information.** If nothing happened in a theme, say so
   and leave it thin. Never pad.
 - **Explain the mechanism, not just the conclusion.** "Bad for Apple" is

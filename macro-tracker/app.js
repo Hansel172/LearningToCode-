@@ -29,7 +29,9 @@ function dataPoints(pts) {
     <div class="dp-row"><span class="dp-k">${esc(p.label)}</span>
       <span class="dp-v">${esc(p.value)}</span></div>
     ${p.detail ? `<div class="dp-d">${esc(p.detail)}</div>` : ''}
-    ${p.source ? `<div class="dp-s">${esc(p.source)}</div>` : ''}
+    ${p.source ? `<div class="dp-s">${p.sourceUrl
+      ? `<a href="${esc(p.sourceUrl)}" target="_blank" rel="noopener">${esc(p.source)}</a>`
+      : esc(p.source)}</div>` : ''}
   </div>`).join('');
 }
 
