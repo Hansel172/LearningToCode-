@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-17T19:02:25+00:00",
+    "updated": "2026-10-19T17:27:41+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -28,13 +28,13 @@
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 16.46,
+        "value": 19.99,
         "unit": "",
         "note": "last close",
-        "changePct": -2.43,
+        "changePct": 21.45,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-15",
+        "asOf": "2026-10-16",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
