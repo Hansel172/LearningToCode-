@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 5231869000000.0,
-        "pe_ttm": 27.1,
+        "market_cap": 5216927000000.0,
+        "pe_ttm": 27.0,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -487,8 +487,8 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 5004928089200.0,
-        "pe_ttm": 38.8,
+        "market_cap": 4954724110000.0,
+        "pe_ttm": 38.4,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -792,8 +792,8 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3961677030358.0,
-        "pe_ttm": 29.6,
+        "market_cap": 3949424880298.0,
+        "pe_ttm": 29.5,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -980,7 +980,7 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 2008234687635.0,
+        "market_cap": 2005927307959.0,
         "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
@@ -1218,9 +1218,9 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 1023824864539.0,
-        "pe_ttm": 12.0,
-        "ev_ebitda_ttm": 9.1
+        "market_cap": 1013834397577.0,
+        "pe_ttm": 11.9,
+        "ev_ebitda_ttm": 9.0
       },
       "annual_returns": [
         {
@@ -1478,7 +1478,7 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 199261691344.0,
+        "market_cap": 198427510449.0,
         "pe_ttm": 17.4,
         "ev_ebitda_ttm": null
       },
@@ -1734,8 +1734,8 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 131574378236.0,
-        "pe_ttm": 14.0,
+        "market_cap": 136098286474.0,
+        "pe_ttm": 14.4,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -2022,8 +2022,8 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 151139505686.0,
-        "pe_ttm": 47.5,
+        "market_cap": 154414755337.0,
+        "pe_ttm": 48.5,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
