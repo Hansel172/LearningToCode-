@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-20T15:38:41+00:00",
+    "updated": "2026-10-20T20:34:06+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-16",
+        "asOf": "2026-10-19",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.09,
+        "value": 5.15,
         "unit": "%",
         "note": "last close",
-        "changePct": -0.2,
+        "changePct": 1.18,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-16",
+        "asOf": "2026-10-19",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -533,6 +533,14 @@
       "source": "Crypto Briefing",
       "publishedAt": "2026-10-15T14:48:48Z",
       "detectedAt": "2026-10-16T15:22:06+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Tenstorrent hits $6.2B valuation to scale open-weight AI chips",
+      "url": "https://biztoc.com/x/b2af7c1dbb7e57ef",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-19T18:41:59Z",
+      "detectedAt": "2026-10-20T20:34:07+00:00"
     }
   ]
 }
