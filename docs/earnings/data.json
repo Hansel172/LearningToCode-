@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 5216927000000.0,
-        "pe_ttm": 27.0,
+        "market_cap": 5349477000000.0,
+        "pe_ttm": 27.7,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -487,8 +487,8 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 4954724110000.0,
-        "pe_ttm": 38.4,
+        "market_cap": 5020251978200.0,
+        "pe_ttm": 38.9,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -792,8 +792,8 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3949424880298.0,
-        "pe_ttm": 29.5,
+        "market_cap": 3957444469428.0,
+        "pe_ttm": 29.6,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -980,7 +980,7 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 2005927307959.0,
+        "market_cap": 2162286213079.0,
         "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
@@ -991,10 +991,6 @@
           "note": "year to date"
         }
       ],
-      "next_earnings": {
-        "date": "2026-11-03",
-        "days_until": 13
-      },
       "story": "SPCX's numbers cover a full 12-month stretch (June 2025 to June 2026, spanning its IPO) rather than a single quarter, so these are year-over-year comparisons rather than quarter-over-quarter ones. Over that span, revenue nearly doubled (+91.9%) while gross margin climbed 11.3 points to 55.3%, suggesting the company is not just selling more but keeping more of each dollar earned. Net income, while still negative, improved 46.3%, and diluted EPS rose 73.5%, pointing toward a narrowing path away from losses. Cash on hand jumped 525.1%, which likely reflects proceeds from the June 2026 IPO on top of the underlying business trends.",
       "company_story": [
         {
@@ -1218,9 +1214,9 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 1013834397577.0,
-        "pe_ttm": 11.9,
-        "ev_ebitda_ttm": 9.0
+        "market_cap": 1033747446108.0,
+        "pe_ttm": 12.2,
+        "ev_ebitda_ttm": 9.2
       },
       "annual_returns": [
         {
@@ -1478,8 +1474,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 198427510449.0,
-        "pe_ttm": 17.4,
+        "market_cap": 200293517886.0,
+        "pe_ttm": 17.5,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1734,8 +1730,8 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 136098286474.0,
-        "pe_ttm": 14.4,
+        "market_cap": 141399216110.0,
+        "pe_ttm": 15.0,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -2022,8 +2018,8 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 154414755337.0,
-        "pe_ttm": 48.5,
+        "market_cap": 159391671006.0,
+        "pe_ttm": 50.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
