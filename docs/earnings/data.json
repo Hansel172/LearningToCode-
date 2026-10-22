@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 5349477000000.0,
-        "pe_ttm": 27.7,
+        "market_cap": 5114261000000.0,
+        "pe_ttm": 26.5,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -487,8 +487,8 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 5020251978200.0,
-        "pe_ttm": 38.9,
+        "market_cap": 5081985359600.0,
+        "pe_ttm": 39.4,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -792,8 +792,8 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3957444469428.0,
-        "pe_ttm": 29.6,
+        "market_cap": 3869303244450.0,
+        "pe_ttm": 28.9,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -919,37 +919,48 @@
     {
       "ticker": "SPCX",
       "insufficient_data": false,
-      "period_end": "2026-06-30",
-      "compared_to": "2025-06-30",
-      "gap_days": 365,
-      "is_quarterly_comparison": false,
+      "period_end": "2026-09-30",
+      "compared_to": "2026-06-30",
+      "gap_days": 92,
+      "is_quarterly_comparison": true,
       "good": [
         {
           "metric": "Revenue growth",
-          "change_pct": 91.9
+          "change_pct": 86.5
         },
         {
-          "metric": "Net income (still negative, but improving)",
-          "change_pct": 46.3
+          "metric": "Net income",
+          "change_pct": 914.0
         },
         {
           "metric": "EPS (diluted)",
-          "change_pct": 73.5
+          "change_pct": 488.9
         },
         {
-          "metric": "Cash on hand",
-          "change_pct": 525.1
+          "metric": "Debt",
+          "change_pct": -1.1
         },
         {
           "metric": "Gross margin",
-          "change_pts": 11.3,
-          "from_pct": 43.94,
-          "to_pct": 55.27
+          "change_pts": 7.1,
+          "from_pct": 55.27,
+          "to_pct": 62.42
         }
       ],
       "bad": [],
-      "ugly": [],
-      "red_flags": [],
+      "ugly": [
+        {
+          "metric": "Cash on hand",
+          "change_pct": -43.4
+        }
+      ],
+      "red_flags": [
+        {
+          "flag": "Cash reserves dropped sharply",
+          "severity": "medium",
+          "detail": "Cash and equivalents fell 43.4% in one quarter."
+        }
+      ],
       "trend": {
         "revenue_points": [
           {
@@ -957,18 +968,38 @@
             "revenue": 4071000000
           },
           {
+            "period_end": "2025-09-30",
+            "revenue": 5576000000
+          },
+          {
             "period_end": "2026-06-30",
             "revenue": 7814000000
+          },
+          {
+            "period_end": "2026-09-30",
+            "revenue": 14575000000
           }
         ],
-        "revenue_growth_streak": 1,
-        "margin_expansion_streak": 1,
+        "revenue_growth_streak": 3,
+        "margin_expansion_streak": 3,
         "quarters_table": [
+          {
+            "period_end": "2026-09-30",
+            "revenue": 14575000000,
+            "gross_margin_pct": 62.42,
+            "eps_diluted": 0.35
+          },
           {
             "period_end": "2026-06-30",
             "revenue": 7814000000,
             "gross_margin_pct": 55.27,
             "eps_diluted": -0.09
+          },
+          {
+            "period_end": "2025-09-30",
+            "revenue": 5576000000,
+            "gross_margin_pct": 51.49,
+            "eps_diluted": -0.36
           },
           {
             "period_end": "2025-06-30",
@@ -980,8 +1011,8 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 2162286213079.0,
-        "pe_ttm": null,
+        "market_cap": 1964665930219.0,
+        "pe_ttm": 1090.9,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -989,64 +1020,6 @@
           "year": 2026,
           "return_pct": -1.0,
           "note": "year to date"
-        }
-      ],
-      "story": "SPCX's numbers cover a full 12-month stretch (June 2025 to June 2026, spanning its IPO) rather than a single quarter, so these are year-over-year comparisons rather than quarter-over-quarter ones. Over that span, revenue nearly doubled (+91.9%) while gross margin climbed 11.3 points to 55.3%, suggesting the company is not just selling more but keeping more of each dollar earned. Net income, while still negative, improved 46.3%, and diluted EPS rose 73.5%, pointing toward a narrowing path away from losses. Cash on hand jumped 525.1%, which likely reflects proceeds from the June 2026 IPO on top of the underlying business trends.",
-      "company_story": [
-        {
-          "n": 1,
-          "label": "What it does",
-          "answer": "SpaceX designs, builds, and launches reusable rockets (Falcon 9, Falcon Heavy, Starship) for commercial, government, and military payloads, and separately operates Starlink, a satellite internet constellation that sells broadband subscriptions directly to consumers, businesses, and governments."
-        },
-        {
-          "n": 2,
-          "label": "Who its customers are",
-          "answer": "Customers include NASA and the U.S. Department of Defense, commercial satellite operators and telecom companies needing launch services, and a growing base of individual, enterprise, maritime, aviation, and government Starlink internet subscribers worldwide."
-        },
-        {
-          "n": 3,
-          "label": "Competitive edge",
-          "answer": "Its edge is reusable rocket technology that lets it launch far more often and far more cheaply than competitors, combined with a vertically integrated manufacturing operation and a Starlink satellite fleet that no rival currently matches in scale."
-        },
-        {
-          "n": 4,
-          "label": "Leadership",
-          "answer": "Elon Musk is CEO, based on general knowledge; this may be outdated if there has been a very recent leadership change not yet reflected publicly."
-        },
-        {
-          "n": 5,
-          "label": "Insider ownership",
-          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
-        },
-        {
-          "n": 6,
-          "label": "Growth potential",
-          "answer": "Growth potential rests on Starlink subscriber and revenue expansion, increased launch cadence (including Starship coming online for heavier and cheaper missions), and new applications like direct-to-cell satellite service, in-space infrastructure, and potential government contracts tied to national security and lunar/Mars programs."
-        },
-        {
-          "n": 7,
-          "label": "Risks",
-          "answer": "Key risks include the technical and regulatory difficulty of scaling Starship, dependence on a small number of large government contracts, competitive pressure from other satellite constellations, launch failures or delays, and the general execution risk of running two capital-intensive businesses simultaneously."
-        },
-        {
-          "n": 8,
-          "label": "What you're paying",
-          "answer": "Trailing P/E and EV/EBITDA are both not available due to a trailing net loss or missing/negative earnings data, so no multiple-based valuation judgment can be made from these figures alone."
-        },
-        {
-          "n": 9,
-          "label": "Market cap today",
-          "answer": "$1.95T, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
-        },
-        {
-          "n": 10,
-          "label": "The 5-10 year case",
-          "answer": "A materially higher market cap in five to ten years would require Starlink to scale into a large, durable, profitable global subscriber and enterprise/government revenue base, Starship to become a reliable, high-cadence, low-cost launch platform, and new lines of business (direct-to-cell, in-space services, government contracts) to meaningfully add revenue beyond current levels."
-        },
-        {
-          "n": 11,
-          "label": "Risk / reward",
-          "answer": "If the business executes as described, the payoff could be very large given the scale of the addressable launch and satellite-broadband markets; if it doesn't \u2014 through technical setbacks, contract losses, competitive erosion, or capital strain from Starship development \u2014 an investor could lose a substantial portion or all of the capital committed, since no profitability metrics currently exist to cushion the downside."
         }
       ]
     },
@@ -1214,9 +1187,9 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 1033747446108.0,
-        "pe_ttm": 12.2,
-        "ev_ebitda_ttm": 9.2
+        "market_cap": 969052666846.0,
+        "pe_ttm": 11.4,
+        "ev_ebitda_ttm": 8.6
       },
       "annual_returns": [
         {
@@ -1474,8 +1447,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 200293517886.0,
-        "pe_ttm": 17.5,
+        "market_cap": 183248034064.0,
+        "pe_ttm": 16.0,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1730,8 +1703,8 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 141399216110.0,
-        "pe_ttm": 15.0,
+        "market_cap": 132314042836.0,
+        "pe_ttm": 14.0,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -2018,8 +1991,8 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 159391671006.0,
-        "pe_ttm": 50.1,
+        "market_cap": 146869330339.0,
+        "pe_ttm": 46.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
