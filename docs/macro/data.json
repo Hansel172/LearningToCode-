@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-22T15:52:18+00:00",
+    "updated": "2026-10-22T20:33:04+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-20",
+        "asOf": "2026-10-21",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.12,
+        "value": 5.13,
         "unit": "%",
         "note": "last close",
-        "changePct": -0.58,
+        "changePct": 0.2,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-20",
+        "asOf": "2026-10-21",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -519,14 +519,6 @@
   },
   "pending_deals": [
     {
-      "ticker": "AAPL",
-      "headline": "Apple plans to debut AI features in China in December",
-      "url": "https://cryptobriefing.com/apple-intelligence-china-december-launch/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-14T19:58:04Z",
-      "detectedAt": "2026-10-15T20:19:59+00:00"
-    },
-    {
       "ticker": "NVDA",
       "headline": "German government plans Nvidia partnership, Handelsblatt reports",
       "url": "https://cryptobriefing.com/german-government-nvidia-partnership-handelsblatt/",
@@ -565,6 +557,22 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-10-21T15:05:53Z",
       "detectedAt": "2026-10-22T15:52:19+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "ServiceNow Announces New AI Agent Services With Nvidia",
+      "url": "https://biztoc.com/x/6ff9322218147d86",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-21T20:19:54Z",
+      "detectedAt": "2026-10-22T20:33:04+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Xbox Could Be Worth Up to $150 Billion to Private Equity Buyers, but Microsoft Insists the Division Isn\u2019t for Sale",
+      "url": "https://wccftech.com/xbox-150-billion-private-equity-buyers-microsoft-not-for-sale/",
+      "source": "Wccftech",
+      "publishedAt": "2026-10-21T20:30:00Z",
+      "detectedAt": "2026-10-22T20:33:04+00:00"
     }
   ]
 }
