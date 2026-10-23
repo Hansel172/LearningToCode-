@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-23T15:43:54+00:00",
+    "updated": "2026-10-23T20:26:40+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-21",
+        "asOf": "2026-10-22",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 5.13,
+        "value": 4.96,
         "unit": "%",
         "note": "last close",
-        "changePct": 0.2,
+        "changePct": -3.31,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-21",
+        "asOf": "2026-10-22",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -573,6 +573,14 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-10-21T22:08:35Z",
       "detectedAt": "2026-10-23T00:39:04+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Sure, let\u2019s smoosh SpaceX and Tesla together, who cares",
+      "url": "https://biztoc.com/x/66248c22d385b37f",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-22T19:49:48Z",
+      "detectedAt": "2026-10-23T20:26:41+00:00"
     }
   ]
 }
