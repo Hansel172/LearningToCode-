@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-22T20:33:04+00:00",
+    "updated": "2026-10-23T00:39:04+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.32,
+        "value": 0.31,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-10-21",
+        "asOf": "2026-10-22",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -573,6 +573,14 @@
       "source": "Wccftech",
       "publishedAt": "2026-10-21T20:30:00Z",
       "detectedAt": "2026-10-22T20:33:04+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Tesla Beats Estimates as Musk Floats SpaceX Merger",
+      "url": "https://biztoc.com/x/3cb53b6b56ee6d76",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-21T22:08:35Z",
+      "detectedAt": "2026-10-23T00:39:04+00:00"
     }
   ]
 }
