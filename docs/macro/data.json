@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-23T00:39:04+00:00",
+    "updated": "2026-10-23T15:43:54+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26702.86,
+        "value": 26008.86,
         "unit": "",
         "note": "last close",
-        "changePct": 1.05,
+        "changePct": -2.6,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-21",
+        "asOf": "2026-10-22",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 16.68,
+        "value": 19.03,
         "unit": "",
         "note": "last close",
-        "changePct": -3.64,
+        "changePct": 14.09,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-21",
+        "asOf": "2026-10-22",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -518,14 +518,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "German government plans Nvidia partnership, Handelsblatt reports",
-      "url": "https://cryptobriefing.com/german-government-nvidia-partnership-handelsblatt/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-15T14:48:48Z",
-      "detectedAt": "2026-10-16T15:22:06+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "Tenstorrent hits $6.2B valuation to scale open-weight AI chips",
