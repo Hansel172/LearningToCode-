@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 5114261000000.0,
-        "pe_ttm": 26.5,
+        "market_cap": 5084136000000.0,
+        "pe_ttm": 26.4,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -487,7 +487,7 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 5081985359600.0,
+        "market_cap": 5074761240500.0,
         "pe_ttm": 39.4,
         "ev_ebitda_ttm": null
       },
@@ -792,8 +792,8 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3869303244450.0,
-        "pe_ttm": 28.9,
+        "market_cap": 3895235078383.0,
+        "pe_ttm": 29.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1011,8 +1011,8 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 1964665930219.0,
-        "pe_ttm": 1090.9,
+        "market_cap": 2001855461471.0,
+        "pe_ttm": 1111.5,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1187,9 +1187,9 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 969052666846.0,
-        "pe_ttm": 11.4,
-        "ev_ebitda_ttm": 8.6
+        "market_cap": 992880439691.0,
+        "pe_ttm": 11.7,
+        "ev_ebitda_ttm": 8.8
       },
       "annual_returns": [
         {
@@ -1447,8 +1447,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 183248034064.0,
-        "pe_ttm": 16.0,
+        "market_cap": 179920030146.0,
+        "pe_ttm": 15.7,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1529,56 +1529,47 @@
     {
       "ticker": "WDC",
       "insufficient_data": false,
-      "period_end": "2026-07-03",
-      "compared_to": "2026-04-03",
+      "period_end": "2026-10-02",
+      "compared_to": "2026-07-03",
       "gap_days": 91,
       "is_quarterly_comparison": true,
       "good": [
         {
           "metric": "Revenue growth",
-          "change_pct": 12.3
-        },
-        {
-          "metric": "Debt",
-          "change_pct": -33.5
+          "change_pct": 16.9
         },
         {
           "metric": "Gross margin",
-          "change_pts": 3.9,
-          "from_pct": 50.22,
-          "to_pct": 54.12
+          "change_pts": 3.7,
+          "from_pct": 54.12,
+          "to_pct": 57.84
         }
       ],
       "bad": [
         {
-          "metric": "Net income",
-          "change_pct": -0.3
+          "metric": "Cash on hand",
+          "change_pct": -16.8
+        },
+        {
+          "metric": "Debt",
+          "change_pct": 0.0
         }
       ],
       "ugly": [
         {
-          "metric": "Cash on hand",
-          "change_pct": -23.0
+          "metric": "Net income",
+          "change_pct": -44.3
         }
       ],
       "red_flags": [
         {
           "flag": "Net income falling despite revenue growth",
           "severity": "medium",
-          "detail": "Revenue rose 12.3% but net income fell 0.3%. Growth alone doesn't tell the whole story here \u2014 costs are eating more of each new dollar of sales."
-        },
-        {
-          "flag": "Cash reserves dropped sharply",
-          "severity": "medium",
-          "detail": "Cash and equivalents fell 23.0% in one quarter."
+          "detail": "Revenue rose 16.9% but net income fell 44.3%. Growth alone doesn't tell the whole story here \u2014 costs are eating more of each new dollar of sales."
         }
       ],
       "trend": {
         "revenue_points": [
-          {
-            "period_end": "2023-09-29",
-            "revenue": 1194000000
-          },
           {
             "period_end": "2023-12-29",
             "revenue": 1367000000
@@ -1622,11 +1613,21 @@
           {
             "period_end": "2026-07-03",
             "revenue": 3747000000
+          },
+          {
+            "period_end": "2026-10-02",
+            "revenue": 4381000000
           }
         ],
-        "revenue_growth_streak": 5,
+        "revenue_growth_streak": 6,
         "margin_expansion_streak": 11,
         "quarters_table": [
+          {
+            "period_end": "2026-10-02",
+            "revenue": 4381000000,
+            "gross_margin_pct": 57.84,
+            "eps_diluted": 4.63
+          },
           {
             "period_end": "2026-07-03",
             "revenue": 3747000000,
@@ -1692,19 +1693,13 @@
             "revenue": 1367000000,
             "gross_margin_pct": 22.9,
             "eps_diluted": -0.92
-          },
-          {
-            "period_end": "2023-09-29",
-            "revenue": 1194000000,
-            "gross_margin_pct": 20.44,
-            "eps_diluted": -2.17
           }
         ]
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 132314042836.0,
-        "pe_ttm": 14.0,
+        "market_cap": 128384107687.0,
+        "pe_ttm": 12.8,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1762,64 +1757,6 @@
           "year": 2026,
           "return_pct": 105.6,
           "note": "year to date"
-        }
-      ],
-      "story": "WDC grew revenue 12.3% and pushed gross margin up nearly 4 points to 54.1%, continuing streaks of five straight quarters of sales growth and eleven straight quarters of margin expansion. But that stronger top line didn't translate into more profit \u2014 net income slipped 0.3%, meaning other costs below the gross margin line ate up the gains. The company also cut debt by a third, a positive sign, but cash on hand dropped 23%, a notable one-quarter decline worth watching alongside the flat profit picture.",
-      "company_story": [
-        {
-          "n": 1,
-          "label": "What it does",
-          "answer": "Western Digital designs and manufactures hard disk drives (HDDs) and, historically, flash storage, selling storage capacity to cloud providers, enterprises, and device makers who need to store massive amounts of data; the company recently separated its flash/NAND business (SanDisk) from its HDD business, leaving WDC as a more focused hard-drive and storage-systems maker."
-        },
-        {
-          "n": 2,
-          "label": "Who its customers are",
-          "answer": "Its main customers are hyperscale cloud and data center operators (like AWS, Google, Microsoft, Meta) who buy high-capacity drives in bulk, along with enterprise IT departments and some consumer/retail storage products."
-        },
-        {
-          "n": 3,
-          "label": "Competitive edge",
-          "answer": "WDC's edge comes from decades of manufacturing scale, proprietary areal-density technology (like energy-assisted recording), and being one of only three companies globally (with Seagate and Toshiba) capable of producing HDDs at the precision and volume data centers require \u2014 high capital and technical barriers keep new entrants out."
-        },
-        {
-          "n": 4,
-          "label": "Leadership",
-          "answer": "As of recent public information, Irving Tan serves as CEO of Western Digital following the 2025 separation of the flash business into SanDisk; leadership may have changed since, so this should be verified against current sources."
-        },
-        {
-          "n": 5,
-          "label": "Insider ownership",
-          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
-        },
-        {
-          "n": 6,
-          "label": "Growth potential",
-          "answer": "Growth is tied to the ongoing global expansion of data storage needs \u2014 AI, cloud, and video are driving demand for higher-capacity drives \u2014 and the company has posted 5 straight quarters of revenue growth and 11 straight quarters of gross margin expansion, suggesting improving unit economics alongside demand growth."
-        },
-        {
-          "n": 7,
-          "label": "Risks",
-          "answer": "Key risks include cyclicality in storage pricing and demand, competition from flash/SSD technology eating into HDD's role over time, and two flagged concerns: net income fell 0.3% even as revenue rose 12.3% (margin pressure from rising costs), and cash reserves dropped 23% in a single quarter, which warrants attention to cash management or capital spending."
-        },
-        {
-          "n": 8,
-          "label": "What you're paying",
-          "answer": "The stock trades at a trailing P/E of 15.8; EV/EBITDA is not available due to missing or negative EBITDA data, so that comparison can't be made here."
-        },
-        {
-          "n": 9,
-          "label": "Market cap today",
-          "answer": "$148.5B, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
-        },
-        {
-          "n": 10,
-          "label": "The 5-10 year case",
-          "answer": "A materially higher market cap in five to ten years would require sustained data-center storage demand growth (especially AI-driven data retention), continued margin expansion turning into actual net income growth rather than the recent net-income stagnation, and stabilization of cash flow trends \u2014 without those, growth in revenue alone may not translate to shareholder value."
-        },
-        {
-          "n": 11,
-          "label": "Risk / reward",
-          "answer": "Without a specific target price or multiple to project forward, precise return figures can't be given; in general terms, an investor's upside depends on whether revenue growth converts into real profit growth (which hasn't been happening lately), while the downside risk centers on continued margin erosion, cash burn, or a cyclical storage-demand downturn eroding both earnings and the multiple paid."
         }
       ]
     },
@@ -1987,8 +1924,8 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 146869330339.0,
-        "pe_ttm": 46.1,
+        "market_cap": 144204759220.0,
+        "pe_ttm": 45.3,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
