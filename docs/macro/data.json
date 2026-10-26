@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-24T00:39:57+00:00",
+    "updated": "2026-10-26T17:21:46+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26008.86,
+        "value": 25955.34,
         "unit": "",
         "note": "last close",
-        "changePct": -2.6,
+        "changePct": -0.21,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-22",
+        "asOf": "2026-10-23",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 19.03,
+        "value": 19.45,
         "unit": "",
         "note": "last close",
-        "changePct": 14.09,
+        "changePct": 2.21,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-22",
+        "asOf": "2026-10-23",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
