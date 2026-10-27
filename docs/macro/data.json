@@ -1,40 +1,40 @@
 {
   "live": {
-    "updated": "2026-10-27T01:28:16+00:00",
+    "updated": "2026-10-27T16:36:21+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7623.68,
+        "value": 7676.77,
         "unit": "",
         "note": "last close",
-        "changePct": -0.52,
+        "changePct": 0.7,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-23",
+        "asOf": "2026-10-26",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 25955.34,
+        "value": 26169.38,
         "unit": "",
         "note": "last close",
-        "changePct": -0.21,
+        "changePct": 0.82,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-23",
+        "asOf": "2026-10-26",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 19.45,
+        "value": 18.39,
         "unit": "",
         "note": "last close",
-        "changePct": 2.21,
+        "changePct": -5.45,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-23",
+        "asOf": "2026-10-26",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -581,6 +581,38 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-10-22T19:49:48Z",
       "detectedAt": "2026-10-23T20:26:41+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft offering buyouts to around 60,000 employees, Business Insider reports",
+      "url": "https://biztoc.com/x/181ae7cdec623a94",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-26T16:33:46Z",
+      "detectedAt": "2026-10-27T16:36:22+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft offers mass buyouts for roughly a quarter of its workforce - The Seattle Times",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=186464006",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-10-26T16:33:08Z",
+      "detectedAt": "2026-10-27T16:36:22+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft offers buyouts to 60,000 employees",
+      "url": "https://www.theverge.com/tech/1018666/microsoft-expands-buyouts-60000-employees-eligible",
+      "source": "The Verge",
+      "publishedAt": "2026-10-26T16:07:16Z",
+      "detectedAt": "2026-10-27T16:36:22+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft offers voluntary buyouts to 60,000 employees",
+      "url": "https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html",
+      "source": "CNBC",
+      "publishedAt": "2026-10-26T16:05:23Z",
+      "detectedAt": "2026-10-27T16:36:22+00:00"
     }
   ]
 }
