@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-27T16:36:21+00:00",
+    "updated": "2026-10-27T21:16:44+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -60,7 +60,7 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-23",
+        "asOf": "2026-10-26",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
@@ -69,10 +69,10 @@
         "value": 5.0,
         "unit": "%",
         "note": "last close",
-        "changePct": 0.81,
+        "changePct": 0.0,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-23",
+        "asOf": "2026-10-26",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.32,
+        "value": 0.29,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-10-26",
+        "asOf": "2026-10-27",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -520,14 +520,6 @@
   "pending_deals": [
     {
       "ticker": "NVDA",
-      "headline": "Tenstorrent hits $6.2B valuation to scale open-weight AI chips",
-      "url": "https://biztoc.com/x/b2af7c1dbb7e57ef",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-19T18:41:59Z",
-      "detectedAt": "2026-10-20T20:34:07+00:00"
-    },
-    {
-      "ticker": "NVDA",
       "headline": "Red Hat and Nvidia expand their partnership to secure autonomous AI agents",
       "url": "https://siliconangle.com/2026/10/21/red-hat-and-nvidia-expand-their-partnership-to-secure-autonomous-ai-agents/",
       "source": "SiliconANGLE News",
@@ -613,6 +605,54 @@
       "source": "CNBC",
       "publishedAt": "2026-10-26T16:05:23Z",
       "detectedAt": "2026-10-27T16:36:22+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft Offers Buyouts To 60,000, A Quarter Of Its Workforce",
+      "url": "http://deadline.com/2026/10/microsoft-offers-buyouts-to-a-quarter-of-workforce-1237197224/",
+      "source": "Deadline",
+      "publishedAt": "2026-10-26T21:15:32Z",
+      "detectedAt": "2026-10-27T21:16:45+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft offers voluntary buyouts to a quarter of its workforce",
+      "url": "https://www.kuow.org/technology/2026-10-26/microsoft-offers-voluntary-buyouts-to-a-quarter-of-its-workforce",
+      "source": "KUOW News and Information",
+      "publishedAt": "2026-10-26T21:05:15Z",
+      "detectedAt": "2026-10-27T21:16:45+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft\u2019s Massive Employee Buyout Shows How AI Is Reshaping the Economy",
+      "url": "https://www.cnet.com/tech/services-and-software/microsofts-employee-buyout-ai-reshaping-economy/",
+      "source": "CNET",
+      "publishedAt": "2026-10-26T20:29:55Z",
+      "detectedAt": "2026-10-27T21:16:45+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft offers around 60,000 employees voluntary buyouts",
+      "url": "https://biztoc.com/x/422eebf026517cb9",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-26T20:24:48Z",
+      "detectedAt": "2026-10-27T21:16:45+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft offers voluntary buyouts to 60,000 employees as tech giant reshapes its workforce",
+      "url": "https://biztoc.com/x/77f8835c13da276d",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-26T20:09:31Z",
+      "detectedAt": "2026-10-27T21:16:45+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Daily Digest: Instacart explores sale to Uber or DoorDash, S.F. property linked to Gov. Newsom sells over asking",
+      "url": "https://biztoc.com/x/5062b34f93d66cd6",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-26T20:09:23Z",
+      "detectedAt": "2026-10-27T21:16:45+00:00"
     }
   ]
 }
