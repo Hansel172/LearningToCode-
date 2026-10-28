@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-28T01:18:57+00:00",
+    "updated": "2026-10-28T17:09:20+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26169.38,
+        "value": 26477.81,
         "unit": "",
         "note": "last close",
-        "changePct": 0.82,
+        "changePct": 1.18,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-26",
+        "asOf": "2026-10-27",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 18.39,
+        "value": 17.52,
         "unit": "",
         "note": "last close",
-        "changePct": -5.45,
+        "changePct": -4.73,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-26",
+        "asOf": "2026-10-27",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -685,6 +685,30 @@
       "source": "Slashdot.org",
       "publishedAt": "2026-10-26T23:53:31Z",
       "detectedAt": "2026-10-28T01:18:58+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft Offers Voluntary Buyouts to More Than 25% of Workforce",
+      "url": "https://www.today.com/video/microsoft-offers-voluntary-buyouts-to-more-than-60k-employees-272339525525",
+      "source": "TODAY",
+      "publishedAt": "2026-10-27T17:08:40Z",
+      "detectedAt": "2026-10-28T17:09:21+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft to report Q1 earnings with Wall Street looking for further Azure growth",
+      "url": "https://biztoc.com/x/ee0dd263806c8a7a",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-27T17:00:20Z",
+      "detectedAt": "2026-10-28T17:09:21+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "The Impact of AI: Microsoft Slashes 27% of Workforce with Voluntary Buyout Offer",
+      "url": "https://www.breitbart.com/tech/2026/10/27/the-impact-of-ai-microsoft-slashes-27-of-workforce-with-voluntary-buyout-offer/",
+      "source": "Breitbart News",
+      "publishedAt": "2026-10-27T16:14:34Z",
+      "detectedAt": "2026-10-28T17:09:21+00:00"
     }
   ]
 }
