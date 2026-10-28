@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-10-27T21:16:44+00:00",
+    "updated": "2026-10-28T01:18:57+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7676.77,
+        "value": 7722.6,
         "unit": "",
         "note": "last close",
-        "changePct": 0.7,
+        "changePct": 0.6,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-26",
+        "asOf": "2026-10-27",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -653,6 +653,38 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-10-26T20:09:23Z",
       "detectedAt": "2026-10-27T21:16:45+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft buyout offer to employees: Who is eligible and what more 60,000 techies have been offered",
+      "url": "https://www.livemint.com/companies/people/microsoft-buyout-offer-to-employees-who-is-eligible-and-what-more-60-000-techies-have-been-offered-11793062882761.html",
+      "source": "Livemint",
+      "publishedAt": "2026-10-27T01:17:19Z",
+      "detectedAt": "2026-10-28T01:18:58+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft offers buyouts to 60,000 employees as AI spending mounts",
+      "url": "https://biztoc.com/x/aaaf8199ea3e654c",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-27T00:46:37Z",
+      "detectedAt": "2026-10-28T01:18:58+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Xbox staff among up to 60,000 Microsoft employees offered voluntary exit - GamesIndustry.biz",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=186467832",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-10-27T00:12:27Z",
+      "detectedAt": "2026-10-28T01:18:58+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft offers voluntary buyouts to 60,000 employees as tech giant reshapes its workforce - Fox Business",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=186467598",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-10-26T23:53:31Z",
+      "detectedAt": "2026-10-28T01:18:58+00:00"
     }
   ]
 }
