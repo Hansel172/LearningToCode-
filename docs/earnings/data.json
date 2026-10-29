@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 5190658000000.0,
-        "pe_ttm": 26.9,
+        "market_cap": 5149206000000.0,
+        "pe_ttm": 26.7,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -487,8 +487,8 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 5017916909400.0,
-        "pe_ttm": 38.9,
+        "market_cap": 5092055343800.0,
+        "pe_ttm": 39.5,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -780,7 +780,7 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3943506852056.0,
+        "market_cap": 3937045860811.0,
         "pe_ttm": 27.6,
         "ev_ebitda_ttm": null
       },
@@ -953,8 +953,8 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 1972377882458.0,
-        "pe_ttm": 1095.2,
+        "market_cap": 1954179257088.0,
+        "pe_ttm": 1085.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1129,9 +1129,9 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 1112449244735.0,
-        "pe_ttm": 13.1,
-        "ev_ebitda_ttm": 9.9
+        "market_cap": 1057054764275.0,
+        "pe_ttm": 12.4,
+        "ev_ebitda_ttm": 9.4
       },
       "annual_returns": [
         {
@@ -1389,8 +1389,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 204151967843.0,
-        "pe_ttm": 17.9,
+        "market_cap": 193293083444.0,
+        "pe_ttm": 16.9,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1640,7 +1640,7 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 148389230297.0,
+        "market_cap": 148011163795.0,
         "pe_ttm": 14.8,
         "ev_ebitda_ttm": null
       },
@@ -1705,8 +1705,8 @@
     {
       "ticker": "STX",
       "insufficient_data": false,
-      "period_end": "2026-07-03",
-      "compared_to": "2026-04-03",
+      "period_end": "2026-10-02",
+      "compared_to": "2026-07-03",
       "gap_days": 91,
       "is_quarterly_comparison": true,
       "good": [
@@ -1716,32 +1716,29 @@
         },
         {
           "metric": "Net income",
-          "change_pct": 73.0
-        },
-        {
-          "metric": "Cash on hand",
-          "change_pct": 48.6
+          "change_pct": 36.1
         },
         {
           "metric": "Debt",
-          "change_pct": -2.5
+          "change_pct": -30.4
         },
         {
           "metric": "Gross margin",
-          "change_pts": 5.8,
-          "from_pct": 46.5,
-          "to_pct": 52.3
+          "change_pts": 5.0,
+          "from_pct": 52.3,
+          "to_pct": 57.34
         }
       ],
-      "bad": [],
+      "bad": [
+        {
+          "metric": "Cash on hand",
+          "change_pct": -19.6
+        }
+      ],
       "ugly": [],
       "red_flags": [],
       "trend": {
         "revenue_points": [
-          {
-            "period_end": "2023-09-29",
-            "revenue": 1454000000
-          },
           {
             "period_end": "2023-12-29",
             "revenue": 1555000000
@@ -1785,11 +1782,21 @@
           {
             "period_end": "2026-07-03",
             "revenue": 3629000000
+          },
+          {
+            "period_end": "2026-10-02",
+            "revenue": 4233000000
           }
         ],
-        "revenue_growth_streak": 5,
+        "revenue_growth_streak": 6,
         "margin_expansion_streak": 11,
         "quarters_table": [
+          {
+            "period_end": "2026-10-02",
+            "revenue": 4233000000,
+            "gross_margin_pct": 57.34,
+            "eps_diluted": 7.59
+          },
           {
             "period_end": "2026-07-03",
             "revenue": 3629000000,
@@ -1855,19 +1862,13 @@
             "revenue": 1555000000,
             "gross_margin_pct": 23.28,
             "eps_diluted": -0.09
-          },
-          {
-            "period_end": "2023-09-29",
-            "revenue": 1454000000,
-            "gross_margin_pct": 10.25,
-            "eps_diluted": -0.88
           }
         ]
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 159638687041.0,
-        "pe_ttm": 50.1,
+        "market_cap": 160210483419.0,
+        "pe_ttm": 36.4,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1925,64 +1926,6 @@
           "year": 2026,
           "return_pct": 153.4,
           "note": "year to date"
-        }
-      ],
-      "story": "Seagate (STX) had a strong quarter: revenue climbed 16.6% while net income surged 73.0%, a sign that profits grew much faster than sales. That gap shows up clearly in the gross margin, which jumped 5.8 points to 52.3% \u2014 meaning the company is keeping a lot more of each sales dollar as profit. At the same time, Seagate built up cash (+48.6%) and paid down debt (-2.5%), strengthening its financial footing. This isn't a one-off: it's the 5th straight quarter of revenue growth and the 11th straight quarter of improving margins, pointing to a sustained trend of both growing and getting more efficient at the same time.",
-      "company_story": [
-        {
-          "n": 1,
-          "label": "What it does",
-          "answer": "Seagate designs and manufactures hard disk drives (HDDs) \u2014 mostly high-capacity \"nearline\" drives \u2014 and sells them to data center operators, cloud providers, and enterprise storage vendors as the physical backbone for storing mass data."
-        },
-        {
-          "n": 2,
-          "label": "Who its customers are",
-          "answer": "Its core customers are hyperscale cloud providers (like AWS, Microsoft, Google), enterprise storage OEMs, and to a lesser extent PC makers, surveillance systems, and NAS device makers."
-        },
-        {
-          "n": 3,
-          "label": "Competitive edge",
-          "answer": "Seagate's edge comes from being one of only two scaled HDD makers left (alongside Western Digital), decades of manufacturing know-how in areal density technology (like HAMR), and deep, hard-to-switch qualification relationships with hyperscale buyers who need drives at massive volume and reliability."
-        },
-        {
-          "n": 4,
-          "label": "Leadership",
-          "answer": "Dave Mosley is CEO, based on general knowledge \u2014 this may be out of date if there's been a very recent leadership change."
-        },
-        {
-          "n": 5,
-          "label": "Insider ownership",
-          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
-        },
-        {
-          "n": 6,
-          "label": "Growth potential",
-          "answer": "Growth is tied to the ongoing explosion in data creation and storage \u2014 especially AI training/inference datasets and cloud archival needs \u2014 which favors cheap, high-capacity nearline HDDs even as flash grows in other segments; the 5-quarter growth streak and 11-quarter gross margin expansion suggest this demand and pricing discipline are currently working in its favor."
-        },
-        {
-          "n": 7,
-          "label": "Risks",
-          "answer": "Key risks include the cyclicality of hardware demand, heavy customer concentration in a handful of hyperscalers, long-term substitution risk from falling SSD/flash prices, and the capital intensity and execution risk of next-generation technology transitions like HAMR."
-        },
-        {
-          "n": 8,
-          "label": "What you're paying",
-          "answer": "The business currently trades at a trailing P/E of 55.4; EV/EBITDA is not available due to missing or negative EBITDA data."
-        },
-        {
-          "n": 9,
-          "label": "Market cap today",
-          "answer": "$176.5B, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
-        },
-        {
-          "n": 10,
-          "label": "The 5-10 year case",
-          "answer": "A materially larger market cap in five to ten years would require the current streak of revenue growth and margin expansion to continue for years, HAMR technology to scale successfully and defend cost leadership, and cloud/AI data growth to keep favoring HDDs over flash for bulk storage \u2014 none of which is guaranteed given the cyclical and competitive nature of the industry."
-        },
-        {
-          "n": 11,
-          "label": "Risk / reward",
-          "answer": "Without a defined growth rate or forward multiple to anchor this, the honest framing is binary: if the current margin-expansion and demand streak persists, the business could be worth meaningfully more as earnings compound; if the cycle turns, competition intensifies, or flash substitution accelerates, both earnings and the multiple paid for them (currently high at 55.4x trailing) could compress simultaneously, amplifying losses."
         }
       ]
     }
