@@ -1,0 +1,18 @@
+{
+  "entries": [
+    {
+      "date": "2026-10-29",
+      "period_end": "2026-09-30",
+      "compared_to": "2026-06-30",
+      "consensus_line": "not available this quarter",
+      "key_metric": "",
+      "good": "Revenue growth: +2.5%; Net income: +2.4%; Debt: -11.9%",
+      "bad": "Free cash flow: -5.1%; Cash on hand: -3.1%",
+      "ugly": "nothing stood out",
+      "guidance_note": "Not available \u2014 SEC filings and Nasdaq's calendar don't carry forward-looking statements; would need an earnings-call transcript or press-release source to add this.",
+      "position_note": "",
+      "verdict": "Improving",
+      "verdict_reason": "revenue growth streak at 10"
+    }
+  ]
+}
