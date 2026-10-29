@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 5252354000000.0,
-        "pe_ttm": 27.2,
+        "market_cap": 5190658000000.0,
+        "pe_ttm": 26.9,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -487,8 +487,8 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 5065639878000.0,
-        "pe_ttm": 39.3,
+        "market_cap": 5017916909400.0,
+        "pe_ttm": 38.9,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -614,60 +614,44 @@
     {
       "ticker": "MSFT",
       "insufficient_data": false,
-      "period_end": "2026-06-30",
-      "compared_to": "2026-03-31",
-      "gap_days": 91,
+      "period_end": "2026-09-30",
+      "compared_to": "2026-06-30",
+      "gap_days": 92,
       "is_quarterly_comparison": true,
       "good": [
         {
           "metric": "Revenue growth",
-          "change_pct": 8.6
+          "change_pct": 2.5
         },
         {
           "metric": "Net income",
-          "change_pct": 12.5
+          "change_pct": 2.4
         },
         {
-          "metric": "Free cash flow",
-          "change_pct": 24.3
+          "metric": "Debt",
+          "change_pct": -11.9
+        },
+        {
+          "metric": "Gross margin",
+          "change_pts": 0.6,
+          "from_pct": 67.2,
+          "to_pct": 67.79
         }
       ],
       "bad": [
         {
-          "metric": "Debt",
-          "change_pct": 0.1
+          "metric": "Free cash flow",
+          "change_pct": -5.1
         },
-        {
-          "metric": "Gross margin",
-          "change_pts": -0.4,
-          "from_pct": 67.63,
-          "to_pct": 67.2
-        }
-      ],
-      "ugly": [
         {
           "metric": "Cash on hand",
-          "change_pct": -34.8
+          "change_pct": -3.1
         }
       ],
-      "red_flags": [
-        {
-          "flag": "Operating expenses outgrowing revenue",
-          "severity": "medium",
-          "detail": "For two straight quarters, operating costs have grown faster than revenue (most recent: opex +12.6% vs. revenue +8.6%). If this continues, profitability erodes even while the top line still grows."
-        },
-        {
-          "flag": "Cash reserves dropped sharply",
-          "severity": "high",
-          "detail": "Cash and equivalents fell 34.8% in one quarter. Debt rose 0.1% in the same period \u2014 spending down cash while also borrowing more is worth a closer look."
-        }
-      ],
+      "ugly": [],
+      "red_flags": [],
       "trend": {
         "revenue_points": [
-          {
-            "period_end": "2023-09-30",
-            "revenue": 56517000000
-          },
           {
             "period_end": "2023-12-31",
             "revenue": 62020000000
@@ -711,11 +695,21 @@
           {
             "period_end": "2026-06-30",
             "revenue": 90007000000
+          },
+          {
+            "period_end": "2026-09-30",
+            "revenue": 92279000000
           }
         ],
-        "revenue_growth_streak": 9,
-        "margin_expansion_streak": 0,
+        "revenue_growth_streak": 10,
+        "margin_expansion_streak": 1,
         "quarters_table": [
+          {
+            "period_end": "2026-09-30",
+            "revenue": 92279000000,
+            "gross_margin_pct": 67.79,
+            "eps_diluted": 4.92
+          },
           {
             "period_end": "2026-06-30",
             "revenue": 90007000000,
@@ -781,19 +775,13 @@
             "revenue": 62020000000,
             "gross_margin_pct": 68.36,
             "eps_diluted": 2.93
-          },
-          {
-            "period_end": "2023-09-30",
-            "revenue": 56517000000,
-            "gross_margin_pct": 71.16,
-            "eps_diluted": 2.99
           }
         ]
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3945883308606.0,
-        "pe_ttm": 29.5,
+        "market_cap": 3943506852056.0,
+        "pe_ttm": 27.6,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -857,62 +845,20 @@
         "date": "2026-10-28",
         "days_until": 0
       },
-      "story": "Microsoft posted solid growth this quarter, with revenue up 8.6%, net income up 12.5%, and free cash flow jumping 24.3% \u2014 continuing a revenue growth streak that's now lasted nine straight quarters. But underneath those headline numbers, operating expenses grew even faster than revenue (12.6%) for the second quarter in a row, and gross margin slipped slightly, signs that costs are creeping up relative to sales. The bigger question mark is cash: reserves fell 34.8% while debt ticked up 0.1%, meaning the company drew down cash and added a bit more borrowing in the same period \u2014 a combination worth watching even though profits and cash flow both looked strong on the surface.",
-      "company_story": [
+      "position_history": [
         {
-          "n": 1,
-          "label": "What it does",
-          "answer": "Microsoft sells software, productivity tools, operating systems, and cloud infrastructure \u2014 making money through licensing (Windows, Office), subscriptions (Microsoft 365, Dynamics 365), and consumption-based cloud services (Azure), plus a growing slice from AI tools like Copilot and gaming (Xbox, Activision)."
-        },
-        {
-          "n": 2,
-          "label": "Who its customers are",
-          "answer": "Its customers span the spectrum: individual consumers using Windows and Office, small businesses running Microsoft 365, and large enterprises and governments relying on Azure cloud infrastructure, security tools, and enterprise software agreements."
-        },
-        {
-          "n": 3,
-          "label": "Competitive edge",
-          "answer": "Its moat comes from deep enterprise entrenchment \u2014 decades of businesses building workflows around Windows, Office, and Active Directory \u2014 plus high switching costs, bundled pricing that makes Microsoft cheaper to keep than to leave, and Azure's scale advantages in cloud and AI infrastructure."
-        },
-        {
-          "n": 4,
-          "label": "Leadership",
-          "answer": "Satya Nadella is CEO, a role he's held since 2014; this is from general knowledge and could be outdated if a change has occurred very recently."
-        },
-        {
-          "n": 5,
-          "label": "Insider ownership",
-          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
-        },
-        {
-          "n": 6,
-          "label": "Growth potential",
-          "answer": "Growth is being driven by Azure cloud expansion, AI monetization through Copilot and OpenAI-related products, and continued enterprise software upsell; the 9-quarter revenue growth streak suggests this momentum is currently intact, though the pace of expansion into new AI revenue is the key swing factor."
-        },
-        {
-          "n": 7,
-          "label": "Risks",
-          "answer": "Key risks include operating costs growing faster than revenue for two straight quarters (opex +12.6% vs. revenue +8.6%), a sharp 34.8% drop in cash reserves alongside slightly rising debt, and zero quarters of gross margin expansion \u2014 together suggesting the company is spending heavily (likely on AI/cloud infrastructure) with pressure building on profitability if that spending doesn't translate to revenue fast enough."
-        },
-        {
-          "n": 8,
-          "label": "What you're paying",
-          "answer": "The stock trades at a trailing P/E of 27.6; EV/EBITDA is not available due to missing or negative EBITDA data."
-        },
-        {
-          "n": 9,
-          "label": "Market cap today",
-          "answer": "$3.69T, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
-        },
-        {
-          "n": 10,
-          "label": "The 5-10 year case",
-          "answer": "At $3.69T today, a meaningfully higher market cap in five to ten years would require Azure and AI products to keep growing revenue at a healthy clip while operating expense growth comes back under revenue growth \u2014 if opex keeps outpacing revenue and margins erode instead, the current premium multiple would be harder to sustain even with top-line growth."
-        },
-        {
-          "n": 11,
-          "label": "Risk / reward",
-          "answer": "If the growth and AI monetization story plays out while cost growth normalizes, the business could compound earnings and re-rate higher; if cost growth keeps outpacing revenue and cash burn continues without clear payoff, the multiple could compress, meaning the loss risk is less about the business failing and more about paying a high price for growth that slows or margins that shrink."
+          "date": "2026-10-29",
+          "period_end": "2026-09-30",
+          "compared_to": "2026-06-30",
+          "consensus_line": "not available this quarter",
+          "key_metric": "",
+          "good": "Revenue growth: +2.5%; Net income: +2.4%; Debt: -11.9%",
+          "bad": "Free cash flow: -5.1%; Cash on hand: -3.1%",
+          "ugly": "nothing stood out",
+          "guidance_note": "Not available \u2014 SEC filings and Nasdaq's calendar don't carry forward-looking statements; would need an earnings-call transcript or press-release source to add this.",
+          "position_note": "",
+          "verdict": "Improving",
+          "verdict_reason": "revenue growth streak at 10"
         }
       ]
     },
@@ -1011,8 +957,8 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 2017874445883.0,
-        "pe_ttm": 1120.4,
+        "market_cap": 1972377882458.0,
+        "pe_ttm": 1095.2,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1187,9 +1133,9 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 1050820622377.0,
-        "pe_ttm": 12.4,
-        "ev_ebitda_ttm": 9.3
+        "market_cap": 1112449244735.0,
+        "pe_ttm": 13.1,
+        "ev_ebitda_ttm": 9.9
       },
       "annual_returns": [
         {
@@ -1447,8 +1393,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 189629372581.0,
-        "pe_ttm": 16.6,
+        "market_cap": 204151967843.0,
+        "pe_ttm": 17.9,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1698,8 +1644,8 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 142572246697.0,
-        "pe_ttm": 14.2,
+        "market_cap": 148389230297.0,
+        "pe_ttm": 14.8,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1924,8 +1870,8 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 152749684285.0,
-        "pe_ttm": 48.0,
+        "market_cap": 159638687041.0,
+        "pe_ttm": 50.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
