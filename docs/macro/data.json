@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-29T01:47:22+00:00",
+    "updated": "2026-10-29T17:25:02+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 26477.81,
+        "value": 26549.85,
         "unit": "",
         "note": "last close",
-        "changePct": 1.18,
+        "changePct": 0.27,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-10-27",
+        "asOf": "2026-10-28",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 17.52,
+        "value": 16.91,
         "unit": "",
         "note": "last close",
-        "changePct": -4.73,
+        "changePct": -3.48,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-27",
+        "asOf": "2026-10-28",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -518,30 +518,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "Red Hat and Nvidia expand their partnership to secure autonomous AI agents",
-      "url": "https://siliconangle.com/2026/10/21/red-hat-and-nvidia-expand-their-partnership-to-secure-autonomous-ai-agents/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-10-21T15:25:52Z",
-      "detectedAt": "2026-10-22T15:52:19+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "headline": "Open Channels FM: Munich Bets on Open Source as Meta Apple and NVIDIA Drive Local AI and Hardware Choices",
-      "url": "https://openchannels.fm/munich-bets-on-open-source-as-meta-apple-and-nvidia-drive-local-ai-and-hardware-choices/",
-      "source": "Openchannels.fm",
-      "publishedAt": "2026-10-21T15:00:00Z",
-      "detectedAt": "2026-10-22T15:52:19+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "What Will $5,000 Invested in Microsoft Stock Be Worth in 5 Years?",
-      "url": "https://biztoc.com/x/928f69858854610c",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-21T15:05:53Z",
-      "detectedAt": "2026-10-22T15:52:19+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "ServiceNow Announces New AI Agent Services With Nvidia",
