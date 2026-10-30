@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-29T17:25:02+00:00",
+    "updated": "2026-10-30T01:56:55+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 4.12,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-27",
+        "asOf": "2026-10-28",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 4.99,
+        "value": 5.05,
         "unit": "%",
         "note": "last close",
-        "changePct": -0.2,
+        "changePct": 1.2,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-27",
+        "asOf": "2026-10-28",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.38,
+        "value": 0.37,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-10-28",
+        "asOf": "2026-10-29",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -520,30 +520,6 @@
   "pending_deals": [
     {
       "ticker": "NVDA",
-      "headline": "ServiceNow Announces New AI Agent Services With Nvidia",
-      "url": "https://biztoc.com/x/6ff9322218147d86",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-21T20:19:54Z",
-      "detectedAt": "2026-10-22T20:33:04+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Xbox Could Be Worth Up to $150 Billion to Private Equity Buyers, but Microsoft Insists the Division Isn\u2019t for Sale",
-      "url": "https://wccftech.com/xbox-150-billion-private-equity-buyers-microsoft-not-for-sale/",
-      "source": "Wccftech",
-      "publishedAt": "2026-10-21T20:30:00Z",
-      "detectedAt": "2026-10-22T20:33:04+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "headline": "Tesla Beats Estimates as Musk Floats SpaceX Merger",
-      "url": "https://biztoc.com/x/3cb53b6b56ee6d76",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-21T22:08:35Z",
-      "detectedAt": "2026-10-23T00:39:04+00:00"
-    },
-    {
-      "ticker": "NVDA",
       "headline": "Sure, let\u2019s smoosh SpaceX and Tesla together, who cares",
       "url": "https://biztoc.com/x/66248c22d385b37f",
       "source": "Biztoc.com",
@@ -701,6 +677,38 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-10-27T20:02:45Z",
       "detectedAt": "2026-10-28T21:39:22+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "DOJ Probes Nvidia\u2019s Hugging Face Deal Over AI Competition Concerns",
+      "url": "https://www.pymnts.com/legal/2026/doj-probes-nvidias-hugging-face-deal-over-ai-competition-concerns/",
+      "source": "pymnts.com",
+      "publishedAt": "2026-10-29T01:44:07Z",
+      "detectedAt": "2026-10-30T01:56:56+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft is offering buyouts to 60,000 employees. Here's what's included. #layoffs #tech #jobs",
+      "url": "https://biztoc.com/x/36ca8e5625d3f22f",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-29T01:14:07Z",
+      "detectedAt": "2026-10-30T01:56:56+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft posts $36.6bn profit after offering buyouts to one in four workers",
+      "url": "https://biztoc.com/x/a7ee4fe51dcff976",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-29T00:52:31Z",
+      "detectedAt": "2026-10-30T01:56:56+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft expects 'very few people' to accept buyout, CFO says in internal memo",
+      "url": "https://biztoc.com/x/0e556c78d8566f84",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-10-29T00:37:54Z",
+      "detectedAt": "2026-10-30T01:56:56+00:00"
     }
   ]
 }
