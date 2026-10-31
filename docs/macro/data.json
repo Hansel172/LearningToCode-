@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-10-30T21:28:52+00:00",
+    "updated": "2026-10-31T01:35:01+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -709,6 +709,14 @@
       "source": "Crypto Briefing",
       "publishedAt": "2026-10-29T20:34:23Z",
       "detectedAt": "2026-10-30T21:28:52+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Nvidia is set to work even closer with Meta's slightly creepy Muse AI models \u2014 and it's even investing $3bn in Meta to show its support",
+      "url": "https://www.techradar.com/pro/nvidia-is-set-to-work-even-closer-with-metas-slightly-creepy-muse-ai-models-and-its-even-investing-usd3bn-in-meta-to-show-its-support",
+      "source": "TechRadar",
+      "publishedAt": "2026-10-30T00:25:00Z",
+      "detectedAt": "2026-10-31T01:35:01+00:00"
     }
   ]
 }
