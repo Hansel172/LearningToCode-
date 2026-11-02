@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-10-31T01:35:01+00:00",
+    "updated": "2026-11-02T20:45:03+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7720.39,
+        "value": 7580.07,
         "unit": "",
         "note": "last close",
-        "changePct": -0.3,
+        "changePct": -1.82,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-29",
+        "asOf": "2026-10-30",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -28,13 +28,13 @@
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 17.2,
+        "value": 19.42,
         "unit": "",
         "note": "last close",
-        "changePct": 1.71,
+        "changePct": 12.91,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-10-29",
+        "asOf": "2026-10-30",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -717,6 +717,14 @@
       "source": "TechRadar",
       "publishedAt": "2026-10-30T00:25:00Z",
       "detectedAt": "2026-10-31T01:35:01+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Nvidia's Korea robotics push gains ground as LG starts data factory operations",
+      "url": "https://www.digitimes.com/news/a20261030VL228/nvidia-robotics-data-lg-hyundai.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-11-01T18:15:00Z",
+      "detectedAt": "2026-11-02T20:45:04+00:00"
     }
   ]
 }
