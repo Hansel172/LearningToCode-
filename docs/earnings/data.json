@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 4931824000000.0,
-        "pe_ttm": 25.6,
+        "market_cap": 4869646000000.0,
+        "pe_ttm": 25.2,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -237,6 +237,10 @@
           "note": "year to date"
         }
       ],
+      "next_earnings": {
+        "date": "2026-11-17",
+        "days_until": 14
+      },
       "story": "Nvidia grew revenue by 17.9% this quarter, extending its streak to 11 straight quarters of growth, while net income and EPS each edged up modestly (around 2-3%). Cash on hand jumped nearly 70%, giving the company a much larger cushion, though this coincided with debt nearly quadrupling (up 293.9%) \u2014 a sharp shift worth watching to understand what the borrowed money is funding. Gross margin held essentially flat at 75%, showing that profitability per dollar of sales stayed steady even as the top line surged.",
       "company_story": [
         {
@@ -487,8 +491,8 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 5029592253400.0,
-        "pe_ttm": 39.0,
+        "market_cap": 4937502977600.0,
+        "pe_ttm": 38.3,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -548,10 +552,6 @@
           "note": "year to date"
         }
       ],
-      "next_earnings": {
-        "date": "2026-11-02",
-        "days_until": 2
-      },
       "story": "Apple's profits and earnings per share ticked up slightly even as revenue slipped 1.6%, thanks to improved efficiency: gross margin rose to 50.1%, extending a four-quarter streak of margin gains, and debt edged lower. Cash on hand dropped a notable 13.2%, though nothing in the numbers here explains why. The bigger caution sign is that operating expenses grew 0.9% while revenue shrank\u2014the second straight quarter costs have outpaced sales\u2014meaning the company is spending more to earn less, a pattern that could squeeze profits down the road if it continues.",
       "company_story": [
         {
@@ -780,8 +780,8 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3875805198634.0,
-        "pe_ttm": 27.2,
+        "market_cap": 3765971781210.0,
+        "pe_ttm": 26.4,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -953,14 +953,14 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 1829640902876.0,
-        "pe_ttm": 1015.9,
+        "market_cap": 1852049657996.0,
+        "pe_ttm": 1028.3,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
         {
           "year": 2026,
-          "return_pct": -16.3,
+          "return_pct": -15.3,
           "note": "year to date"
         }
       ]
@@ -1129,14 +1129,14 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 1001015372585.0,
-        "pe_ttm": 11.8,
-        "ev_ebitda_ttm": 8.9
+        "market_cap": 943143075291.0,
+        "pe_ttm": 11.1,
+        "ev_ebitda_ttm": 8.3
       },
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 27.7,
+          "return_pct": 31.4,
           "note": "partial year"
         },
         {
@@ -1186,7 +1186,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 210.0,
+          "return_pct": 192.1,
           "note": "year to date"
         }
       ],
@@ -1399,8 +1399,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 167256175937.0,
-        "pe_ttm": 8.6,
+        "market_cap": 156238884365.0,
+        "pe_ttm": 8.0,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1411,7 +1411,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 384.8,
+          "return_pct": 352.9,
           "note": "year to date"
         }
       ]
@@ -1588,14 +1588,14 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 137043492014.0,
-        "pe_ttm": 13.7,
+        "market_cap": 126742115651.0,
+        "pe_ttm": 12.6,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 16.3,
+          "return_pct": 23.1,
           "note": "partial year"
         },
         {
@@ -1645,7 +1645,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 112.5,
+          "return_pct": 96.5,
           "note": "year to date"
         }
       ]
@@ -1815,14 +1815,14 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 147427403604.0,
-        "pe_ttm": 33.5,
+        "market_cap": 136304204080.0,
+        "pe_ttm": 31.0,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 11.3,
+          "return_pct": 16.9,
           "note": "partial year"
         },
         {
@@ -1872,7 +1872,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 134.1,
+          "return_pct": 115.6,
           "note": "year to date"
         }
       ]
