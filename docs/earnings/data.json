@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 4869646000000.0,
-        "pe_ttm": 25.2,
+        "market_cap": 4981229000000.0,
+        "pe_ttm": 25.8,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -239,7 +239,7 @@
       ],
       "next_earnings": {
         "date": "2026-11-17",
-        "days_until": 14
+        "days_until": 13
       },
       "story": "Nvidia grew revenue by 17.9% this quarter, extending its streak to 11 straight quarters of growth, while net income and EPS each edged up modestly (around 2-3%). Cash on hand jumped nearly 70%, giving the company a much larger cushion, though this coincided with debt nearly quadrupling (up 293.9%) \u2014 a sharp shift worth watching to understand what the borrowed money is funding. Gross margin held essentially flat at 75%, showing that profitability per dollar of sales stayed steady even as the top line surged.",
       "company_story": [
@@ -319,54 +319,47 @@
     {
       "ticker": "AAPL",
       "insufficient_data": false,
-      "period_end": "2026-06-27",
-      "compared_to": "2026-03-28",
+      "period_end": "2026-09-26",
+      "compared_to": "2026-06-27",
       "gap_days": 91,
       "is_quarterly_comparison": true,
       "good": [
         {
-          "metric": "Net income",
-          "change_pct": 0.7
+          "metric": "Revenue growth",
+          "change_pct": 4.6
         },
         {
-          "metric": "EPS (diluted)",
-          "change_pct": 0.5
+          "metric": "Net income",
+          "change_pct": 3.1
         },
         {
           "metric": "Debt",
-          "change_pct": -0.5
-        },
-        {
-          "metric": "Gross margin",
-          "change_pts": 0.8,
-          "from_pct": 49.27,
-          "to_pct": 50.06
+          "change_pct": -5.1
         }
       ],
       "bad": [
         {
-          "metric": "Revenue growth",
-          "change_pct": -1.6
-        },
-        {
           "metric": "Cash on hand",
-          "change_pct": -13.2
+          "change_pct": -8.2
         }
       ],
-      "ugly": [],
+      "ugly": [
+        {
+          "metric": "Gross margin",
+          "change_pts": -2.2,
+          "from_pct": 50.06,
+          "to_pct": 47.89
+        }
+      ],
       "red_flags": [
         {
-          "flag": "Operating expenses outgrowing revenue",
+          "flag": "Gross margin compression",
           "severity": "medium",
-          "detail": "For two straight quarters, operating costs have grown faster than revenue (most recent: opex +0.9% vs. revenue -1.6%). If this continues, profitability erodes even while the top line still grows."
+          "detail": "Gross margin fell from 50.1% to 47.9% (2.2 points). The company is keeping less of every dollar of revenue than it did last quarter \u2014 from higher input costs, pricing pressure, or a shift toward lower-margin products."
         }
       ],
       "trend": {
         "revenue_points": [
-          {
-            "period_end": "2023-09-30",
-            "revenue": 89498000000
-          },
           {
             "period_end": "2023-12-30",
             "revenue": 119575000000
@@ -410,11 +403,21 @@
           {
             "period_end": "2026-06-27",
             "revenue": 109417000000
+          },
+          {
+            "period_end": "2026-09-26",
+            "revenue": 114477000000
           }
         ],
-        "revenue_growth_streak": 0,
-        "margin_expansion_streak": 4,
+        "revenue_growth_streak": 1,
+        "margin_expansion_streak": 0,
         "quarters_table": [
+          {
+            "period_end": "2026-09-26",
+            "revenue": 114477000000,
+            "gross_margin_pct": 47.89,
+            "eps_diluted": null
+          },
           {
             "period_end": "2026-06-27",
             "revenue": 109417000000,
@@ -480,19 +483,13 @@
             "revenue": 119575000000,
             "gross_margin_pct": 45.87,
             "eps_diluted": 2.18
-          },
-          {
-            "period_end": "2023-09-30",
-            "revenue": 89498000000,
-            "gross_margin_pct": 45.17,
-            "eps_diluted": null
           }
         ]
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 4937502977600.0,
-        "pe_ttm": 38.3,
+        "market_cap": 4843808342000.0,
+        "pe_ttm": 36.6,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -552,62 +549,20 @@
           "note": "year to date"
         }
       ],
-      "story": "Apple's profits and earnings per share ticked up slightly even as revenue slipped 1.6%, thanks to improved efficiency: gross margin rose to 50.1%, extending a four-quarter streak of margin gains, and debt edged lower. Cash on hand dropped a notable 13.2%, though nothing in the numbers here explains why. The bigger caution sign is that operating expenses grew 0.9% while revenue shrank\u2014the second straight quarter costs have outpaced sales\u2014meaning the company is spending more to earn less, a pattern that could squeeze profits down the road if it continues.",
-      "company_story": [
+      "position_history": [
         {
-          "n": 1,
-          "label": "What it does",
-          "answer": "Apple designs and sells premium hardware \u2014 iPhone, Mac, iPad, Watch \u2014 and layers a growing services business (App Store, iCloud, Apple Music, AppleCare, advertising, payments) on top, monetizing a large installed base of devices over time."
-        },
-        {
-          "n": 2,
-          "label": "Who its customers are",
-          "answer": "Its customers are consumers and businesses globally who want tightly integrated, premium hardware and software, skewing toward higher-income buyers in the U.S., Europe, and China, plus a large recurring base of existing iPhone/Mac/iPad owners who buy services and upgrades."
-        },
-        {
-          "n": 3,
-          "label": "Competitive edge",
-          "answer": "The moat comes from ecosystem lock-in (iMessage, iCloud, Apple Watch pairing, AirDrop), a tightly controlled hardware-software-services integration that's hard to replicate, brand loyalty, and high switching costs once someone owns multiple Apple devices tied together."
-        },
-        {
-          "n": 4,
-          "label": "Leadership",
-          "answer": "Tim Cook is CEO, a role he's held since 2011 after succeeding Steve Jobs; this is based on general knowledge and could be outdated if there's been a very recent leadership change."
-        },
-        {
-          "n": 5,
-          "label": "Insider ownership",
-          "answer": "Requires manual research \u2014 there's no free, keyless, reliable source for insider ownership percentage. Check the company's most recent DEF 14A proxy statement on SEC EDGAR (the \"Security Ownership of Certain Beneficial Owners and Management\" table) for the real number."
-        },
-        {
-          "n": 6,
-          "label": "Growth potential",
-          "answer": "Growth is currently stalled at the top line (0 straight quarters of revenue growth) even as gross margins have expanded for 4 straight quarters, so future growth potential rests on services expansion, new product categories (like wearables or future AI-driven features), and eventual hardware upgrade cycles rather than current momentum."
-        },
-        {
-          "n": 7,
-          "label": "Risks",
-          "answer": "Key risks include revenue growth having stopped, operating expenses growing faster than revenue for two straight quarters, heavy reliance on iPhone sales, regulatory pressure on App Store fees globally, and geopolitical/supply chain exposure concentrated in China."
-        },
-        {
-          "n": 8,
-          "label": "What you're paying",
-          "answer": "The stock trades at a trailing P/E of 37.5; EV/EBITDA is not available due to missing or negative EBITDA data, so that comparison can't be made."
-        },
-        {
-          "n": 9,
-          "label": "Market cap today",
-          "answer": "$4.84T, from Nasdaq's public quote data \u2014 the market's price on the whole business, not a per-share number."
-        },
-        {
-          "n": 10,
-          "label": "The 5-10 year case",
-          "answer": "For the market cap to grow meaningfully from $4.84T, revenue growth would need to resume and the current opex-outgrowing-revenue trend would need to reverse, likely requiring a new services or product growth driver (such as AI-integrated features or new device categories) to reaccelerate the top line while sustaining margins."
-        },
-        {
-          "n": 11,
-          "label": "Risk / reward",
-          "answer": "Without a share price or explicit future multiple/growth assumption to model, no numeric return can be responsibly estimated here; qualitatively, the risk/reward hinges on whether growth resumes and margins hold \u2014 if operating costs keep outpacing flat-to-declining revenue, profitability could erode even as the business remains large and profitable in absolute terms."
+          "date": "2026-11-04",
+          "period_end": "2026-09-26",
+          "compared_to": "2026-06-27",
+          "consensus_line": "not available this quarter",
+          "key_metric": "",
+          "good": "Revenue growth: +4.6%; Net income: +3.1%; Debt: -5.1%",
+          "bad": "Cash on hand: -8.2%",
+          "ugly": "Gross margin: -2.2 points (50.1% -> 47.9%)",
+          "guidance_note": "Not available \u2014 SEC filings and Nasdaq's calendar don't carry forward-looking statements; would need an earnings-call transcript or press-release source to add this.",
+          "position_note": "",
+          "verdict": "Holding steady",
+          "verdict_reason": "1 medium flag(s), nothing worse"
         }
       ]
     },
@@ -780,8 +735,8 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3765971781210.0,
-        "pe_ttm": 26.4,
+        "market_cap": 3868973099646.0,
+        "pe_ttm": 27.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -953,8 +908,8 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 1852049657996.0,
-        "pe_ttm": 1028.3,
+        "market_cap": 1919140112719.0,
+        "pe_ttm": 1065.6,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1129,9 +1084,9 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 943143075291.0,
-        "pe_ttm": 11.1,
-        "ev_ebitda_ttm": 8.3
+        "market_cap": 967479988581.0,
+        "pe_ttm": 11.4,
+        "ev_ebitda_ttm": 8.6
       },
       "annual_returns": [
         {
@@ -1399,8 +1354,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 156238884365.0,
-        "pe_ttm": 8.0,
+        "market_cap": 160291815460.0,
+        "pe_ttm": 8.3,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1588,8 +1543,8 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 126742115651.0,
-        "pe_ttm": 12.6,
+        "market_cap": 130021187487.0,
+        "pe_ttm": 13.0,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1815,8 +1770,8 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 136304204080.0,
-        "pe_ttm": 31.0,
+        "market_cap": 139201265275.0,
+        "pe_ttm": 31.7,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
