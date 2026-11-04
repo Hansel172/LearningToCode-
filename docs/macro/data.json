@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-11-03T18:24:57+00:00",
+    "updated": "2026-11-04T02:18:35+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7580.07,
+        "value": 7541.4,
         "unit": "",
         "note": "last close",
-        "changePct": -1.82,
+        "changePct": -0.51,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-10-30",
+        "asOf": "2026-11-02",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 3.89,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-10-30",
+        "asOf": "2026-11-02",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 4.94,
+        "value": 4.91,
         "unit": "%",
         "note": "last close",
-        "changePct": -0.8,
+        "changePct": -0.61,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-10-30",
+        "asOf": "2026-11-02",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.32,
+        "value": 0.34,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-11-02",
+        "asOf": "2026-11-03",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -520,86 +520,6 @@
   "pending_deals": [
     {
       "ticker": "MSFT",
-      "headline": "Microsoft Offers Buyouts To 60,000, A Quarter Of Its Workforce",
-      "url": "http://deadline.com/2026/10/microsoft-offers-buyouts-to-a-quarter-of-workforce-1237197224/",
-      "source": "Deadline",
-      "publishedAt": "2026-10-26T21:15:32Z",
-      "detectedAt": "2026-10-27T21:16:45+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft offers voluntary buyouts to a quarter of its workforce",
-      "url": "https://www.kuow.org/technology/2026-10-26/microsoft-offers-voluntary-buyouts-to-a-quarter-of-its-workforce",
-      "source": "KUOW News and Information",
-      "publishedAt": "2026-10-26T21:05:15Z",
-      "detectedAt": "2026-10-27T21:16:45+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft\u2019s Massive Employee Buyout Shows How AI Is Reshaping the Economy",
-      "url": "https://www.cnet.com/tech/services-and-software/microsofts-employee-buyout-ai-reshaping-economy/",
-      "source": "CNET",
-      "publishedAt": "2026-10-26T20:29:55Z",
-      "detectedAt": "2026-10-27T21:16:45+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft offers around 60,000 employees voluntary buyouts",
-      "url": "https://biztoc.com/x/422eebf026517cb9",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-26T20:24:48Z",
-      "detectedAt": "2026-10-27T21:16:45+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft offers voluntary buyouts to 60,000 employees as tech giant reshapes its workforce",
-      "url": "https://biztoc.com/x/77f8835c13da276d",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-26T20:09:31Z",
-      "detectedAt": "2026-10-27T21:16:45+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Daily Digest: Instacart explores sale to Uber or DoorDash, S.F. property linked to Gov. Newsom sells over asking",
-      "url": "https://biztoc.com/x/5062b34f93d66cd6",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-26T20:09:23Z",
-      "detectedAt": "2026-10-27T21:16:45+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft buyout offer to employees: Who is eligible and what more 60,000 techies have been offered",
-      "url": "https://www.livemint.com/companies/people/microsoft-buyout-offer-to-employees-who-is-eligible-and-what-more-60-000-techies-have-been-offered-11793062882761.html",
-      "source": "Livemint",
-      "publishedAt": "2026-10-27T01:17:19Z",
-      "detectedAt": "2026-10-28T01:18:58+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft offers buyouts to 60,000 employees as AI spending mounts",
-      "url": "https://biztoc.com/x/aaaf8199ea3e654c",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-27T00:46:37Z",
-      "detectedAt": "2026-10-28T01:18:58+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Xbox staff among up to 60,000 Microsoft employees offered voluntary exit - GamesIndustry.biz",
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=186467832",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-10-27T00:12:27Z",
-      "detectedAt": "2026-10-28T01:18:58+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft offers voluntary buyouts to 60,000 employees as tech giant reshapes its workforce - Fox Business",
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=186467598",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-10-26T23:53:31Z",
-      "detectedAt": "2026-10-28T01:18:58+00:00"
-    },
-    {
-      "ticker": "MSFT",
       "headline": "Microsoft Offers Voluntary Buyouts to More Than 25% of Workforce",
       "url": "https://www.today.com/video/microsoft-offers-voluntary-buyouts-to-more-than-60k-employees-272339525525",
       "source": "TODAY",
@@ -693,6 +613,14 @@
       "source": "Digitimes",
       "publishedAt": "2026-11-01T18:15:00Z",
       "detectedAt": "2026-11-02T20:45:04+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Nvidia strengthens South Korea ties at AI Day Seoul",
+      "url": "https://www.digitimes.com/news/a20261103PD203/nvidia-development-robotics-samsung-cloud.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-11-03T02:10:08Z",
+      "detectedAt": "2026-11-04T02:18:35+00:00"
     }
   ]
 }
