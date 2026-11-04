@@ -1,0 +1,18 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-04",
+      "period_end": "2026-09-26",
+      "compared_to": "2026-06-27",
+      "consensus_line": "not available this quarter",
+      "key_metric": "",
+      "good": "Revenue growth: +4.6%; Net income: +3.1%; Debt: -5.1%",
+      "bad": "Cash on hand: -8.2%",
+      "ugly": "Gross margin: -2.2 points (50.1% -> 47.9%)",
+      "guidance_note": "Not available \u2014 SEC filings and Nasdaq's calendar don't carry forward-looking statements; would need an earnings-call transcript or press-release source to add this.",
+      "position_note": "",
+      "verdict": "Holding steady",
+      "verdict_reason": "1 medium flag(s), nothing worse"
+    }
+  ]
+}
