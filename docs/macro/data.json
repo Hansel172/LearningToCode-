@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-11-05T18:43:54+00:00",
+    "updated": "2026-11-06T02:24:16+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7568.92,
+        "value": 7688.62,
         "unit": "",
         "note": "last close",
-        "changePct": 0.36,
+        "changePct": 1.58,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-11-03",
+        "asOf": "2026-11-04",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 3.89,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-11-03",
+        "asOf": "2026-11-04",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 4.95,
+        "value": 4.9,
         "unit": "%",
         "note": "last close",
-        "changePct": 0.81,
+        "changePct": -1.01,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-11-03",
+        "asOf": "2026-11-04",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.32,
+        "value": 0.38,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-11-04",
+        "asOf": "2026-11-05",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -518,38 +518,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "DOJ Probes Nvidia\u2019s Hugging Face Deal Over AI Competition Concerns",
-      "url": "https://www.pymnts.com/legal/2026/doj-probes-nvidias-hugging-face-deal-over-ai-competition-concerns/",
-      "source": "pymnts.com",
-      "publishedAt": "2026-10-29T01:44:07Z",
-      "detectedAt": "2026-10-30T01:56:56+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft is offering buyouts to 60,000 employees. Here's what's included. #layoffs #tech #jobs",
-      "url": "https://biztoc.com/x/36ca8e5625d3f22f",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-29T01:14:07Z",
-      "detectedAt": "2026-10-30T01:56:56+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft posts $36.6bn profit after offering buyouts to one in four workers",
-      "url": "https://biztoc.com/x/a7ee4fe51dcff976",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-29T00:52:31Z",
-      "detectedAt": "2026-10-30T01:56:56+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft expects 'very few people' to accept buyout, CFO says in internal memo",
-      "url": "https://biztoc.com/x/0e556c78d8566f84",
-      "source": "Biztoc.com",
-      "publishedAt": "2026-10-29T00:37:54Z",
-      "detectedAt": "2026-10-30T01:56:56+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "Nvidia CEO Jensen Huang defends Megaspeed dealings as US probe widens",
