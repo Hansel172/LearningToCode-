@@ -176,8 +176,8 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 4393189000000.0,
-        "pe_ttm": 22.8,
+        "market_cap": 4498024000000.0,
+        "pe_ttm": 23.3,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -239,7 +239,7 @@
       ],
       "next_earnings": {
         "date": "2026-11-17",
-        "days_until": 11
+        "days_until": 10
       },
       "story": "Nvidia grew revenue by 17.9% this quarter, extending its streak to 11 straight quarters of growth, while net income and EPS each edged up modestly (around 2-3%). Cash on hand jumped nearly 70%, giving the company a much larger cushion, though this coincided with debt nearly quadrupling (up 293.9%) \u2014 a sharp shift worth watching to understand what the borrowed money is funding. Gross margin held essentially flat at 75%, showing that profitability per dollar of sales stayed steady even as the top line surged.",
       "company_story": [
@@ -488,8 +488,8 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 5015782617300.0,
-        "pe_ttm": 37.9,
+        "market_cap": 4975383151340.0,
+        "pe_ttm": 37.6,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -735,8 +735,8 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 3993101941583.0,
-        "pe_ttm": 28.0,
+        "market_cap": 3940413091237.0,
+        "pe_ttm": 27.6,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -908,8 +908,8 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 1683778920535.0,
-        "pe_ttm": 934.9,
+        "market_cap": 1823529424207.0,
+        "pe_ttm": 1012.5,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1084,9 +1084,9 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 739837638327.0,
-        "pe_ttm": 8.7,
-        "ev_ebitda_ttm": 6.5
+        "market_cap": 780682016280.0,
+        "pe_ttm": 9.2,
+        "ev_ebitda_ttm": 6.8
       },
       "annual_returns": [
         {
@@ -1354,8 +1354,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 114513058058.0,
-        "pe_ttm": 5.9,
+        "market_cap": 118820157137.0,
+        "pe_ttm": 6.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1543,8 +1543,8 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 99936826358.0,
-        "pe_ttm": 10.0,
+        "market_cap": 98738991897.0,
+        "pe_ttm": 9.9,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1770,8 +1770,8 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 106571449242.0,
-        "pe_ttm": 24.2,
+        "market_cap": 105825375638.0,
+        "pe_ttm": 24.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
