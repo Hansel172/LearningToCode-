@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-11-07T01:54:26+00:00",
+    "updated": "2026-11-09T21:25:46+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 24315.0,
+        "value": 24579.42,
         "unit": "",
         "note": "last close",
-        "changePct": -5.52,
+        "changePct": 1.09,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-11-05",
+        "asOf": "2026-11-06",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 28.18,
+        "value": 25.64,
         "unit": "",
         "note": "last close",
-        "changePct": 69.66,
+        "changePct": -9.01,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-11-05",
+        "asOf": "2026-11-06",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 3.89,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-11-05",
+        "asOf": "2026-11-06",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 4.84,
+        "value": 4.86,
         "unit": "%",
         "note": "last close",
-        "changePct": -1.22,
+        "changePct": 0.41,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-11-05",
+        "asOf": "2026-11-06",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -518,14 +518,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "Nvidia's Korea robotics push gains ground as LG starts data factory operations",
-      "url": "https://www.digitimes.com/news/a20261030VL228/nvidia-robotics-data-lg-hyundai.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-11-01T18:15:00Z",
-      "detectedAt": "2026-11-02T20:45:04+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "Nvidia strengthens South Korea ties at AI Day Seoul",
