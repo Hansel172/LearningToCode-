@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-11-09T21:25:46+00:00",
+    "updated": "2026-11-10T04:05:48+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -98,13 +98,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.35,
+        "value": 0.32,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-11-06",
+        "asOf": "2026-11-09",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -541,6 +541,14 @@
       "source": "Digitimes",
       "publishedAt": "2026-11-04T01:26:38Z",
       "detectedAt": "2026-11-05T02:25:08+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft's Oracle move raises new question for investors",
+      "url": "https://biztoc.com/x/68f6a9cb31bddffc",
+      "source": "Biztoc.com",
+      "publishedAt": "2026-11-09T00:50:02Z",
+      "detectedAt": "2026-11-10T04:05:48+00:00"
     }
   ]
 }
