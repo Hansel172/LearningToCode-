@@ -1,40 +1,40 @@
 {
   "live": {
-    "updated": "2026-11-10T04:05:48+00:00",
+    "updated": "2026-11-10T18:39:45+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7353.73,
+        "value": 7549.94,
         "unit": "",
         "note": "last close",
-        "changePct": -4.36,
+        "changePct": 2.35,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-11-05",
+        "asOf": "2026-11-09",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 24579.42,
+        "value": 25253.14,
         "unit": "",
         "note": "last close",
-        "changePct": 1.09,
+        "changePct": 2.74,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-11-06",
+        "asOf": "2026-11-09",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 25.64,
+        "value": 19.92,
         "unit": "",
         "note": "last close",
-        "changePct": -9.01,
+        "changePct": -22.31,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-11-06",
+        "asOf": "2026-11-09",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -76,16 +76,6 @@
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
-      "CPIAUCSL": {
-        "label": "CPI",
-        "value": 3.72,
-        "unit": "%",
-        "note": "year over year",
-        "changePct": null,
-        "asOf": "2026-09-01",
-        "source": "FRED CPIAUCSL",
-        "sourceUrl": "https://fred.stlouisfed.org/series/CPIAUCSL"
-      },
       "PPIACO": {
         "label": "PPI",
         "value": 12.84,
@@ -109,7 +99,9 @@
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
     },
-    "errors": []
+    "errors": [
+      "CPIAUCSL: no observation exactly 12 months before 2026-10-01 (looked for 2025-10-01) \u2014 a real gap, not guessing a substitute"
+    ]
   },
   "themes": {
     "updated": "2026-10-17",
@@ -549,6 +541,14 @@
       "source": "Biztoc.com",
       "publishedAt": "2026-11-09T00:50:02Z",
       "detectedAt": "2026-11-10T04:05:48+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft AI Chief Mustafa Suleyman: Agents Could Deserve Rights if Evidence Emerges",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/microsoft-ai-chief-mustafa-suleyman-agents-could-deserve-rights-if-evidence-emerges/",
+      "source": "pymnts.com",
+      "publishedAt": "2026-11-09T17:28:13Z",
+      "detectedAt": "2026-11-10T18:39:45+00:00"
     }
   ]
 }
