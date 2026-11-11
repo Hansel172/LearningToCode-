@@ -176,71 +176,11 @@
       },
       "description": "Designs GPUs and AI chips that power most large-scale AI training and data centers.",
       "valuation": {
-        "market_cap": 4305947000000.0,
-        "pe_ttm": 22.3,
+        "market_cap": null,
+        "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
-      "annual_returns": [
-        {
-          "year": 2016,
-          "return_pct": 52.6,
-          "note": "partial year"
-        },
-        {
-          "year": 2017,
-          "return_pct": 81.3,
-          "note": null
-        },
-        {
-          "year": 2018,
-          "return_pct": -31.0,
-          "note": null
-        },
-        {
-          "year": 2019,
-          "return_pct": 76.3,
-          "note": null
-        },
-        {
-          "year": 2020,
-          "return_pct": 121.9,
-          "note": null
-        },
-        {
-          "year": 2021,
-          "return_pct": 125.3,
-          "note": null
-        },
-        {
-          "year": 2022,
-          "return_pct": -50.3,
-          "note": null
-        },
-        {
-          "year": 2023,
-          "return_pct": 238.9,
-          "note": null
-        },
-        {
-          "year": 2024,
-          "return_pct": 171.2,
-          "note": null
-        },
-        {
-          "year": 2025,
-          "return_pct": 38.9,
-          "note": null
-        },
-        {
-          "year": 2026,
-          "return_pct": -4.2,
-          "note": "year to date"
-        }
-      ],
-      "next_earnings": {
-        "date": "2026-11-17",
-        "days_until": 7
-      },
+      "annual_returns": [],
       "story": "Nvidia grew revenue by 17.9% this quarter, extending its streak to 11 straight quarters of growth, while net income and EPS each edged up modestly (around 2-3%). Cash on hand jumped nearly 70%, giving the company a much larger cushion, though this coincided with debt nearly quadrupling (up 293.9%) \u2014 a sharp shift worth watching to understand what the borrowed money is funding. Gross margin held essentially flat at 75%, showing that profitability per dollar of sales stayed steady even as the top line surged.",
       "company_story": [
         {
@@ -488,67 +428,11 @@
       },
       "description": "Makes the iPhone, Mac, and services like the App Store and iCloud.",
       "valuation": {
-        "market_cap": 5096290905580.0,
-        "pe_ttm": 38.6,
+        "market_cap": null,
+        "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
-      "annual_returns": [
-        {
-          "year": 2016,
-          "return_pct": 4.5,
-          "note": "partial year"
-        },
-        {
-          "year": 2017,
-          "return_pct": 46.1,
-          "note": null
-        },
-        {
-          "year": 2018,
-          "return_pct": -6.8,
-          "note": null
-        },
-        {
-          "year": 2019,
-          "return_pct": 86.2,
-          "note": null
-        },
-        {
-          "year": 2020,
-          "return_pct": 80.7,
-          "note": null
-        },
-        {
-          "year": 2021,
-          "return_pct": 33.8,
-          "note": null
-        },
-        {
-          "year": 2022,
-          "return_pct": -26.8,
-          "note": null
-        },
-        {
-          "year": 2023,
-          "return_pct": 48.2,
-          "note": null
-        },
-        {
-          "year": 2024,
-          "return_pct": 30.1,
-          "note": null
-        },
-        {
-          "year": 2025,
-          "return_pct": 8.6,
-          "note": null
-        },
-        {
-          "year": 2026,
-          "return_pct": 29.0,
-          "note": "year to date"
-        }
-      ],
+      "annual_returns": [],
       "position_history": [
         {
           "date": "2026-11-04",
@@ -735,67 +619,11 @@
       },
       "description": "Software and cloud giant \u2014 Windows, Office, and Azure cloud computing.",
       "valuation": {
-        "market_cap": 4048612745859.0,
-        "pe_ttm": 28.4,
+        "market_cap": null,
+        "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
-      "annual_returns": [
-        {
-          "year": 2016,
-          "return_pct": 3.3,
-          "note": "partial year"
-        },
-        {
-          "year": 2017,
-          "return_pct": 37.7,
-          "note": null
-        },
-        {
-          "year": 2018,
-          "return_pct": 18.7,
-          "note": null
-        },
-        {
-          "year": 2019,
-          "return_pct": 55.3,
-          "note": null
-        },
-        {
-          "year": 2020,
-          "return_pct": 41.0,
-          "note": null
-        },
-        {
-          "year": 2021,
-          "return_pct": 51.2,
-          "note": null
-        },
-        {
-          "year": 2022,
-          "return_pct": -28.7,
-          "note": null
-        },
-        {
-          "year": 2023,
-          "return_pct": 56.8,
-          "note": null
-        },
-        {
-          "year": 2024,
-          "return_pct": 12.1,
-          "note": null
-        },
-        {
-          "year": 2025,
-          "return_pct": 14.7,
-          "note": null
-        },
-        {
-          "year": 2026,
-          "return_pct": 12.7,
-          "note": "year to date"
-        }
-      ],
+      "annual_returns": [],
       "position_history": [
         {
           "date": "2026-10-29",
@@ -908,17 +736,11 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 1929461721138.0,
-        "pe_ttm": 1071.3,
+        "market_cap": null,
+        "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
-      "annual_returns": [
-        {
-          "year": 2026,
-          "return_pct": -11.7,
-          "note": "year to date"
-        }
-      ]
+      "annual_returns": []
     },
     {
       "ticker": "MU",
@@ -1084,67 +906,11 @@
       },
       "description": "Makes memory and storage chips (DRAM and NAND) for computers, phones, and data centers.",
       "valuation": {
-        "market_cap": 829502927878.0,
-        "pe_ttm": 9.8,
-        "ev_ebitda_ttm": 7.3
+        "market_cap": null,
+        "pe_ttm": null,
+        "ev_ebitda_ttm": null
       },
-      "annual_returns": [
-        {
-          "year": 2016,
-          "return_pct": 27.4,
-          "note": "partial year"
-        },
-        {
-          "year": 2017,
-          "return_pct": 87.6,
-          "note": null
-        },
-        {
-          "year": 2018,
-          "return_pct": -22.8,
-          "note": null
-        },
-        {
-          "year": 2019,
-          "return_pct": 69.5,
-          "note": null
-        },
-        {
-          "year": 2020,
-          "return_pct": 39.8,
-          "note": null
-        },
-        {
-          "year": 2021,
-          "return_pct": 23.9,
-          "note": null
-        },
-        {
-          "year": 2022,
-          "return_pct": -46.3,
-          "note": null
-        },
-        {
-          "year": 2023,
-          "return_pct": 70.7,
-          "note": null
-        },
-        {
-          "year": 2024,
-          "return_pct": -1.4,
-          "note": null
-        },
-        {
-          "year": 2025,
-          "return_pct": 239.1,
-          "note": null
-        },
-        {
-          "year": 2026,
-          "return_pct": 156.9,
-          "note": "year to date"
-        }
-      ],
+      "annual_returns": [],
       "story": "Micron had a strong quarter: revenue climbed 30.8% and net income rose 33.5%, while profitability also improved as gross margin expanded from 84.6% to 86.8%. The company's financial position got healthier too, with cash on hand up 53.4% and debt cut by 68.4%. This marks the sixth straight quarter of both revenue growth and margin expansion, suggesting the memory and storage chip business has been on a sustained upswing rather than a one-time bounce.",
       "company_story": [
         {
@@ -1354,22 +1120,11 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 126140944966.0,
-        "pe_ttm": 6.5,
+        "market_cap": null,
+        "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
-      "annual_returns": [
-        {
-          "year": 2025,
-          "return_pct": 559.4,
-          "note": "partial year"
-        },
-        {
-          "year": 2026,
-          "return_pct": 273.5,
-          "note": "year to date"
-        }
-      ]
+      "annual_returns": []
     },
     {
       "ticker": "WDC",
@@ -1543,67 +1298,11 @@
       },
       "description": "Makes hard drives and storage systems, mainly for data centers.",
       "valuation": {
-        "market_cap": 108471396891.0,
-        "pe_ttm": 10.8,
+        "market_cap": null,
+        "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
-      "annual_returns": [
-        {
-          "year": 2016,
-          "return_pct": 18.2,
-          "note": "partial year"
-        },
-        {
-          "year": 2017,
-          "return_pct": 17.0,
-          "note": null
-        },
-        {
-          "year": 2018,
-          "return_pct": -53.5,
-          "note": null
-        },
-        {
-          "year": 2019,
-          "return_pct": 71.7,
-          "note": null
-        },
-        {
-          "year": 2020,
-          "return_pct": -12.7,
-          "note": null
-        },
-        {
-          "year": 2021,
-          "return_pct": 17.7,
-          "note": null
-        },
-        {
-          "year": 2022,
-          "return_pct": -51.6,
-          "note": null
-        },
-        {
-          "year": 2023,
-          "return_pct": 66.0,
-          "note": null
-        },
-        {
-          "year": 2024,
-          "return_pct": 13.9,
-          "note": null
-        },
-        {
-          "year": 2025,
-          "return_pct": 277.3,
-          "note": null
-        },
-        {
-          "year": 2026,
-          "return_pct": 68.2,
-          "note": "year to date"
-        }
-      ]
+      "annual_returns": []
     },
     {
       "ticker": "STX",
@@ -1770,67 +1469,11 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 116190059709.0,
-        "pe_ttm": 26.4,
+        "market_cap": null,
+        "pe_ttm": null,
         "ev_ebitda_ttm": null
       },
-      "annual_returns": [
-        {
-          "year": 2016,
-          "return_pct": 9.8,
-          "note": "partial year"
-        },
-        {
-          "year": 2017,
-          "return_pct": 9.6,
-          "note": null
-        },
-        {
-          "year": 2018,
-          "return_pct": -7.8,
-          "note": null
-        },
-        {
-          "year": 2019,
-          "return_pct": 54.2,
-          "note": null
-        },
-        {
-          "year": 2020,
-          "return_pct": 4.5,
-          "note": null
-        },
-        {
-          "year": 2021,
-          "return_pct": 81.8,
-          "note": null
-        },
-        {
-          "year": 2022,
-          "return_pct": -53.4,
-          "note": null
-        },
-        {
-          "year": 2023,
-          "return_pct": 62.3,
-          "note": null
-        },
-        {
-          "year": 2024,
-          "return_pct": 1.1,
-          "note": null
-        },
-        {
-          "year": 2025,
-          "return_pct": 219.1,
-          "note": null
-        },
-        {
-          "year": 2026,
-          "return_pct": 83.8,
-          "note": "year to date"
-        }
-      ]
+      "annual_returns": []
     }
   ]
 }
