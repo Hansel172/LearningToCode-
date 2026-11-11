@@ -1,40 +1,40 @@
 {
   "live": {
-    "updated": "2026-11-11T01:55:01+00:00",
+    "updated": "2026-11-11T18:40:57+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7549.94,
+        "value": 7520.93,
         "unit": "",
         "note": "last close",
-        "changePct": 2.35,
+        "changePct": -0.38,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-11-09",
+        "asOf": "2026-11-10",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 25253.14,
+        "value": 25065.87,
         "unit": "",
         "note": "last close",
-        "changePct": 2.74,
+        "changePct": -0.74,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-11-09",
+        "asOf": "2026-11-10",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 19.92,
+        "value": 19.46,
         "unit": "",
         "note": "last close",
-        "changePct": -22.31,
+        "changePct": -2.31,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-11-09",
+        "asOf": "2026-11-10",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -512,22 +512,6 @@
   "pending_deals": [
     {
       "ticker": "NVDA",
-      "headline": "Nvidia strengthens South Korea ties at AI Day Seoul",
-      "url": "https://www.digitimes.com/news/a20261103PD203/nvidia-development-robotics-samsung-cloud.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-11-03T02:10:08Z",
-      "detectedAt": "2026-11-04T02:18:35+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft Workforce Buyouts Amid Record Revenue",
-      "url": "https://mjtsai.com/blog/2026/11/03/microsoft-workforce-buyouts-amid-record-revenue/",
-      "source": "Mjtsai.com",
-      "publishedAt": "2026-11-03T17:58:36Z",
-      "detectedAt": "2026-11-04T18:37:50+00:00"
-    },
-    {
-      "ticker": "NVDA",
       "headline": "DeepSeek V5 reportedly targets Huawei Ascend 950 training in 2027, a crucial test for a Chinese alternative to Nvidia",
       "url": "https://www.digitimes.com/news/a20261104VL213/deepseek-training-ascend-huawei-nvidia.html",
       "source": "Digitimes",
@@ -549,6 +533,14 @@
       "source": "pymnts.com",
       "publishedAt": "2026-11-09T17:28:13Z",
       "detectedAt": "2026-11-10T18:39:45+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "headline": "Who Is Lori Huang? 10 Facts About Jensen Huang's Wife of Over 40 Years After Nvidia CEO Admits to Affair",
+      "url": "https://www.ibtimes.com.au/who-lori-huang-jensen-huang-wife-1878323",
+      "source": "Ibtimes.com.au",
+      "publishedAt": "2026-11-10T18:13:08Z",
+      "detectedAt": "2026-11-11T18:40:57+00:00"
     }
   ]
 }
