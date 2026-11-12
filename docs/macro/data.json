@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-11-11T18:40:57+00:00",
+    "updated": "2026-11-12T02:56:54+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -510,14 +510,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "DeepSeek V5 reportedly targets Huawei Ascend 950 training in 2027, a crucial test for a Chinese alternative to Nvidia",
-      "url": "https://www.digitimes.com/news/a20261104VL213/deepseek-training-ascend-huawei-nvidia.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-11-04T01:26:38Z",
-      "detectedAt": "2026-11-05T02:25:08+00:00"
-    },
     {
       "ticker": "MSFT",
       "headline": "Microsoft's Oracle move raises new question for investors",
