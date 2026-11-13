@@ -1,40 +1,40 @@
 {
   "live": {
-    "updated": "2026-11-13T02:37:11+00:00",
+    "updated": "2026-11-13T18:30:05+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7619.38,
+        "value": 7592.4,
         "unit": "",
         "note": "last close",
-        "changePct": 1.31,
+        "changePct": -0.35,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-11-11",
+        "asOf": "2026-11-12",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 25466.19,
+        "value": 25366.09,
         "unit": "",
         "note": "last close",
-        "changePct": 1.6,
+        "changePct": -0.39,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-11-11",
+        "asOf": "2026-11-12",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 17.49,
+        "value": 18.7,
         "unit": "",
         "note": "last close",
-        "changePct": -10.12,
+        "changePct": 6.92,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-11-11",
+        "asOf": "2026-11-12",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -78,11 +78,11 @@
       },
       "PPIACO": {
         "label": "PPI",
-        "value": 12.84,
+        "value": 12.79,
         "unit": "%",
         "note": "year over year",
         "changePct": null,
-        "asOf": "2026-09-01",
+        "asOf": "2026-10-01",
         "source": "FRED PPIACO",
         "sourceUrl": "https://fred.stlouisfed.org/series/PPIACO"
       },
@@ -533,6 +533,22 @@
       "source": "Ibtimes.com.au",
       "publishedAt": "2026-11-10T18:13:08Z",
       "detectedAt": "2026-11-11T18:40:57+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "headline": "Brad Pitt to Star in \u2018Connector\u2019 from \u2018Sound of Metal\u2019 Director Darius Marder for Apple",
+      "url": "https://www.indiewire.com/news/breaking-news/brad-pitt-connector-sound-of-metal-director-darius-marder-1235227338/",
+      "source": "IndieWire",
+      "publishedAt": "2026-11-12T18:15:18Z",
+      "detectedAt": "2026-11-13T18:30:06+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "headline": "iPhone 18\u2019s delayed launch is due to Samsung",
+      "url": "https://www.notebookcheck.net/iPhone-18-s-delayed-launch-is-due-to-Samsung.1449023.0.html",
+      "source": "Notebookcheck.net",
+      "publishedAt": "2026-11-12T18:10:00Z",
+      "detectedAt": "2026-11-13T18:30:06+00:00"
     }
   ]
 }
