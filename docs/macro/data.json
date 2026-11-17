@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-11-17T04:28:29+00:00",
+    "updated": "2026-11-17T19:49:54+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,25 +16,25 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 25136.27,
+        "value": 24509.76,
         "unit": "",
         "note": "last close",
-        "changePct": -0.91,
+        "changePct": -2.49,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-11-13",
+        "asOf": "2026-11-16",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 19.3,
+        "value": 22.91,
         "unit": "",
         "note": "last close",
-        "changePct": 3.21,
+        "changePct": 18.7,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-11-13",
+        "asOf": "2026-11-16",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -510,14 +510,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "MSFT",
-      "headline": "Microsoft AI Chief Mustafa Suleyman: Agents Could Deserve Rights if Evidence Emerges",
-      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/microsoft-ai-chief-mustafa-suleyman-agents-could-deserve-rights-if-evidence-emerges/",
-      "source": "pymnts.com",
-      "publishedAt": "2026-11-09T17:28:13Z",
-      "detectedAt": "2026-11-10T18:39:45+00:00"
-    },
     {
       "ticker": "NVDA",
       "headline": "Who Is Lori Huang? 10 Facts About Jensen Huang's Wife of Over 40 Years After Nvidia CEO Admits to Affair",
