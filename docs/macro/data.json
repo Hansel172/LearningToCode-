@@ -1,52 +1,52 @@
 {
   "live": {
-    "updated": "2026-11-18T03:42:02+00:00",
+    "updated": "2026-11-18T19:23:26+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7416.59,
+        "value": 7340.53,
         "unit": "",
         "note": "last close",
-        "changePct": -1.92,
+        "changePct": -1.03,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-11-16",
+        "asOf": "2026-11-17",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 24509.76,
+        "value": 24328.38,
         "unit": "",
         "note": "last close",
-        "changePct": -2.49,
+        "changePct": -0.74,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-11-16",
+        "asOf": "2026-11-17",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 22.91,
+        "value": 25.46,
         "unit": "",
         "note": "last close",
-        "changePct": 18.7,
+        "changePct": 11.13,
         "fiftyTwoWeekHigh": 31.05,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-11-16",
+        "asOf": "2026-11-17",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
       "DCOILWTICO": {
         "label": "WTI Crude",
-        "value": 89.62,
+        "value": 89.53,
         "unit": "",
         "note": "last close",
-        "changePct": 0.0,
+        "changePct": 0.32,
         "fiftyTwoWeekHigh": 114.58,
         "fiftyTwoWeekLow": 55.44,
-        "asOf": "2026-11-11",
+        "asOf": "2026-11-17",
         "source": "FRED DCOILWTICO",
         "sourceUrl": "https://fred.stlouisfed.org/series/DCOILWTICO"
       }
@@ -510,14 +510,6 @@
     ]
   },
   "pending_deals": [
-    {
-      "ticker": "NVDA",
-      "headline": "Who Is Lori Huang? 10 Facts About Jensen Huang's Wife of Over 40 Years After Nvidia CEO Admits to Affair",
-      "url": "https://www.ibtimes.com.au/who-lori-huang-jensen-huang-wife-1878323",
-      "source": "Ibtimes.com.au",
-      "publishedAt": "2026-11-10T18:13:08Z",
-      "detectedAt": "2026-11-11T18:40:57+00:00"
-    },
     {
       "ticker": "AAPL",
       "headline": "Brad Pitt to Star in \u2018Connector\u2019 from \u2018Sound of Metal\u2019 Director Darius Marder for Apple",
