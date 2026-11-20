@@ -183,7 +183,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 14.3,
+          "return_pct": 14.8,
           "note": "partial year"
         },
         {
@@ -233,7 +233,7 @@
         },
         {
           "year": 2026,
-          "return_pct": -19.1,
+          "return_pct": -21.7,
           "note": "year to date"
         }
       ],
@@ -491,7 +491,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 5.2,
+          "return_pct": 3.7,
           "note": "partial year"
         },
         {
@@ -541,7 +541,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 29.6,
+          "return_pct": 28.5,
           "note": "year to date"
         }
       ],
@@ -738,7 +738,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 3.0,
+          "return_pct": 2.1,
           "note": "partial year"
         },
         {
@@ -788,7 +788,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 5.1,
+          "return_pct": 3.0,
           "note": "year to date"
         }
       ],
@@ -904,14 +904,14 @@
       },
       "description": "Builds and launches rockets and satellites, including Starlink. IPO'd June 2026.",
       "valuation": {
-        "market_cap": 1880026649237.0,
-        "pe_ttm": 1043.9,
+        "market_cap": 1948882642242.0,
+        "pe_ttm": 1082.1,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
         {
           "year": 2026,
-          "return_pct": -10.8,
+          "return_pct": -14.0,
           "note": "year to date"
         }
       ]
@@ -1087,7 +1087,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 14.1,
+          "return_pct": 12.5,
           "note": "partial year"
         },
         {
@@ -1137,7 +1137,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 147.1,
+          "return_pct": 141.9,
           "note": "year to date"
         }
       ],
@@ -1350,8 +1350,8 @@
       },
       "description": "Makes NAND flash storage and memory cards. Spun off from Western Digital in 2025.",
       "valuation": {
-        "market_cap": 107451236873.0,
-        "pe_ttm": 5.5,
+        "market_cap": 110447850900.0,
+        "pe_ttm": 5.7,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
@@ -1362,7 +1362,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 227.0,
+          "return_pct": 218.1,
           "note": "year to date"
         }
       ]
@@ -1546,7 +1546,7 @@
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": 11.5,
+          "return_pct": 11.1,
           "note": "partial year"
         },
         {
@@ -1596,7 +1596,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 67.3,
+          "return_pct": 72.3,
           "note": "year to date"
         }
       ]
@@ -1766,14 +1766,14 @@
       },
       "description": "Makes hard drives, mainly for data centers and cloud storage providers.",
       "valuation": {
-        "market_cap": 119690866622.0,
-        "pe_ttm": 27.2,
+        "market_cap": 118430576133.0,
+        "pe_ttm": 26.9,
         "ev_ebitda_ttm": null
       },
       "annual_returns": [
         {
           "year": 2016,
-          "return_pct": -2.9,
+          "return_pct": -4.1,
           "note": "partial year"
         },
         {
@@ -1823,7 +1823,7 @@
         },
         {
           "year": 2026,
-          "return_pct": 87.3,
+          "return_pct": 89.3,
           "note": "year to date"
         }
       ]
