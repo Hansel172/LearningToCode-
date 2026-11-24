@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-11-23T22:37:06+00:00",
+    "updated": "2026-11-24T21:09:39+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 6910.39,
+        "value": 7237.17,
         "unit": "",
         "note": "last close",
-        "changePct": -3.7,
+        "changePct": 4.73,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-11-20",
+        "asOf": "2026-11-23",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -28,13 +28,13 @@
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 35.89,
+        "value": 26.62,
         "unit": "",
         "note": "last close",
-        "changePct": 26.2,
+        "changePct": -25.83,
         "fiftyTwoWeekHigh": 35.89,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-11-20",
+        "asOf": "2026-11-23",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
@@ -509,5 +509,22 @@
       }
     ]
   },
-  "pending_deals": []
+  "pending_deals": [
+    {
+      "ticker": "NVDA",
+      "headline": "Nvidia rockets 30%: These beaten down ASX AI shares could be buys too",
+      "url": "https://www.fool.com.au/2026/11/24/nvidia-rockets-30-these-beaten-down-asx-ai-shares-could-be-buys-too/",
+      "source": "Motley Fool Australia",
+      "publishedAt": "2026-11-23T21:05:41Z",
+      "detectedAt": "2026-11-24T21:09:39+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Microsoft Retires \u201cTo Do\u201d App",
+      "url": "https://mjtsai.com/blog/2026/11/23/microsoft-retires-to-do-app/",
+      "source": "Mjtsai.com",
+      "publishedAt": "2026-11-23T19:56:06Z",
+      "detectedAt": "2026-11-24T21:09:39+00:00"
+    }
+  ]
 }
