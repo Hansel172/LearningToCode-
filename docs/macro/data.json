@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-11-24T21:09:39+00:00",
+    "updated": "2026-11-25T04:53:05+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -16,13 +16,13 @@
       },
       "NASDAQCOM": {
         "label": "Nasdaq",
-        "value": 23879.2,
+        "value": 23733.54,
         "unit": "",
         "note": "last close",
-        "changePct": -2.25,
+        "changePct": -1.48,
         "fiftyTwoWeekHigh": 27599.89,
         "fiftyTwoWeekLow": 20794.64,
-        "asOf": "2026-11-19",
+        "asOf": "2026-11-24",
         "source": "FRED NASDAQCOM",
         "sourceUrl": "https://fred.stlouisfed.org/series/NASDAQCOM"
       },
@@ -60,7 +60,7 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 3.89,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-11-20",
+        "asOf": "2026-11-23",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
@@ -69,10 +69,10 @@
         "value": 4.92,
         "unit": "%",
         "note": "last close",
-        "changePct": -2.38,
+        "changePct": 0.0,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-11-20",
+        "asOf": "2026-11-23",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -88,13 +88,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.29,
+        "value": 0.28,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-11-23",
+        "asOf": "2026-11-24",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
