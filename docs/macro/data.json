@@ -1,16 +1,16 @@
 {
   "live": {
-    "updated": "2026-11-25T04:53:05+00:00",
+    "updated": "2026-11-25T20:27:51+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
-        "value": 7237.17,
+        "value": 7201.09,
         "unit": "",
         "note": "last close",
-        "changePct": 4.73,
+        "changePct": -0.5,
         "fiftyTwoWeekHigh": 7818.93,
         "fiftyTwoWeekLow": 6343.72,
-        "asOf": "2026-11-23",
+        "asOf": "2026-11-24",
         "source": "FRED SP500",
         "sourceUrl": "https://fred.stlouisfed.org/series/SP500"
       },
@@ -28,25 +28,25 @@
       },
       "VIXCLS": {
         "label": "VIX",
-        "value": 26.62,
+        "value": 26.36,
         "unit": "",
         "note": "last close",
-        "changePct": -25.83,
+        "changePct": -0.98,
         "fiftyTwoWeekHigh": 35.89,
         "fiftyTwoWeekLow": 13.47,
-        "asOf": "2026-11-23",
+        "asOf": "2026-11-24",
         "source": "FRED VIXCLS",
         "sourceUrl": "https://fred.stlouisfed.org/series/VIXCLS"
       },
       "DCOILWTICO": {
         "label": "WTI Crude",
-        "value": 89.53,
+        "value": 82.24,
         "unit": "",
         "note": "last close",
-        "changePct": 0.32,
+        "changePct": 1.01,
         "fiftyTwoWeekHigh": 114.58,
         "fiftyTwoWeekLow": 55.44,
-        "asOf": "2026-11-17",
+        "asOf": "2026-11-24",
         "source": "FRED DCOILWTICO",
         "sourceUrl": "https://fred.stlouisfed.org/series/DCOILWTICO"
       }
