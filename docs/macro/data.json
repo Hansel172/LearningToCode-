@@ -1,6 +1,6 @@
 {
   "live": {
-    "updated": "2026-11-27T19:56:13+00:00",
+    "updated": "2026-11-28T03:53:35+00:00",
     "market": {
       "SP500": {
         "label": "S&P 500",
@@ -60,19 +60,19 @@
         "changePct": 0.0,
         "fiftyTwoWeekHigh": 3.89,
         "fiftyTwoWeekLow": 3.62,
-        "asOf": "2026-11-24",
+        "asOf": "2026-11-26",
         "source": "FRED DFF",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF"
       },
       "DGS10": {
         "label": "10-year Treasury",
-        "value": 4.91,
+        "value": 4.85,
         "unit": "%",
         "note": "last close",
-        "changePct": -0.2,
+        "changePct": -1.22,
         "fiftyTwoWeekHigh": 5.31,
         "fiftyTwoWeekLow": 3.97,
-        "asOf": "2026-11-24",
+        "asOf": "2026-11-25",
         "source": "FRED DGS10",
         "sourceUrl": "https://fred.stlouisfed.org/series/DGS10"
       },
@@ -88,13 +88,13 @@
       },
       "T10Y2Y": {
         "label": "10Y-2Y spread",
-        "value": 0.24,
+        "value": 0.25,
         "unit": "pp",
         "note": "last close",
         "changePct": null,
         "fiftyTwoWeekHigh": 0.74,
         "fiftyTwoWeekLow": 0.2,
-        "asOf": "2026-11-25",
+        "asOf": "2026-11-27",
         "source": "FRED T10Y2Y",
         "sourceUrl": "https://fred.stlouisfed.org/series/T10Y2Y"
       }
@@ -525,6 +525,14 @@
       "source": "Mjtsai.com",
       "publishedAt": "2026-11-23T19:56:06Z",
       "detectedAt": "2026-11-24T21:09:39+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "headline": "Japan\u2019s JERA is in talks with Amazon, Microsoft and Google over the AI power crunch",
+      "url": "https://cryptobriefing.com/jera-amazon-microsoft-google-energy-talks/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-26T22:00:15Z",
+      "detectedAt": "2026-11-28T03:53:35+00:00"
     }
   ]
 }
